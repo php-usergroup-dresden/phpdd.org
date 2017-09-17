@@ -30,16 +30,16 @@ the previously one-day event to two days of knowledge exchange around the PHP ec
 
 <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="http://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
     </div>
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="http://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
     </div>
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="http://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
     </div>
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="http://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
     </div>
 </div>
 
@@ -57,15 +57,15 @@ the previously one-day event to two days of knowledge exchange around the PHP ec
 
 <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="http://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
+        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
     </div>
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="http://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
+        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
     </div>
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="http://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
+        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
     </div>
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="http://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
+        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
     </div>
 </div>
