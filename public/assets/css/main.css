@@ -1,5 +1,11 @@
 * html, body {
 	font-family: "robotoregular", Helvetica, Arial, sans-serif;
+	color: #6c6c6c;
+	line-height: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6, b, strong {
+	color: #333333;
 }
 
 a {
@@ -82,6 +88,16 @@ a:active {
 	margin: 15px 0;
 }
 
+.img-speaker {
+	display: inline-block;
+	margin-top: 15px;
+}
+
+.img-phpartner {
+	display: inline-block;
+	margin-top: 15px;
+}
+
 .img-inline {
 	display: inline-block;
 	margin: 5px;
@@ -141,7 +157,7 @@ a:active {
 }
 
 h1.page-headline {
-	line-height: 77px;
+	line-height: 1.5em;
 	text-transform: uppercase;
 }
 
@@ -216,6 +232,17 @@ h1.page-headline {
 
 .breadcrumb {
 	margin-top: 17px;
+}
+
+.teaser {
+	padding: 15px;
+	background-color: #a7231d;
+	border-radius: 5px;
+	color: #ffada5;
+}
+
+.teaser h3 {
+	color: #f6f6f6;
 }
 
 /* collapsed sidebar styles */
