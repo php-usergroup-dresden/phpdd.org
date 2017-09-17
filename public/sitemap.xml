@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://2018.phpdd.org/index.html</loc>
+    <image:image>
+      <image:loc>https://2018.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Home</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2018.phpdd.org/404.html</loc>
+    <image:image>
+      <image:loc>https://2018.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>404 - Not Found</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2018.phpdd.org/imprint.html</loc>
+    <image:image>
+      <image:loc>https://2018.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Imprint</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2018.phpdd.org/privacy.html</loc>
+    <image:image>
+      <image:loc>https://2018.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Privacy</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2018.phpdd.org/code-of-conduct.html</loc>
+    <image:image>
+      <image:loc>https://2018.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Code of Conduct</image:caption>
+    </image:image>
+  </url>
+</urlset>
