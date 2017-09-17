@@ -1,0 +1,121 @@
+{
+  "name": "PHP Developer Day Dresden, Germany",
+  "baseUrl": "https://2018.phpdd.org",
+  "outputDir": "./public/",
+  "contentsDir": "./src/Contents/",
+  "replacements": {
+    "@website_version@": "v1.0.0",
+    "@github_url@": "https://github.com/php-usergroup-dresden",
+    "@twitter_url@": "https://twitter.com/phpugdd",
+    "@twitter_url_phpdd@": "https://twitter.com/phpdd",
+    "@facebook_url@": "https://www.facebook.com/PHP-USERGROUP-DRESDEN-1623896237827037",
+    "@xing_url@": "https://www.xing.com/communities/groups/php-usergroup-dresden-bac6-1084388",
+    "@gitter_url@": "https://gitter.im/php-usergroup-dresden/phpugdd",
+    "@slackteam_url@": "https://slackinvite.me/to/phpugdd",
+    "@meetup_url@": "http://www.meetup.com/PHP-USERGROUP-DRESDEN/",
+    "@youtube_url@": "https://www.youtube.com/channel/UC9RvlzszDfeZ_ILq0JSNHZQ",
+    "@contact_email@": "info@phpug-dresden.org",
+    "@board_member@": "Holger Woltersdorf, Marcel Führer, Patrick Pächnatz",
+    "@twitter_handle@": "@PHPDD",
+    "@calendar_url@": "https://calendar.google.com/calendar/ical/phpugdd%40gmail.com/public/basic.ics",
+    "@cfp_url@": "https://cfp.phpdd.org"
+  },
+  "pages": {
+    "/index.html": {
+      "pageLevel": 1,
+      "navName": "Home",
+      "pageTitle": "Home",
+      "description": "Website of the PHP Developer Day in Dresden, Germany",
+      "language": "en",
+      "imageUrl": "/assets/images/logo.png",
+      "tags": [
+        "PHP",
+        "Developer",
+        "Day",
+        "Website",
+        "Event",
+        "Conference",
+        "Speaker",
+        "Sponsorship",
+        "Schedule",
+        "Tickets"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Home.md",
+      "children": [
+        "/privacy.html",
+        "/imprint.html",
+        "/code-of-conduct.html"
+      ]
+    },
+    "/404.html": {
+      "pageLevel": 1,
+      "navName": "Not Found",
+      "pageTitle": "404 - Not Found",
+      "description": "The page you requested was not found.",
+      "language": "en",
+      "imageUrl": "/assets/images/logo.png",
+      "tags": [],
+      "contentType": "html",
+      "renderer": "twig",
+      "template": "Templates/404.twig",
+      "contentFile": "",
+      "children": []
+    },
+    "/imprint.html": {
+      "pageLevel": 2,
+      "navName": "Imprint",
+      "pageTitle": "Imprint",
+      "description": "Imprint, Legal notes, Disclaimer",
+      "language": "en",
+      "imageUrl": "/assets/images/logo.png",
+      "tags": [
+        "legal notes",
+        "disclaimer"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Imprint.md",
+      "children": []
+    },
+    "/privacy.html": {
+      "pageLevel": 2,
+      "navName": "Privacy",
+      "pageTitle": "Privacy",
+      "description": "Privacy statement",
+      "language": "en",
+      "imageUrl": "/assets/images/logo.png",
+      "tags": [
+        "privacy",
+        "legal"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Privacy.md",
+      "children": []
+    },
+    "/code-of-conduct.html": {
+      "pageLevel": 2,
+      "navName": "Code of Conduct",
+      "pageTitle": "Code of Conduct",
+      "description": "Dresden Community Code of Conduct",
+      "language": "en",
+      "imageUrl": "/assets/images/logo.png",
+      "tags": [
+        "Code of Conduct",
+        "Dresden",
+        "Community",
+        "Events"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "CodeOfConduct.md",
+      "children": []
+    }
+  }
+}
