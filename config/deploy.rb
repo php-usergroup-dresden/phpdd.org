@@ -8,7 +8,7 @@ require 'mina/git'
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :domain, 'phpdd.org'
-set :deploy_to, '/var/www/2018.phpdd.org'
+set :deploy_to, '/var/www/phpdd.org'
 set :repository, 'https://github.com/php-usergroup-dresden/phpdd.org.git'
 set :branch, 'master'
 set :keep_releases, 3
@@ -23,7 +23,7 @@ set :keep_releases, 3
    set :port, '22'     	  # SSH port number.
 
 desc "Deploys the current version to the server."
-task :deploy => :environment do
+task :deploy => :remote_environment do
   deploy do
     # Put things that will set up an empty directory into a fully set-up
     # instance of your project.
@@ -45,7 +45,7 @@ task :reload_env do
 end
 
 desc "Rolls back the latest release"
-task :rollback => :environment do
+task :rollback => :remote_environment do
   command! %[echo "-----> Rolling back to previous release for instance: #{domain}"]
 
   # Delete existing sym link and create a new symlink pointing to the previous release
