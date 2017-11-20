@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://2018.phpdd.org/sitemap.xml
