@@ -15,8 +15,10 @@ set :keep_releases, 3
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-#set :shared_files, []
-#set :shared_dirs, []
+set :shared_files, []
+set :shared_dirs, [
+    "public/2017/media"
+]
 
 # Optional settings:
    set :user, 'deploy'    # Username in the server to SSH to.
@@ -29,7 +31,7 @@ task :deploy => :remote_environment do
     # instance of your project.
 
     invoke :'git:clone'
-    #invoke :'deploy:link_shared_paths'
+    invoke :'deploy:link_shared_paths'
 
     on :launch do
       invoke :'reload_env'
