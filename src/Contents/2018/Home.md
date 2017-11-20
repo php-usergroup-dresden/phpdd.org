@@ -1,7 +1,7 @@
 <h2>The 4th annual PHP event in Dresden</h2>
 
-We want to push things forward in 2018, so depending on the talk and tutorial submissions we'll expand 
-the previously one-day event to two days of knowledge exchange around the PHP ecosystem. 
+We want to push things forward in 2018, so we're expanding our one day event with a preceding tutorial day. 
+Two days of knowledge exchange and community around the PHP ecosystem. 
 
 [Checkout our last PHP Developer Day in 2017.](http://phpug-dresden.org/en/phpdd17.html)
 

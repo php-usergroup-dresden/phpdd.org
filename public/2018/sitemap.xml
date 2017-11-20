@@ -15,6 +15,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://2018.phpdd.org/impressions.html</loc>
+    <image:image>
+      <image:loc>https://2018.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Impressions</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://2018.phpdd.org/imprint.html</loc>
     <image:image>
       <image:loc>https://2018.phpdd.org/assets/images/logo.png</image:loc>
