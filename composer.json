@@ -18,14 +18,8 @@
 			"PHPUGDD\\PHPDD\\Website\\": "src/"
 		}
 	},
-	"autoload-dev": {
-		"psr-4": {
-			"PHPUGDD\\PHPDD\\Website\\Tests\\": "tests/"
-		}
-	},
 	"require-dev": {
-		"tm/tooly-composer-script": "^1.0",
-		"roave/security-advisories": "dev-master"
+		"tm/tooly-composer-script": "^1.0"
 	},
 	"scripts": {
 		"post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
@@ -33,18 +27,6 @@
 	},
 	"extra": {
 		"tools": {
-			"phpunit": {
-				"url": "https://phar.phpunit.de/phpunit-6.3.0.phar",
-				"only-dev": true
-			},
-			"coveralls": {
-				"url": "https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar",
-				"only-dev": true
-			},
-			"phpmetrics": {
-				"url": "https://github.com/phpmetrics/PhpMetrics/releases/download/v2.2.0/phpmetrics.phar",
-				"only-dev": true
-			},
 			"spg": {
 				"url": "https://github.com/icehawk/static-page-generator/releases/download/v1.3.1/static-page-generator.phar",
 				"only-dev": true
