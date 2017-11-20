@@ -1,0 +1,516 @@
+{
+	"name": "PHP Developer Day 2017 - Dresden, Germany",
+	"baseUrl": "https://2017.phpdd.org",
+	"outputDir": "./public/2017/",
+	"contentsDir": "./src/Contents/2017/",
+	"replacements": {
+		"@website_version@": "v1.0.0",
+		"@github_url@": "https://github.com/php-usergroup-dresden/phpdd.org",
+		"@twitter_url@": "https://twitter.com/phpdd",
+		"@facebook_url@": "https://www.facebook.com/PHP-USERGROUP-DRESDEN-1623896237827037",
+		"@xing_url@": "https://www.xing.com/communities/groups/php-usergroup-dresden-bac6-1084388",
+		"@slackteam_url@": "https://quiet-headland-47734.herokuapp.com/",
+		"@meetup_url@": "http://www.meetup.com/PHP-USERGROUP-DRESDEN/",
+		"@youtube_url@": "https://www.youtube.com/channel/UC9RvlzszDfeZ_ILq0JSNHZQ",
+		"@contact_email@": "orga@phpug-dresden.org",
+		"@board_member@": "Holger Woltersdorf, Marcel Führer, Patrick Pächnatz",
+		"@twitter_handle@": "@PHPDD",
+		"@calendar_url@": "https://calendar.google.com/calendar/ical/phpugdd%40gmail.com/public/basic.ics"
+	},
+	"pages": {
+		"/de/index.html": {
+			"pageLevel": 1,
+			"navName": "PHP Developer Day 2017",
+			"pageTitle": "Einleitung",
+			"description": "Speaker, Tickets, Ort und Anreise, Infos zum PHP Developer Day 2017 in Dresden, Deutschland",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Speaker",
+				"Location",
+				"Tickets"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "de/intro.md",
+			"children": [
+				"/de/speaker.html",
+				"/de/programm.html",
+				"/de/tickets-kaufen.html",
+				"/de/ort-und-anreise.html",
+				"/de/verpflegung.html",
+				"/de/sponsor-werden.html",
+				"/de/verhaltenskodex.html",
+				"/de/media.html",
+				"/de/impressum.html",
+				"/de/datenschutz.html"
+			]
+		},
+		"/en/index.html": {
+			"pageLevel": 1,
+			"navName": "PHP Developer Day 2017",
+			"pageTitle": "Intro",
+			"description": "Speaker, Tickets, Location, Information about the PHP Developer Day 2017 in Dresden, Germany",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Speaker",
+				"Location",
+				"Tickets",
+				"Information"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "en/intro.md",
+			"children": [
+				"/en/speakers.html",
+				"/en/schedule.html",
+				"/en/buy-tickets.html",
+				"/en/location-and-arrival.html",
+				"/en/catering.html",
+				"/en/become-sponsor.html",
+				"/en/code-of-conduct.html",
+				"/en/media.html",
+				"/en/imprint.html",
+				"/en/privacy.html"
+			]
+		},
+		"/404.html": {
+			"pageLevel": 1,
+			"navName": "Not Found",
+			"pageTitle": "404 - Not Found",
+			"description": "The page you requested was not found.",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [],
+			"contentType": "html",
+			"renderer": "twig",
+			"template": "Templates/404.twig",
+			"contentFile": "",
+			"children": []
+		},
+		"/de/speaker.html": {
+			"pageLevel": 20,
+			"navName": "Die Speaker",
+			"pageTitle": "Die Speaker",
+			"description": "Speaker auf dem PHP Developer Day 2017 in Dresden, Deutschland",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Speakers"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "de/speakers.md",
+			"children": [
+			]
+		},
+		"/de/programm.html": {
+			"pageLevel": 20,
+			"navName": "Das Programm",
+			"pageTitle": "Das Programm",
+			"description": "Das Programm des PHP Developer Day 2017 in Dresden, Deutschland",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Schedule",
+				"Program",
+				"Time table"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "de/schedule.md",
+			"children": [
+			]
+		},
+		"/de/tickets-kaufen.html": {
+			"pageLevel": 20,
+			"navName": "Tickets kaufen",
+			"pageTitle": "Tickets kaufen",
+			"description": "Tickets kaufen für den PHP Developer Day 2017 in Dresden, Deutschland",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Tickets"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "de/tickets.md",
+			"children": [
+			]
+		},
+		"/de/ort-und-anreise.html": {
+			"pageLevel": 20,
+			"navName": "Ort und Anreise",
+			"pageTitle": "Ort und Anreise",
+			"description": "Ort und Anreise zum PHP Developer Day 2017 in Dresden, Deutschland",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Location"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "de/location.md",
+			"children": [
+			]
+		},
+		"/de/verpflegung.html": {
+			"pageLevel": 20,
+			"navName": "Verpflegung",
+			"pageTitle": "Verpflegung",
+			"description": "Verpflegung beim PHP Developer Day 2017 in Dresden, Deutschland",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Verpflegung",
+				"Essen",
+				"Getränke"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "de/catering.md",
+			"children": [
+			]
+		},
+		"/de/sponsor-werden.html": {
+			"pageLevel": 20,
+			"navName": "Sponsor werden",
+			"pageTitle": "Sponsor werden",
+			"description": "Sponsor werden für den PHP Developer Day 2017",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Sponsoring"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "de/sponsoring.md",
+			"children": [
+			]
+		},
+		"/de/verhaltenskodex.html": {
+			"pageLevel": 20,
+			"navName": "Verhaltenskodex",
+			"pageTitle": "Verhaltenskodex",
+			"description": "Verhaltenskodex für den PHP Developer Day 2017 in Dresden, Deutschland",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Sponsoring"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "de/code-of-conduct.md",
+			"children": [
+			]
+		},
+		"/de/media.html": {
+			"pageLevel": 20,
+			"navName": "Media",
+			"pageTitle": "Media",
+			"description": "Digital Media für den PHP Developer Day 2017 in Dresden, Deutschland",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Media",
+				"Digital",
+				"Social",
+				"Share",
+				"Images"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "de/media.md",
+			"children": [
+			]
+		},
+		"/de/impressum.html": {
+			"pageLevel": 20,
+			"navName": "Impressum",
+			"pageTitle": "Impressum",
+			"description": "Impressum, Rechtliche Hinweise",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Impressum",
+				"Rechtliche Hinweise",
+				"Disclaimer"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "Imprint.md",
+			"children": []
+		},
+		"/de/datenschutz.html": {
+			"pageLevel": 20,
+			"navName": "Datenschutz",
+			"pageTitle": "Datenschutz",
+			"description": "Datenschutzerklärung",
+			"language": "de",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"datenschutz",
+				"legal"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "Privacy.md",
+			"children": []
+		},
+		"/en/speakers.html": {
+			"pageLevel": 30,
+			"navName": "The speakers",
+			"pageTitle": "The speakers",
+			"description": "Speakers at PHP Developer Day 2017 in Dresden",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Speakers"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "en/speakers.md",
+			"children": [
+			]
+		},
+		"/en/schedule.html": {
+			"pageLevel": 30,
+			"navName": "The schedule",
+			"pageTitle": "The schedule",
+			"description": "Schedule of the PHP Developer Day 2017 in Dresden",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Schedule",
+				"Program",
+				"Time table"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "en/schedule.md",
+			"children": [
+			]
+		},
+		"/en/buy-tickets.html": {
+			"pageLevel": 30,
+			"navName": "Buy tickets",
+			"pageTitle": "Buy tickets",
+			"description": "Buy tickets for the PHP Developer Day 2017 in Dresden, Germany",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Tickets"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "en/tickets.md",
+			"children": [
+			]
+		},
+		"/en/location-and-arrival.html": {
+			"pageLevel": 30,
+			"navName": "Location / Arrival",
+			"pageTitle": "Location / Arrival",
+			"description": "Location and arrival for the PHP Developer Day 2017 in Dresden, Germany",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Location"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "en/location.md",
+			"children": [
+			]
+		},
+		"/en/catering.html": {
+			"pageLevel": 30,
+			"navName": "Catering",
+			"pageTitle": "Catering",
+			"description": "Catering at the PHP Developer Day 2017 in Dresden, Germany",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Catering",
+				"Food",
+				"Drinks"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "en/catering.md",
+			"children": [
+			]
+		},
+		"/en/become-sponsor.html": {
+			"pageLevel": 30,
+			"navName": "Become sponsor",
+			"pageTitle": "Become sponsor",
+			"description": "Become a sponsor for the PHP Developer Day 2017 in Dresden, Germany",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Sponsoring"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "en/sponsoring.md",
+			"children": [
+			]
+		},
+		"/en/code-of-conduct.html": {
+			"pageLevel": 30,
+			"navName": "Code of Conduct",
+			"pageTitle": "Code of Conduct",
+			"description": "Code of Conduct for the PHP Developer Day 2017 in Dresden, Germany",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Event",
+				"Conference",
+				"Developer Day",
+				"Dresden",
+				"Sponsoring"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "en/code-of-conduct.md",
+			"children": [
+			]
+		},
+		"/en/media.html": {
+			"pageLevel": 30,
+			"navName": "Media",
+			"pageTitle": "Media",
+			"description": "Digital media for the PHP Developer Day 2017 in Dresden, Germany",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"Media",
+				"Digital",
+				"Share",
+				"Social",
+				"Images"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "en/media.md",
+			"children": [
+			]
+		},
+		"/en/imprint.html": {
+			"pageLevel": 30,
+			"navName": "Imprint",
+			"pageTitle": "Imprint",
+			"description": "Imprint, Legal notes, Disclaimer",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"legal notes",
+				"disclaimer"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "Imprint.md",
+			"children": []
+		},
+		"/en/privacy.html": {
+			"pageLevel": 30,
+			"navName": "Privacy",
+			"pageTitle": "Privacy",
+			"description": "Privacy statement",
+			"language": "en",
+			"imageUrl": "/assets/images/logo.png",
+			"tags": [
+				"privacy",
+				"legal"
+			],
+			"contentType": "markdown",
+			"renderer": "twig",
+			"template": "Templates/Page.twig",
+			"contentFile": "Privacy.md",
+			"children": []
+		}
+	}
+}

@@ -1,5 +1,5 @@
 {
-  "name": "PHP Developer Day - Dresden, Germany",
+  "name": "PHP Developer Day 2018 - Dresden, Germany",
   "baseUrl": "https://2018.phpdd.org",
   "outputDir": "./public/2018/",
   "contentsDir": "./src/Contents/2018/",

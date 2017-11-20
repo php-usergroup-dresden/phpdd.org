@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://2017.phpdd.org/de/index.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Einleitung</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/index.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Intro</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/404.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>404 - Not Found</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/de/speaker.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Die Speaker</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/de/programm.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Das Programm</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/de/tickets-kaufen.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Tickets kaufen</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/de/ort-und-anreise.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Ort und Anreise</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/de/verpflegung.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Verpflegung</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/de/sponsor-werden.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Sponsor werden</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/de/verhaltenskodex.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Verhaltenskodex</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/de/media.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Media</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/de/impressum.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Impressum</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/de/datenschutz.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Datenschutz</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/speakers.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>The speakers</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/schedule.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>The schedule</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/buy-tickets.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Buy tickets</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/location-and-arrival.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Location / Arrival</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/catering.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Catering</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/become-sponsor.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Become sponsor</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/code-of-conduct.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Code of Conduct</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/media.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Media</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/imprint.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Imprint</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://2017.phpdd.org/en/privacy.html</loc>
+    <image:image>
+      <image:loc>https://2017.phpdd.org/assets/images/logo.png</image:loc>
+      <image:caption>Privacy</image:caption>
+    </image:image>
+  </url>
+</urlset>

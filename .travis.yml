@@ -1,25 +1,21 @@
 language: php
-
 php:
-  - 7.0
   - 7.1
-
 branches:
   only:
-    - master
-    - development
-    - /^feature\/.+$/
-    - /^refactoring\/.+$/
-    - /^issue\/.+$/
-
+  - master
+  - development
+  - "/^issue\\/.+$/"
 before_script:
- - composer self-update
- - mkdir -p vendor/bin
- - composer install -o --prefer-dist --no-interaction
- - mkdir build/logs
-
+- composer self-update
+- mkdir -p vendor/bin
+- mkdir -p build/logs
+- composer install -o --prefer-dist --no-interaction
+- nohup php -S 127.0.0.1:8017 -t ./public/2017/ > build/logs/webserver.2017.log 2>&1 &
+- nohup php -S 127.0.0.1:8018 -t ./public/2018/ > build/logs/webserver.2018.log 2>&1 &
 script:
- - php vendor/bin/phpunit.phar -c build/
-
-after_success:
- - travis_retry php vendor/bin/coveralls.phar -v --exclude-no-stmt
+- php vendor/bin/spg.phar check:links -g -b "http://127.0.0.1:8017" ./Project2017.json
+- php vendor/bin/spg.phar check:links -g -b "http://127.0.0.1:8018" ./Project2018.json
+notifications:
+  slack:
+    secure: YMxC1Tg28tb5pLUNMezUF58v+1U0//Ti0A4Yot15ezIeGjrGIIHdp7bMRDd0Muisf78Mf3w85+wO3lWzQcxP+DUWgTKMgS+R2uV5u5ps2RGxy5RZt0BU5B+iRiJk8fpOYlt4qH1MGS1LhXwP0plA1ogpraeCZ2b8DBKrdUsWoxCLNorjzfYzDqU0Mw8MZHjET3Fz89tz7Q2mA+GD34YjBi1E93XaM7lmrOOpabYmmIqUu22pzZTKNO538QNSQLcoY23ELWu6Mqif+2T56HXkq63yPKFf7uYMFnXsgZNcTSblUt53ZHDM13j2I3CS84i+zy0e5gaabLGK8KqPCt7elZu7QfnP+bN3BPllm/sPEHDQCNUPShTMZ6JzK1KBrE37Rw2GziS/d8K5O4Eu7j7zvcSo6UeFoKKzpNYPuq0nRK0ab3+zFcqpG+DB7XuYz3X+G/pvGpYX1UwaN4QiG2Wmklk2heuh9OmQFfyExMOR4mVnlWIxg/zkkJIXDDp/rw947JqvALbzyy/wwpax4k0loBlRBc5rjENJ7G3sJbj3XWYPAIZM3QRvgmWdjHxxGCLkbr4lASbSzvc2qijLBJsWILmdD9M8ckdRCDo5Sky693SZvkBvnEfH9WJ6laGYsVFzpibe2a/KYgjoLfnwXChPVuIwUfuN1yy/6Qz9MRFaNzU=

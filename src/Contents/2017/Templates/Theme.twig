@@ -1,0 +1,314 @@
+{% macro subTree(loopPage, project, breadCrumb) %}
+    {% set isActive = (loopPage.getUri in breadCrumb|keys) %}
+    <li{% if isActive %} class="active"{% endif %}>
+        <a href="{{ project.getUrl(loopPage.getUri) }}">{{ loopPage.getNavName }}</a>
+        {% if loopPage.hasChildren and isActive %}
+            <ul class="nav">
+                {% import _self as nav %}
+                {% for child in project.getChildrenOf(loopPage) %}
+                    {{ nav.subTree(child, project, breadCrumb) }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endmacro subTree %}
+{% import _self as nav %}
+<!doctype html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <base href="{{ project.getBaseUrl }}">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>{{ page.getPageTitle }} | PHP Developer Day 2017 • Dresden, Germany</title>
+    <meta name="description" content="Dresden's largest PHP event takes the 3rd round">
+    <meta name="keywords" content="{{ page.getTags|join(', ') }}">
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="geo.region" content="DE-SN"/>
+    <meta name="geo.placename" content="Dresden"/>
+    <meta name="geo.position" content="51.052088;13.741672"/>
+    <meta name="ICBM" content="51.052088, 13.741672"/>
+    <meta name="twitter:site" content="@twitter_handle@">
+    <meta name="twitter:creator" content="@twitter_handle@">
+    <script type="application/ld+json">{% spaceless %}
+{
+  "@context" : "http://schema.org",
+  "@type": "Person",
+  "name": "PHP Developer Day 2017 • Dresden, Germany",
+  "image": "{{ project.getUrl(page.getImageUrl) }}",
+  "url": "{{ project.getBaseUrl }}",
+  "sameAs" : [
+      "@twitter_url@",
+      "@xing_url@",
+      "@gitter_url@",
+      "@slackteam_url@",
+      "@meetup_url@",
+      "@facebook_url@"
+    ]
+  }
+}{% endspaceless %}</script>
+    <meta property="article:author" content="@xing_url@"/>
+    <meta property="article:publisher" content="@xing_url@"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ project.getUrl('/assets/favicons/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ project.getUrl('/assets/favicons/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ project.getUrl('/assets/favicons/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ project.getUrl('/assets/favicons/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ project.getUrl('/assets/favicons/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ project.getUrl('/assets/favicons/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ project.getUrl('/assets/favicons/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ project.getUrl('/assets/favicons/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ project.getUrl('/assets/favicons/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="{{ project.getUrl('/assets/favicons/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ project.getUrl('/assets/favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ project.getUrl('/assets/favicons/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ project.getUrl('/assets/favicons/favicon-16x16.png') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ project.getUrl('/assets/favicons/ms-icon-144x144.png') }}">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="canonical" href="{{ project.getUrl(page.getUri) }}"/>
+    <meta name="referrer" content="origin"/>
+
+    <meta property="og:site_name" content="{{ project.getName }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ page.getPageTitle }} | PHP Developer Day 2017 • Dresden, Germany"/>
+    <meta property="og:description" content="{{ page.getDescription }}"/>
+    <meta property="og:url" content="{{ project.getBaseUrl }}"/>
+    <meta property="og:image" content="{{ project.getUrl(page.getImageUrl) }}"/>
+    <meta property="article:published_time" content="{{ 'now'|date('c') }}"/>
+    <meta property="article:modified_time" content="{{ 'now'|date('c') }}"/>
+    {% for tag in page.getTags %}
+        <meta property="article:tag" content="{{ tag }}"/>
+    {% endfor %}
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{ page.getPageTitle }} | PHP Developer Day 2017 • Dresden, Germany"/>
+    <meta name="twitter:description" content="{{ page.getDescription }}"/>
+    <meta name="twitter:url" content="{{ project.getUrl(page.getUri ) }}"/>
+    <meta name="twitter:image:src" content="{{ project.getUrl(page.getImageUrl) }}"/>
+
+    <meta name="generator" content="IceHawk Static Page Generator"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ project.getUrl('/assets/css/webfonts.css') }}">
+    <link rel="stylesheet" href="{{ project.getUrl('/assets/css/twemoji-awesome.css') }}">
+    <link rel="stylesheet" href="{{ project.getUrl('/assets/css/phpdd17.css') ~ '?' ~ ('now'|date('YmdHis')) }}">
+    <script src="https://use.fontawesome.com/e89ed69fdb.js" async="async"></script>
+
+    {% if page.getUri starts with '/de/' %}
+        <link rel="alternate" hreflang="en" href="{{ project.getUrl('/en/index.html') }}">
+    {% elseif page.getUri starts with '/en/' %}
+        <link rel="alternate" hreflang="de" href="{{ project.getUrl('/de/index.html') }}">
+    {% endif %}
+
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+
+<div class="page-container">
+
+    <div class="meta-bar">
+        <div class="container text-center">
+            <ul class="list-inline h4 lang-switch">
+                <li>
+                    <i class="fa fa-language"></i>
+                </li>
+                <li{% if page.getUri starts with '/de/' %} class="active"{% endif %}>
+                    <a href="{{ project.getUrl('/de/index.html') }}" title="Zur deutschen Version">DEUTSCHE WEBSITE</a>
+                </li>
+                <li>|</li>
+                <li{% if page.getUri starts with '/en/' %} class="active"{% endif %}>
+                    <a href="{{ project.getUrl('/en/index.html') }}" title="Go to english version">ENGLISH WEBSITE</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                <!-- sidebar -->
+                <nav id="sidenav">
+                    {% if page.getUri starts with '/de/' %}
+                        <a href="{{ project.getUrl('/de/index.html') }}" class="hidden-xs hidden-sm">
+                            <img src="{{ project.getUrl('/assets/images/phpdd17-logo.png') }}" id="brandimg"
+                                 class="img-responsive" alt="{{ project.getName }}">
+                        </a>
+                    {% elseif page.getUri starts with '/en/' %}
+                        <a href="{{ project.getUrl('/en/index.html') }}" class="hidden-xs hidden-sm">
+                            <img src="{{ project.getUrl('/assets/images/phpdd17-logo.png') }}" id="brandimg"
+                                 class="img-responsive" alt="{{ project.getName }}">
+                        </a>
+                    {% endif %}
+
+                    <hr class="blockspace">
+
+                    <ul class="nav">
+                        {% if page.getUri starts with '/de/' %}
+                            {# German navigation #}
+                            <li class="hidden-sm hidden-md hidden-lg">
+                                <a href="{{ project.getUrl('/de/index.html') }}" title="PHP Developer Day 2017">PHP
+                                    Developer Day 2017</a>
+                            </li>
+                            {% for loopPage in project.getPageConfigsAtLevel(20) %}
+
+                                {{ nav.subTree(loopPage, project, breadCrumb) }}
+
+                            {% endfor %}
+                        {% elseif page.getUri starts with '/en/' %}
+                            {# English navigation #}
+                            <li class="hidden-sm hidden-md hidden-lg">
+                                <a href="{{ project.getUrl('/en/index.html') }}" title="PHP Developer Day 2017">PHP
+                                    Developer Day 2017</a>
+                            </li>
+                            {% for loopPage in project.getPageConfigsAtLevel(30) %}
+
+                                {{ nav.subTree(loopPage, project, breadCrumb) }}
+
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+
+                    <hr class="blockspace">
+
+                    <div id="socialmedia">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a href="@twitter_url@" target="_blank"
+                                   title="Follow PHP Developer Day 2017 on twitter">
+                                    <i class="fa fa-twitter"></i> <span class="text-twitter">@twitter_handle@</span>
+                                </a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="https://twitter.com/hashtag/phpdd17" target="_blank"
+                                   title="Hashtag #PHPDD17 on twitter">
+                                    <i class="fa fa-twitter"></i> <span class="text-twitter">#PHPDD17</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+
+            <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9" id="mainstage">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1 class="text-right page-headline">
+                            <a href="javascript:void(0);" data-toggle="offcanvas" data-target="#sidebar"
+                               class="visible-xs hidden-sm hidden-md hidden-lg pull-left">
+                                <i class="fa fa-bars"></i>
+                            </a>
+
+                            {% if page.getUri starts with '/de/' %}
+                                <small class="text-muted">22. September 2017 |</small>
+                            {% elseif page.getUri starts with '/en/' %}
+                                <small class="text-muted">September 22
+                                    <small>nd</small>
+                                    2017 |
+                                </small>
+                            {% endif %}
+                            {{ page.getPageTitle }}
+                        </h1>
+                    </div>
+                </div>
+
+                <ul class="breadcrumb hidden-xs hidden-sm">
+                    {% for uri, title in breadCrumb %}
+                        {% if not loop.last %}
+                            <li>
+                                <a href="{{ project.getUrl(uri) }}">{{ title }}</a>
+                            </li>
+                        {% else %}
+                            <li class="active">{{ title }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+
+                {% block content %}{% endblock %}
+
+            </div>
+        </div>
+
+
+    </div><!--/.container-->
+
+    <div class="container" id="footer">
+
+        <hr class="blockspace">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Community PHPartners</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-2 col-md-6 col-lg-3">
+                <a href="http://phpug-dresden.org" title="PHP USERGROUP DRESDEN e.V.">
+                    <img src="{{ project.getUrl('/assets/images/phpartners/phpugdd-logo.png') }}" class="img-responsive"
+                         alt="PHP USERGROUP DRESDEN Logo" style="max-height: 130px;">
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-6 col-lg-3">
+                <a href="https://www.softwerkskammer.org/groups/sachsen" target="_blank"
+                   title="Softwerkskammer Sachsen">
+                    <img src="{{ project.getUrl('/assets/images/phpartners/softwerkskammer.png') }}" alt="Logo Softwerkskammer"
+                         class="img-responsive" style="max-height: 130px;">
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-6 col-lg-3">
+                <a href="https://dresden-code-of-conduct.org" target="_blank"
+                   title="Dresden Community - Code of Conduct">
+                    <img src="{{ project.getUrl('/assets/images/phpartners/dresden-community-logo.png') }}" alt="Logo Dresden Community"
+                         class="img-responsive" style="max-height: 130px;">
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-2 col-md-6 col-lg-3">
+                <a href="https://2017.phpce.eu" target="_blank" title="php Central Europe 2017">
+                    <img src="{{ project.getUrl('/assets/images/phpartners/phpce-logo.png') }}"
+                         alt="Logo phpCE - php Central Europe" class="img-responsive" style="max-height: 130px;">
+                </a>
+            </div>
+        </div>
+
+        <hr class="blockspace">
+
+        <div class="row blockspace">
+            <div class="col-xs-12 text-center small text-muted">
+                @website_version@
+                &middot;
+                &copy; {{ 'now'|date('Y') }} PHP USERGROUP DRESDEN e.V.
+                &middot;
+                {% if page.getUri starts with '/de/' %}
+                    <a href="{{ project.getUrl('/de/impressum.html') }}">Impressum</a>
+                    &middot;
+                    <a href="{{ project.getUrl('/de/datenschutz.html') }}">Datenschutz</a>
+                {% elseif page.getUri starts with '/en/' %}
+                    <a href="{{ project.getUrl('/en/imprint.html') }}">Imprint</a>
+                    &middot;
+                    <a href="{{ project.getUrl('/en/privacy.html') }}">Privacy</a>
+                {% endif %}
+                &middot;
+                Letzte Änderung: {{ 'now'|date('d.m.Y H:i') }}
+            </div>
+        </div>
+
+    </div><!--/.container-->
+
+</div><!--/.page-container-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ project.getUrl('/assets/js/main.js') ~ '?' ~ ('now'|date('YmdHis')) }}"></script>
+{% block javascripts %}{% endblock %}
+</body>
+</html>
