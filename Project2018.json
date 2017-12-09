@@ -47,6 +47,8 @@
       "template": "Templates/Page.twig",
       "contentFile": "Home.md",
       "children": [
+        "/impressions.html",
+        "/become-sponsor.html",
         "/privacy.html",
         "/imprint.html",
         "/code-of-conduct.html"
@@ -84,6 +86,29 @@
       "renderer": "twig",
       "template": "Templates/Page.twig",
       "contentFile": "Impressions.md",
+      "children": []
+    },
+    "/become-sponsor.html": {
+      "pageLevel": 2,
+      "navName": "Become sponsor",
+      "pageTitle": "Become sponsor",
+      "description": "Become sponsor of the PHP Developer Day 2018",
+      "language": "en",
+      "imageUrl": "/assets/images/logo.png",
+      "tags": [
+        "Sponsor",
+        "Sponsorship",
+        "Platin",
+        "Gold",
+        "Silver",
+        "Bronze",
+        "Dresden",
+        "Community"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Sponsorships.md",
       "children": []
     },
     "/imprint.html": {

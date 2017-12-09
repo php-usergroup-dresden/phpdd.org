@@ -1,309 +1,320 @@
 * html, body {
-	font-family: "robotoregular", Helvetica, Arial, sans-serif;
-	color: #6c6c6c;
-	line-height: 1.5em;
+    font-family: "robotoregular", Helvetica, Arial, sans-serif;
+    color: #6c6c6c;
+    line-height: 1.5em;
 }
 
 h1, h2, h3, h4, h5, h6, b, strong {
-	color: #333333;
+    color: #333333;
 }
 
 a {
-	color: #a7231d;
+    color: #a7231d;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #bf2e26;
-	text-decoration: none;
+    color: #bf2e26;
+    text-decoration: none;
 }
 
 .fa.fa-meetup {
-	color: #da3846;
+    color: #da3846;
 }
 
 .fa.fa-github {
-	color: #505050;
+    color: #505050;
 }
 
 .fa.fa-twitter {
-	color: #4a9ee9;
+    color: #4a9ee9;
 }
 
 .fa.fa-facebook {
-	color: #415993;
+    color: #415993;
 }
 
 .fa.fa-xing {
-	color: #2a6366;
+    color: #2a6366;
 }
 
 .fa.fa-github-square {
-	color: #ce2d55;
+    color: #ce2d55;
 }
 
 .fa.fa-slack {
-	color: #e1ab3b;
+    color: #e1ab3b;
 }
 
 .fa.fa-youtube {
-	color: #000000;
-}
-
-.meta-bar {
-	background-color: #000000;
-	height: 35px;
+    color: #000000;
 }
 
 #brandimg {
-	margin: 0 auto;
+    margin: 0 auto;
+}
+
+.page-container {
+    border-left: 10px solid #4b6597;
+    border-right: 10px solid #ef8332;
 }
 
 .blockspace {
-	margin: 25px 0;
+    margin: 25px 0;
 }
 
 .speaker {
-	margin-top: 15px;
+    margin-top: 15px;
 }
 
 .speaker > img {
-	margin: 0 auto;
+    margin: 0 auto;
 }
 
 .orgamember {
-	margin: 15px 0;
+    margin: 15px 0;
 }
 
 .orgamember h4 {
-	font-size: larger;
+    font-size: larger;
 }
 
 .sponsor {
-	margin: 15px 0;
+    margin: 15px 0;
 }
 
 .coop {
-	margin: 15px 0;
+    margin: 15px 0;
 }
 
-.img-speaker {
-	display: inline-block;
-	margin-top: 15px;
+.img-speaker,
+.img-tutorial,
+.img-sponsor {
+    display: inline-block;
+    margin-top: 15px;
+    border-bottom: 5px solid #ffffff;
+}
+
+.img-speaker:hover,
+.img-tutorial:hover,
+.img-sponsor:hover {
+    display: inline-block;
+    margin-top: 15px;
+    border-bottom: 5px solid #4b6597;
 }
 
 .img-phpartner {
-	display: inline-block;
-	margin-top: 15px;
+    display: inline-block;
+    margin-top: 15px;
 }
 
 .img-inline {
-	display: inline-block;
-	margin: 5px;
+    display: inline-block;
+    margin: 5px;
 }
 
 #sidebar {
-	height: 100%;
-	padding-right: 0;
-	padding-top: 30px;
+    height: 100%;
+    padding-right: 0;
+    padding-top: 30px;
 }
 
 #sidebar nav {
-	margin: 0 10px;
+    margin: 0 10px;
 }
 
 #sidebar nav > li > ul {
-	margin: 5px 0;
+    margin: 5px 0;
 }
 
 #sidenav .nav > li > a {
-	text-transform: uppercase;
-	font-size: larger;
+    text-transform: uppercase;
+    font-size: larger;
 }
 
 #sidenav .nav > li.active > a {
-	background-color: #f6f6f6;
+    background-color: #f6f6f6;
 }
 
 #sidenav .nav > li > ul > li {
-	font-size: smaller;
-	padding-left: 15px;
-	border-top: 1px solid #eeeeee;
+    font-size: smaller;
+    padding-left: 15px;
+    border-top: 1px solid #eeeeee;
 }
 
 #socialmedia a {
-	font-size: x-large;
-	margin: 15px 0;
-	display: inline-block;
+    font-size: x-large;
+    margin: 15px 0;
+    display: inline-block;
 }
 
 #swk,
 #phpugdd {
-	padding: 10px 40px 10px 0;
+    padding: 10px 40px 10px 0;
 }
 
 #calendar {
-	width: 100%;
-	margin: 20px auto 0 auto;
-	min-height: 600px;
+    width: 100%;
+    margin: 20px auto 0 auto;
+    min-height: 600px;
 
 }
 
 #calendar .fc-event,
 #calendar .fc-event-dot {
-	background-color: #ff8c00;
-	border-color: #f47c20;
+    background-color: #ff8c00;
+    border-color: #f47c20;
 }
 
 h1.page-headline {
-	line-height: 1.5em;
-	text-transform: uppercase;
+    line-height: 1.5em;
+    text-transform: uppercase;
 }
 
 .text-twitter {
-	color: #4a9ee9;
-	font-weight: bold;
+    color: #4a9ee9;
+    font-weight: bold;
 }
 
 .lang-switch {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 .lang-switch li a {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 .lang-switch li.active a {
-	font-weight: bold;
-	color: #808080;
+    font-weight: bold;
+    color: #808080;
 }
 
 .intro-speaker {
-	background-color: #eaeaea;
-	padding: 5px;
-	border-radius: 5px;
-	margin: 15px 0;
+    background-color: #eaeaea;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 15px 0;
 }
 
 .intro-speaker > p {
-	display: block;
-	text-align: center;
-	font-weight: bold;
-	padding-top: 10px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
 }
 
 /* Countdown clock */
 /* https://codepen.io/SitePoint/pen/MwNPVq/ */
 #clockdiv {
-	font-family: "robotoregular", Helvetica, Arial, sans-serif;
-	color: #ffffff;
-	display: block;
-	font-weight: 100;
-	text-align: center;
-	margin: 25px 0 0 0;
+    font-family: "robotoregular", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    display: block;
+    font-weight: 100;
+    text-align: center;
+    margin: 25px 0 0 0;
 }
 
 #clockdiv > div {
-	color: #808080;
-	padding: 3px;
-	border-radius: 3px;
-	background: #f5f5f5;
-	display: inline-block;
-	font-size: 10px;
-	font-weight: 600;
-	width: 23%;
+    color: #808080;
+    padding: 3px;
+    border-radius: 3px;
+    background: #f5f5f5;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    width: 23%;
 }
 
 #clockdiv div > span {
-	color: #000000;
-	padding: 8px;
-	border-radius: 3px;
-	background: #ffffff;
-	display: inline-block;
-	width: 97%;
-	font-size: 16px;
+    color: #000000;
+    padding: 8px;
+    border-radius: 3px;
+    background: #ffffff;
+    display: inline-block;
+    width: 97%;
+    font-size: 16px;
 }
 
 .smalltext {
-	padding-top: 5px;
-	font-size: 12px;
+    padding-top: 5px;
+    font-size: 12px;
 }
 
 .breadcrumb {
-	margin-top: 17px;
+    margin-top: 17px;
 }
 
 .teaser {
-	padding: 15px;
-	background-color: #a7231d;
-	border-radius: 5px;
-	color: #ffada5;
+    padding: 15px;
+    background-color: #a7231d;
+    border-radius: 5px;
+    color: #ffada5;
 }
 
 .teaser h3 {
-	color: #f6f6f6;
+    color: #f6f6f6;
 }
 
 /* collapsed sidebar styles */
 @media screen and (max-width: 767px) {
 
-	#mainstage > h1 {
-		font-size: x-large;
-	}
+    #mainstage > h1 {
+        font-size: x-large;
+    }
 
-	.row-offcanvas {
-		position: relative;
-		-webkit-transition: all 0.25s ease-out;
-		-moz-transition: all 0.25s ease-out;
-		transition: all 0.25s ease-out;
-	}
+    .row-offcanvas {
+        position: relative;
+        -webkit-transition: all 0.25s ease-out;
+        -moz-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+    }
 
-	.row-offcanvas-right .sidebar-offcanvas {
-		right: -50.0%;
-	}
+    .row-offcanvas-right .sidebar-offcanvas {
+        right: -50.0%;
+    }
 
-	.row-offcanvas-left .sidebar-offcanvas {
-		left: -50.0%;
-	}
+    .row-offcanvas-left .sidebar-offcanvas {
+        left: -50.0%;
+    }
 
-	#sidenav .nav > li > a {
-		font-size: small;
-	}
+    #sidenav .nav > li > a {
+        font-size: small;
+    }
 
-	.row-offcanvas-right.active {
-		right: 50.0%;
-	}
+    .row-offcanvas-right.active {
+        right: 50.0%;
+    }
 
-	.row-offcanvas-left.active {
-		left: 50.0%;
-	}
+    .row-offcanvas-left.active {
+        left: 50.0%;
+    }
 
-	.sidebar-offcanvas {
-		position: absolute;
-		top: 0;
-		width: 50.0%;
-	}
+    .sidebar-offcanvas {
+        position: absolute;
+        top: 0;
+        width: 50.0%;
+    }
 
-	.btn {
-		font-size: small;
-	}
+    .btn {
+        font-size: small;
+    }
 
-	#sidenav > .btn.blockspace {
-		margin-top: 0;
-	}
+    #sidenav > .btn.blockspace {
+        margin-top: 0;
+    }
 
-	.lang-switch {
-		font-size: smaller;
-	}
+    .lang-switch {
+        font-size: smaller;
+    }
 
-	#socialmedia .text-twitter {
-		font-size: medium;
-	}
+    #socialmedia .text-twitter {
+        font-size: medium;
+    }
 
-	#swk,
-	#phpugdd {
-		padding: 10px 0;
-		text-align: center;
-	}
+    #swk,
+    #phpugdd {
+        padding: 10px 0;
+        text-align: center;
+    }
 }

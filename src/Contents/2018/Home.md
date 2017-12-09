@@ -3,7 +3,7 @@
 We want to push things forward in 2018, so we're expanding our one day event with a preceding tutorial day. 
 Two days of knowledge exchange and community around the PHP ecosystem. 
 
-[Checkout our last PHP Developer Day in 2017.](http://phpug-dresden.org/en/phpdd17.html)
+[Checkout our last PHP Developer Day in 2017.](https://2017.phpdd.org)
 
 <hr class="blockspace">
 
@@ -26,20 +26,45 @@ Two days of knowledge exchange and community around the PHP ecosystem.
 
 <hr class="blockspace">
 
-### OUR SPEAKERS
+### OUR TUTORIALS
 
 <div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <img src="https://placehold.it/439x280/f3f3f3/000000/?text=TUTORIAL 1" class="img-responsive img-tutorial">
     </div>
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <img src="https://placehold.it/439x280/f3f3f3/000000/?text=TUTORIAL 2" class="img-responsive img-tutorial">
     </div>
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+</div>
+
+<br>
+<p>
+    You want to give a tutorial/workshop at PHP Developer Day?
+    <a href="@cfp_url@" target="_blank" title="Submit your talk(s)">
+        Submit your topic!
+    </a>
+</p>
+
+### OUR TALKS
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
     </div>
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
     </div>
 </div>
 
@@ -56,16 +81,115 @@ Two days of knowledge exchange and community around the PHP ecosystem.
 ### OUR SPONSORS
 
 <div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <a href="@baseUrl@/become-sponsor.html#platin" title="Become a PLATIN sponsor">
+            <img src="https://placehold.it/439x270/f3f3f3/000000/?text=PLATIN" class="img-responsive img-sponsor">
+        </a>
     </div>
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <a href="@baseUrl@/become-sponsor.html#platin" title="Become a PLATIN sponsor">
+            <img src="https://placehold.it/439x270/f3f3f3/000000/?text=PLATIN" class="img-responsive img-sponsor">
+        </a>
     </div>
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <a href="@baseUrl@/become-sponsor.html#gold" title="Become a GOLD sponsor">
+            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=GOLD" class="img-responsive img-sponsor">
+        </a>
     </div>
-    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-        <img src="https://placehold.it/200x250/f3f3f3/000000/?text=COMPANY" class="img-responsive img-speaker">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <a href="@baseUrl@/become-sponsor.html#gold" title="Become a GOLD sponsor">
+            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=GOLD" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <a href="@baseUrl@/become-sponsor.html#gold" title="Become a GOLD sponsor">
+            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=GOLD" class="img-responsive img-sponsor">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <a href="@baseUrl@/become-sponsor.html#silver" title="Become a SILVER sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=SILVER" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <a href="@baseUrl@/become-sponsor.html#silver" title="Become a SILVER sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=SILVER" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <a href="@baseUrl@/become-sponsor.html#silver" title="Become a SILVER sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=SILVER" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <a href="@baseUrl@/become-sponsor.html#silver" title="Become a SILVER sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=SILVER" class="img-responsive img-sponsor">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
+        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
+            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        </a>
     </div>
 </div>
