@@ -6,6 +6,7 @@
 namespace PHPUGDD\PHPDD\Website\Interfaces;
 
 use PHPUGDD\PHPDD\Website\Infrastructure\ErrorHandling\SentryClient;
+use PHPUGDD\PHPDD\Website\Infrastructure\Session;
 
 /**
  * Interface ProvidesInfrastructure
@@ -14,4 +15,6 @@ use PHPUGDD\PHPDD\Website\Infrastructure\ErrorHandling\SentryClient;
 interface ProvidesInfrastructure
 {
 	public function getErrorHandler() : SentryClient;
+
+	public function getSession() : Session;
 }
