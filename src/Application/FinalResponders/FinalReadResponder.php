@@ -6,6 +6,7 @@
 namespace PHPUGDD\PHPDD\Website\Application\FinalResponders;
 
 use IceHawk\IceHawk\Constants\HttpCode;
+use IceHawk\IceHawk\Exceptions\UnresolvedRequest;
 use IceHawk\IceHawk\Interfaces\ProvidesReadRequestData;
 use IceHawk\IceHawk\Interfaces\RespondsFinallyToReadRequest;
 use PHPUGDD\PHPDD\Website\Traits\InfrastructureInjecting;
@@ -20,10 +21,23 @@ final class FinalReadResponder implements RespondsFinallyToReadRequest
 
 	public function handleUncaughtException( \Throwable $throwable, ProvidesReadRequestData $request ) : void
 	{
-		$this->getEnv()->getErrorHandler()->captureException( $throwable );
+		try
+		{
+			throw $throwable;
+		}
+		catch ( UnresolvedRequest $e )
+		{
+			header( 'Content-Type: text/html; charset=utf-8', true, HttpCode::NOT_FOUND );
+			readfile( __DIR__ . '/../../../public/2018/404.html' );
+			flush();
+		}
+		catch ( \Throwable $e )
+		{
+			$this->getEnv()->getErrorHandler()->captureException( $e );
 
-		header( 'Content-Type: text/html; charset=utf-8', true, HttpCode::INTERNAL_SERVER_ERROR );
-		readfile( __DIR__ . '/../../../public/2018/500.html' );
-		flush();
+			header( 'Content-Type: text/html; charset=utf-8', true, HttpCode::INTERNAL_SERVER_ERROR );
+			readfile( __DIR__ . '/../../../public/2018/500.html' );
+			flush();
+		}
 	}
 }
