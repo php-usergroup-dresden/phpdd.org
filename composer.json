@@ -11,7 +11,13 @@
 		}
 	],
 	"require": {
-		"php": ">=7.1"
+		"php": ">=7.2",
+		"moneyphp/money": "~3.0.9",
+		"icehawk/icehawk": "~2.2.0",
+		"icehawk/session-forms-bridge": "~1.0.0",
+		"twig/twig": "~2.4.4",
+		"sentry/sentry": "~1.8.2",
+		"roave/security-advisories": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
@@ -28,7 +34,7 @@
 	"extra": {
 		"tools": {
 			"spg": {
-				"url": "https://github.com/icehawk/static-page-generator/releases/download/v1.3.1/static-page-generator.phar",
+				"url": "https://github.com/icehawk/static-page-generator/releases/download/v1.4.0/static-page-generator.phar",
 				"only-dev": true
 			}
 		}

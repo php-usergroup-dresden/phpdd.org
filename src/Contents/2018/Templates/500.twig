@@ -1,0 +1,22 @@
+{% extends "Templates/Theme.twig" %}
+{% block content %}
+
+    <div class="text-center">
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+        <h2>Woops! - 500 Internal Server Error</h2>
+
+        <p>&nbsp;</p>
+        <p class="text-center">
+            An error occurred during your request. Please try again later.
+        </p>
+        <p>&nbsp;</p>
+        <h4 class="text-center">
+            <a href="{{ project.getUrl('/') }}" title="Back to homepage">Back to homepage</a>
+        </h4>
+        <p>&nbsp;</p>
+    </div>
+
+{% endblock %}
