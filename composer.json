@@ -36,6 +36,14 @@
 			"spg": {
 				"url": "https://github.com/icehawk/static-page-generator/releases/download/v1.4.0/static-page-generator.phar",
 				"only-dev": true
+			},
+			"phpunit": {
+				"url": "https://phar.phpunit.de/phpunit-6.5.5.phar",
+				"only-dev": true
+			},
+			"coveralls": {
+				"url": "https://github.com/php-coveralls/php-coveralls/releases/download/v2.0.0/php-coveralls.phar",
+				"only-dev": true
 			}
 		}
 	}

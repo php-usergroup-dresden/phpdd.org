@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9b1dd64b5fb8229f4826423691a1103",
+    "content-hash": "6349c74361cb4ec9cb89d3667664889d",
     "packages": [
         {
             "name": "icehawk/forms",
