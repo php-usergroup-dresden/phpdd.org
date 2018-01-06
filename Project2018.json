@@ -68,6 +68,20 @@
       "contentFile": "",
       "children": []
     },
+    "/500.html": {
+      "pageLevel": 1,
+      "navName": "Not Found",
+      "pageTitle": "404 - Not Found",
+      "description": "The page you requested was not found.",
+      "language": "en",
+      "imageUrl": "/assets/images/logo.png",
+      "tags": [],
+      "contentType": "html",
+      "renderer": "twig",
+      "template": "Templates/500.twig",
+      "contentFile": "",
+      "children": []
+    },
     "/impressions.html": {
       "pageLevel": 2,
       "navName": "Impressions",
