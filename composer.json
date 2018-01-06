@@ -1,55 +1,56 @@
 {
-	"name": "php-usergroup-dresden/phpdd-website",
-	"description": "Website of PHP Developer Day in Dresden, Germany",
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Holger Woltersdorf",
-			"email": "hw@hollo.me"
-		}
-	],
-	"require": {
-		"php": ">=7.2",
-		"moneyphp/money": "~3.0.9",
-		"icehawk/icehawk": "~2.2.0",
-		"icehawk/session-forms-bridge": "~1.0.0",
-		"twig/twig": "~2.4.4",
-		"sentry/sentry": "~1.8.2",
-		"roave/security-advisories": "dev-master"
-	},
-	"autoload": {
-		"psr-4": {
-			"PHPUGDD\\PHPDD\\Website\\": "src/"
-		}
-	},
-	"autoload-dev": {
-		"psr-4": {
-			"PHPUGDD\\PHPDD\\Website\\Tests\\": "tests/"
-		}
-	},
-	"require-dev": {
-		"tm/tooly-composer-script": "^1.0"
-	},
-	"scripts": {
-		"post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
-		"post-update-cmd": "Tooly\\ScriptHandler::installPharTools"
-	},
-	"extra": {
-		"tools": {
-			"spg": {
-				"url": "https://github.com/icehawk/static-page-generator/releases/download/v1.4.0/static-page-generator.phar",
-				"only-dev": true
-			},
-			"phpunit": {
-				"url": "https://phar.phpunit.de/phpunit-6.5.5.phar",
-				"only-dev": true
-			},
-			"coveralls": {
-				"url": "https://github.com/php-coveralls/php-coveralls/releases/download/v2.0.0/php-coveralls.phar",
-				"only-dev": true
-			}
-		}
-	}
+  "name": "php-usergroup-dresden/phpdd-website",
+  "description": "Website of PHP Developer Day in Dresden, Germany",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Holger Woltersdorf",
+      "email": "hw@hollo.me"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "moneyphp/money": "~3.0.9",
+    "icehawk/icehawk": "~2.2.0",
+    "icehawk/session-forms-bridge": "~1.0.0",
+    "twig/twig": "~2.4.4",
+    "sentry/sentry": "~1.8.2",
+    "fortuneglobe/types": "~1.0.0",
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "PHPUGDD\\PHPDD\\Website\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PHPUGDD\\PHPDD\\Website\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "tm/tooly-composer-script": "^1.0"
+  },
+  "scripts": {
+    "post-install-cmd": "Tooly\\ScriptHandler::installPharTools",
+    "post-update-cmd": "Tooly\\ScriptHandler::installPharTools"
+  },
+  "extra": {
+    "tools": {
+      "spg": {
+        "url": "https://github.com/icehawk/static-page-generator/releases/download/v1.4.0/static-page-generator.phar",
+        "only-dev": true
+      },
+      "phpunit": {
+        "url": "https://phar.phpunit.de/phpunit-6.5.5.phar",
+        "only-dev": true
+      },
+      "coveralls": {
+        "url": "https://github.com/php-coveralls/php-coveralls/releases/download/v2.0.0/php-coveralls.phar",
+        "only-dev": true
+      }
+    }
+  }
 }

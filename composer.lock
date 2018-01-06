@@ -4,8 +4,64 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6349c74361cb4ec9cb89d3667664889d",
+    "content-hash": "10c27b7e10a004d1260a7e71ed65cf6b",
     "packages": [
+        {
+            "name": "fortuneglobe/types",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fortuneglobe/types.git",
+                "reference": "6ef0e25114d6d7b561bb64c4c779da0198ed68c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fortuneglobe/types/zipball/6ef0e25114d6d7b561bb64c4c779da0198ed68c9",
+                "reference": "6ef0e25114d6d7b561bb64c4c779da0198ed68c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "tm/tooly-composer-script": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "tools": {
+                    "phpunit": {
+                        "url": "https://phar.phpunit.de/phpunit-6.4.3.phar",
+                        "only-dev": true
+                    },
+                    "phpmetrics": {
+                        "url": "https://github.com/phpmetrics/PhpMetrics/releases/download/v2.3.2/phpmetrics.phar",
+                        "only-dev": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fortuneglobe\\Types\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Holger Woltersdorf"
+                },
+                {
+                    "name": "Christian Ramelow"
+                },
+                {
+                    "name": "Benjamin Bruska"
+                }
+            ],
+            "description": "Basic type classes wrapping scalar values to create types in applications.",
+            "time": "2017-11-13T22:30:20+00:00"
+        },
         {
             "name": "icehawk/forms",
             "version": "v1.0.0",
