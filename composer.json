@@ -1,6 +1,6 @@
 {
 	"name": "php-usergroup-dresden/phpdd-website",
-	"description": "Website of PHP Developer Day in Dresden Germany",
+	"description": "Website of PHP Developer Day in Dresden, Germany",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"license": "MIT",
@@ -22,6 +22,11 @@
 	"autoload": {
 		"psr-4": {
 			"PHPUGDD\\PHPDD\\Website\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"PHPUGDD\\PHPDD\\Website\\Tests\\": "tests/"
 		}
 	},
 	"require-dev": {

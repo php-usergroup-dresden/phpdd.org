@@ -1,12 +1,15 @@
 language: php
+
 php:
   - 7.1
   - 7.2
+
 branches:
   only:
   - master
   - development
   - "/^issue\\/.+$/"
+
 before_script:
 - composer self-update
 - mkdir -p vendor/bin
@@ -14,9 +17,11 @@ before_script:
 - composer install -o --prefer-dist --no-interaction
 - nohup php -S 127.0.0.1:8017 -t ./public/2017/ > build/logs/webserver.2017.log 2>&1 &
 - nohup php -S 127.0.0.1:8018 -t ./public/2018/ > build/logs/webserver.2018.log 2>&1 &
+
 script:
 - php vendor/bin/spg.phar check:links -g -b "http://127.0.0.1:8017" ./Project2017.json
 - php vendor/bin/spg.phar check:links -g -b "http://127.0.0.1:8018" ./Project2018.json
 - php vendor/bin/phpunit.phar -c build/
+
 after_success:
  - travis_retry php vendor/bin/coveralls.phar -v --exclude-no-stmt
