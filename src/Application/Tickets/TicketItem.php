@@ -6,7 +6,6 @@
 namespace PHPUGDD\PHPDD\Website\Application\Tickets;
 
 use Fortuneglobe\Types\Exceptions\InvalidArgumentException;
-use Money\Currency;
 use Money\Money;
 use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\DiscountExceededTicketPriceException;
 use PHPUGDD\PHPDD\Website\Application\Types\AttendeeName;
@@ -14,6 +13,7 @@ use PHPUGDD\PHPDD\Website\Application\Types\DiscountCode;
 use PHPUGDD\PHPDD\Website\Application\Types\DiscountDescription;
 use PHPUGDD\PHPDD\Website\Application\Types\DiscountName;
 use PHPUGDD\PHPDD\Website\Application\Types\DiscountPrice;
+use PHPUGDD\PHPDD\Website\Traits\MoneyProviding;
 
 /**
  * Class TicketItem
@@ -21,6 +21,8 @@ use PHPUGDD\PHPDD\Website\Application\Types\DiscountPrice;
  */
 final class TicketItem
 {
+	use MoneyProviding;
+
 	/** @var Ticket */
 	private $ticket;
 
@@ -45,7 +47,7 @@ final class TicketItem
 			new DiscountName( '' ),
 			new DiscountCode( '0OOOOOO0' ),
 			new DiscountDescription( '' ),
-			new DiscountPrice( new Money( 0, new Currency( 'EUR' ) ) )
+			new DiscountPrice( $this->getMoney( 0 ) )
 		);
 	}
 

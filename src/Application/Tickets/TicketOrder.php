@@ -5,8 +5,6 @@
 
 namespace PHPUGDD\PHPDD\Website\Application\Tickets;
 
-use Money\Currency;
-use Money\Money;
 use PHPUGDD\PHPDD\Website\Application\Constants\CountryCodes;
 use PHPUGDD\PHPDD\Website\Application\Constants\TicketTypes;
 use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\AllowedTicketCountExceededException;
@@ -28,6 +26,7 @@ use PHPUGDD\PHPDD\Website\Application\Types\TicketOrderPaymentTotal;
 use PHPUGDD\PHPDD\Website\Application\Types\TicketOrderTotal;
 use PHPUGDD\PHPDD\Website\Application\Types\TicketType;
 use PHPUGDD\PHPDD\Website\Application\Types\ZipCode;
+use PHPUGDD\PHPDD\Website\Traits\MoneyProviding;
 
 /**
  * Class TicketOrder
@@ -35,6 +34,8 @@ use PHPUGDD\PHPDD\Website\Application\Types\ZipCode;
  */
 final class TicketOrder implements ProvidesTicketOrderInformation
 {
+	use MoneyProviding;
+
 	private const WORKSHOP_TICKETS_MAX               = 10;
 
 	private const WORKSHOP_SLOT_TICKETS_PER_ATTENDEE = 1;
@@ -83,7 +84,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 			new City( '' ),
 			new CountryCode( CountryCodes::DE_SHORT )
 		);
-		$this->diversityDonation = new DiversityDonation( new Money( 0, new Currency( 'EUR' ) ) );
+		$this->diversityDonation = new DiversityDonation( $this->getMoney( 0 ) );
 	}
 
 	/**
@@ -202,7 +203,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	 */
 	public function getOrderTotal() : TicketOrderTotal
 	{
-		$money = new Money( 0, new Currency( 'EUR' ) );
+		$money = $this->getMoney( 0 );
 
 		foreach ( $this->ticketItems as $ticketItem )
 		{
@@ -218,7 +219,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	 */
 	public function getDiscountTotal() : TicketOrderDiscountTotal
 	{
-		$money = new Money( 0, new Currency( 'EUR' ) );
+		$money = $this->getMoney( 0 );
 
 		foreach ( $this->ticketItems as $ticketItem )
 		{
