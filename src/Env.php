@@ -11,6 +11,8 @@ use Money\MoneyFormatter;
 use PHPUGDD\PHPDD\Website\Infrastructure\Configs\SentryConfig;
 use PHPUGDD\PHPDD\Website\Infrastructure\Configs\TwigConfig;
 use PHPUGDD\PHPDD\Website\Infrastructure\ErrorHandling\SentryClient;
+use PHPUGDD\PHPDD\Website\Infrastructure\Rendering\Filters\DateFormatFilter;
+use PHPUGDD\PHPDD\Website\Infrastructure\Rendering\Filters\MoneyFormatFilter;
 use PHPUGDD\PHPDD\Website\Infrastructure\Rendering\Twig;
 use PHPUGDD\PHPDD\Website\Infrastructure\Session;
 use PHPUGDD\PHPDD\Website\Interfaces\ProvidesInfrastructure;
@@ -100,9 +102,13 @@ final class Env extends AbstractObjectPool implements ProvidesInfrastructure
 				$twigConfig = new TwigConfig();
 				$twig       = new Twig( $twigConfig );
 
-				$twig->addFilter( new \Twig_Filter( 'formatDate', [$this->getDateFormatter(), 'formatDateValue'] ) );
-				$twig->addFilter( new \Twig_Filter( 'formatDateTime', [$this->getDateTimeFormatter(), 'formatDateValue'] ) );
-				$twig->addFilter( new \Twig_Filter( 'formatMoney', [$this->getMoneyFormatter(), 'formatMoneyValue'] ) );
+				$dateFormatter     = new DateFormatFilter( $this->getDateFormatter() );
+				$dateTimeFormatter = new DateFormatFilter( $this->getDateTimeFormatter() );
+				$moneyFormatter    = new MoneyFormatFilter( $this->getMoneyFormatter() );
+
+				$twig->addFilter( new \Twig_Filter( 'formatDate', [$dateFormatter, 'formatDateValue'] ) );
+				$twig->addFilter( new \Twig_Filter( 'formatDateTime', [$dateTimeFormatter, 'formatDateValue'] ) );
+				$twig->addFilter( new \Twig_Filter( 'formatMoney', [$moneyFormatter, 'formatMoneyValue'] ) );
 
 				return $twig;
 			}
