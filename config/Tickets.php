@@ -1,0 +1,58 @@
+<?php declare(strict_types=1);
+
+return [
+	'Workshop Ticket Slot A1'      => [
+		'description' => 'Workshop 1 from 09:00am to 01:30pm on September 21st 2018',
+		'price'       => 25900,
+		'seats'       => 25,
+		'type'        => \PHPUGDD\PHPDD\Website\Application\Constants\TicketTypes::WORKSHOP_SLOT_A,
+		'validFrom'   => '2018-01-01 00:00:00',
+		'validTo'     => '2018-09-15 23:59:59',
+		'image'       => '/assets/images/tickets/workshop.png',
+	],
+	'Workshop Ticket Slot A2'      => [
+		'description' => 'Workshop 2 from 09:00am to 01:30pm on September 21st 2018',
+		'price'       => 25900,
+		'seats'       => 25,
+		'type'        => \PHPUGDD\PHPDD\Website\Application\Constants\TicketTypes::WORKSHOP_SLOT_A,
+		'validFrom'   => '2018-01-01 00:00:00',
+		'validTo'     => '2018-09-15 23:59:59',
+		'image'       => '/assets/images/tickets/workshop.png',
+	],
+	'Workshop Ticket Slot B1'      => [
+		'description' => 'Workshop 3 from 02:00pm to 06:30pm on September 21st 2018',
+		'price'       => 25900,
+		'seats'       => 25,
+		'type'        => \PHPUGDD\PHPDD\Website\Application\Constants\TicketTypes::WORKSHOP_SLOT_B,
+		'validFrom'   => '2018-01-01 00:00:00',
+		'validTo'     => '2018-09-15 23:59:59',
+		'image'       => '/assets/images/tickets/workshop.png',
+	],
+	'Workshop Ticket Slot B2'      => [
+		'description' => 'Workshop 4 from 02:00pm to 06:30pm on September 21st 2018',
+		'price'       => 25900,
+		'seats'       => 25,
+		'type'        => \PHPUGDD\PHPDD\Website\Application\Constants\TicketTypes::WORKSHOP_SLOT_B,
+		'validFrom'   => '2018-01-01 00:00:00',
+		'validTo'     => '2018-09-15 23:59:59',
+		'image'       => '/assets/images/tickets/workshop.png',
+	],
+	'Early Bird Conference Ticket' => [
+		'description' => 'Grants access to all conference session on September 22nd 2018.',
+		'price'       => 5900,
+		'seats'       => 50,
+		'type'        => \PHPUGDD\PHPDD\Website\Application\Constants\TicketTypes::CONFERENCE,
+		'validFrom'   => '2018-01-01 00:00:00',
+		'validTo'     => '2018-05-31 23:59:59',
+		'image'       => '/assets/images/tickets/early-bird.png',
+	],
+	'Conference Ticket'            => [
+		'description' => 'Grants access to all conference session on September 22nd 2018.',
+		'price'       => 8900,
+		'seats'       => 300,
+		'type'        => \PHPUGDD\PHPDD\Website\Application\Constants\TicketTypes::CONFERENCE,
+		'validFrom'   => '2018-06-01 00:00:00',
+		'validTo'     => '2018-09-15 23:59:59',
+		'image'       => '/assets/images/tickets/conference.png',
+	],
+];
