@@ -6,5 +6,5 @@ return [
 		__DIR__ . '/../src/Application/Web',
 	],
 	'debugEnabled' => true,
-	'cacheDir'     => sys_get_temp_dir(),
+	'cacheDir'     => '/var/tmp',
 ];
