@@ -5,7 +5,9 @@
 
 namespace PHPUGDD\PHPDD\Website\Interfaces;
 
+use Money\MoneyFormatter;
 use PHPUGDD\PHPDD\Website\Infrastructure\ErrorHandling\SentryClient;
+use PHPUGDD\PHPDD\Website\Infrastructure\Rendering\Twig;
 use PHPUGDD\PHPDD\Website\Infrastructure\Session;
 
 /**
@@ -17,4 +19,12 @@ interface ProvidesInfrastructure
 	public function getErrorHandler() : SentryClient;
 
 	public function getSession() : Session;
+
+	public function getDateFormatter() : \IntlDateFormatter;
+
+	public function getDateTimeFormatter() : \IntlDateFormatter;
+
+	public function getMoneyFormatter() : MoneyFormatter;
+
+	public function getTemplateRenderer() : Twig;
 }
