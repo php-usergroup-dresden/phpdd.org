@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fa193a2cd622ad2d10d534117b8da98",
+    "content-hash": "abe39af4d13e11287a7ba432edbd9601",
     "packages": [
         {
             "name": "fortuneglobe/types",
