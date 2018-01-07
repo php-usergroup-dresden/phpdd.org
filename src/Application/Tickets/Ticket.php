@@ -55,4 +55,13 @@ final class Ticket
 	{
 		return $this->price;
 	}
+
+	public function equals( Ticket $other ) : bool
+	{
+		$typeEquals        = $this->type->equals( $other->getType() );
+		$nameEquals        = $this->name->equals( $other->getName() );
+		$descriptionEquals = $this->description->equals( $other->getDescription() );
+
+		return ($typeEquals && $nameEquals && $descriptionEquals);
+	}
 }

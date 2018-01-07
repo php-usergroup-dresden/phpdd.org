@@ -8,10 +8,10 @@ namespace PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions;
 use PHPUGDD\PHPDD\Website\Application\Exceptions\LogicException;
 
 /**
- * Class AllowedTicketCountExceeded
+ * Class DiscountExceedsTicketPriceException
  * @package PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions
  */
-final class AllowedTicketCountExceeded extends LogicException
+final class DiscountExceededTicketPriceException extends LogicException
 {
 
 }

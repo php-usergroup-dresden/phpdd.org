@@ -5,8 +5,10 @@
 
 namespace PHPUGDD\PHPDD\Website\Application\Tickets;
 
+use Fortuneglobe\Types\Exceptions\InvalidArgumentException;
 use Money\Currency;
 use Money\Money;
+use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\DiscountExceededTicketPriceException;
 use PHPUGDD\PHPDD\Website\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Application\Types\DiscountCode;
 use PHPUGDD\PHPDD\Website\Application\Types\DiscountDescription;
@@ -28,16 +30,48 @@ final class TicketItem
 	/** @var DiscountItem */
 	private $discountItem;
 
+	/**
+	 * @param Ticket       $ticket
+	 * @param AttendeeName $attendeeName
+	 *
+	 * @throws \InvalidArgumentException
+	 * @throws InvalidArgumentException
+	 */
 	public function __construct( Ticket $ticket, AttendeeName $attendeeName )
 	{
 		$this->ticket       = $ticket;
 		$this->attendeeName = $attendeeName;
 		$this->discountItem = new DiscountItem(
 			new DiscountName( '' ),
-			new DiscountCode( '' ),
+			new DiscountCode( '0OOOOOO0' ),
 			new DiscountDescription( '' ),
 			new DiscountPrice( new Money( 0, new Currency( 'EUR' ) ) )
 		);
+	}
+
+	/**
+	 * @param DiscountItem $discountItem
+	 *
+	 * @throws DiscountExceededTicketPriceException
+	 */
+	public function grantDiscount( DiscountItem $discountItem ) : void
+	{
+		$this->guardDiscountMoneyIsValid( $discountItem->getDiscountPrice()->getMoney() );
+
+		$this->discountItem = $discountItem;
+	}
+
+	/**
+	 * @param Money $money
+	 *
+	 * @throws DiscountExceededTicketPriceException
+	 */
+	private function guardDiscountMoneyIsValid( Money $money ) : void
+	{
+		if ( $money->absolute()->greaterThan( $this->ticket->getPrice()->getMoney() ) )
+		{
+			throw new DiscountExceededTicketPriceException( 'Discount exceeded ticket price.' );
+		}
 	}
 
 	public function getTicket() : Ticket

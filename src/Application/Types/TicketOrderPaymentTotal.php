@@ -5,6 +5,7 @@
 
 namespace PHPUGDD\PHPDD\Website\Application\Types;
 
+use Fortuneglobe\Types\Exceptions\InvalidArgumentException;
 use Money\Money;
 
 /**
@@ -16,9 +17,29 @@ final class TicketOrderPaymentTotal
 	/** @var Money */
 	private $money;
 
+	/**
+	 * @param Money $money
+	 *
+	 * @throws InvalidArgumentException
+	 */
 	public function __construct( Money $money )
 	{
+		$this->guardMoneyIsValid( $money );
+
 		$this->money = $money;
+	}
+
+	/**
+	 * @param Money $money
+	 *
+	 * @throws InvalidArgumentException
+	 */
+	private function guardMoneyIsValid( Money $money ) : void
+	{
+		if ( $money->isNegative() )
+		{
+			throw new InvalidArgumentException( 'Invalid money amount for ticket order payment total provided: ' . $money->getAmount() );
+		}
 	}
 
 	public function getMoney() : Money

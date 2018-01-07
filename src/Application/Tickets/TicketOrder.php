@@ -9,7 +9,8 @@ use Money\Currency;
 use Money\Money;
 use PHPUGDD\PHPDD\Website\Application\Constants\CountryCodes;
 use PHPUGDD\PHPDD\Website\Application\Constants\TicketTypes;
-use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\AllowedTicketCountExceeded;
+use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\AllowedTicketCountExceededException;
+use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException;
 use PHPUGDD\PHPDD\Website\Application\Tickets\Interfaces\ProvidesTicketOrderInformation;
 use PHPUGDD\PHPDD\Website\Application\Types\AddressAddon;
 use PHPUGDD\PHPDD\Website\Application\Types\City;
@@ -34,9 +35,13 @@ use PHPUGDD\PHPDD\Website\Application\Types\ZipCode;
  */
 final class TicketOrder implements ProvidesTicketOrderInformation
 {
-	private const WORKSHOP_TICKETS_MAX   = 3;
+	private const WORKSHOP_TICKETS_MAX               = 10;
 
-	private const CONFERENCE_TICKETS_MAX = 10;
+	private const WORKSHOP_SLOT_TICKETS_PER_ATTENDEE = 1;
+
+	private const CONFERENCE_TICKETS_MAX             = 10;
+
+	private const CONFERENCE_TICKETS_PER_ATTENDEE    = 1;
 
 	/** @var TicketOrderId */
 	private $orderId;
@@ -56,6 +61,12 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	/** @var DiversityDonation */
 	private $diversityDonation;
 
+	/**
+	 * @param TicketOrderId   $orderId
+	 * @param TicketOrderDate $orderDate
+	 *
+	 * @throws \InvalidArgumentException
+	 */
 	public function __construct( TicketOrderId $orderId, TicketOrderDate $orderDate )
 	{
 		$this->orderId           = $orderId;
@@ -78,7 +89,8 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	/**
 	 * @param TicketItem[] ...$ticketItems
 	 *
-	 * @throws AllowedTicketCountExceeded
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
 	 */
 	public function orderTickets( TicketItem ...$ticketItems ) : void
 	{
@@ -91,29 +103,53 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	/**
 	 * @param TicketItem $ticketItem
 	 *
-	 * @throws AllowedTicketCountExceeded
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
 	 */
 	private function orderTicket( TicketItem $ticketItem ) : void
 	{
-		$ticketType  = $ticketItem->getTicket()->getType();
-		$ticketCount = $this->ticketItems->getCountForType( $ticketType );
-		$maxCount    = $this->getMaxCountForTicketType( $ticketType );
+		$ticketType      = $ticketItem->getTicket()->getType();
+		$ticketCountType = $this->ticketItems->getCountForType( $ticketType );
+		$maxCountType    = $this->getMaxCountForTicketType( $ticketType );
 
-		if ( $ticketCount >= $maxCount )
+		if ( $ticketCountType >= $maxCountType )
 		{
-			throw new AllowedTicketCountExceeded( sprintf( 'Allowed ticket count of %d exceeded.', $maxCount ) );
+			throw new AllowedTicketCountExceededException( sprintf( 'Allowed ticket count of %d exceeded.', $maxCountType ) );
+		}
+
+		$attendeeName               = $ticketItem->getAttendeeName();
+		$ticketCountTypeForAttendee = $this->ticketItems->getCountForTypeAndAttendeeName( $ticketType, $attendeeName );
+		$maxCountTypeForAttendee    = $this->getMaxCountForTicketTypePerAttendee( $ticketType );
+
+		if ( $ticketCountTypeForAttendee >= $maxCountTypeForAttendee )
+		{
+			throw new AllowedTicketCountPerAttendeeExceededException(
+				sprintf( 'Allowed ticket count of %d for attendee %s exceeded.', $maxCountTypeForAttendee, $attendeeName->toString() )
+			);
 		}
 
 		$this->ticketItems->add( $ticketItem );
 	}
 
-	private function getMaxCountForTicketType( TicketType $ticketType )
+	private function getMaxCountForTicketType( TicketType $ticketType ) : int
 	{
 		$maxCount = self::CONFERENCE_TICKETS_MAX;
 
-		if ( TicketTypes::WORKSHOP === $ticketType->toString() )
+		if ( \in_array( $ticketType->toString(), TicketTypes::WORKSHOPS, true ) )
 		{
 			$maxCount = self::WORKSHOP_TICKETS_MAX;
+		}
+
+		return $maxCount;
+	}
+
+	private function getMaxCountForTicketTypePerAttendee( TicketType $ticketType ) : int
+	{
+		$maxCount = self::CONFERENCE_TICKETS_PER_ATTENDEE;
+
+		if ( \in_array( $ticketType->toString(), TicketTypes::WORKSHOPS, true ) )
+		{
+			$maxCount = self::WORKSHOP_SLOT_TICKETS_PER_ATTENDEE;
 		}
 
 		return $maxCount;
@@ -160,6 +196,10 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		return $this->diversityDonation;
 	}
 
+	/**
+	 * @return TicketOrderTotal
+	 * @throws \InvalidArgumentException
+	 */
 	public function getOrderTotal() : TicketOrderTotal
 	{
 		$money = new Money( 0, new Currency( 'EUR' ) );
@@ -172,6 +212,10 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		return new TicketOrderTotal( $money );
 	}
 
+	/**
+	 * @return TicketOrderDiscountTotal
+	 * @throws \InvalidArgumentException
+	 */
 	public function getDiscountTotal() : TicketOrderDiscountTotal
 	{
 		$money = new Money( 0, new Currency( 'EUR' ) );
@@ -184,11 +228,15 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		return new TicketOrderDiscountTotal( $money );
 	}
 
+	/**
+	 * @return TicketOrderPaymentTotal
+	 * @throws \InvalidArgumentException
+	 */
 	public function getPaymentTotal() : TicketOrderPaymentTotal
 	{
 		$orderTotal    = $this->getOrderTotal();
 		$discountTotal = $this->getDiscountTotal();
-		$money         = $orderTotal->getMoney()->subtract( $discountTotal->getMoney() );
+		$money         = $orderTotal->getMoney()->subtract( $discountTotal->getMoney()->absolute() );
 
 		return new TicketOrderPaymentTotal( $money );
 	}

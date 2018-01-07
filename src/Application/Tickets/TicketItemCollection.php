@@ -5,6 +5,7 @@
 
 namespace PHPUGDD\PHPDD\Website\Application\Tickets;
 
+use PHPUGDD\PHPDD\Website\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Application\Types\TicketType;
 
 /**
@@ -31,6 +32,28 @@ final class TicketItemCollection implements \Countable, \Iterator
 			{
 				$count++;
 			}
+		}
+
+		return $count;
+	}
+
+	public function getCountForTypeAndAttendeeName( TicketType $ticketType, AttendeeName $attendeeName ) : int
+	{
+		$count = 0;
+
+		foreach ( $this->ticketItems as $ticketItem )
+		{
+			if ( !$ticketType->equals( $ticketItem->getTicket()->getType() ) )
+			{
+				continue;
+			}
+
+			if ( !$attendeeName->equals( $ticketItem->getAttendeeName() ) )
+			{
+				continue;
+			}
+
+			$count++;
 		}
 
 		return $count;
