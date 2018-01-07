@@ -7,6 +7,7 @@ namespace PHPUGDD\PHPDD\Website\Infrastructure;
 
 use IceHawk\IceHawk\Interfaces\ProvidesRequestInfo;
 use IceHawk\IceHawk\Interfaces\SetsUpEnvironment;
+use PHPUGDD\PHPDD\Website\Env;
 use PHPUGDD\PHPDD\Website\Infrastructure\Configs\SessionConfig;
 use PHPUGDD\PHPDD\Website\Traits\InfrastructureInjecting;
 
@@ -20,6 +21,7 @@ final class IceHawkDelegate implements SetsUpEnvironment
 
 	public function setUpGlobalVars() : void
 	{
+		date_default_timezone_set( Env::TIMEZONE );
 	}
 
 	/**
