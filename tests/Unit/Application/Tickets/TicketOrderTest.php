@@ -5,21 +5,17 @@
 
 namespace PHPUGDD\PHPDD\Website\Tests\Unit\Application\Tickets;
 
-use Money\Currency;
-use Money\Money;
 use PHPUGDD\PHPDD\Website\Application\Constants\TicketTypes;
-use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\AllowedTicketCountExceeded;
-use PHPUGDD\PHPDD\Website\Application\Tickets\Ticket;
+use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\AllowedTicketCountExceededException;
+use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException;
 use PHPUGDD\PHPDD\Website\Application\Tickets\TicketItem;
 use PHPUGDD\PHPDD\Website\Application\Tickets\TicketOrder;
 use PHPUGDD\PHPDD\Website\Application\Types\AttendeeName;
-use PHPUGDD\PHPDD\Website\Application\Types\TicketDescription;
-use PHPUGDD\PHPDD\Website\Application\Types\TicketImage;
-use PHPUGDD\PHPDD\Website\Application\Types\TicketName;
 use PHPUGDD\PHPDD\Website\Application\Types\TicketOrderDate;
 use PHPUGDD\PHPDD\Website\Application\Types\TicketOrderId;
-use PHPUGDD\PHPDD\Website\Application\Types\TicketPrice;
-use PHPUGDD\PHPDD\Website\Application\Types\TicketType;
+use PHPUGDD\PHPDD\Website\Tests\Fixtures\Traits\DiscountItemProviding;
+use PHPUGDD\PHPDD\Website\Tests\Fixtures\Traits\MoneyProviding;
+use PHPUGDD\PHPDD\Website\Tests\Fixtures\Traits\TicketProviding;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -28,8 +24,13 @@ use PHPUnit\Framework\TestCase;
  */
 final class TicketOrderTest extends TestCase
 {
+	use TicketProviding;
+	use MoneyProviding;
+	use DiscountItemProviding;
+
 	/**
 	 * @throws \PHPUnit\Framework\Exception
+	 * @throws \InvalidArgumentException
 	 */
 	public function testCanCreateInstanceFromOrderIdAndDate() : void
 	{
@@ -59,7 +60,8 @@ final class TicketOrderTest extends TestCase
 
 	/**
 	 * @throws \PHPUnit\Framework\Exception
-	 * @throws AllowedTicketCountExceeded
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
 	 */
 	public function testThrowsExceptionForExceedingMaxConferenceTicketCount() : void
 	{
@@ -68,26 +70,22 @@ final class TicketOrderTest extends TestCase
 		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate() );
 		$ticketItems = [];
 
-		for ( $i = 0; $i < 12; $i++ )
+		for ( $i = 0; $i < 11; $i++ )
 		{
-			$ticket = new Ticket(
-				new TicketType( TicketTypes::CONFERENCE ),
-				new TicketName( 'Conference ticket' ),
-				new TicketDescription( 'Grant access to the conference day of PHPDD.' ),
-				new TicketPrice( new Money( 8900, new Currency( 'EUR' ) ) )
-			);
+			$ticket = $this->getConferenceTicket( $this->getMoney( 8900 ) );
 
 			$ticketItems[] = new TicketItem( $ticket, new AttendeeName( 'John Doe ' . $i ) );
 		}
 
-		$this->expectException( AllowedTicketCountExceeded::class );
+		$this->expectException( AllowedTicketCountExceededException::class );
 
 		$ticketOrder->orderTickets( ...$ticketItems );
 	}
 
 	/**
 	 * @throws \PHPUnit\Framework\Exception
-	 * @throws AllowedTicketCountExceeded
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
 	 */
 	public function testThrowsExceptionForExceedingMaxWorkshopTicketCount() : void
 	{
@@ -96,20 +94,184 @@ final class TicketOrderTest extends TestCase
 		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate() );
 		$ticketItems = [];
 
-		for ( $i = 0; $i < 5; $i++ )
+		for ( $i = 0; $i < 11; $i++ )
 		{
-			$ticket = new Ticket(
-				new TicketType( TicketTypes::WORKSHOP ),
-				new TicketName( 'Conference ticket' ),
-				new TicketDescription( 'Grant access to the conference day of PHPDD.' ),
-				new TicketPrice( new Money( 8900, new Currency( 'EUR' ) ) )
-			);
+			$ticket = $this->getWorkshopTicket( TicketTypes::WORKSHOP_SLOT_A, 'Workshop Ticket', 'Workshop description', $this->getMoney( 25000 ) );
 
 			$ticketItems[] = new TicketItem( $ticket, new AttendeeName( 'John Doe ' . $i ) );
 		}
 
-		$this->expectException( AllowedTicketCountExceeded::class );
+		$this->expectException( AllowedTicketCountExceededException::class );
 
 		$ticketOrder->orderTickets( ...$ticketItems );
+	}
+
+	/**
+	 * @throws AllowedTicketCountExceededException
+	 * @throws \PHPUnit\Framework\Exception
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 */
+	public function testThrowsExceptionForExceedingMaxWorkshopTicketCountPerAttendee() : void
+	{
+		/** @var TicketOrderId $orderId */
+		$orderId      = TicketOrderId::generate();
+		$ticketOrder  = new TicketOrder( $orderId, new TicketOrderDate() );
+		$ticketItems  = [];
+		$attendeeName = new AttendeeName( 'John Doe' );
+
+		for ( $i = 0; $i < 2; $i++ )
+		{
+			$ticket = $this->getWorkshopTicket(
+				TicketTypes::WORKSHOP_SLOT_A,
+				'Workshop Ticket',
+				'Workshop description',
+				$this->getMoney( 25000 )
+			);
+
+			$ticketItems[] = new TicketItem( $ticket, $attendeeName );
+		}
+
+		$this->expectException( AllowedTicketCountPerAttendeeExceededException::class );
+
+		$ticketOrder->orderTickets( ...$ticketItems );
+	}
+
+	/**
+	 * @throws AllowedTicketCountExceededException
+	 * @throws \PHPUnit\Framework\Exception
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 */
+	public function testThrowsExceptionForExceedingMaxConferenceTicketCountPerAttendee() : void
+	{
+		/** @var TicketOrderId $orderId */
+		$orderId      = TicketOrderId::generate();
+		$ticketOrder  = new TicketOrder( $orderId, new TicketOrderDate() );
+		$ticketItems  = [];
+		$attendeeName = new AttendeeName( 'John Doe' );
+
+		for ( $i = 0; $i < 2; $i++ )
+		{
+			$ticket = $this->getConferenceTicket( $this->getMoney( 25000 ) );
+
+			$ticketItems[] = new TicketItem( $ticket, $attendeeName );
+		}
+
+		$this->expectException( AllowedTicketCountPerAttendeeExceededException::class );
+
+		$ticketOrder->orderTickets( ...$ticketItems );
+	}
+
+	/**
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \PHPUnit\Framework\Exception
+	 */
+	public function testSameAttendeeCanOrderAWorkshopTicketForEachSlot() : void
+	{
+		/** @var TicketOrderId $orderId */
+		$orderId     = TicketOrderId::generate();
+		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate() );
+		$johnDoe     = new AttendeeName( 'John Doe' );
+		$janeDoe     = new AttendeeName( 'Jane Doe' );
+
+		$ticketSlotA = $this->getWorkshopTicket(
+			TicketTypes::WORKSHOP_SLOT_A,
+			'Workshop Ticket Slot A',
+			'Workshop description slot A',
+			$this->getMoney( 25000 )
+		);
+
+		$ticketSlotB = $this->getWorkshopTicket(
+			TicketTypes::WORKSHOP_SLOT_B,
+			'Workshop Ticket Slot B',
+			'Workshop description slot B',
+			$this->getMoney( 25000 )
+		);
+
+		# John Doe can order a workshop ticket for slot A
+		$ticketOrder->orderTickets( new TicketItem( $ticketSlotA, $johnDoe ) );
+
+		$this->assertCount( 1, $ticketOrder->getTicketItems() );
+
+		# John Doe can order a workshop ticket for slot B
+		$ticketOrder->orderTickets( new TicketItem( $ticketSlotB, $johnDoe ) );
+
+		$this->assertCount( 2, $ticketOrder->getTicketItems() );
+
+		# John Doe cannot order another workshop ticket for slot A
+		try
+		{
+			$ticketOrder->orderTickets( new TicketItem( $ticketSlotA, $johnDoe ) );
+		}
+		catch ( \Throwable $e )
+		{
+			$this->assertInstanceOf( AllowedTicketCountPerAttendeeExceededException::class, $e );
+		}
+
+		# Jane Doe can order a workshop ticket for slot A
+		$ticketOrder->orderTickets( new TicketItem( $ticketSlotA, $janeDoe ) );
+
+		$this->assertCount( 3, $ticketOrder->getTicketItems() );
+
+		# Jane Doe can order a workshop ticket for slot B
+		$ticketOrder->orderTickets( new TicketItem( $ticketSlotB, $janeDoe ) );
+
+		$this->assertCount( 4, $ticketOrder->getTicketItems() );
+
+		# Jane Doe cannot order another workshop ticket for slot A
+		try
+		{
+			$ticketOrder->orderTickets( new TicketItem( $ticketSlotB, $janeDoe ) );
+		}
+		catch ( \Throwable $e )
+		{
+			$this->assertInstanceOf( AllowedTicketCountPerAttendeeExceededException::class, $e );
+		}
+	}
+
+	/**
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\DiscountExceededTicketPriceException
+	 * @throws \InvalidArgumentException
+	 */
+	public function testCanGetTotals() : void
+	{
+		/** @var TicketOrderId $orderId */
+		$orderId     = TicketOrderId::generate();
+		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate() );
+		$johnDoe     = new AttendeeName( 'John Doe' );
+
+		$ticketSlotA = $this->getWorkshopTicket(
+			TicketTypes::WORKSHOP_SLOT_A,
+			'Workshop Ticket Slot A',
+			'Workshop description slot A',
+			$this->getMoney( 25000 )
+		);
+
+		$ticketSlotB = $this->getWorkshopTicket(
+			TicketTypes::WORKSHOP_SLOT_B,
+			'Workshop Ticket Slot B',
+			'Workshop description slot B',
+			$this->getMoney( 25000 )
+		);
+
+		$conferenceTicket = $this->getConferenceTicket( $this->getMoney( 8900 ) );
+
+		$workshopDiscount   = $this->getDiscountItem( 'Workshop discount', '9D8C7B6A', 'Reduces ticket price', $this->getMoney( -3500 ) );
+		$conferenceDiscount = $this->getDiscountItem( 'Conference discount', 'A2B3C4D5', 'Reduces ticket price', $this->getMoney( -2000 ) );
+
+		$ticketItemSlotA      = new TicketItem( $ticketSlotA, $johnDoe );
+		$ticketItemSlotB      = new TicketItem( $ticketSlotB, $johnDoe );
+		$ticketItemConference = new TicketItem( $conferenceTicket, $johnDoe );
+
+		$ticketItemSlotB->grantDiscount( $workshopDiscount );
+		$ticketItemConference->grantDiscount( $conferenceDiscount );
+
+		$ticketOrder->orderTickets( $ticketItemSlotA, $ticketItemSlotB, $ticketItemConference );
+
+		$this->assertSame( '58900', $ticketOrder->getOrderTotal()->getMoney()->getAmount() );
+		$this->assertSame( '-5500', $ticketOrder->getDiscountTotal()->getMoney()->getAmount() );
+		$this->assertSame( '53400', $ticketOrder->getPaymentTotal()->getMoney()->getAmount() );
 	}
 }
