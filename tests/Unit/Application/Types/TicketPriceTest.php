@@ -8,7 +8,7 @@ namespace PHPUGDD\PHPDD\Website\Tests\Unit\Application\Types;
 use Fortuneglobe\Types\Exceptions\InvalidArgumentException;
 use Money\Money;
 use PHPUGDD\PHPDD\Website\Application\Types\TicketPrice;
-use PHPUGDD\PHPDD\Website\Tests\Fixtures\Traits\MoneyProviding;
+use PHPUGDD\PHPDD\Website\Traits\MoneyProviding;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -33,6 +33,10 @@ final class TicketPriceTest extends TestCase
 		$this->assertSame( $money, $ticketPrice->getMoney() );
 	}
 
+	/**
+	 * @return array
+	 * @throws \InvalidArgumentException
+	 */
 	public function validMoneyProvider() : array
 	{
 		return [
@@ -47,6 +51,7 @@ final class TicketPriceTest extends TestCase
 
 	/**
 	 * @throws \PHPUnit\Framework\Exception
+	 * @throws \InvalidArgumentException
 	 */
 	public function testThrowsExceptionForZeroMoney() : void
 	{
@@ -57,6 +62,7 @@ final class TicketPriceTest extends TestCase
 
 	/**
 	 * @throws \PHPUnit\Framework\Exception
+	 * @throws \InvalidArgumentException
 	 */
 	public function testThrowsExceptionForNegativeMoney() : void
 	{

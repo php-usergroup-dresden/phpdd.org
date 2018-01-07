@@ -14,8 +14,8 @@ use PHPUGDD\PHPDD\Website\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Application\Types\TicketOrderDate;
 use PHPUGDD\PHPDD\Website\Application\Types\TicketOrderId;
 use PHPUGDD\PHPDD\Website\Tests\Fixtures\Traits\DiscountItemProviding;
-use PHPUGDD\PHPDD\Website\Tests\Fixtures\Traits\MoneyProviding;
 use PHPUGDD\PHPDD\Website\Tests\Fixtures\Traits\TicketProviding;
+use PHPUGDD\PHPDD\Website\Traits\MoneyProviding;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -62,6 +62,7 @@ final class TicketOrderTest extends TestCase
 	 * @throws \PHPUnit\Framework\Exception
 	 * @throws AllowedTicketCountExceededException
 	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \InvalidArgumentException
 	 */
 	public function testThrowsExceptionForExceedingMaxConferenceTicketCount() : void
 	{
@@ -86,6 +87,7 @@ final class TicketOrderTest extends TestCase
 	 * @throws \PHPUnit\Framework\Exception
 	 * @throws AllowedTicketCountExceededException
 	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \InvalidArgumentException
 	 */
 	public function testThrowsExceptionForExceedingMaxWorkshopTicketCount() : void
 	{
@@ -110,6 +112,7 @@ final class TicketOrderTest extends TestCase
 	 * @throws AllowedTicketCountExceededException
 	 * @throws \PHPUnit\Framework\Exception
 	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \InvalidArgumentException
 	 */
 	public function testThrowsExceptionForExceedingMaxWorkshopTicketCountPerAttendee() : void
 	{
@@ -140,6 +143,7 @@ final class TicketOrderTest extends TestCase
 	 * @throws AllowedTicketCountExceededException
 	 * @throws \PHPUnit\Framework\Exception
 	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \InvalidArgumentException
 	 */
 	public function testThrowsExceptionForExceedingMaxConferenceTicketCountPerAttendee() : void
 	{
@@ -165,6 +169,7 @@ final class TicketOrderTest extends TestCase
 	 * @throws AllowedTicketCountExceededException
 	 * @throws AllowedTicketCountPerAttendeeExceededException
 	 * @throws \PHPUnit\Framework\Exception
+	 * @throws \InvalidArgumentException
 	 */
 	public function testSameAttendeeCanOrderAWorkshopTicketForEachSlot() : void
 	{

@@ -10,8 +10,8 @@ use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\DiscountExceededTicketP
 use PHPUGDD\PHPDD\Website\Application\Tickets\TicketItem;
 use PHPUGDD\PHPDD\Website\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Tests\Fixtures\Traits\DiscountItemProviding;
-use PHPUGDD\PHPDD\Website\Tests\Fixtures\Traits\MoneyProviding;
 use PHPUGDD\PHPDD\Website\Tests\Fixtures\Traits\TicketProviding;
+use PHPUGDD\PHPDD\Website\Traits\MoneyProviding;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -26,6 +26,7 @@ final class TicketItemTest extends TestCase
 
 	/**
 	 * @throws \PHPUnit\Framework\Exception
+	 * @throws \InvalidArgumentException
 	 */
 	public function testCanCreateInstance() : void
 	{
@@ -48,6 +49,7 @@ final class TicketItemTest extends TestCase
 	 * @throws \PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\DiscountExceededTicketPriceException
 	 *
 	 * @dataProvider validDiscountItemProvider
+	 * @throws \InvalidArgumentException
 	 */
 	public function testCanGrantDiscounts( DiscountItem $discountItem ) : void
 	{
@@ -81,6 +83,7 @@ final class TicketItemTest extends TestCase
 	/**
 	 * @throws DiscountExceededTicketPriceException
 	 * @throws \PHPUnit\Framework\Exception
+	 * @throws \InvalidArgumentException
 	 */
 	public function testThrowsExceptionIfDiscountExceedsTicketPrice() : void
 	{
