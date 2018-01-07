@@ -5,6 +5,7 @@
 
 namespace PHPUGDD\PHPDD\Website\Application\Web\Responses;
 
+use IceHawk\IceHawk\Constants\HttpCode;
 use PHPUGDD\PHPDD\Website\Traits\InfrastructureInjecting;
 
 /**
@@ -15,7 +16,7 @@ final class HtmlPage
 {
 	use InfrastructureInjecting;
 
-	public function respond( string $template, array $data, int $httpCode ) : void
+	public function respond( string $template, array $data, int $httpCode = HttpCode::OK ) : void
 	{
 		$templateRenderer = $this->getEnv()->getTemplateRenderer();
 
