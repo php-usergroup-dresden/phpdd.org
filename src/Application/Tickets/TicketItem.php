@@ -8,6 +8,7 @@ namespace PHPUGDD\PHPDD\Website\Application\Tickets;
 use Fortuneglobe\Types\Exceptions\InvalidArgumentException;
 use Money\Money;
 use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\DiscountExceededTicketPriceException;
+use PHPUGDD\PHPDD\Website\Application\Tickets\Interfaces\ProvidesTicketItemInformation;
 use PHPUGDD\PHPDD\Website\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Application\Types\DiscountCode;
 use PHPUGDD\PHPDD\Website\Application\Types\DiscountDescription;
@@ -19,7 +20,7 @@ use PHPUGDD\PHPDD\Website\Traits\MoneyProviding;
  * Class TicketItem
  * @package PHPUGDD\PHPDD\Website\Application\Tickets
  */
-final class TicketItem
+final class TicketItem implements ProvidesTicketItemInformation
 {
 	use MoneyProviding;
 

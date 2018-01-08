@@ -6,7 +6,6 @@
 namespace PHPUGDD\PHPDD\Website\Application\Tickets\Interfaces;
 
 use PHPUGDD\PHPDD\Website\Application\Tickets\DiscountItemCollection;
-use PHPUGDD\PHPDD\Website\Application\Tickets\TicketItemCollection;
 use PHPUGDD\PHPDD\Website\Application\Tickets\TicketOrderBillingAddress;
 use PHPUGDD\PHPDD\Website\Application\Types\DiversityDonation;
 use PHPUGDD\PHPDD\Website\Application\Types\TicketOrderDate;
@@ -26,7 +25,7 @@ interface ProvidesTicketOrderInformation
 
 	public function getOrderDate() : TicketOrderDate;
 
-	public function getTicketItems() : TicketItemCollection;
+	public function getTicketItems() : CollectsTicketItems;
 
 	public function getDiversityDonation() : DiversityDonation;
 

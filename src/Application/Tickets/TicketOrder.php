@@ -9,6 +9,7 @@ use PHPUGDD\PHPDD\Website\Application\Constants\CountryCodes;
 use PHPUGDD\PHPDD\Website\Application\Constants\TicketTypes;
 use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\AllowedTicketCountExceededException;
 use PHPUGDD\PHPDD\Website\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException;
+use PHPUGDD\PHPDD\Website\Application\Tickets\Interfaces\CollectsTicketItems;
 use PHPUGDD\PHPDD\Website\Application\Tickets\Interfaces\ProvidesTicketOrderInformation;
 use PHPUGDD\PHPDD\Website\Application\Types\AddressAddon;
 use PHPUGDD\PHPDD\Website\Application\Types\City;
@@ -50,7 +51,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	/** @var TicketOrderDate */
 	private $orderDate;
 
-	/** @var TicketItemCollection */
+	/** @var CollectsTicketItems */
 	private $ticketItems;
 
 	/** @var TicketOrderEmailAddress */
@@ -166,7 +167,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		return $this->orderDate;
 	}
 
-	public function getTicketItems() : TicketItemCollection
+	public function getTicketItems() : CollectsTicketItems
 	{
 		return $this->ticketItems;
 	}
