@@ -6,7 +6,7 @@
 namespace PHPUGDD\PHPDD\Website;
 
 use IceHawk\IceHawk\IceHawk;
-use PHPUGDD\PHPDD\Website\Infrastructure\IceHawkConfig;
+use PHPUGDD\PHPDD\Website\Application\Configs\IceHawkConfig;
 use PHPUGDD\PHPDD\Website\Infrastructure\IceHawkDelegate;
 
 require __DIR__ . '/../../vendor/autoload.php';

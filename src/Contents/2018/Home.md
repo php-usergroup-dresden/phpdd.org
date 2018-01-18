@@ -1,84 +1,99 @@
-<h2>The 4th annual PHP event in Dresden</h2>
-
-We want to push things forward in 2018, so we're expanding our one day event with a preceding tutorial day. 
-Two days of knowledge exchange and community around the PHP ecosystem. 
-
-[Checkout our last PHP Developer Day in 2017.](https://2017.phpdd.org)
-
-<hr class="blockspace">
-
-<div class="teaser">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
-            <h3>Call for papers now open!</h3>
-            <p>
-                Talk submissions are accepted until March 31st 2018.
-            </p>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
-            <br>
-            <a href="@cfp_url@" target="_blank" title="Submit your talk(s)" class="btn btn-block btn-lg btn-default text-uppercase pull-right">
-                Submit your talk(s)!
-            </a>
+<h1>The 4th annual PHP event in Dresden, Germany</h1>
+<hr class="blockspace-sm">
+<div id="venue-cover">
+    <div class="teaser">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
+                <h3>Call for papers now open!</h3>
+                <p>
+                    Submissions are accepted until April 30th 2018.
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+                <br>
+                <a href="@cfp_url@" target="_blank" title="Submit your ideas!" class="btn btn-block btn-lg btn-danger text-uppercase pull-right">
+                    Submit your ideas!
+                </a>
+            </div>
         </div>
     </div>
 </div>
 
-<hr class="blockspace">
+## OUR GOAL
 
-### OUR TUTORIALS
+---
+
+After a very successful edition in 2017 we aim to push this community driven conference to the next level in 2018.
+For the first time we will offer a full day with workshops, so you can get the most out of our excellent trainers.
+On the second day our international speakers will provide you with great sessions in a single track.
+
+We are commited to creating a unique community experience - an event where everyone is among #<span class="text-danger">PHP</span>riends.
+
+[<i class="fa fa-clock-o"></i> Check out the impressions of our last PHP Developer Day in 2017](https://2017.phpdd.org)
+
+## OUR WORKSHOPS
+
+---
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <img src="https://placehold.it/439x280/f3f3f3/000000/?text=TUTORIAL 1" class="img-responsive img-tutorial">
+        <a href="@cfp_url@" target="_blank" title="Submit your workshop">
+            <img src="https://placehold.it/439x582/f3f3f3/000000/?text=%20%20FULL-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
+        </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <img src="https://placehold.it/439x280/f3f3f3/000000/?text=TUTORIAL 2" class="img-responsive img-tutorial">
+        <a href="@cfp_url@" target="_blank" title="Submit your workshop">
+            <img src="https://placehold.it/439x280/f3f3f3/000000/?text=%20%20HALF-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
+        </a>
+        <br>
+        <a href="@cfp_url@" target="_blank" title="Submit your workshop">
+            <img src="https://placehold.it/439x280/f3f3f3/000000/?text=%20%20HALF-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
+        </a>
     </div>
 </div>
 
-<br>
-<p>
-    You want to give a tutorial/workshop at PHP Developer Day?
-    <a href="@cfp_url@" target="_blank" title="Submit your talk(s)">
-        Submit your topic!
-    </a>
-</p>
 
-### OUR TALKS
+
+## OUR SESSION
+
+---
 
 <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        <a href="@cfp_url@" target="_blank" title="Submit your talk">
+            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        <a href="@cfp_url@" target="_blank" title="Submit your talk">
+            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        <a href="@cfp_url@" target="_blank" title="Submit your talk">
+            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        <a href="@cfp_url@" target="_blank" title="Submit your talk">
+            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        <a href="@cfp_url@" target="_blank" title="Submit your talk">
+            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        <a href="@cfp_url@" target="_blank" title="Submit your talk">
+            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+        </a>
     </div>
 </div>
 
-<br>
-<p>
-    You want to speak at PHP Developer Day?
-    <a href="@cfp_url@" target="_blank" title="Submit your talk(s)">
-        Submit your talk(s)!
-    </a>
-</p>
+## OUR SPONSORS
 
-<hr class="blockspace">
-
-### OUR SPONSORS
+---
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">

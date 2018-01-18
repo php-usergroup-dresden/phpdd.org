@@ -49,9 +49,9 @@
       "children": [
         "/impressions.html",
         "/become-sponsor.html",
+        "/code-of-conduct.html",
         "/privacy.html",
-        "/imprint.html",
-        "/code-of-conduct.html"
+        "/imprint.html"
       ]
     },
     "/404.html": {
@@ -125,6 +125,25 @@
       "contentFile": "Sponsorships.md",
       "children": []
     },
+    "/code-of-conduct.html": {
+      "pageLevel": 2,
+      "navName": "Code of Conduct",
+      "pageTitle": "Code of Conduct",
+      "description": "Dresden Community Code of Conduct",
+      "language": "en",
+      "imageUrl": "/assets/images/logo.png",
+      "tags": [
+        "Code of Conduct",
+        "Dresden",
+        "Community",
+        "Events"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "CodeOfConduct.md",
+      "children": []
+    },
     "/imprint.html": {
       "pageLevel": 2,
       "navName": "Imprint",
@@ -157,25 +176,6 @@
       "renderer": "twig",
       "template": "Templates/Page.twig",
       "contentFile": "Privacy.md",
-      "children": []
-    },
-    "/code-of-conduct.html": {
-      "pageLevel": 2,
-      "navName": "Code of Conduct",
-      "pageTitle": "Code of Conduct",
-      "description": "Dresden Community Code of Conduct",
-      "language": "en",
-      "imageUrl": "/assets/images/logo.png",
-      "tags": [
-        "Code of Conduct",
-        "Dresden",
-        "Community",
-        "Events"
-      ],
-      "contentType": "markdown",
-      "renderer": "twig",
-      "template": "Templates/Page.twig",
-      "contentFile": "CodeOfConduct.md",
       "children": []
     }
   }

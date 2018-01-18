@@ -1,11 +1,13 @@
 * html, body {
     font-family: "robotoregular", Helvetica, Arial, sans-serif;
-    color: #6c6c6c;
-    line-height: 1.5em;
+    color: #788891;
+    font-size: 1.5em;
+    line-height: 1.6em;
+    font-weight: lighter;
 }
 
 h1, h2, h3, h4, h5, h6, b, strong {
-    color: #333333;
+    color: #364349;
 }
 
 a {
@@ -17,6 +19,13 @@ a:focus,
 a:active {
     color: #bf2e26;
     text-decoration: none;
+}
+
+hr {
+    margin: 5px 0;
+    height: 1px;
+    background: transparent;
+    border-top: 2px solid #dce4e8;
 }
 
 .fa.fa-meetup {
@@ -56,12 +65,16 @@ a:active {
 }
 
 .page-container {
-    border-left: 10px solid #4b6597;
-    border-right: 10px solid #ef8332;
+    border-top: 5px solid #a7231d;
+    padding-top: 15px;
 }
 
 .blockspace {
     margin: 25px 0;
+}
+
+.blockspace-sm {
+    margin: 15px 0;
 }
 
 .speaker {
@@ -117,7 +130,7 @@ a:active {
 #sidebar {
     height: 100%;
     padding-right: 0;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 #sidebar nav {
@@ -131,10 +144,17 @@ a:active {
 #sidenav .nav > li > a {
     text-transform: uppercase;
     font-size: larger;
+    color: #9babb4;
+}
+
+#sidenav .nav > li > a:hover,
+#sidenav .nav > li > a:focus,
+#sidenav .nav > li > a:active {
+    background: none;
 }
 
 #sidenav .nav > li.active > a {
-    background-color: #f6f6f6;
+    color: #364349;
 }
 
 #sidenav .nav > li > ul > li {
@@ -212,7 +232,7 @@ h1.page-headline {
     display: block;
     font-weight: 100;
     text-align: center;
-    margin: 25px 0 0 0;
+    margin: 0 auto;
 }
 
 #clockdiv > div {
@@ -236,6 +256,18 @@ h1.page-headline {
     font-size: 16px;
 }
 
+#venue-cover {
+    background-attachment: scroll, fixed;
+    background-image: url(/assets/images/venue.jpg);
+    background-clip: border-box;
+    background-position-x: 45%;
+    background-position-y: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    border-radius: 5px;
+}
+
 .smalltext {
     padding-top: 5px;
     font-size: 12px;
@@ -246,14 +278,27 @@ h1.page-headline {
 }
 
 .teaser {
-    padding: 15px;
-    background-color: #a7231d;
-    border-radius: 5px;
-    color: #ffada5;
+    padding: 15px 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #364349;
+    position: relative;
+    top: 230px;
+    left: 0;
+    right: 0;
+}
+
+.teaser p {
+    text-shadow: 0 0 2px #ffffff;
 }
 
 .teaser h3 {
-    color: #f6f6f6;
+    color: #a7231d;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+footer {
+    padding-bottom: 30px;
 }
 
 /* collapsed sidebar styles */
