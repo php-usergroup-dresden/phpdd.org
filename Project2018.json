@@ -29,7 +29,7 @@
       "pageTitle": "Home",
       "description": "Website of the PHP Developer Day in Dresden, Germany",
       "language": "en",
-      "imageUrl": "/assets/images/logo.png",
+      "imageUrl": "/assets/images/socialcard.png",
       "tags": [
         "PHP",
         "Developer",
@@ -59,7 +59,7 @@
       "pageTitle": "404 - Not Found",
       "description": "The page you requested was not found.",
       "language": "en",
-      "imageUrl": "/assets/images/logo.png",
+      "imageUrl": "/assets/images/socialcard.png",
       "tags": [],
       "contentType": "html",
       "renderer": "twig",
@@ -73,7 +73,7 @@
       "pageTitle": "404 - Not Found",
       "description": "The page you requested was not found.",
       "language": "en",
-      "imageUrl": "/assets/images/logo.png",
+      "imageUrl": "/assets/images/socialcard.png",
       "tags": [],
       "contentType": "html",
       "renderer": "twig",
@@ -87,7 +87,7 @@
       "pageTitle": "Become sponsor",
       "description": "Become sponsor of the PHP Developer Day 2018",
       "language": "en",
-      "imageUrl": "/assets/images/logo.png",
+      "imageUrl": "/assets/images/socialcard.png",
       "tags": [
         "Sponsor",
         "Sponsorship",
@@ -110,7 +110,7 @@
       "pageTitle": "Code of Conduct",
       "description": "Dresden Community Code of Conduct",
       "language": "en",
-      "imageUrl": "/assets/images/logo.png",
+      "imageUrl": "/assets/images/socialcard.png",
       "tags": [
         "Code of Conduct",
         "Dresden",
@@ -129,7 +129,7 @@
       "pageTitle": "Imprint",
       "description": "Imprint, Legal notes, Disclaimer",
       "language": "en",
-      "imageUrl": "/assets/images/logo.png",
+      "imageUrl": "/assets/images/socialcard.png",
       "tags": [
         "legal notes",
         "disclaimer"
@@ -146,7 +146,7 @@
       "pageTitle": "Privacy",
       "description": "Privacy statement",
       "language": "en",
-      "imageUrl": "/assets/images/logo.png",
+      "imageUrl": "/assets/images/socialcard.png",
       "tags": [
         "privacy",
         "legal"

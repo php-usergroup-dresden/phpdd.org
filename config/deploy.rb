@@ -42,7 +42,7 @@ end
 
 desc "Reloading nginx and php-fpm"
 task :reload_env do
-    command 'sudo service php7.1-fpm reload'
+    command 'sudo service php7.2-fpm reload'
     command 'sudo service nginx restart'
 end
 
