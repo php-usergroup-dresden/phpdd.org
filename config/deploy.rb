@@ -17,7 +17,7 @@ set :keep_releases, 3
 # They will be linked in the 'deploy:link_shared_paths' step.
 set :shared_files, []
 set :shared_dirs, [
-    "public/2018/media"
+    "public/2017/media"
 ]
 
 # Optional settings:

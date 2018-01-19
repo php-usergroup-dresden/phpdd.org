@@ -37,7 +37,7 @@
 			],
 			"contentType": "markdown",
 			"renderer": "twig",
-			"template": "Templates/Page.twig",
+			"template": "Templates/Home.twig",
 			"contentFile": "de/intro.md",
 			"children": [
 				"/de/speaker.html",
@@ -71,7 +71,7 @@
 			],
 			"contentType": "markdown",
 			"renderer": "twig",
-			"template": "Templates/Page.twig",
+			"template": "Templates/Home.twig",
 			"contentFile": "en/intro.md",
 			"children": [
 				"/en/speakers.html",

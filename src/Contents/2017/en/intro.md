@@ -9,6 +9,16 @@ Come along on **SEPTEMBER 22nd** at **DRESDNER VOLKSHAUS, SCHÜTZENPLATZ 14 in D
 
 <hr class="blockspace">
 
+## We say THANK YOU! - Impressions of #PHPDD17
+
+<div id="blueimp-image-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+    <div class="slides"></div>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+</div>
+
+<hr class="blockspace">
+
 ## Program
 
 Announcing the following great speakers talking about new tools, technologies and frameworks.

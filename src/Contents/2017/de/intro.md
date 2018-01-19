@@ -9,6 +9,14 @@ Sei auch du am **22. SEPTEMBER** im **DRESDNER VOLKSHAUS, SCHÜTZENPLATZ 14 in D
 
 <hr class="blockspace">
 
+## Wir sagen DANKE! - Impressionen vom #PHPDD17
+
+<div id="blueimp-image-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+    <div class="slides"></div>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+</div>
+
 ## Programm
 
 Wir konnten für dieses Jahr wieder tolle Speaker gewinnen, die uns neue Tools, Techniken und Frameworks vorstellen.
