@@ -47,7 +47,6 @@
       "template": "Templates/Page.twig",
       "contentFile": "Home.md",
       "children": [
-        "/impressions.html",
         "/become-sponsor.html",
         "/code-of-conduct.html",
         "/privacy.html",
@@ -80,26 +79,6 @@
       "renderer": "twig",
       "template": "Templates/500.twig",
       "contentFile": "",
-      "children": []
-    },
-    "/impressions.html": {
-      "pageLevel": 2,
-      "navName": "Impressions",
-      "pageTitle": "Impressions",
-      "description": "Impressions of the PHP Developer Day 2017",
-      "language": "en",
-      "imageUrl": "/assets/images/logo.png",
-      "tags": [
-        "Impressions",
-        "Photos",
-        "Previous event",
-        "Dresden",
-        "Community"
-      ],
-      "contentType": "markdown",
-      "renderer": "twig",
-      "template": "Templates/Page.twig",
-      "contentFile": "Impressions.md",
       "children": []
     },
     "/become-sponsor.html": {

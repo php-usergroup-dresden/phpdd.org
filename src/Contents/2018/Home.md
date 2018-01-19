@@ -29,7 +29,7 @@ On the second day our international speakers will provide you with great session
 
 We are commited to creating a unique community experience - an event where everyone is among #<span class="text-danger">PHP</span>riends.
 
-[<i class="fa fa-clock-o"></i> Check out the impressions of our last PHP Developer Day in 2017](https://2017.phpdd.org)
+[<i class="fa fa-clock-o"></i> Check out the impressions of our last PHP Developer Day in 2017](https://2017.phpdd.org/en/)
 
 ## OUR WORKSHOPS
 
