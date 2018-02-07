@@ -3,11 +3,11 @@
     <img src="@baseUrl@/assets/images/phpartners/dresden-community-logo.png" alt="Dresden Community" class="img-responsive img-rounded">
 </div>
 
-## We are excellent to each other.
+## WE ARE EXCELLENT TO EACH OTHER.
  
 We take a comfortable atmosphere and an enrichig exchange for everyone very seriously.
  
-### The PHP USERGROUP DRESDEN e.V. and this event are commited to the [Dresden Code of Conduct](https://dresden-code-of-conduct.org/en/).
+### The PHP USERGROUP DRESDEN e.V. and this event are commited to the [<i class="fa fa-link"></i> DRESDEN CODE OF CONDUCT](https://dresden-code-of-conduct.org/en/).
 
 <hr class="blockspace">
 

@@ -1,5 +1,5 @@
 {
-  "name": "PHP Developer Day 2018 - Dresden, Germany",
+  "name": "PHP Developer Days 2018 - Dresden, Germany",
   "baseUrl": "https://2018.phpdd.org",
   "outputDir": "./public/2018/",
   "contentsDir": "./src/Contents/2018/",
@@ -47,6 +47,7 @@
       "template": "Templates/Page.twig",
       "contentFile": "Home.md",
       "children": [
+        "/venue.html",
         "/become-sponsor.html",
         "/code-of-conduct.html",
         "/privacy.html",
@@ -81,11 +82,32 @@
       "contentFile": "",
       "children": []
     },
+    "/venue.html": {
+      "pageLevel": 2,
+      "navName": "The venue",
+      "pageTitle": "The venue",
+      "description": "The venue of the PHP Developer Days 2018",
+      "language": "en",
+      "imageUrl": "/assets/images/socialcard.png",
+      "tags": [
+        "Venue",
+        "Location",
+        "Congress Center",
+        "Maritim",
+        "Dresden",
+        "Community"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Venue.md",
+      "children": []
+    },
     "/become-sponsor.html": {
       "pageLevel": 2,
       "navName": "Become sponsor",
       "pageTitle": "Become sponsor",
-      "description": "Become sponsor of the PHP Developer Day 2018",
+      "description": "Become sponsor of the PHP Developer Days 2018",
       "language": "en",
       "imageUrl": "/assets/images/socialcard.png",
       "tags": [

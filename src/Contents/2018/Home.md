@@ -1,5 +1,5 @@
-<h1>The 4th annual PHP event in Dresden, Germany</h1>
-<hr class="blockspace-sm">
+# THE 4th PHP COMMUNITY EVENT IN DRESDEN, DE
+
 <div id="venue-cover">
     <div class="teaser">
         <div class="row">

@@ -1,4 +1,4 @@
-# Become a sponsor
+# BECOME A SPONSOR
 
 ---
 
