@@ -45,7 +45,7 @@
         "only-dev": true
       },
       "phpunit": {
-        "url": "https://phar.phpunit.de/phpunit-6.5.5.phar",
+        "url": "https://phar.phpunit.de/phpunit-7.0.1.phar",
         "only-dev": true
       },
       "coveralls": {
