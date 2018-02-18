@@ -1,5 +1,5 @@
 <?php declare(strict_types=1);
 
 return [
-	'^/tickets/$' => \PHPUGDD\PHPDD\Website\Application\Web\Tickets\Read\TicketSelectionRequestHandler::class,
+	'^/tickets/$' => \PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Read\TicketSelectionRequestHandler::class,
 ];
