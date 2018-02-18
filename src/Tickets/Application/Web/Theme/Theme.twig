@@ -1,0 +1,280 @@
+{% macro subTree(loopPage, project, breadCrumb) %}
+    {% set isActive = (loopPage.getUri in breadCrumb|keys) %}
+    <li{% if isActive %} class="active"{% endif %}>
+        <a href="{{ project.getUrl(loopPage.getUri) }}">{{ loopPage.getNavName }}</a>
+        {% if loopPage.hasChildren and isActive %}
+            <ul class="nav">
+                {% import _self as nav %}
+                {% for child in project.getChildrenOf(loopPage) %}
+                    {{ nav.subTree(child, project, breadCrumb) }}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endmacro subTree %}
+{% import _self as nav %}
+<!doctype html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <base href="{{ baseUrl }}">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>{% block pageTitle %}Tickets{% endblock %} | PHP Developer Day 2018 • Dresden, Germany</title>
+    <meta name="description" content="Dresden's largest PHP event takes the 3rd round">
+    <meta name="keywords" content="{% block metaTags %}{% endblock %}">
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="geo.region" content="DE-SN"/>
+    <meta name="geo.placename" content="Dresden"/>
+    <meta name="geo.position" content="51.052088;13.741672"/>
+    <meta name="ICBM" content="51.052088, 13.741672"/>
+    <meta name="twitter:site" content="@twitter_handle@">
+    <meta name="twitter:creator" content="@twitter_handle@">
+    <script type="application/ld+json">{% spaceless %}
+{
+  "@context" : "http://schema.org",
+  "@type": "Person",
+  "name": "PHP Developer Day 2018 • Dresden, Germany",
+  "image": "{{ project.getUrl(page.getImageUrl) }}",
+  "url": "{{ baseUrl }}",
+  "sameAs" : [
+      "{{ twitter_url }}",
+      "{{ xing_url }}",
+      "{{ slackteam_url }}",
+      "{{ meetup_url }}",
+      "{{ facebook_url }}"
+    ]
+  }
+}{% endspaceless %}</script>
+    <meta property="article:author" content="{{ xing_url }}"/>
+    <meta property="article:publisher" content="{{ xing_url }}"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ baseUrl ~ '/assets/favicons/apple-icon-57x57.png' }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ baseUrl ~ '/assets/favicons/apple-icon-60x60.png' }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ baseUrl ~ '/assets/favicons/apple-icon-72x72.png' }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ baseUrl ~ '/assets/favicons/apple-icon-76x76.png' }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ baseUrl ~ '/assets/favicons/apple-icon-114x114.png' }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ baseUrl ~ '/assets/favicons/apple-icon-120x120.png' }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ baseUrl ~ '/assets/favicons/apple-icon-144x144.png' }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ baseUrl ~ '/assets/favicons/apple-icon-152x152.png' }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ baseUrl ~ '/assets/favicons/apple-icon-180x180.png' }}">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="{{ baseUrl ~ '/assets/favicons/android-icon-192x192.png' }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ baseUrl ~ '/assets/favicons/favicon-32x32.png' }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ baseUrl ~ '/assets/favicons/favicon-96x96.png' }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ baseUrl ~ '/assets/favicons/favicon-16x16.png' }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ baseUrl ~ '/assets/favicons/ms-icon-144x144.png' }}">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="canonical" href="{{ project.getUrl(page.getUri) }}"/>
+    <meta name="referrer" content="origin"/>
+
+    <meta property="og:site_name" content="{{ projectName }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="{{ page.getPageTitle }} | PHP Developer Day 2017 • Dresden, Germany"/>
+    <meta property="og:description" content="{{ page.getDescription }}"/>
+    <meta property="og:url" content="{{ baseUrl }}"/>
+    <meta property="og:image" content="{{ project.getUrl(page.getImageUrl) }}"/>
+    <meta property="article:published_time" content="{{ 'now'|date('c') }}"/>
+    <meta property="article:modified_time" content="{{ 'now'|date('c') }}"/>
+    {% for tag in page.getTags %}
+        <meta property="article:tag" content="{{ tag }}"/>
+    {% endfor %}
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{ page.getPageTitle }} | PHP Developer Day 2017 • Dresden, Germany"/>
+    <meta name="twitter:description" content="{{ page.getDescription }}"/>
+    <meta name="twitter:url" content="{{ project.getUrl(page.getUri ) }}"/>
+    <meta name="twitter:image:src" content="{{ project.getUrl(page.getImageUrl) }}"/>
+    <meta name="generator" content="IceHawk Static Page Generator"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ baseUrl ~ '/assets/css/webfonts.css' }}">
+    <link rel="stylesheet" href="{{ baseUrl ~ '/assets/css/twemoji-awesome.css' }}">
+    <link rel="stylesheet" href="{{ baseUrl ~ '/assets/css/main.css' ~ '?' ~ ('now'|date('YmdHis')) }}">
+    <script src="https://use.fontawesome.com/e89ed69fdb.js" async="async"></script>
+
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+
+<div class="page-container">
+
+    <div class="container">
+
+        <div class="row blockspace">
+            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+                <a href="{{ baseUrl ~ '/' }}" class="hidden-xs hidden-sm">
+                    <img src="{{ baseUrl ~ '/assets/images/phpugdd-logo.png' }}"
+                         data-src="{{ baseUrl ~ '/assets/images/phpugdd-logo.svg' }}" id="brandimg"
+                         class="svg-inject img-responsive" alt="PHP USERGROUP DRESDEN e.V.">
+                </a>
+            </div>
+            <div class="col-xs-8 col-sm-9 col-md-8 col-lg-6">
+                <a href="{{ baseUrl ~ '/' }}" class="hidden-xs hidden-sm">
+                    <img src="{{ baseUrl ~ '/assets/images/phpdd18-logo.png' }}"
+                         data-src="{{ baseUrl ~ '/assets/images/phpdd18-logo.svg' }}" id="brandimg"
+                         class="svg-inject img-responsive" alt="{{ projectName }}">
+                </a>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2 col-lg-4">
+                <p class="blockspace-sm text-center">
+                    September 21st &amp; 22nd 2018 in Dresden, Germany
+                </p>
+                <div id="clockdiv">
+                    <div>
+                        <span class="days"></span>
+                        <div class="smalltext">Days</div>
+                    </div>
+                    <div>
+                        <span class="hours"></span>
+                        <div class="smalltext">Hours</div>
+                    </div>
+                    <div>
+                        <span class="minutes"></span>
+                        <div class="smalltext">Minutes</div>
+                    </div>
+                    <div>
+                        <span class="seconds"></span>
+                        <div class="smalltext">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                <!-- sidebar -->
+                <nav id="sidenav">
+
+                    <ul class="nav">
+                        <li>
+                            <a href="{{ baseUrl ~ '/' }}" title="PHP Developer Day 2018">
+                                Home
+                            </a>
+                        </li>
+                        {% for loopPage in project.getPageConfigsAtLevel(2) %}
+
+                            {{ nav.subTree(loopPage, project, breadCrumb) }}
+
+                        {% endfor %}
+                    </ul>
+
+                    <div id="socialmedia" class="blockspace">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a href="{{ twitter_url }}" target="_blank"
+                                   title="Follow PHP Developer Day 2017 on twitter">
+                                    <i class="fa fa-twitter"></i> <span class="text-twitter">{{ twitter_handle }}</span>
+                                </a>
+                            </div>
+                            <div class="col-xs-12">
+                                <a href="{{ twitter_hashtag_url }}" target="_blank"
+                                   title="Hashtag #PHPDD18 on twitter">
+                                    <i class="fa fa-twitter"></i> <span
+                                            class="text-twitter">{{ twitter_hashtag }}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+
+            <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9" id="mainstage">
+
+                {% block content %}{% endblock %}
+
+            </div>
+        </div>
+
+
+    </div><!--/.container-->
+
+    <div class="container" id="footer">
+
+        <hr class="blockspace">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h4>Community PHPartners</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                <a href="https://www.softwerkskammer.org/groups/sachsen" target="_blank"
+                   title="Softwerkskammer Sachsen">
+                    <img src="{{ baseUrl ~ '/assets/images/phpartners/softwerkskammer.png' }}"
+                         alt="Logo Softwerkskammer"
+                         class="img-responsive img-phpartner" style="max-height: 130px;">
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3">
+                <a href="https://dresden-code-of-conduct.org" target="_blank"
+                   title="Dresden Community - Code of Conduct">
+                    <img src="{{ baseUrl ~ '/assets/images/phpartners/dresden-community-logo.png' }}"
+                         alt="Logo Dresden Community"
+                         class="img-responsive img-phpartner" style="max-height: 130px;">
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-2 col-md-6 col-lg-3">
+                <a href="https://2017.phpce.eu" target="_blank" title="php Central Europe 2017">
+                    <img src="{{ baseUrl ~ '/assets/images/phpartners/phpce-logo.png' }}"
+                         alt="Logo phpCE - php Central Europe" class="img-responsive img-phpartner"
+                         style="max-height: 130px;">
+                </a>
+            </div>
+        </div>
+
+    </div><!--/.container-->
+
+    <hr class="blockspace">
+
+    <footer class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center text-muted">
+                {{ website_version }}
+                &middot;
+                Brought to you by PHP USERGROUP DRESDEN e.V.
+                &middot;
+                <a href="{{ twitter_url }}" target="_blank"
+                   title="Follow PHP Developer Day 2017 on twitter">
+                    <i class="fa fa-twitter"></i> <span class="text-twitter">{{ twitter_handle }}</span>
+                </a>
+                &middot;
+                <a href="{{ twitter_hashtag_url }}" target="_blank"
+                   title="Hashtag #PHPDD18 on twitter">
+                    <i class="fa fa-twitter"></i> <span class="text-twitter">{{ twitter_hashtag }}</span>
+                </a>
+                &middot;
+                <a href="{{ baseUrl ~ '/imprint.html' }}">Imprint</a>
+                &middot;
+                <a href="{{ baseUrl ~ '/privacy.html' }}">Privacy</a>
+                &middot;
+                Letzte Änderung: {{ 'now'|date('d.m.Y H:i') }}
+            </div>
+        </div>
+    </footer>
+
+</div><!--/.page-container-->
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ baseUrl ~ '/assets/js/main.js?' ~ ('now'|date('YmdHis')) }}"></script>
+<script type="text/javascript"
+        src="{{ baseUrl ~ '/assets/js/svg-injector.min.js?' ~ ('now'|date('YmdHis')) }}"></script>
+<script type="text/javascript"
+        src="{{ baseUrl ~ '/assets/js/countdown.js?' ~ ('now'|date('YmdHis')) }}"></script>
+<script>
+    var mySVGsToInject = document.querySelectorAll('img.svg-inject');
+    SVGInjector(mySVGsToInject);
+</script>
+{% block javascripts %}{% endblock %}
+</body>
+</html>
