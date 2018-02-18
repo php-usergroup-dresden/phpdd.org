@@ -1,0 +1,49 @@
+<?php declare(strict_types=1);
+/**
+ * @author hollodotme
+ */
+
+namespace PHPUGDD\PHPDD\Website\Tickets\Application\Types;
+
+use Fortuneglobe\Types\Exceptions\InvalidArgumentException;
+use Money\Money;
+
+/**
+ * Class DiversityDonation
+ * @package PHPUGDD\PHPDD\Website\Tickets\Application\Types
+ */
+final class DiversityDonation
+{
+	/** @var Money */
+	private $money;
+
+	/**
+	 * @param Money $money
+	 *
+	 * @throws InvalidArgumentException
+	 */
+	public function __construct( Money $money )
+	{
+		$this->guardMoneyIsValid( $money );
+
+		$this->money = $money;
+	}
+
+	/**
+	 * @param Money $money
+	 *
+	 * @throws InvalidArgumentException
+	 */
+	private function guardMoneyIsValid( Money $money ) : void
+	{
+		if ( $money->isNegative() )
+		{
+			throw new InvalidArgumentException( 'Invalid money amount for ticket order total provided: ' . $money->getAmount() );
+		}
+	}
+
+	public function getMoney() : Money
+	{
+		return $this->money;
+	}
+}
