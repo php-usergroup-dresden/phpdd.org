@@ -8,18 +8,16 @@
         convertNoticesToExceptions="true"
         convertWarningsToExceptions="true">
     <testsuites>
-        <testsuite name="PHPDD-Website">
-            <directory suffix="Test.php">../tests/Unit</directory>
+        <testsuite name="PHPDD-Website-Tickets">
+            <directory suffix="Test.php">../tests/Unit/Tickets</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">../src</directory>
+            <directory suffix=".php">../src/Tickets</directory>
         </whitelist>
     </filter>
     <logging>
-        <log type="coverage-html" target="logs/coverage" lowUpperBound="35"
-             highLowerBound="70"/>
         <log type="coverage-clover" target="logs/clover.xml"/>
     </logging>
 </phpunit>
