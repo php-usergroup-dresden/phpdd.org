@@ -2,30 +2,64 @@
 
 {% block content %}
 
-    {% for ticketConfig in ticketConfigs %}
-        <div class="row">
-            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
-                <img src="{{ ticketConfig.getImage }}" alt="{{ ticketConfig.getName }}"
-                     class="img-rounded img-responsive">
+    <form method="post" action="/init-ticket-order" id="init-ticket-order-form">
+
+        {% for ticket in ticketConfigs %}
+            <div class="row">
+                <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
+                    <img src="{{ ticket.getImage }}" alt="{{ ticket.getName }}"
+                         class="img-rounded img-responsive">
+                </div>
+                <div class="col-xs-6 col-sm-8 col-md-9 col-lg-9">
+                    <h4>{{ ticket.getName }}</h4>
+                    <p>
+                        {{ ticket.getDescription }}
+                    </p>
+                    <p>
+                        <b>{{ ticket.getPrice.getMoney|formatMoney }}</b><sup>*</sup>
+                        <small class="text-muted"> | {{ ticket.getSeats }} seats available</small>
+                    </p>
+                    <p>
+                        <small class="text-muted">
+                            Available from {{ ticket.getValidFrom|formatDate }}
+                            to {{ ticket.getValidTo|formatDate }}
+                        </small>
+                        {% if not ticket.isAvailable %}
+                            <br>
+                            <small class="text-danger">
+                                This ticket is not for sale at the moment.
+                            </small>
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
+                    <label for="quantity[{{ ticket.getName }}]" class="sr-only">Quantity</label>
+                    <select id="quantity[{{ ticket.getName }}]" name="quantity[{{ ticket.getName }}]"
+                            class="form-control"{% if not ticket.isAvailable %} disabled{% endif %}>
+                        {% for i in 0..ticket.getMaxSeatsPerOrder %}
+                            <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
             </div>
-            <div class="col-xs-8 col-sm-9 col-md-10 col-lg-10">
-                <h4>{{ ticketConfig.getName }}</h4>
-                <p>
-                    {{ ticketConfig.getDescription }}
-                </p>
-                <p>
-                    <b>{{ ticketConfig.getPrice.getMoney|formatMoney }}</b>
-                    <small class="text-muted"> | {{ ticketConfig.getSeats }} seats available</small>
-                </p>
-                <p>
-                    <small class="text-muted">
-                        Available from {{ ticketConfig.getValidFrom|formatDate }}
-                        to {{ ticketConfig.getValidTo|formatDate }}
-                    </small>
-                </p>
+            <hr>
+        {% endfor %}
+
+        <div class="row blockspace">
+            <div class="col-xs-12">
+                <sup>*</sup> Plus fees depending on your payment type.
             </div>
         </div>
-        <hr>
-    {% endfor %}
+
+
+        <div class="row blockspace">
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-danger btn-lg btn-block">
+                    <i class="fa fa-ticket"></i> Order tickets now
+                </button>
+            </div>
+        </div>
+
+    </form>
 
 {% endblock %}
