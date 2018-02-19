@@ -47,6 +47,7 @@
       "template": "Templates/Page.twig",
       "contentFile": "Home.md",
       "children": [
+        "/tickets.html",
         "/venue.html",
         "/become-sponsor.html",
         "/code-of-conduct.html",
@@ -80,6 +81,28 @@
       "renderer": "twig",
       "template": "Templates/500.twig",
       "contentFile": "",
+      "children": []
+    },
+    "/tickets.html": {
+      "pageLevel": 2,
+      "navName": "Buy tickets",
+      "pageTitle": "Buy tickets",
+      "description": "Buy tickets for the PHP Developer Days 2018",
+      "language": "en",
+      "imageUrl": "/assets/images/socialcard.png",
+      "tags": [
+        "Tickets",
+        "Conference",
+        "Workshop",
+        "Order",
+        "Price",
+        "Dresden",
+        "Community"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Tickets.md",
       "children": []
     },
     "/venue.html": {
