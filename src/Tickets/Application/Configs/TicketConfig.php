@@ -31,6 +31,9 @@ final class TicketConfig
 	/** @var int */
 	private $seats;
 
+	/** @var int */
+	private $maxSeatsPerOrder;
+
 	/** @var string */
 	private $type;
 
@@ -43,16 +46,17 @@ final class TicketConfig
 	/** @var string */
 	private $image;
 
-	public function __construct( string $name, string $description, int $price, int $seats, string $type, string $validFrom, string $validTo, string $image )
+	public function __construct( string $name, string $description, int $price, int $seats, int $maxSeatsPerOrder, string $type, string $validFrom, string $validTo, string $image )
 	{
-		$this->name        = $name;
-		$this->description = $description;
-		$this->price       = $price;
-		$this->seats       = $seats;
-		$this->type        = $type;
-		$this->validFrom   = $validFrom;
-		$this->validTo     = $validTo;
-		$this->image       = $image;
+		$this->name             = $name;
+		$this->description      = $description;
+		$this->price            = $price;
+		$this->seats            = $seats;
+		$this->maxSeatsPerOrder = $maxSeatsPerOrder;
+		$this->type             = $type;
+		$this->validFrom        = $validFrom;
+		$this->validTo          = $validTo;
+		$this->image            = $image;
 	}
 
 	public function getName() : TicketName
@@ -79,6 +83,11 @@ final class TicketConfig
 		return $this->seats;
 	}
 
+	public function getMaxSeatsPerOrder() : int
+	{
+		return $this->maxSeatsPerOrder;
+	}
+
 	public function getType() : TicketType
 	{
 		return new TicketType( $this->type );
@@ -97,5 +106,12 @@ final class TicketConfig
 	public function getImage() : string
 	{
 		return $this->image;
+	}
+
+	public function isAvailable() : bool
+	{
+		$now = new \DateTimeImmutable();
+
+		return $this->getValidFrom() < $now && $now < $this->getValidTo();
 	}
 }
