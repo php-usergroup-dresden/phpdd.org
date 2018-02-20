@@ -1,1 +1,10 @@
-# Buy tickets
+# BUY TICKETS
+
+Tickets will be available once the line-up of workshops and conference talks was selected.
+
+The [Call for Papers](https://cfp.phpdd.org) ends on 30th of April 2018. 
+So ticket sale will presumably start in the mid of May.
+
+Please follow us on [Twitter](https://twitter.com/PHPDD) for updates.  
+
+
