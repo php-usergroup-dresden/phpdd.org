@@ -126,18 +126,18 @@ We are commited to creating a unique community experience - an event where every
 </div>
 <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-        <a href="@baseUrl@/become-sponsor.html#silver" title="Become a SILVER sponsor">
-            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=SILVER" class="img-responsive img-sponsor">
+        <a href="https://www.check24.de" target="_blank" title="CHECK24 - Versicherungen, Kredit, Strom, DSL & Reisen im Vergleich">
+            <img src="@baseUrl@/assets/images/sponsors/check24_220x192.png" alt="CHECK24" class="img-responsive img-sponsor">
         </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <a href="https://en.lovoo.com" target="_blank" title="LOVOO - Online dating app for flirting, chatting and getting to know new people">
-            <img src="@baseUrl@/assets/images/sponsors/lovoo_220x192.png" class="img-responsive img-sponsor">
+            <img src="@baseUrl@/assets/images/sponsors/lovoo_220x192.png" alt="LOVOO" class="img-responsive img-sponsor">
         </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
         <a href="https://www.fortuneglobe.com" target="_blank" title="Fortuneglobe | Full Service Agentur für Online Shops">
-            <img src="@baseUrl@/assets/images/sponsors/fortuneglobe_220x192.png" class="img-responsive img-sponsor">
+            <img src="@baseUrl@/assets/images/sponsors/fortuneglobe_220x192.png" alt="Fortuneglobe" class="img-responsive img-sponsor">
         </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
