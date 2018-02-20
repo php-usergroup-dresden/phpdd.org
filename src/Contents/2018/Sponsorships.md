@@ -20,9 +20,9 @@ You can also help us to bring more diversity to this conference by a diversity s
 
 ---
 
-<a href="mailto:orga@phpug-dresden.org?subject=DIVERSITY scholarship booking%20PHPDD18" class="btn btn-lg btn-danger pull-right">
+<button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#diversity-sponsor-modal">
     SPONSOR NOW
-</a>
+</button>
 
 
 For the attendee this scholarship includes:
@@ -43,9 +43,9 @@ and for you:
 
 ---
 
-<a href="mailto:orga@phpug-dresden.org?subject=PLATIN sponsorship booking%20PHPDD18" class="btn btn-lg btn-danger pull-right">
+<button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#platin-sponsor-modal">
     BOOK NOW
-</a>
+</button>
 
 - You can advertise with: 
     - Flyers/Stickers 
@@ -69,9 +69,9 @@ and for you:
 
 ---
 
-<a href="mailto:orga@phpug-dresden.org?subject=GOLD sponsorship booking%20PHPDD18" class="btn btn-lg btn-danger pull-right">
+<button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#gold-sponsor-modal">
     BOOK NOW
-</a>
+</button>
 
 - You can advertise with: 
     - Flyers/Stickers 
@@ -91,9 +91,9 @@ and for you:
 
 ---
 
-<a href="mailto:orga@phpug-dresden.org?subject=SILVER sponsorship booking%20PHPDD18" class="btn btn-lg btn-danger pull-right">
+<button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#silver-sponsor-modal">
     BOOK NOW
-</a>
+</button>
 
 - You can advertise with: 
     - Flyers/Stickers 
@@ -111,9 +111,9 @@ and for you:
 
 ---
 
-<a href="mailto:orga@phpug-dresden.org?subject=BRONZE sponsorship booking%20PHPDD18" class="btn btn-lg btn-danger pull-right">
+<button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#bronze-sponsor-modal">
     BOOK NOW
-</a>
+</button>
 
 - You can advertise with: 
     - Flyers/Stickers 
@@ -122,3 +122,174 @@ and for you:
 - Your company logo will be visible on: 
     - the event website 
     - speaker, sponsor and attendee badges
+
+
+<div class="modal fade" id="diversity-sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="diversity-sponsor-modal-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="diversity-sponsor-modal-label">DIVERSITY SCHOLARSHIP - next steps</h4>
+      </div>
+      <div class="modal-body">
+            <h5>What we need from you</h5>
+            <ul>
+                <li>Your company's billing address</li>
+                <li>Your company's VAT number</li>
+                <li>An email address where we can send the invoice to</li>
+                <li>
+                    Your company's official logo - preferably as a vector graphic (.eps, .svg, .ai) 
+                    or a web graphic with high resolution (1000x1000 pixels, at least 300dpi)
+                </li>
+            </ul>
+            <h5>What you will get</h5>
+            <ul>
+                <li>An invoice for your sponsoring package incl. payment details</li>
+                <li>Your logo on our website at the appropriate sponsor slot</li>
+                <li>An announcement as our sponsor via social media channels</li>
+            </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="mailto:orga@phpug-dresden.org?subject=DIVERSITY%20SCHOLARSHIP%20booking%20PHPDD18" class="btn btn-lg btn-block btn-danger">
+            ALRIGHT, BOOK NOW!
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="platin-sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="platin-sponsor-modal-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="platin-sponsor-modal-label">PLATIN SPONSORSHIP - next steps</h4>
+      </div>
+      <div class="modal-body">
+            <h5>What we need from you</h5>
+            <ul>
+                <li>Your company's billing address</li>
+                <li>Your company's VAT number</li>
+                <li>An email address where we can send the invoice to</li>
+                <li>
+                    Your company's official logo - preferably as a vector graphic (.eps, .svg, .ai) 
+                    or a web graphic with high resolution (1000x1000 pixels, at least 300dpi)
+                </li>
+            </ul>
+            <h5>What you will get</h5>
+            <ul>
+                <li>An invoice for your sponsoring package incl. payment details</li>
+                <li>Your logo on our website at the appropriate sponsor slot</li>
+                <li>An announcement as our sponsor via social media channels</li>
+            </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="mailto:orga@phpug-dresden.org?subject=PLATIN%20sponsorship%20booking%20PHPDD18" class="btn btn-lg btn-block btn-danger">
+            ALRIGHT, BOOK NOW!
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="gold-sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="gold-sponsor-modal-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gold-sponsor-modal-label">GOLD SPONSORSHIP - next steps</h4>
+      </div>
+      <div class="modal-body">
+            <h5>What we need from you</h5>
+            <ul>
+                <li>Your company's billing address</li>
+                <li>Your company's VAT number</li>
+                <li>An email address where we can send the invoice to</li>
+                <li>
+                    Your company's official logo - preferably as a vector graphic (.eps, .svg, .ai) 
+                    or a web graphic with high resolution (1000x1000 pixels, at least 300dpi)
+                </li>
+            </ul>
+            <h5>What you will get</h5>
+            <ul>
+                <li>An invoice for your sponsoring package incl. payment details</li>
+                <li>Your logo on our website at the appropriate sponsor slot</li>
+                <li>An announcement as our sponsor via social media channels</li>
+            </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="mailto:orga@phpug-dresden.org?subject=GOLD%20sponsorship%20booking%20PHPDD18" class="btn btn-lg btn-block btn-danger">
+            ALRIGHT, BOOK NOW!
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="silver-sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="silver-sponsor-modal-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="silver-sponsor-modal-label">SILVER SPONSORSHIP - next steps</h4>
+      </div>
+      <div class="modal-body">
+            <h5>What we need from you</h5>
+            <ul>
+                <li>Your company's billing address</li>
+                <li>Your company's VAT number</li>
+                <li>An email address where we can send the invoice to</li>
+                <li>
+                    Your company's official logo - preferably as a vector graphic (.eps, .svg, .ai) 
+                    or a web graphic with high resolution (1000x1000 pixels, at least 300dpi)
+                </li>
+            </ul>
+            <h5>What you will get</h5>
+            <ul>
+                <li>An invoice for your sponsoring package incl. payment details</li>
+                <li>Your logo on our website at the appropriate sponsor slot</li>
+                <li>An announcement as our sponsor via social media channels</li>
+            </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="mailto:orga@phpug-dresden.org?subject=SILVER%20sponsorship%20booking%20PHPDD18" class="btn btn-lg btn-block btn-danger">
+            ALRIGHT, BOOK NOW!
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="bronze-sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="bronze-sponsor-modal-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="bronze-sponsor-modal-label">BRONZE SPONSORSHIP - next steps</h4>
+      </div>
+      <div class="modal-body">
+            <h5>What we need from you</h5>
+            <ul>
+                <li>Your company's billing address</li>
+                <li>Your company's VAT number</li>
+                <li>An email address where we can send the invoice to</li>
+                <li>
+                    Your company's official logo - preferably as a vector graphic (.eps, .svg, .ai) 
+                    or a web graphic with high resolution (1000x1000 pixels, at least 300dpi)
+                </li>
+            </ul>
+            <h5>What you will get</h5>
+            <ul>
+                <li>An invoice for your sponsoring package incl. payment details</li>
+                <li>Your logo on our website at the appropriate sponsor slot</li>
+                <li>An announcement as our sponsor via social media channels</li>
+            </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="mailto:orga@phpug-dresden.org?subject=BRONZE%20sponsorship%20booking%20PHPDD18" class="btn btn-lg btn-block btn-danger">
+            ALRIGHT, BOOK NOW!
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
