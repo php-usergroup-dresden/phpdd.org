@@ -20,6 +20,13 @@
                 "/venue.html": "The venue"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -57,6 +64,13 @@
                 "/index.html": "Home"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/code-of-conduct.html": {
             "title": "Code of Conduct",
             "breadcrumb": {
@@ -84,6 +98,13 @@
             "title": "Home",
             "breadcrumb": {
                 "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         }
     },
@@ -121,6 +142,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         },
         "https://2018.phpdd.org/become-sponsor.html": {
@@ -179,6 +207,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         },
         "https://2018.phpdd.org/become-sponsor.html": {
@@ -254,6 +289,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         },
         "https://2018.phpdd.org/become-sponsor.html": {
@@ -354,6 +396,13 @@
                 "/venue.html": "The venue"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -384,6 +433,13 @@
                 "/index.html": "Home"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -407,6 +463,13 @@
                 "/index.html": "Home"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -420,6 +483,13 @@
             "title": "Home",
             "breadcrumb": {
                 "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         },
         "https://2018.phpdd.org/code-of-conduct.html": {
@@ -514,6 +584,13 @@
                 "/tickets.html": "Buy tickets"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -582,6 +659,13 @@
                 "/tickets.html": "Buy tickets"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -635,6 +719,13 @@
                 "/index.html": "Home"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -670,6 +761,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         },
         "https://2018.phpdd.org/become-sponsor.html": {
@@ -839,6 +937,13 @@
             "breadcrumb": {
                 "/index.html": "Home"
             }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
         }
     },
     "commited": {
@@ -877,6 +982,13 @@
             "title": "Home",
             "breadcrumb": {
                 "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         }
     },
@@ -1037,6 +1149,13 @@
                 "/tickets.html": "Buy tickets"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -1064,6 +1183,13 @@
             "title": "Home",
             "breadcrumb": {
                 "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         },
         "https://2018.phpdd.org/privacy.html": {
@@ -1149,6 +1275,13 @@
                 "/venue.html": "The venue"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -1170,6 +1303,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/tickets.html": "Buy tickets"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         }
     },
@@ -1666,6 +1806,13 @@
                 "/venue.html": "The venue"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -1936,6 +2083,13 @@
                 "/index.html": "Home",
                 "/venue.html": "The venue"
             }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
         }
     },
     "four": {
@@ -2016,6 +2170,13 @@
                 "/venue.html": "The venue"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/code-of-conduct.html": {
             "title": "Code of Conduct",
             "breadcrumb": {
@@ -2030,6 +2191,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         }
     },
@@ -2282,6 +2450,13 @@
                 "/venue.html": "The venue"
             }
         },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -2341,6 +2516,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
             }
         }
     },
@@ -2523,6 +2705,988 @@
                 "/index.html": "Home",
                 "/venue.html": "The venue"
             }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "events": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "along": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "schedule": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "september": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "22nd": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "have": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "several": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "provided": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "presented": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "members": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "unconference": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "lightning": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "talk": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "chosen": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "attendees": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "step": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "put": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "flip": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "chart": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "vote": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "got": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "idea": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "send": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.org/code-of-conduct.html": {
+            "title": "Code of Conduct",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/code-of-conduct.html": "Code of Conduct"
+            }
+        }
+    },
+    "orga": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "phpug": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.org/imprint.html": {
+            "title": "Imprint",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/imprint.html": "Imprint"
+            }
+        }
+    },
+    "dev": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "radio": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "podcast": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "happy": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "michael": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "hler": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "claudio": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "zizza": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "ralf": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.org/code-of-conduct.html": {
+            "title": "Code of Conduct",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/code-of-conduct.html": "Code of Conduct"
+            }
+        }
+    },
+    "kroner": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "joining": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "some": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "interviews": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "phpdd18": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "tape": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "free": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "german": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "devs": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "gpg": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "signing": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "building": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "circle": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "trust": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "andreas": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "heigl": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "guide": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "through": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "process": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "verifying": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "keys": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "trusted": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "sign": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "git": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "commits": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "encrypt": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "emails": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "verify": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "identity": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "agile": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "game": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "challenges": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "improve": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "team": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "work": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "colleague": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "tobias": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "ner": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "challenge": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "teamwork": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "skills": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "iterating": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "funny": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "small": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "games": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "learn": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "make": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "repeat": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "wurstcon": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "never": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "sausage": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "sir": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "mampfelot": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "serve": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "awesome": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "creations": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "hot": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "dog": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "grab": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "yourself": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "bib": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "post": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "install": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "require": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "package": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
         }
     },
     "become": {
@@ -2692,15 +3856,6 @@
             }
         }
     },
-    "package": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
     "includes": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
@@ -2710,25 +3865,7 @@
             }
         }
     },
-    "have": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
     "additional": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "make": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -2827,31 +3964,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "orga": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "phpug": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        },
-        "https://2018.phpdd.org/imprint.html": {
-            "title": "Imprint",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/imprint.html": "Imprint"
             }
         }
     },
@@ -3000,15 +4112,6 @@
         }
     },
     "welcoming": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "talk": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -3265,15 +4368,6 @@
             }
         }
     },
-    "attendees": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
     "job": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
@@ -3452,15 +4546,6 @@
             }
         }
     },
-    "small": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
     "4m2": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
@@ -3530,22 +4615,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "send": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        },
-        "https://2018.phpdd.org/code-of-conduct.html": {
-            "title": "Code of Conduct",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/code-of-conduct.html": "Code of Conduct"
             }
         }
     },
@@ -4020,15 +5089,6 @@
         }
     },
     "keil": {
-        "https://2018.phpdd.org/code-of-conduct.html": {
-            "title": "Code of Conduct",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/code-of-conduct.html": "Code of Conduct"
-            }
-        }
-    },
-    "ralf": {
         "https://2018.phpdd.org/code-of-conduct.html": {
             "title": "Code of Conduct",
             "breadcrumb": {

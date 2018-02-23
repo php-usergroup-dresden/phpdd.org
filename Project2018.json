@@ -49,6 +49,7 @@
       "children": [
         "/tickets.html",
         "/venue.html",
+        "/side-events.html",
         "/become-sponsor.html",
         "/code-of-conduct.html",
         "/privacy.html",
@@ -124,6 +125,27 @@
       "renderer": "twig",
       "template": "Templates/Page.twig",
       "contentFile": "Venue.md",
+      "children": []
+    },
+    "/side-events.html": {
+      "pageLevel": 2,
+      "navName": "Side events",
+      "pageTitle": "Side events",
+      "description": "Side events of the PHP Developer Days 2018",
+      "language": "en",
+      "imageUrl": "/assets/images/socialcard.png",
+      "tags": [
+        "Side event",
+        "Session",
+        "Happening",
+        "Maritim",
+        "Dresden",
+        "Community"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "SideEvents.md",
       "children": []
     },
     "/become-sponsor.html": {
