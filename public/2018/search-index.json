@@ -1208,6 +1208,28 @@
             }
         }
     },
+    "book": {
+        "https://2018.phpdd.org/index.html": {
+            "title": "Home",
+            "breadcrumb": {
+                "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
     "buy": {
         "https://2018.phpdd.org/tickets.html": {
             "title": "Buy tickets",
@@ -1662,22 +1684,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/privacy.html": "Privacy"
-            }
-        }
-    },
-    "book": {
-        "https://2018.phpdd.org/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
-            }
-        },
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
             }
         }
     },
@@ -3059,31 +3065,6 @@
         }
     },
     "zizza": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "ralf": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        },
-        "https://2018.phpdd.org/code-of-conduct.html": {
-            "title": "Code of Conduct",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/code-of-conduct.html": "Code of Conduct"
-            }
-        }
-    },
-    "kroner": {
         "https://2018.phpdd.org/side-events.html": {
             "title": "Side events",
             "breadcrumb": {
@@ -5089,6 +5070,15 @@
         }
     },
     "keil": {
+        "https://2018.phpdd.org/code-of-conduct.html": {
+            "title": "Code of Conduct",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/code-of-conduct.html": "Code of Conduct"
+            }
+        }
+    },
+    "ralf": {
         "https://2018.phpdd.org/code-of-conduct.html": {
             "title": "Code of Conduct",
             "breadcrumb": {

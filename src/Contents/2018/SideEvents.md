@@ -35,7 +35,8 @@ Along with our main conference schedule on September 22nd, we will have several 
             The podcast for PHP
         </p>
         <p>
-            We're very happy that Michael Döhler, Claudio Zizza & Ralf Kroner from 
+            We're very happy that <a href="https://twitter.com/whataboutmd" target="_blank">Michael Döhler</a> & 
+            <a href="https://twitter.com/SenseException" target="_blank">Claudio Zizza</a> from 
             <a href="http://phpdevradio.de" target="_blank" title="PHP DEV RADIO website">PHP DEV RADIO</a> 
             are joining us to do some interviews and put your #PHPDD18 experience on tape.
         </p>
