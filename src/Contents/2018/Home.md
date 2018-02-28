@@ -91,6 +91,22 @@ We are commited to creating a unique community experience - an event where every
     </div>
 </div>
 
+## OUR DIVERSITY SCHOLARSHIP SPONSORS
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <a href="https://en.shopware.com" target="_blank" title="shopware - The trendsetting eCommerce platform to power your online business">
+            <img src="@baseUrl@/assets/images/sponsors/shopware.png" alt="shopware" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"></div>
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"></div>
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"></div>
+</div>
+
+
 ## OUR SPONSORS
 
 ---

@@ -66,6 +66,9 @@ Along with our main conference schedule on September 22nd, we will have several 
             Use trusted GPG keys to sign your git commits,
             encrypt your emails or verify your identity.
         </p>
+        <p>
+            <b>PRO-TIP:</b> You'll need your laptop with your GPG keyring to participate.
+        </p>
     </div>
 </div> 
 
