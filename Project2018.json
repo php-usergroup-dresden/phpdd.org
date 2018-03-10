@@ -48,6 +48,7 @@
       "contentFile": "Home.md",
       "children": [
         "/tickets.html",
+        "/diversity-scholarship-application.html",
         "/venue.html",
         "/side-events.html",
         "/become-sponsor.html",
@@ -105,6 +106,28 @@
       "renderer": "twig",
       "template": "Templates/Page.twig",
       "contentFile": "Tickets.md",
+      "children": []
+    },
+    "/diversity-scholarship-application.html": {
+      "pageLevel": 2,
+      "navName": "Scholarships",
+      "pageTitle": "Diversity scholarships",
+      "description": "Diversity scholarships for the PHP Developer Days 2018",
+      "language": "en",
+      "imageUrl": "/assets/images/socialcard.png",
+      "tags": [
+        "Tickets",
+        "Conference",
+        "Workshop",
+        "Order",
+        "Price",
+        "Dresden",
+        "Community"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "DiversityScholarshipApplication.md",
       "children": []
     },
     "/venue.html": {
