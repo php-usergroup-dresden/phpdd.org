@@ -50,6 +50,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://2018.phpdd.org/team.html</loc>
+    <image:image>
+      <image:loc>https://2018.phpdd.org/assets/images/socialcard.png</image:loc>
+      <image:caption>Meet the team</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://2018.phpdd.org/code-of-conduct.html</loc>
     <image:image>
       <image:loc>https://2018.phpdd.org/assets/images/socialcard.png</image:loc>

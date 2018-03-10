@@ -51,6 +51,7 @@
         "/venue.html",
         "/side-events.html",
         "/become-sponsor.html",
+        "/team.html",
         "/code-of-conduct.html",
         "/privacy.html",
         "/imprint.html"
@@ -169,6 +170,28 @@
       "renderer": "twig",
       "template": "Templates/Page.twig",
       "contentFile": "Sponsorships.md",
+      "children": []
+    },
+    "/team.html": {
+      "pageLevel": 2,
+      "navName": "Meet the team",
+      "pageTitle": "Meet the team",
+      "description": "Meet the team of PHP Developer Days 2018",
+      "language": "en",
+      "imageUrl": "/assets/images/socialcard.png",
+      "tags": [
+        "Meeting",
+        "Team",
+        "Organizers",
+        "Volunteers",
+        "Dresden",
+        "Community",
+        "Events"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Team.md",
       "children": []
     },
     "/code-of-conduct.html": {
