@@ -12,8 +12,8 @@
             by covering travel, hotel and ticket costs for our conference.
         </p>
         <p>
-            If you are an underrepresented person and want to experience the PHP Developer Days 2018 in Dresden, please read the 
-            following information on how to apply for a diversity scholarship.
+            If you are a member of an underrepresented group and want to experience the PHP Developer Days 2018 in Dresden, 
+            please read the following information on how to apply for a diversity scholarship.
         </p>        
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
@@ -47,7 +47,11 @@ Please note...
   We won't be able to spend more than this amount.
 * we are not able to help you out with getting a Visa for Germany.
 * we will inform you no later than two months before the event (mid of July 2018) if your application was accepted.
-
+* if your application was accepted we will book your flight/train tickets and your hotel room.
+  For that matter we'll get in touch with you and ask you for some personal data like your passport details, 
+  allergies and food preference. If you rather like to organise your trip on your own, just let us know and we
+  will reimburse you on presentation/production of receipts. 
+  Because we already reserved hotel rooms at the venue you won't need to book a hotel.  
 
 <div class="text-center blockspace">
     <a href="mailto:orga@phpug-dresden.org?subject=PHPDD18%20DIVERSITY%20SCHOLARSHIP%20APPLICATION" 
