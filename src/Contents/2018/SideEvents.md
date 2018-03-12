@@ -25,6 +25,27 @@ Along with our main conference schedule on September 22nd, we will have several 
 
 <hr class="blockspace">
 
+<div class="blockspace gpg-session">
+    <h3>GPG SIGNING SESSION</h3>
+    <p>
+        Building a circle of trust in the community
+    </p>
+    <p>
+        <a href="https://twitter.com/heiglandreas" target="_blank">Mr. Andreas Heigl</a> 
+        will guide you through the process of
+        verifying & signing GPG keys from other community members. 
+    </p>
+    <p>
+        Use trusted GPG keys to sign your git commits,
+        encrypt your emails or verify your identity.
+    </p>
+    <p>
+        <b>PRO-TIP:</b> You'll need your laptop with your GPG keyring to participate.
+    </p>
+</div> 
+
+<hr class="blockspace">
+
 <div class="row blockspace">
     <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
         <img src="@baseUrl@/assets/images/side-events/php-dev-radio-logo.png" class="img-responsive" alt="PHP DEV RADIO - Der Podcast für PHP">
@@ -48,49 +69,18 @@ Along with our main conference schedule on September 22nd, we will have several 
 
 <hr class="blockspace">
 
-<div class="row blockspace">
-    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
-        <img src="@baseUrl@/assets/images/side-events/gpg-signing-session.png" class="img-responsive" alt="PHP DEV RADIO - Der Podcast für PHP">
-    </div>
-    <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9">
-        <h3>GPG SIGNING SESSION</h3>
-        <p>
-            Building a circle of trust in the community
-        </p>
-        <p>
-            <a href="https://twitter.com/heiglandreas" target="_blank">Mr. Andreas Heigl</a> 
-            will guide you through the process of
-            verifying & signing GPG keys from other community members. 
-        </p>
-        <p>
-            Use trusted GPG keys to sign your git commits,
-            encrypt your emails or verify your identity.
-        </p>
-        <p>
-            <b>PRO-TIP:</b> You'll need your laptop with your GPG keyring to participate.
-        </p>
-    </div>
-</div> 
-
-<hr class="blockspace">
-
-<div class="row blockspace">
-    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
-        <img src="@baseUrl@/assets/images/side-events/agile-game-challenges.png" class="img-responsive" alt="PHP DEV RADIO - Der Podcast für PHP">
-    </div>
-    <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9">
-        <h3>AGILE GAME CHALLENGES</h3>
-        <p>
-            Improve your team work
-        </p>
-        <p>
-            Our colleague <a href="https://twitter.com/h3lmpfl1cht" target="_blank">Tobias Mißner</a> 
-            will challenge your teamwork skills by iterating over funny small games.
-        </p>
-        <p>
-            Learn. Make. Repeat.
-        </p>
-    </div>
+<div class="blockspace agile-games">
+    <h3>AGILE GAME CHALLENGES</h3>
+    <p>
+        Improve your team work
+    </p>
+    <p>
+        Our colleague <a href="https://twitter.com/h3lmpfl1cht" target="_blank">Tobias Mißner</a> 
+        will challenge your teamwork skills by iterating over funny small games.
+    </p>
+    <p>
+        Learn. Make. Repeat.
+    </p>
 </div> 
 
 <hr class="blockspace">

@@ -297,6 +297,18 @@ h1.page-headline {
     font-weight: bolder;
 }
 
+.gpg-session {
+    background: url(../images/side-events/banner-gpg-signing-session.png) no-repeat;
+    height: 350px;
+    padding: 100px 10px 10px 260px;
+}
+
+.agile-games {
+    background: url(../images/side-events/banner-agile-games.png) no-repeat;
+    height: 350px;
+    padding: 100px 10px 10px 260px;
+}
+
 footer {
     padding-bottom: 30px;
 }
