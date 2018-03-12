@@ -2778,7 +2778,32 @@
             }
         }
     },
-    "raise": {
+    "spend": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "more": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "than": {
         "https://2018.phpdd.org/diversity-scholarship-application.html": {
             "title": "Diversity scholarships",
             "breadcrumb": {
@@ -2831,15 +2856,6 @@
         }
     },
     "later": {
-        "https://2018.phpdd.org/diversity-scholarship-application.html": {
-            "title": "Diversity scholarships",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/diversity-scholarship-application.html": "Scholarships"
-            }
-        }
-    },
-    "than": {
         "https://2018.phpdd.org/diversity-scholarship-application.html": {
             "title": "Diversity scholarships",
             "breadcrumb": {
@@ -5080,15 +5096,6 @@
         }
     },
     "even": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "more": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {

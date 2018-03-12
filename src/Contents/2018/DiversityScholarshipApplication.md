@@ -44,7 +44,7 @@ Please note...
 * we only have a limited amount of diversity scholarships for this event.
   So please apply only if you are sure you can make it to Dresden on the date of the event.
 * each scholarship is limited to expenses of 800 EURO to cover travel, hotel and the conference ticket.   
-  We won't be able to raise this amount.
+  We won't be able to spend more than this amount.
 * we are not able to help you out with getting a Visa for Germany.
 * we will inform you no later than two months before the event (mid of July 2018) if your application was accepted.
 
