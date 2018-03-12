@@ -996,6 +996,13 @@
                 "/index.html": "Home"
             }
         },
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -1497,6 +1504,13 @@
                 "/index.html": "Home"
             }
         },
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
         "https://2018.phpdd.org/venue.html": {
             "title": "The venue",
             "breadcrumb": {
@@ -1527,6 +1541,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/tickets.html": "Buy tickets"
+            }
+        },
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
             }
         },
         "https://2018.phpdd.org/venue.html": {
@@ -2082,12 +2103,28 @@
             }
         }
     },
-    "person": {
+    "member": {
         "https://2018.phpdd.org/diversity-scholarship-application.html": {
             "title": "Diversity scholarships",
             "breadcrumb": {
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "group": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/privacy.html": {
+            "title": "Privacy",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/privacy.html": "Privacy"
             }
         }
     },
@@ -2254,6 +2291,15 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/side-events.html": "Side events"
+            }
+        }
+    },
+    "person": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
             }
         }
     },
@@ -2900,7 +2946,327 @@
             }
         }
     },
+    "flight": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "train": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
+    "room": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "that": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "matter": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "touch": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "ask": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "personal": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "data": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/privacy.html": {
+            "title": "Privacy",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/privacy.html": "Privacy"
+            }
+        }
+    },
+    "passport": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "details": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "allergies": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "food": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "preference": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "rather": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "organise": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "trip": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "own": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "just": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
+    "reimburse": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "presentation": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "production": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "receipts": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "because": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "already": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "reserved": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "rooms": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
     "venue": {
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
         "https://2018.phpdd.org/venue.html": {
             "title": "The venue",
             "breadcrumb": {
@@ -3358,22 +3724,6 @@
             }
         }
     },
-    "rooms": {
-        "https://2018.phpdd.org/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
-            }
-        },
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
     "spread": {
         "https://2018.phpdd.org/venue.html": {
             "title": "The venue",
@@ -3452,15 +3802,6 @@
         }
     },
     "situated": {
-        "https://2018.phpdd.org/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
-            }
-        }
-    },
-    "just": {
         "https://2018.phpdd.org/venue.html": {
             "title": "The venue",
             "breadcrumb": {
@@ -3696,15 +4037,6 @@
         }
     },
     "tram": {
-        "https://2018.phpdd.org/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
-            }
-        }
-    },
-    "train": {
         "https://2018.phpdd.org/venue.html": {
             "title": "The venue",
             "breadcrumb": {
@@ -3975,22 +4307,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "The venue"
-            }
-        }
-    },
-    "that": {
-        "https://2018.phpdd.org/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
-            }
-        },
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
             }
         }
     },
@@ -4266,141 +4582,6 @@
             }
         }
     },
-    "dev": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "radio": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "podcast": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "happy": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "michael": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "hler": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "claudio": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "zizza": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "joining": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "interviews": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "phpdd18": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "tape": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "free": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "german": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "devs": {
-        "https://2018.phpdd.org/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
     "gpg": {
         "https://2018.phpdd.org/side-events.html": {
             "title": "Side events",
@@ -4618,6 +4799,141 @@
         }
     },
     "participate": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "dev": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "radio": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "podcast": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "happy": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "michael": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "hler": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "claudio": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "zizza": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "joining": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "interviews": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "phpdd18": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "tape": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "free": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "german": {
+        "https://2018.phpdd.org/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "devs": {
         "https://2018.phpdd.org/side-events.html": {
             "title": "Side events",
             "breadcrumb": {
@@ -5330,15 +5646,6 @@
             }
         }
     },
-    "presentation": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
     "during": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
@@ -5385,15 +5692,6 @@
         }
     },
     "workshop": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "room": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -5856,15 +6154,6 @@
         }
     },
     "payment": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "details": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -10958,15 +11247,6 @@
             }
         }
     },
-    "data": {
-        "https://2018.phpdd.org/privacy.html": {
-            "title": "Privacy",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/privacy.html": "Privacy"
-            }
-        }
-    },
     "protection": {
         "https://2018.phpdd.org/privacy.html": {
             "title": "Privacy",
@@ -11220,15 +11500,6 @@
         }
     },
     "science": {
-        "https://2018.phpdd.org/privacy.html": {
-            "title": "Privacy",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/privacy.html": "Privacy"
-            }
-        }
-    },
-    "group": {
         "https://2018.phpdd.org/privacy.html": {
             "title": "Privacy",
             "breadcrumb": {
