@@ -157,8 +157,8 @@ We are commited to creating a unique community experience - an event where every
         </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-        <a href="@baseUrl@/become-sponsor.html#silver" title="Become a SILVER sponsor">
-            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=SILVER" class="img-responsive img-sponsor">
+        <a href="https://itexia.com" target="_blank" title="iTEXiA - excellence in ambition">
+            <img src="@baseUrl@/assets/images/sponsors/itexia_220x192.png" alt="iTEXiA - excellence in ambition" class="img-responsive img-sponsor">
         </a>
     </div>
 </div>
