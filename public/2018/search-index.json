@@ -5977,6 +5977,15 @@
             }
         }
     },
+    "left": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
     "times": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",

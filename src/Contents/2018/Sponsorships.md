@@ -91,8 +91,8 @@ and for you:
 
 ---
 
-<button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#silver-sponsor-modal">
-    BOOK NOW
+<button class="btn btn-lg btn-danger pull-right disabled" disabled data-toggle="modal" data-target="#silver-sponsor-modal">
+    NO SLOTS LEFT
 </button>
 
 - You can advertise with: 
