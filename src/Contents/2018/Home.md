@@ -130,8 +130,8 @@ We are commited to creating a unique community experience - an event where every
         </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-        <a href="@baseUrl@/become-sponsor.html#gold" title="Become a GOLD sponsor">
-            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=GOLD" class="img-responsive img-sponsor">
+        <a href="https://www.move-elevator.de" target="_blank" title="move:elevator - Full Service Werbeagentur">
+            <img src="@baseUrl@/assets/images/sponsors/move_elevator_263x244.png" class="img-responsive img-sponsor" alt="move:elevator - Full Service Werbeagentur">
         </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
