@@ -37,6 +37,7 @@ and for you:
 
 * Your sponsorship will be announced in the welcoming talk on conference day
 * Your sponsorship will be advertised in our Twitter & Facebook campaign
+* Your sponsorship will be mentioned in all official e-mails to attendees
 
 <a name="platin"></a>
 ## PLATIN SPONSORSHIP - € 5,000
@@ -44,7 +45,7 @@ and for you:
 ---
 
 <button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#platin-sponsor-modal">
-    BOOK NOW
+    2 slots left - BOOK NOW
 </button>
 
 - You can advertise with: 
@@ -62,7 +63,9 @@ and for you:
     - our Twitter & Facebook campaigns
     - one of the workshop rooms (the room will carry your company name)
 - You will be mentioned in all press publications
-- You will get a 15 minutes Sponsor-Talk-Slot after the keynote at the beginning of the conference
+- You will be introduced with an exclusive 1 minute slot in the opening words by the organizers
+- You will get a 5 minutes Sponsor-Talk-Slot after the keynote at the beginning of the conference
+- You will be mentioned in all official e-mails to attendees
 
 <a name="gold"></a>
 ## GOLD SPONSORSHIP - € 3,000
@@ -70,13 +73,13 @@ and for you:
 ---
 
 <button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#gold-sponsor-modal">
-    BOOK NOW
+    2 slots left - BOOK NOW
 </button>
 
 - You can advertise with: 
     - Flyers/Stickers 
     - Presentation during the breaks
-    - Rollup
+    - Rollup / Banner on the main conference stage
     - Small booth (4m<sup>2</sup> with max. 2 people incl. full catering)
     - Goodies for attendees
     - Job offers
@@ -85,6 +88,8 @@ and for you:
     - speaker, sponsor and attendee badges
     - our Twitter & Facebook campaigns
 - You will be mentioned in all press publications
+- You will be introduced with an exclusive 30 seconds slot in the opening words by the organizers
+- You will be mentioned in all official e-mails to attendees
 
 <a name="silver"></a>
 ## SILVER SPONSORSHIP - € 1,000
@@ -105,6 +110,7 @@ and for you:
     - the event website 
     - speaker, sponsor and attendee badges
     - our Twitter & Facebook campaigns
+- You will be mentioned in all official e-mails to attendees
 
 <a name="bronze"></a>
 ## BRONZE SPONSORSHIP - € 500
@@ -112,7 +118,7 @@ and for you:
 ---
 
 <button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#bronze-sponsor-modal">
-    BOOK NOW
+    12 slots left - BOOK NOW
 </button>
 
 - You can advertise with: 
@@ -122,7 +128,7 @@ and for you:
 - Your company logo will be visible on: 
     - the event website 
     - speaker, sponsor and attendee badges
-
+- You will be mentioned in all official e-mails to attendees
 
 <div class="modal fade" id="diversity-sponsor-modal" tabindex="-1" role="dialog" aria-labelledby="diversity-sponsor-modal-label">
   <div class="modal-dialog" role="document">

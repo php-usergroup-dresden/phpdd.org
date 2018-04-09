@@ -5619,6 +5619,58 @@
             }
         }
     },
+    "mentioned": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "all": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "official": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "mails": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.org/privacy.html": {
+            "title": "Privacy",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/privacy.html": "Privacy"
+            }
+        }
+    },
+    "left": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
     "advertise": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
@@ -5905,24 +5957,6 @@
             }
         }
     },
-    "mentioned": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "all": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
     "press": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
@@ -5938,6 +5972,67 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "introduced": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "exclusive": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "minute": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "opening": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "words": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "organizers": {
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.org/team.html": {
+            "title": "Meet the team",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/team.html": "Meet the team"
             }
         }
     },
@@ -5977,7 +6072,7 @@
             }
         }
     },
-    "left": {
+    "seconds": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -6032,15 +6127,6 @@
         }
     },
     "invoice": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "official": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -6235,15 +6321,6 @@
         }
     },
     "responsible": {
-        "https://2018.phpdd.org/team.html": {
-            "title": "Meet the team",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/team.html": "Meet the team"
-            }
-        }
-    },
-    "organizers": {
         "https://2018.phpdd.org/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -12148,15 +12225,6 @@
         }
     },
     "zugesendeter": {
-        "https://2018.phpdd.org/privacy.html": {
-            "title": "Privacy",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/privacy.html": "Privacy"
-            }
-        }
-    },
-    "mails": {
         "https://2018.phpdd.org/privacy.html": {
             "title": "Privacy",
             "breadcrumb": {
