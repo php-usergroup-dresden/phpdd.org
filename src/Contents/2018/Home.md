@@ -59,7 +59,7 @@ We are commited to creating a unique community experience - an event where every
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
-        <a href="https://twitter.com/miss_jwo" target="_blank" title="Jenny Wong on Twitter">
+        <a href="@baseUrl@/speakers.html#jenny-wong" title="Jenny Wong on Twitter">
             <img src="@baseUrl@/assets/images/speakers/jenny-wong_400x400.jpg" alt="Jenny Wong" class="img-responsive img-circle blockspace">
         </a>
     </div>
