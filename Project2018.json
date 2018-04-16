@@ -47,6 +47,7 @@
       "template": "Templates/Page.twig",
       "contentFile": "Home.md",
       "children": [
+        "/speakers.html",
         "/tickets.html",
         "/diversity-scholarship-application.html",
         "/venue.html",
@@ -84,6 +85,28 @@
       "renderer": "twig",
       "template": "Templates/500.twig",
       "contentFile": "",
+      "children": []
+    },
+    "/speakers.html": {
+      "pageLevel": 2,
+      "navName": "Speakers/Trainers",
+      "pageTitle": "Speakers/Trainers",
+      "description": "Speakers and Trainers at the PHP Developer Days 2018",
+      "language": "en",
+      "imageUrl": "/assets/images/socialcard.png",
+      "tags": [
+        "Speakers",
+        "Trainers",
+        "Workshop",
+        "Talk",
+        "Stage",
+        "Dresden",
+        "Community"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Speakers.md",
       "children": []
     },
     "/tickets.html": {
