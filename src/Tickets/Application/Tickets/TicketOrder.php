@@ -89,13 +89,16 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	}
 
 	/**
-	 * @param TicketItem[] ...$ticketItems
+	 * @param TicketItem $ticketItem
+	 * @param TicketItem ...$ticketItems
 	 *
 	 * @throws AllowedTicketCountExceededException
 	 * @throws AllowedTicketCountPerAttendeeExceededException
 	 */
-	public function orderTickets( TicketItem ...$ticketItems ) : void
+	public function orderTickets( TicketItem $ticketItem, TicketItem ...$ticketItems ) : void
 	{
+		$this->orderTicket( $ticketItem );
+
 		foreach ( $ticketItems as $ticketItem )
 		{
 			$this->orderTicket( $ticketItem );
