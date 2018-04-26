@@ -6,7 +6,9 @@
         colors="true"
         convertErrorsToExceptions="true"
         convertNoticesToExceptions="true"
-        convertWarningsToExceptions="true">
+        convertWarningsToExceptions="true"
+        stopOnError="true"
+        stopOnFailure="true">
     <testsuites>
         <testsuite name="PHPDD-Website-Tickets">
             <directory suffix="Test.php">../tests/Unit/Tickets</directory>
