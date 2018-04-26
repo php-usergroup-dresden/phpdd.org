@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tests\Tickets\Unit\Application\Tickets;
 
@@ -14,10 +11,6 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 use PHPUnit\Framework\TestCase;
 
-/**
- * Class TicketItemTest
- * @package PHPUGDD\PHPDD\Website\Tests\Tickets\Unit\Application\Tickets
- */
 final class TicketItemTest extends TestCase
 {
 	use TicketProviding;

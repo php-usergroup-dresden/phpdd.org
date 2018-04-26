@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tests\Tickets\Unit\Application\Tickets;
 
@@ -18,10 +15,6 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 use PHPUnit\Framework\TestCase;
 
-/**
- * Class TicketOrderTest
- * @package PHPUGDD\PHPDD\Website\Tests\Tickets\Unit\Application\Tickets
- */
 final class TicketOrderTest extends TestCase
 {
 	use TicketProviding;
@@ -31,6 +24,7 @@ final class TicketOrderTest extends TestCase
 	/**
 	 * @throws \PHPUnit\Framework\Exception
 	 * @throws \InvalidArgumentException
+	 * @throws \Exception
 	 */
 	public function testCanCreateInstanceFromOrderIdAndDate() : void
 	{
@@ -61,8 +55,9 @@ final class TicketOrderTest extends TestCase
 	/**
 	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
 	 * @throws \InvalidArgumentException
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \Exception
 	 */
 	public function testThrowsExceptionForExceedingMaxConferenceTicketCount() : void
 	{
@@ -86,8 +81,9 @@ final class TicketOrderTest extends TestCase
 	/**
 	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
 	 * @throws \InvalidArgumentException
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \Exception
 	 */
 	public function testThrowsExceptionForExceedingMaxWorkshopTicketCount() : void
 	{
@@ -111,8 +107,9 @@ final class TicketOrderTest extends TestCase
 	/**
 	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
 	 * @throws \InvalidArgumentException
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \Exception
 	 */
 	public function testThrowsExceptionForExceedingMaxWorkshopTicketCountPerAttendee() : void
 	{
@@ -142,8 +139,9 @@ final class TicketOrderTest extends TestCase
 	/**
 	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
 	 * @throws \InvalidArgumentException
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \Exception
 	 */
 	public function testThrowsExceptionForExceedingMaxConferenceTicketCountPerAttendee() : void
 	{
@@ -170,6 +168,7 @@ final class TicketOrderTest extends TestCase
 	 * @throws AllowedTicketCountPerAttendeeExceededException
 	 * @throws \PHPUnit\Framework\Exception
 	 * @throws \InvalidArgumentException
+	 * @throws \Exception
 	 */
 	public function testSameAttendeeCanOrderAWorkshopTicketForEachSlot() : void
 	{
@@ -237,11 +236,12 @@ final class TicketOrderTest extends TestCase
 	/**
 	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
 	 * @throws \InvalidArgumentException
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
 	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountExceededTicketPriceException
 	 * @throws \PHPUnit\Framework\ExpectationFailedException
 	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+	 * @throws \Exception
 	 */
 	public function testCanGetTotals() : void
 	{

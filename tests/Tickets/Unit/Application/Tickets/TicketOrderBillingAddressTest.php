@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tests\Tickets\Unit\Application\Tickets;
 
@@ -17,10 +14,6 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\StreetWithNumber;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\ZipCode;
 use PHPUnit\Framework\TestCase;
 
-/**
- * Class TicketOrderBillingAddressTest
- * @package PHPUGDD\PHPDD\Website\Tests\Tickets\Unit\Application\Tickets
- */
 final class TicketOrderBillingAddressTest extends TestCase
 {
 	/**
