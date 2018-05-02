@@ -53,10 +53,35 @@ We are commited to creating a unique community experience - an event where every
 </div>
 
 
-
-## OUR SESSION
+## CONFERENCE KICK-OFF KEYNOTE
 
 ---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="@baseUrl@/speakers.html#jenny-wong" title="Jenny Wong on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/jenny-wong_400x400.jpg" alt="Jenny Wong" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <h4>Going Backstage on Community Trends: Bug or Feature?</h4>
+        <p>
+            By <a href="@baseUrl@/speakers.html#jenny-wong" title="Profile of Jenny Wong">Jenny Wong</a>
+        </p>
+        <p>
+            Over the years, the PHP community has enjoyed an increase in events. This has given us more choice than ever over what we attend. At the same time, some of our favourite events have come to a close. 
+        </p><p>    
+            As the community recalibrates, needs have changed and events are repeatedly being challenged. Organisers are burdened with finding the solutions, but is there a way for us all to help? 
+        </p><p>    
+            With change comes an opportunity for growth. This is our chance to grow richer and stronger as a community.
+        </p>
+    </div>
+</div>
+
+## OUR SESSIONS
+
+---
+
 
 <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
