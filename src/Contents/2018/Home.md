@@ -1,23 +1,16 @@
-# THE 4th PHP COMMUNITY EVENT IN DRESDEN, DE
-
-<div id="venue-cover">
+<div id="venue-cover" class="hidden-xs hidden-sm hidden-md">
     <div class="teaser">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8">
-                <h3>Call for papers now open!</h3>
-                <p>
-                    Submissions are accepted until April 30th 2018.
-                </p>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
-                <br>
-                <a href="@cfp_url@" target="_blank" title="Submit your ideas!" class="btn btn-block btn-lg btn-danger text-uppercase pull-right">
-                    Submit your ideas!
-                </a>
-            </div>
-        </div>
+        <h1>
+            THE COMMUNITY EVENT IN DRESDEN, DE<br>
+            - 4th EDITION
+        </h1>
     </div>
 </div>
+
+<h1 class="hidden-lg">
+    THE COMMUNITY EVENT IN DRESDEN, DE<br>
+    - 4th EDITION
+</h1>
 
 ## OUR GOAL
 

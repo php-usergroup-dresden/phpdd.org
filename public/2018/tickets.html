@@ -62,8 +62,8 @@
     <meta property="og:description" content="Buy tickets for the PHP Developer Days 2018 in Dresden, Germany"/>
     <meta property="og:url" content="https://2018.phpdd.org"/>
     <meta property="og:image" content="https://2018.phpdd.org/assets/images/socialcard.png"/>
-    <meta property="article:published_time" content="2018-05-02T20:16:02+00:00"/>
-    <meta property="article:modified_time" content="2018-05-02T20:16:02+00:00"/>
+    <meta property="article:published_time" content="2018-05-03T19:27:57+00:00"/>
+    <meta property="article:modified_time" content="2018-05-03T19:27:57+00:00"/>
             <meta property="article:tag" content="Tickets"/>
             <meta property="article:tag" content="Conference"/>
             <meta property="article:tag" content="Workshop"/>
@@ -83,7 +83,7 @@
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://2018.phpdd.org/assets/css/webfonts.css">
     <link rel="stylesheet" href="https://2018.phpdd.org/assets/css/twemoji-awesome.css">
-    <link rel="stylesheet" href="https://2018.phpdd.org/assets/css/main.css?20180502201602">
+    <link rel="stylesheet" href="https://2018.phpdd.org/assets/css/main.css?20180503192757">
     <script src="https://use.fontawesome.com/e89ed69fdb.js" async="async"></script>
 
     </head>
@@ -94,25 +94,29 @@
     <div class="container">
 
         <div class="row blockspace">
-            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
-                <a href="https://2018.phpdd.org/" class="hidden-xs hidden-sm">
+            <div class="hidden-xs col-sm-3 col-md-2 col-lg-2">
+                <a href="https://2018.phpdd.org/">
                     <img src="https://2018.phpdd.org/assets/images/phpugdd-logo.png"
                          data-src="https://2018.phpdd.org/assets/images/phpugdd-logo.svg" id="brandimg"
                          class="svg-inject img-responsive" alt="PHP USERGROUP DRESDEN e.V.">
                 </a>
             </div>
-            <div class="col-xs-8 col-sm-9 col-md-8 col-lg-6">
-                <a href="https://2018.phpdd.org/" class="hidden-xs hidden-sm">
+            <div class="col-xs-2 hidden-sm hidden-md hidden-lg">
+                <a href="#" class="off-canvas-toggle navbar-text"><i class="glyphicon glyphicon-menu-hamburger"></i></a>
+            </div>
+            <div class="col-xs-10 col-sm-9 col-md-8 col-lg-6">
+                <a href="https://2018.phpdd.org/">
                     <img src="https://2018.phpdd.org/assets/images/phpdd18-logo.png"
                          data-src="https://2018.phpdd.org/assets/images/phpdd18-logo.svg" id="brandimg"
                          class="svg-inject img-responsive" alt="PHP Developer Days 2018 - Dresden, Germany">
                 </a>
             </div>
-            <div class="hidden-xs hidden-sm col-md-2 col-lg-4">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
                 <p class="blockspace-sm text-center">
                     September 21st &amp; 22nd 2018 in Dresden, Germany
                 </p>
-                <div id="clockdiv">
+                <hr class="hidden-sm hidden-md hidden-lg">
+                <div id="clockdiv" class="hidden-xs">
                     <div>
                         <span class="days"></span>
                         <div class="smalltext">Days</div>
@@ -231,10 +235,11 @@
 
                 
 	<h1>BUY TICKETS</h1>
+<hr />
 <p>Tickets will be available once the line-up of workshops and conference talks was selected.</p>
-<p>The <a href="https://cfp.phpdd.org">Call for Papers</a> ends on 30th of April 2018.
-So ticket sale will presumably start in the mid of May.</p>
-<p>Please follow us on <a href="https://twitter.com/PHPDD">Twitter</a> for updates.  </p>
+<p>The Call for Papers has ended on April 30, 2018. </p>
+<p>So ticket sale will presumably start in the mid of May.</p>
+<p>Check in later again or follow us on <a href="https://twitter.com/PHPDD">Twitter</a> for updates.  </p>
 
 
             </div>
@@ -311,7 +316,7 @@ So ticket sale will presumably start in the mid of May.</p>
                 &middot;
                 <a href="https://2018.phpdd.org/privacy.html">Privacy</a>
                 &middot;
-                Letzte Änderung: 02.05.2018 20:16
+                Letzte Änderung: 03.05.2018 19:27
             </div>
         </div>
     </footer>
@@ -321,14 +326,21 @@ So ticket sale will presumably start in the mid of May.</p>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://2018.phpdd.org/assets/js/main.js?20180502201602"></script>
+<script type="text/javascript" src="https://2018.phpdd.org/assets/js/main.js?20180503192757"></script>
 <script type="text/javascript"
-        src="https://2018.phpdd.org/assets/js/svg-injector.min.js?20180502201602"></script>
+        src="https://2018.phpdd.org/assets/js/svg-injector.min.js?20180503192757"></script>
 <script type="text/javascript"
-        src="https://2018.phpdd.org/assets/js/countdown.js?20180502201602"></script>
+        src="https://2018.phpdd.org/assets/js/countdown.js?20180503192757"></script>
 <script>
     var mySVGsToInject = document.querySelectorAll('img.svg-inject');
     SVGInjector(mySVGsToInject);
+</script>
+<script>
+    // Toggle on button click
+    $('.off-canvas-toggle').on('click', function(event) {
+        event.preventDefault();
+        $('.row-offcanvas-left').toggleClass('active');
+    });
 </script>
 </body>
 </html>

@@ -278,8 +278,8 @@ h1.page-headline {
 }
 
 .teaser {
-    padding: 15px 25px;
-    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 25px;
+    background-color: rgba(255, 255, 255, 0.8);
     color: #364349;
     position: relative;
     top: 230px;
@@ -288,11 +288,11 @@ h1.page-headline {
 }
 
 .teaser p {
-    text-shadow: 0 0 2px #ffffff;
+    text-shadow: 1px 1px 5px #ffffff;
 }
 
-.teaser h3 {
-    color: #a7231d;
+.teaser h1 {
+    color: rgba(0,0,0,.75);
     text-transform: uppercase;
     font-weight: bolder;
 }
@@ -327,10 +327,6 @@ footer {
         transition: all 0.25s ease-out;
     }
 
-    .row-offcanvas-right .sidebar-offcanvas {
-        right: -50.0%;
-    }
-
     .row-offcanvas-left .sidebar-offcanvas {
         left: -50.0%;
     }
@@ -339,22 +335,24 @@ footer {
         font-size: small;
     }
 
-    .row-offcanvas-right.active {
-        right: 50.0%;
-    }
-
     .row-offcanvas-left.active {
         left: 50.0%;
+        z-index: 999;
     }
 
     .sidebar-offcanvas {
         position: absolute;
         top: 0;
         width: 50.0%;
+        bottom: 0;
     }
 
     .btn {
         font-size: small;
+    }
+
+    #sidenav {
+        background-color: #ffffff;
     }
 
     #sidenav > .btn.blockspace {

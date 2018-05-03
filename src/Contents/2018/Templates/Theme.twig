@@ -107,25 +107,29 @@
     <div class="container">
 
         <div class="row blockspace">
-            <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
-                <a href="{{ project.getUrl('/') }}" class="hidden-xs hidden-sm">
+            <div class="hidden-xs col-sm-3 col-md-2 col-lg-2">
+                <a href="{{ project.getUrl('/') }}">
                     <img src="{{ project.getUrl('/assets/images/phpugdd-logo.png') }}"
                          data-src="{{ project.getUrl('/assets/images/phpugdd-logo.svg') }}" id="brandimg"
                          class="svg-inject img-responsive" alt="PHP USERGROUP DRESDEN e.V.">
                 </a>
             </div>
-            <div class="col-xs-8 col-sm-9 col-md-8 col-lg-6">
-                <a href="{{ project.getUrl('/') }}" class="hidden-xs hidden-sm">
+            <div class="col-xs-2 hidden-sm hidden-md hidden-lg">
+                <a href="#" class="off-canvas-toggle navbar-text"><i class="glyphicon glyphicon-menu-hamburger"></i></a>
+            </div>
+            <div class="col-xs-10 col-sm-9 col-md-8 col-lg-6">
+                <a href="{{ project.getUrl('/') }}">
                     <img src="{{ project.getUrl('/assets/images/phpdd18-logo.png') }}"
                          data-src="{{ project.getUrl('/assets/images/phpdd18-logo.svg') }}" id="brandimg"
                          class="svg-inject img-responsive" alt="{{ project.getName }}">
                 </a>
             </div>
-            <div class="hidden-xs hidden-sm col-md-2 col-lg-4">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
                 <p class="blockspace-sm text-center">
                     September 21st &amp; 22nd 2018 in Dresden, Germany
                 </p>
-                <div id="clockdiv">
+                <hr class="hidden-sm hidden-md hidden-lg">
+                <div id="clockdiv" class="hidden-xs">
                     <div>
                         <span class="days"></span>
                         <div class="smalltext">Days</div>
@@ -281,6 +285,13 @@
 <script>
     var mySVGsToInject = document.querySelectorAll('img.svg-inject');
     SVGInjector(mySVGsToInject);
+</script>
+<script>
+    // Toggle on button click
+    $('.off-canvas-toggle').on('click', function(event) {
+        event.preventDefault();
+        $('.row-offcanvas-left').toggleClass('active');
+    });
 </script>
 {% block javascripts %}{% endblock %}
 </body>
