@@ -26,11 +26,10 @@ final class TicketOrderEmailAddressTest extends TestCase
 		$this->assertInstanceOf( TicketOrderEmailAddress::class, $email );
 	}
 
-	/**
-	 */
 	public function testThrowsExceptionForInvalidEmailAddress() : void
 	{
 		$this->expectException( InvalidArgumentException::class );
+		$this->expectExceptionMessage( 'Invalid e-mail address provided: you @example.com' );
 
 		new TicketOrderEmailAddress( 'you @example.com' );
 	}

@@ -23,7 +23,7 @@ final class TicketOrderEmailAddress extends AbstractStringType
 	{
 		if ( false === filter_var( $value, FILTER_VALIDATE_EMAIL ) )
 		{
-			throw new InvalidArgumentException( 'Invalid e-mail provided: ' . $value );
+			throw new InvalidArgumentException( 'Invalid e-mail address provided: ' . $value );
 		}
 	}
 }
