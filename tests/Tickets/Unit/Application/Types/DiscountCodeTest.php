@@ -5,6 +5,8 @@
 
 namespace PHPUGDD\PHPDD\Website\Tests\Tickets\Unit\Application\Types;
 
+use InvalidArgumentException;
+use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\EmptyStringProviding;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountCode;
 use PHPUnit\Framework\TestCase;
 
@@ -14,6 +16,8 @@ use PHPUnit\Framework\TestCase;
  */
 final class DiscountCodeTest extends TestCase
 {
+	use EmptyStringProviding;
+
 	/**
 	 * @param string $code
 	 *
@@ -53,5 +57,42 @@ final class DiscountCodeTest extends TestCase
 		$discountCode = DiscountCode::generate();
 
 		$this->assertInstanceOf( DiscountCode::class, $discountCode );
+	}
+
+	/**
+	 * @param string $code
+	 * @param string $expectedExceptionMessage
+	 *
+	 * @dataProvider invalidDiscountCodeProvider
+	 */
+	public function testThrowsExceptionForInvalidCodes( string $code, string $expectedExceptionMessage ) : void
+	{
+		$this->expectException( InvalidArgumentException::class );
+		$this->expectExceptionMessage( $expectedExceptionMessage );
+
+		new DiscountCode( $code );
+	}
+
+	public function invalidDiscountCodeProvider() : array
+	{
+		return array_merge(
+			[
+				# Code is too short
+				[
+					'code'                     => 'A1234B',
+					'expectedExceptionMessage' => 'Invalid discount code provided.',
+				],
+				# Code has no uppercase letters
+				[
+					'code'                     => 'a123456b',
+					'expectedExceptionMessage' => 'Discount code has no uppercase letters.',
+				],
+				# Code has no digits
+				[
+					'code'                     => 'ABCDEFGH',
+					'expectedExceptionMessage' => 'Discount code has no digits.',
+				],
+			]
+		);
 	}
 }

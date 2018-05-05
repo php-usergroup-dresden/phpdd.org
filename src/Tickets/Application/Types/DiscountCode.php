@@ -7,6 +7,9 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Types;
 
 use Fortuneglobe\Types\AbstractStringType;
 use Fortuneglobe\Types\Exceptions\InvalidArgumentException;
+use function preg_match;
+use function random_int;
+use function strlen;
 
 /**
  * Class DiscountCode
@@ -21,7 +24,7 @@ final class DiscountCode extends AbstractStringType
 	 */
 	protected function guardValueIsValid( string $value ) : void
 	{
-		if ( 8 !== \strlen( $value ) )
+		if ( 8 !== strlen( $value ) )
 		{
 			throw new InvalidArgumentException( 'Invalid discount code provided.' );
 		}
@@ -33,7 +36,7 @@ final class DiscountCode extends AbstractStringType
 
 		if ( !preg_match( '#\d#', $value ) )
 		{
-			throw new InvalidArgumentException( 'Discount code has not digits.' );
+			throw new InvalidArgumentException( 'Discount code has no digits.' );
 		}
 	}
 
@@ -44,7 +47,7 @@ final class DiscountCode extends AbstractStringType
 	public static function generate() : self
 	{
 		$chars  = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
-		$length = \strlen( $chars ) - 1;
+		$length = strlen( $chars ) - 1;
 		$code   = '';
 
 		for ( $i = 0; $i < 8; $i++ )
