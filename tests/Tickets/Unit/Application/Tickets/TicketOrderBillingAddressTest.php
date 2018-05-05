@@ -30,7 +30,8 @@ final class TicketOrderBillingAddressTest extends TestCase
 			new AddressAddon( 'c/o Cats & Dogs' ),
 			new ZipCode( '98765' ),
 			new City( 'Uptown Hollywood' ),
-			new CountryCode( CountryCodes::US_SHORT )
+			new CountryCode( CountryCodes::US_SHORT ),
+			null
 		);
 
 		$expectedString = "ACME Inc.\nJohn Doe\nACME Plaza 123\nc/o Cats & Dogs\nUS-98765 Uptown Hollywood";

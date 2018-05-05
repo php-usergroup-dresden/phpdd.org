@@ -12,6 +12,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CountryCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\Firstname;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\Lastname;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\StreetWithNumber;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\VatNumber;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\ZipCode;
 
 /**
@@ -26,13 +27,13 @@ final class TicketOrderBillingAddress
 	/** @var Lastname */
 	private $lastname;
 
-	/** @var CompanyName */
+	/** @var null|CompanyName */
 	private $companyName;
 
 	/** @var StreetWithNumber */
 	private $streetWithNumber;
 
-	/** @var AddressAddon */
+	/** @var null|AddressAddon */
 	private $addressAddon;
 
 	/** @var ZipCode */
@@ -44,15 +45,19 @@ final class TicketOrderBillingAddress
 	/** @var CountryCode */
 	private $countryCode;
 
+	/** @var null|VatNumber */
+	private $vatNumber;
+
 	public function __construct(
 		Firstname $firstname,
 		Lastname $lastname,
-		CompanyName $companyName,
+		?CompanyName $companyName,
 		StreetWithNumber $streetWithNumber,
-		AddressAddon $addressAddon,
+		?AddressAddon $addressAddon,
 		ZipCode $zipCode,
 		City $city,
-		CountryCode $countryCode
+		CountryCode $countryCode,
+		?VatNumber $vatNumber
 	)
 	{
 		$this->firstname        = $firstname;
@@ -63,6 +68,7 @@ final class TicketOrderBillingAddress
 		$this->zipCode          = $zipCode;
 		$this->city             = $city;
 		$this->countryCode      = $countryCode;
+		$this->vatNumber        = $vatNumber;
 	}
 
 	public function getFirstname() : Firstname
@@ -75,7 +81,7 @@ final class TicketOrderBillingAddress
 		return $this->lastname;
 	}
 
-	public function getCompanyName() : CompanyName
+	public function getCompanyName() : ?CompanyName
 	{
 		return $this->companyName;
 	}
@@ -85,7 +91,7 @@ final class TicketOrderBillingAddress
 		return $this->streetWithNumber;
 	}
 
-	public function getAddressAddon() : AddressAddon
+	public function getAddressAddon() : ?AddressAddon
 	{
 		return $this->addressAddon;
 	}
@@ -103,6 +109,11 @@ final class TicketOrderBillingAddress
 	public function getCountryCode() : CountryCode
 	{
 		return $this->countryCode;
+	}
+
+	public function getVatNumber() : ?VatNumber
+	{
+		return $this->vatNumber;
 	}
 
 	public function toString() : string
