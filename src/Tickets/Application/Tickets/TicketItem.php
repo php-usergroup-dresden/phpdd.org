@@ -7,6 +7,7 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
 use Money\Money;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountExceededTicketPriceException;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountNotAllowedForTicketException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketItemInformation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
@@ -42,10 +43,12 @@ final class TicketItem implements ProvidesTicketItemInformation
 	 * @param DiscountItem $discountItem
 	 *
 	 * @throws DiscountExceededTicketPriceException
+	 * @throws DiscountNotAllowedForTicketException
 	 */
 	public function grantDiscount( DiscountItem $discountItem ) : void
 	{
 		$this->guardDiscountMoneyIsValid( $discountItem->getDiscountPrice()->getMoney() );
+		$this->guardTicketIsAllowedForDiscount( $discountItem );
 
 		$this->discountItem = $discountItem;
 	}
@@ -60,6 +63,25 @@ final class TicketItem implements ProvidesTicketItemInformation
 		if ( $money->absolute()->greaterThan( $this->ticket->getPrice()->getMoney() ) )
 		{
 			throw new DiscountExceededTicketPriceException( 'Discount exceeded ticket price.' );
+		}
+	}
+
+	/**
+	 * @param DiscountItem $discountItem
+	 *
+	 * @throws DiscountNotAllowedForTicketException
+	 */
+	private function guardTicketIsAllowedForDiscount( DiscountItem $discountItem ) : void
+	{
+		if ( !$discountItem->isAllowedForTicket( $this->ticket->getName() ) )
+		{
+			throw new DiscountNotAllowedForTicketException(
+				sprintf(
+					'Discount "%s" is not allowed for ticket "%s".',
+					$discountItem->getName(),
+					$this->ticket->getName()
+				)
+			);
 		}
 	}
 

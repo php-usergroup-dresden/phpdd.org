@@ -149,7 +149,12 @@ final class TicketOrderTest extends TestCase
 
 		for ( $i = 0; $i < 11; $i++ )
 		{
-			$ticket = $this->getWorkshopTicket( TicketTypes::WORKSHOP_SLOT_A, 'Workshop Ticket', 'Workshop description', $this->getMoney( 25000 ) );
+			$ticket = $this->getWorkshopTicket(
+				TicketTypes::WORKSHOP_SLOT_A,
+				'Workshop Ticket',
+				'Workshop description',
+				$this->getMoney( 25000 )
+			);
 
 			$ticketItems[] = new TicketItem( $ticket, new AttendeeName( 'John Doe ' . $i ) );
 		}
@@ -321,8 +326,20 @@ final class TicketOrderTest extends TestCase
 
 		$conferenceTicket = $this->getConferenceTicket( $this->getMoney( 8900 ) );
 
-		$workshopDiscount   = $this->getDiscountItem( 'Workshop discount', '9D8C7B6A', 'Reduces ticket price', $this->getMoney( -3500 ) );
-		$conferenceDiscount = $this->getDiscountItem( 'Conference discount', 'A2B3C4D5', 'Reduces ticket price', $this->getMoney( -2000 ) );
+		$workshopDiscount   = $this->getDiscountItem(
+			'Workshop discount',
+			'9D8C7B6A',
+			'Reduces ticket price',
+			$this->getMoney( -3500 ),
+			['Workshop Ticket Slot B']
+		);
+		$conferenceDiscount = $this->getDiscountItem(
+			'Conference discount',
+			'A2B3C4D5',
+			'Reduces ticket price',
+			$this->getMoney( -2000 ),
+			['Conference Ticket']
+		);
 
 		$ticketItemSlotA      = new TicketItem( $ticketSlotA, $johnDoe );
 		$ticketItemSlotB      = new TicketItem( $ticketSlotB, $johnDoe );

@@ -6,6 +6,7 @@ use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\DiscountItemProviding;
 use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\TicketProviding;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\DiscountItem;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountExceededTicketPriceException;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountNotAllowedForTicketException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItem;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
@@ -60,19 +61,39 @@ final class TicketItemTest extends TestCase
 	{
 		return [
 			[
-				'discountItem' => $this->getDiscountItem( 'Member discount', '1AAAAAA1', 'Reduces price for members', $this->getMoney( -8900 ) ),
+				'discountItem' => $this->getDiscountItem(
+					'Member discount',
+					'1AAAAAA1',
+					'Reduces price for members',
+					$this->getMoney( -8900 ),
+					['Conference Ticket']
+				),
 			],
 			[
-				'discountItem' => $this->getDiscountItem( 'Member discount', '1AAAAAA1', 'Reduces price for members', $this->getMoney( -7900 ) ),
+				'discountItem' => $this->getDiscountItem(
+					'Member discount',
+					'1AAAAAA1',
+					'Reduces price for members',
+					$this->getMoney( -7900 ),
+					['Conference Ticket']
+				),
 			],
 			[
-				'discountItem' => $this->getDiscountItem( 'Member discount', '1AAAAAA1', 'Reduces price for members', $this->getMoney( 0 ) ),
+				'discountItem' => $this->getDiscountItem(
+					'Member discount',
+					'1AAAAAA1',
+					'Reduces price for members',
+					$this->getMoney( 0 ),
+					['Conference Ticket']
+				),
 			],
 		];
 	}
 
 	/**
 	 * @throws DiscountExceededTicketPriceException
+	 * @throws DiscountNotAllowedForTicketException
+	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
 	 * @throws \InvalidArgumentException
 	 */
 	public function testThrowsExceptionIfDiscountExceedsTicketPrice() : void
@@ -80,9 +101,42 @@ final class TicketItemTest extends TestCase
 		$ticket     = $this->getConferenceTicket( $this->getMoney( 8900 ) );
 		$ticketItem = new TicketItem( $ticket, new AttendeeName( 'John Doe' ) );
 
-		$discountItem = $this->getDiscountItem( 'Member discount', '1AAAAAA1', 'Reduces price for members', $this->getMoney( -9000 ) );
+		$discountItem = $this->getDiscountItem(
+			'Member discount',
+			'1AAAAAA1',
+			'Reduces price for members',
+			$this->getMoney( -9000 ),
+			[$ticket->getName()->toString()]
+		);
 
 		$this->expectException( DiscountExceededTicketPriceException::class );
+
+		$ticketItem->grantDiscount( $discountItem );
+	}
+
+	/**
+	 * @throws DiscountExceededTicketPriceException
+	 * @throws DiscountNotAllowedForTicketException
+	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
+	 * @throws \InvalidArgumentException
+	 */
+	public function testGrantDiscountThrowsExceptionIfTicketIsNotAllowedForDiscount() : void
+	{
+		$ticket     = $this->getConferenceTicket( $this->getMoney( 8900 ) );
+		$ticketItem = new TicketItem( $ticket, new AttendeeName( 'John Doe' ) );
+
+		$discountItem = $this->getDiscountItem(
+			'Member discount',
+			'1AAAAAA1',
+			'Reduces price for members',
+			$this->getMoney( -3000 ),
+			[]
+		);
+
+		$this->expectException( DiscountNotAllowedForTicketException::class );
+		$this->expectExceptionMessage(
+			'Discount "Member discount" is not allowed for ticket "Conference Ticket".'
+		);
 
 		$ticketItem->grantDiscount( $discountItem );
 	}

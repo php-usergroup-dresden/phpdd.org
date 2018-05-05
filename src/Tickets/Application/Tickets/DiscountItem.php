@@ -9,6 +9,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountDescription;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountPrice;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 
 /**
  * Class DiscountItem
@@ -28,12 +29,22 @@ final class DiscountItem
 	/** @var DiscountPrice */
 	private $discountPrice;
 
-	public function __construct( DiscountName $name, DiscountCode $code, DiscountDescription $description, DiscountPrice $discountPrice )
+	/** @var array|TicketName[] */
+	private $allowedTickets;
+
+	public function __construct(
+		DiscountName $name,
+		DiscountCode $code,
+		DiscountDescription $description,
+		DiscountPrice $discountPrice,
+		array $allowedTickets
+	)
 	{
-		$this->name          = $name;
-		$this->code          = $code;
-		$this->description   = $description;
-		$this->discountPrice = $discountPrice;
+		$this->name           = $name;
+		$this->code           = $code;
+		$this->description    = $description;
+		$this->discountPrice  = $discountPrice;
+		$this->allowedTickets = $allowedTickets;
 	}
 
 	public function getName() : DiscountName
@@ -54,5 +65,10 @@ final class DiscountItem
 	public function getDiscountPrice() : DiscountPrice
 	{
 		return $this->discountPrice;
+	}
+
+	public function isAllowedForTicket( TicketName $ticketName ) : bool
+	{
+		return in_array( $ticketName, $this->allowedTickets );
 	}
 }
