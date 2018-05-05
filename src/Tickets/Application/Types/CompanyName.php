@@ -6,6 +6,7 @@
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Types;
 
 use Fortuneglobe\Types\AbstractStringType;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\InvalidArgumentException;
 
 /**
  * Class CompanyName
@@ -13,8 +14,16 @@ use Fortuneglobe\Types\AbstractStringType;
  */
 final class CompanyName extends AbstractStringType
 {
+	/**
+	 * @param string $value
+	 *
+	 * @throws InvalidArgumentException
+	 */
 	protected function guardValueIsValid( string $value ) : void
 	{
-		// TODO: Implement guardValueIsValid() method.
+		if ( '' === trim( $value ) )
+		{
+			throw new InvalidArgumentException( 'Company name cannot be empty.' );
+		}
 	}
 }
