@@ -236,6 +236,11 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 
 		foreach ( $this->ticketItems as $ticketItem )
 		{
+			if ( null === $ticketItem->getDiscountItem() )
+			{
+				continue;
+			}
+
 			$money = $money->add( $ticketItem->getDiscountItem()->getDiscountPrice()->getMoney() );
 		}
 

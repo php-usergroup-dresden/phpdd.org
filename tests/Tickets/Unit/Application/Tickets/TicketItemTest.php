@@ -30,10 +30,7 @@ final class TicketItemTest extends TestCase
 
 		$this->assertSame( $ticket, $ticketItem->getTicket() );
 		$this->assertSame( 'John Doe', $ticketItem->getAttendeeName()->toString() );
-		$this->assertSame( '', $ticketItem->getDiscountItem()->getName()->toString() );
-		$this->assertSame( '0OOOOOO0', $ticketItem->getDiscountItem()->getCode()->toString() );
-		$this->assertSame( '', $ticketItem->getDiscountItem()->getDescription()->toString() );
-		$this->assertSame( '0', $ticketItem->getDiscountItem()->getDiscountPrice()->getMoney()->getAmount() );
+		$this->assertNull( $ticketItem->getDiscountItem() );
 	}
 
 	/**

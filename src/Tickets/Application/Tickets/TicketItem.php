@@ -5,15 +5,10 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
-use Fortuneglobe\Types\Exceptions\InvalidArgumentException;
 use Money\Money;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountExceededTicketPriceException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketItemInformation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountCode;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountDescription;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountName;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 
 /**
@@ -30,26 +25,17 @@ final class TicketItem implements ProvidesTicketItemInformation
 	/** @var AttendeeName */
 	private $attendeeName;
 
-	/** @var DiscountItem */
+	/** @var null|DiscountItem */
 	private $discountItem;
 
 	/**
 	 * @param Ticket       $ticket
 	 * @param AttendeeName $attendeeName
-	 *
-	 * @throws \InvalidArgumentException
-	 * @throws InvalidArgumentException
 	 */
 	public function __construct( Ticket $ticket, AttendeeName $attendeeName )
 	{
 		$this->ticket       = $ticket;
 		$this->attendeeName = $attendeeName;
-		$this->discountItem = new DiscountItem(
-			new DiscountName( '' ),
-			new DiscountCode( '0OOOOOO0' ),
-			new DiscountDescription( '' ),
-			new DiscountPrice( $this->getMoney( 0 ) )
-		);
 	}
 
 	/**
@@ -87,7 +73,7 @@ final class TicketItem implements ProvidesTicketItemInformation
 		return $this->attendeeName;
 	}
 
-	public function getDiscountItem() : DiscountItem
+	public function getDiscountItem() : ?DiscountItem
 	{
 		return $this->discountItem;
 	}

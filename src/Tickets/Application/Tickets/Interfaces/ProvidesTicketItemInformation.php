@@ -19,5 +19,5 @@ interface ProvidesTicketItemInformation
 
 	public function getAttendeeName() : AttendeeName;
 
-	public function getDiscountItem() : DiscountItem;
+	public function getDiscountItem() : ?DiscountItem;
 }
