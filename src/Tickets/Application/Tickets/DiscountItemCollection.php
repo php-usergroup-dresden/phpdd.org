@@ -5,11 +5,18 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
+use Countable;
+use Iterator;
+use function count;
+use function current;
+use function key;
+use function next;
+
 /**
  * Class DiscountItemCollection
  * @package PHPUGDD\PHPDD\Website\Tickets\Application\Tickets
  */
-final class DiscountItemCollection implements \Countable, \Iterator
+final class DiscountItemCollection implements Countable, Iterator
 {
 	/** @var array|DiscountItem[] */
 	private $discountItems = [];
@@ -46,6 +53,6 @@ final class DiscountItemCollection implements \Countable, \Iterator
 
 	public function count() : int
 	{
-		return \count( $this->discountItems );
+		return count( $this->discountItems );
 	}
 }
