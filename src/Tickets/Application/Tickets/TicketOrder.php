@@ -5,20 +5,12 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
-use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\CountryCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\CollectsTicketItems;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketOrderInformation;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AddressAddon;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\City;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CompanyName;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CountryCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiversityDonation;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\Firstname;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\Lastname;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\StreetWithNumber;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDate;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDiscountTotal;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderEmailAddress;
@@ -26,7 +18,6 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderPaymentTotal;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderTotal;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\ZipCode;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 
 /**
@@ -54,13 +45,13 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	/** @var CollectsTicketItems */
 	private $ticketItems;
 
-	/** @var TicketOrderEmailAddress */
+	/** @var null|TicketOrderEmailAddress */
 	private $emailAddress;
 
-	/** @var TicketOrderBillingAddress */
+	/** @var null|TicketOrderBillingAddress */
 	private $billingAddress;
 
-	/** @var DiversityDonation */
+	/** @var null|DiversityDonation */
 	private $diversityDonation;
 
 	/**
@@ -71,21 +62,39 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	 */
 	public function __construct( TicketOrderId $orderId, TicketOrderDate $orderDate )
 	{
-		$this->orderId           = $orderId;
-		$this->orderDate         = $orderDate;
-		$this->ticketItems       = new TicketItemCollection();
-		$this->emailAddress      = new TicketOrderEmailAddress( 'you@example.com' );
-		$this->billingAddress    = new TicketOrderBillingAddress(
-			new Firstname( '' ),
-			new Lastname( '' ),
-			new CompanyName( '' ),
-			new StreetWithNumber( '' ),
-			new AddressAddon( '' ),
-			new ZipCode( '' ),
-			new City( '' ),
-			new CountryCode( CountryCodes::DE_SHORT )
-		);
-		$this->diversityDonation = new DiversityDonation( $this->getMoney( 0 ) );
+		$this->orderId     = $orderId;
+		$this->orderDate   = $orderDate;
+		$this->ticketItems = new TicketItemCollection();
+	}
+
+	public function isPlaceable() : bool
+	{
+		if ( null === $this->emailAddress )
+		{
+			return false;
+		}
+
+		if ( null === $this->billingAddress )
+		{
+			return false;
+		}
+
+		if ( 0 === $this->ticketItems->count() )
+		{
+			return false;
+		}
+
+		return true;
+	}
+
+	public function sendTicketsAndInvoiceTo( TicketOrderEmailAddress $emailAddress ) : void
+	{
+		$this->emailAddress = $emailAddress;
+	}
+
+	public function billTo( TicketOrderBillingAddress $billingAddress ) : void
+	{
+		$this->billingAddress = $billingAddress;
 	}
 
 	/**
@@ -186,17 +195,17 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		return $discountItems;
 	}
 
-	public function getEmailAddress() : TicketOrderEmailAddress
+	public function getEmailAddress() : ?TicketOrderEmailAddress
 	{
 		return $this->emailAddress;
 	}
 
-	public function getBillingAddress() : TicketOrderBillingAddress
+	public function getBillingAddress() : ?TicketOrderBillingAddress
 	{
 		return $this->billingAddress;
 	}
 
-	public function getDiversityDonation() : DiversityDonation
+	public function getDiversityDonation() : ?DiversityDonation
 	{
 		return $this->diversityDonation;
 	}

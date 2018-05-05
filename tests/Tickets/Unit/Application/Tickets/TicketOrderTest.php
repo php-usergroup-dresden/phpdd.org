@@ -4,14 +4,26 @@ namespace PHPUGDD\PHPDD\Website\Tests\Tickets\Unit\Application\Tickets;
 
 use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\DiscountItemProviding;
 use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\TicketProviding;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\CountryCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItem;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrder;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrderBillingAddress;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AddressAddon;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\City;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CompanyName;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CountryCode;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\Firstname;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\Lastname;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\StreetWithNumber;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDate;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderEmailAddress;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\VatNumber;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\ZipCode;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 use PHPUnit\Framework\TestCase;
 
@@ -29,17 +41,16 @@ final class TicketOrderTest extends TestCase
 	public function testCanCreateInstanceFromOrderIdAndDate() : void
 	{
 		/** @var TicketOrderId $orderId */
-		$orderId                = TicketOrderId::generate();
-		$orderDate              = new TicketOrderDate( '2018-01-06 17:48:17' );
-		$ticketOrder            = new TicketOrder( $orderId, $orderDate );
-		$expectedBillingAddress = "\n \n\n\nDE- ";
+		$orderId     = TicketOrderId::generate();
+		$orderDate   = new TicketOrderDate( '2018-01-06 17:48:17' );
+		$ticketOrder = new TicketOrder( $orderId, $orderDate );
 
 		$this->assertInstanceOf( TicketOrder::class, $ticketOrder );
 
 		$this->assertSame( '0', $ticketOrder->getDiscountTotal()->getMoney()->getAmount() );
 		$this->assertSame( '0', $ticketOrder->getOrderTotal()->getMoney()->getAmount() );
 		$this->assertSame( '0', $ticketOrder->getPaymentTotal()->getMoney()->getAmount() );
-		$this->assertSame( '0', $ticketOrder->getDiversityDonation()->getMoney()->getAmount() );
+		$this->assertNull( $ticketOrder->getDiversityDonation() );
 
 		$this->assertCount( 0, $ticketOrder->getTicketItems() );
 		$this->assertCount( 0, $ticketOrder->getDiscountItems() );
@@ -47,9 +58,53 @@ final class TicketOrderTest extends TestCase
 		$this->assertTrue( $orderId->equals( $ticketOrder->getOrderId() ) );
 		$this->assertSame( $orderDate, $ticketOrder->getOrderDate() );
 
-		$this->assertSame( 'you@example.com', $ticketOrder->getEmailAddress()->toString() );
+		$this->assertFalse( $ticketOrder->isPlaceable() );
+	}
 
-		$this->assertSame( $expectedBillingAddress, $ticketOrder->getBillingAddress()->toString() );
+	/**
+	 * @throws \InvalidArgumentException
+	 * @throws \PHPUnit\Framework\ExpectationFailedException
+	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+	 * @throws \Exception
+	 */
+	public function testTicketOrderGetsPlaceableIfEmailBillingAddressAndTicketsWereSet() : void
+	{
+		/** @var TicketOrderId $orderId */
+		$orderId     = TicketOrderId::generate();
+		$orderDate   = new TicketOrderDate( '2018-01-06 17:48:17' );
+		$ticketOrder = new TicketOrder( $orderId, $orderDate );
+
+		$email = new TicketOrderEmailAddress( 'test@example.com' );
+
+		$ticketOrder->sendTicketsAndInvoiceTo( $email );
+
+		$this->assertSame( $email, $ticketOrder->getEmailAddress() );
+		$this->assertFalse( $ticketOrder->isPlaceable() );
+
+		$billingAddress = new TicketOrderBillingAddress(
+			new Firstname( 'Unit' ),
+			new Lastname( 'Tester' ),
+			new CompanyName( 'Unit Test Company' ),
+			new StreetWithNumber( 'Unit-Test-Str. 123b' ),
+			new AddressAddon( 'Hand to Testers' ),
+			new ZipCode( '01234' ),
+			new City( 'Testcity' ),
+			new CountryCode( CountryCodes::DE_SHORT ),
+			new VatNumber( 'DE 123 456 789' )
+		);
+
+		$ticketOrder->billTo( $billingAddress );
+
+		$this->assertSame( $billingAddress, $ticketOrder->getBillingAddress() );
+		$this->assertFalse( $ticketOrder->isPlaceable() );
+
+		$ticket     = $this->getConferenceTicket( $this->getMoney( 9900 ) );
+		$ticketItem = new TicketItem( $ticket, new AttendeeName( 'John Doe' ) );
+
+		$ticketOrder->orderTickets( $ticketItem );
+
+		$this->assertCount( 1, $ticketOrder->getTicketItems() );
+		$this->assertTrue( $ticketOrder->isPlaceable() );
 	}
 
 	/**

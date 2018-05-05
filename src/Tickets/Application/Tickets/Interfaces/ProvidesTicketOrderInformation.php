@@ -27,11 +27,11 @@ interface ProvidesTicketOrderInformation
 
 	public function getTicketItems() : CollectsTicketItems;
 
-	public function getDiversityDonation() : DiversityDonation;
+	public function getDiversityDonation() : ?DiversityDonation;
 
-	public function getEmailAddress() : TicketOrderEmailAddress;
+	public function getEmailAddress() : ?TicketOrderEmailAddress;
 
-	public function getBillingAddress() : TicketOrderBillingAddress;
+	public function getBillingAddress() : ?TicketOrderBillingAddress;
 
 	public function getDiscountItems() : DiscountItemCollection;
 
