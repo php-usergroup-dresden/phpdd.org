@@ -29,7 +29,7 @@ final class FinalWriteResponder implements RespondsFinallyToWriteRequest
 		catch ( UnresolvedRequest $e )
 		{
 			header( 'Content-Type: text/html; charset=utf-8', true, HttpCode::NOT_FOUND );
-			readfile( __DIR__ . '/../../../public/2018/404.html' );
+			readfile( __DIR__ . '/../../../../public/2018/404.html' );
 			flush();
 		}
 		catch ( \Throwable $e )
@@ -37,7 +37,7 @@ final class FinalWriteResponder implements RespondsFinallyToWriteRequest
 			$this->getEnv()->getErrorHandler()->captureException( $e );
 
 			header( 'Content-Type: text/html; charset=utf-8', true, HttpCode::INTERNAL_SERVER_ERROR );
-			readfile( __DIR__ . '/../../../public/2018/500.html' );
+			readfile( __DIR__ . '/../../../../public/2018/500.html' );
 			flush();
 		}
 	}
