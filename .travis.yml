@@ -23,7 +23,7 @@ before_script:
 script:
 - php vendor/bin/spg.phar check:links -g -b "http://127.0.0.1:8017" ./Project2017.json
 - php vendor/bin/spg.phar check:links -g -b "http://127.0.0.1:8018" ./Project2018.json
-- php -dxdebug.coverage_enable=1 vendor/bin/phpunit.phar -c build/ --coverage-clover build/logs/clover.xml
+- php -dxdebug.coverage_enable=1 vendor/bin/phpunit.phar -c build/ --coverage-clover build/logs/clover.xml tests/
 
 after_success:
  - travis_retry php vendor/bin/coveralls.phar -v --exclude-no-stmt
