@@ -53,6 +53,7 @@
         "/venue.html",
         "/side-events.html",
         "/become-sponsor.html",
+        "/supporters.html",
         "/team.html",
         "/code-of-conduct.html",
         "/privacy.html",
@@ -216,6 +217,28 @@
       "renderer": "twig",
       "template": "Templates/Page.twig",
       "contentFile": "Sponsorships.md",
+      "children": []
+    },
+    "/supporters.html": {
+      "pageLevel": 2,
+      "navName": "Supporters",
+      "pageTitle": "Supporters",
+      "description": "Supporters of the PHP Developer Days 2018 in Dresden, Germany",
+      "language": "en",
+      "imageUrl": "/assets/images/socialcard.png",
+      "tags": [
+        "Support",
+        "User Group",
+        "Meetup",
+        "Volunteers",
+        "Dresden",
+        "Community",
+        "Events"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Supporters.md",
       "children": []
     },
     "/team.html": {
