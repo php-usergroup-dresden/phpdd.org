@@ -64,6 +64,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://2018.phpdd.org/supporters.html</loc>
+    <image:image>
+      <image:loc>https://2018.phpdd.org/assets/images/socialcard.png</image:loc>
+      <image:caption>Supporters</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://2018.phpdd.org/team.html</loc>
     <image:image>
       <image:loc>https://2018.phpdd.org/assets/images/socialcard.png</image:loc>

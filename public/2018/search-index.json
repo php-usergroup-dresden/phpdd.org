@@ -48,6 +48,13 @@
                 "/become-sponsor.html": "Become sponsor"
             }
         },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        },
         "https://2018.phpdd.org/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -125,6 +132,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         },
         "https://2018.phpdd.org/code-of-conduct.html": {
@@ -243,6 +257,13 @@
                 "/become-sponsor.html": "Become sponsor"
             }
         },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        },
         "https://2018.phpdd.org/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -354,6 +375,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         },
         "https://2018.phpdd.org/code-of-conduct.html": {
@@ -763,6 +791,13 @@
                 "/become-sponsor.html": "Become sponsor"
             }
         },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        },
         "https://2018.phpdd.org/code-of-conduct.html": {
             "title": "Code of Conduct",
             "breadcrumb": {
@@ -870,6 +905,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         }
     },
@@ -1028,6 +1070,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         },
         "https://2018.phpdd.org/team.html": {
@@ -1238,6 +1287,13 @@
                 "/side-events.html": "Side events"
             }
         },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        },
         "https://2018.phpdd.org/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -1293,6 +1349,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         },
         "https://2018.phpdd.org/team.html": {
@@ -1999,6 +2062,13 @@
                 "/index.html": "Home",
                 "/become-sponsor.html": "Become sponsor"
             }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
         }
     },
     "help": {
@@ -2226,6 +2296,13 @@
                 "/become-sponsor.html": "Become sponsor"
             }
         },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        },
         "https://2018.phpdd.org/code-of-conduct.html": {
             "title": "Code of Conduct",
             "breadcrumb": {
@@ -2240,6 +2317,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         }
     },
@@ -2257,6 +2341,13 @@
                 "/index.html": "Home",
                 "/become-sponsor.html": "Become sponsor"
             }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
         }
     },
     "shout": {
@@ -2266,6 +2357,13 @@
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
             }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
         }
     },
     "who": {
@@ -2274,6 +2372,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         }
     },
@@ -2361,6 +2466,13 @@
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
             }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
         }
     },
     "knowledge": {
@@ -2385,6 +2497,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         }
     },
@@ -2490,6 +2609,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         },
         "https://2018.phpdd.org/team.html": {
@@ -3205,6 +3331,13 @@
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
             }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
         }
     },
     "stay": {
@@ -3645,6 +3778,13 @@
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
             }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
         }
     },
     "meet": {
@@ -3896,6 +4036,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         }
     },
@@ -4290,6 +4437,13 @@
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
             }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
         }
     },
     "make": {
@@ -4312,6 +4466,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         }
     },
@@ -4453,6 +4614,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         }
     },
@@ -5258,6 +5426,13 @@
                 "/become-sponsor.html": "Become sponsor"
             }
         },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        },
         "https://2018.phpdd.org/code-of-conduct.html": {
             "title": "Code of Conduct",
             "breadcrumb": {
@@ -5665,6 +5840,13 @@
                 "/become-sponsor.html": "Become sponsor"
             }
         },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        },
         "https://2018.phpdd.org/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -5740,6 +5922,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         }
     },
@@ -7532,6 +7721,13 @@
                 "/become-sponsor.html": "Become sponsor"
             }
         },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        },
         "https://2018.phpdd.org/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -7783,16 +7979,95 @@
             }
         }
     },
-    "responsible": {
-        "https://2018.phpdd.org/team.html": {
-            "title": "Meet the team",
+    "supporters": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
             "breadcrumb": {
                 "/index.html": "Home",
-                "/team.html": "Meet the team"
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "groups": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "across": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "supported": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "spreading": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "word": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "whenever": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "cities": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "meetups": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         }
     },
     "usergroup": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        },
         "https://2018.phpdd.org/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -7812,6 +8087,96 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/imprint.html": "Imprint"
+            }
+        }
+    },
+    "nster": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "meetup": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "chemnitz": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "engineering": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "sseldorf": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "rhein": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "neckar": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "entwicklung": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "frankfurt": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "responsible": {
+        "https://2018.phpdd.org/team.html": {
+            "title": "Meet the team",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/team.html": "Meet the team"
             }
         }
     },
