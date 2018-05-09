@@ -466,6 +466,13 @@
                 "/diversity-scholarship-application.html": "Scholarships"
             }
         },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
         "https://2018.phpdd.org/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -641,6 +648,13 @@
                 "/index.html": "Home"
             }
         },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -805,6 +819,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
             }
         },
         "https://2018.phpdd.org/become-sponsor.html": {
@@ -1203,6 +1224,13 @@
                 "/diversity-scholarship-application.html": "Scholarships"
             }
         },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
         "https://2018.phpdd.org/side-events.html": {
             "title": "Side events",
             "breadcrumb": {
@@ -1258,6 +1286,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
             }
         },
         "https://2018.phpdd.org/team.html": {
@@ -2059,6 +2094,28 @@
             }
         }
     },
+    "nbsp": {
+        "https://2018.phpdd.org/index.html": {
+            "title": "Home",
+            "breadcrumb": {
+                "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.org/team.html": {
+            "title": "Meet the team",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/team.html": "Meet the team"
+            }
+        }
+    },
     "diversity": {
         "https://2018.phpdd.org/index.html": {
             "title": "Home",
@@ -2657,6 +2714,13 @@
                 "/diversity-scholarship-application.html": "Scholarships"
             }
         },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
         "https://2018.phpdd.org/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -3122,22 +3186,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "nbsp": {
-        "https://2018.phpdd.org/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        },
-        "https://2018.phpdd.org/team.html": {
-            "title": "Meet the team",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/team.html": "Meet the team"
             }
         }
     },
@@ -4201,6 +4249,13 @@
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
             }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
         }
     },
     "only": {
@@ -4468,6 +4523,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
             }
         },
         "https://2018.phpdd.org/become-sponsor.html": {
@@ -4868,6 +4930,76 @@
             }
         }
     },
+    "leave": {
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
+    "attendee": {
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "should": {
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
+    "discount": {
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
+    "current": {
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
+    "price": {
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
+    "booking": {
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
     "lot": {
         "https://2018.phpdd.org/venue.html": {
             "title": "The venue",
@@ -4905,15 +5037,6 @@
         }
     },
     "checkout": {
-        "https://2018.phpdd.org/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
-            }
-        }
-    },
-    "booking": {
         "https://2018.phpdd.org/venue.html": {
             "title": "The venue",
             "breadcrumb": {
@@ -5577,15 +5700,6 @@
             }
         }
     },
-    "should": {
-        "https://2018.phpdd.org/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
-            }
-        }
-    },
     "use": {
         "https://2018.phpdd.org/venue.html": {
             "title": "The venue",
@@ -5750,6 +5864,38 @@
         }
     },
     "below": {
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
+    "per": {
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.org/privacy.html": {
+            "title": "Privacy",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/privacy.html": "Privacy"
+            }
+        }
+    },
+    "hour": {
         "https://2018.phpdd.org/venue.html": {
             "title": "The venue",
             "breadcrumb": {
@@ -6742,22 +6888,6 @@
             }
         }
     },
-    "per": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        },
-        "https://2018.phpdd.org/privacy.html": {
-            "title": "Privacy",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/privacy.html": "Privacy"
-            }
-        }
-    },
     "slot": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
@@ -6944,15 +7074,6 @@
         }
     },
     "sponsoring": {
-        "https://2018.phpdd.org/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "attendee": {
         "https://2018.phpdd.org/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
