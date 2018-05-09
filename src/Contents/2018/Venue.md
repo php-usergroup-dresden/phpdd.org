@@ -15,10 +15,10 @@
             </a>
         </p>
         <p>
-            The Maritim Hotel is right next to the venue, if you like to book your stay there.
-            <br>
-            <a href="https://www.maritim.com/en/hotels/germany/hotel-internationales-congress-center-dresden/hotel-overview" target="_blank">
-                <i class="fa fa-link"></i> Go to hotel's website
+            The Maritim Hotel is right next to the venue, if you like to book your stay there.<br>
+            If you book your Room, leave a note that you are an attendee of the <b>PHP Developer Days 2018</b> and you should get a <b>10% discount on the current price</b>.<br>
+            <a href="https://www.maritim.de/de/hotels/deutschland/hotel-internationales-congress-center-dresden/hotelzimmer" target="_blank">
+                <i class="fa fa-link"></i> Go to hotel's booking website
             </a>
         </p>
         <p>
@@ -97,3 +97,8 @@ buildings of the old town centre.
 ## CAR PARKING
 
 There is a parking garage below the Congress Center that you can use.
+
+**Prices:**
+
+* 2.00 &euro; per hour
+* 20.00 &euro; per day
