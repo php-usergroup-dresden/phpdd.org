@@ -3,7 +3,7 @@
 ---
 
 Please give a big shout-out to the organizers of local user groups all across Germany
-who supported us by spreading the word about this event. Whenever you are around one
+who support us by spreading the word about this event. Whenever you are around one
 of their cities make sure to join their meetups. 
 
 <div class="row blockspace">
