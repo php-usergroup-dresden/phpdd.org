@@ -31,16 +31,32 @@ We are commited to creating a unique community experience - an event where every
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <a href="@cfp_url@" target="_blank" title="Submit your workshop">
-            <img src="https://placehold.it/439x582/f3f3f3/000000/?text=%20%20FULL-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
+            <img src="https://placehold.it/439x300/f3f3f3/000000/?text=%20%20FULL-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
         </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <a href="@cfp_url@" target="_blank" title="Submit your workshop">
-            <img src="https://placehold.it/439x280/f3f3f3/000000/?text=%20%20HALF-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
+            <img src="https://placehold.it/439x140/f3f3f3/000000/?text=%20%20HALF-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
         </a>
         <br>
         <a href="@cfp_url@" target="_blank" title="Submit your workshop">
-            <img src="https://placehold.it/439x280/f3f3f3/000000/?text=%20%20HALF-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
+            <img src="https://placehold.it/439x140/f3f3f3/000000/?text=%20%20HALF-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <a href="@cfp_url@" target="_blank" title="Submit your workshop">
+            <img src="https://placehold.it/439x300/f3f3f3/000000/?text=%20%20FULL-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <a href="@cfp_url@" target="_blank" title="Submit your workshop">
+            <img src="https://placehold.it/439x140/f3f3f3/000000/?text=%20%20HALF-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
+        </a>
+        <br>
+        <a href="@cfp_url@" target="_blank" title="Submit your workshop">
+            <img src="https://placehold.it/439x140/f3f3f3/000000/?text=%20%20HALF-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
         </a>
     </div>
 </div>
@@ -77,36 +93,58 @@ We are commited to creating a unique community experience - an event where every
 
 
 <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
         <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
         <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
         <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
         <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
         <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
         <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=YOU%3F&" class="img-responsive img-speaker">
+            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
         </a>
     </div>
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">&nbsp;</div>
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+        <a href="@cfp_url@" target="_blank" title="Submit your talk">
+            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+        <a href="@cfp_url@" target="_blank" title="Submit your talk">
+            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+        <a href="@cfp_url@" target="_blank" title="Submit your talk">
+            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
+        <a href="@cfp_url@" target="_blank" title="Submit your talk">
+            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">&nbsp;</div>
 </div>
 
 ## OUR DIVERSITY SCHOLARSHIP SPONSORS
