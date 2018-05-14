@@ -24,6 +24,7 @@ We are commited to creating a unique community experience - an event where every
 
 [<i class="fa fa-clock-o"></i> Check out the impressions of our last PHP Developer Day in 2017](https://2017.phpdd.org/en/)
 
+<a name="workshops"></a>
 ## OUR WORKSHOPS
 
 ---
@@ -61,7 +62,7 @@ We are commited to creating a unique community experience - an event where every
     </div>
 </div>
 
-
+<a name="keynote"></a>
 ## CONFERENCE KICK-OFF KEYNOTE
 
 ---
@@ -87,6 +88,7 @@ We are commited to creating a unique community experience - an event where every
     </div>
 </div>
 
+<a name="sessions"></a>
 ## OUR SESSIONS
 
 ---
@@ -147,6 +149,7 @@ We are commited to creating a unique community experience - an event where every
     <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">&nbsp;</div>
 </div>
 
+<a name="scholarship-sponsors"></a>
 ## OUR DIVERSITY SCHOLARSHIP SPONSORS
 
 ---
@@ -162,7 +165,7 @@ We are commited to creating a unique community experience - an event where every
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"></div>
 </div>
 
-
+<a name="sponsors"></a>
 ## OUR SPONSORS
 
 ---
@@ -220,8 +223,8 @@ We are commited to creating a unique community experience - an event where every
 </div>
 <div class="row">
     <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
-        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
-            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        <a href="https://www.queo.de" title="queo Group" target="_blank">
+            <img src="@baseUrl@/assets/images/sponsors/queo_220x192.png" alt="queo Group" class="img-responsive img-sponsor">
         </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
