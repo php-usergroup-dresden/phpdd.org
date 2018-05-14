@@ -62,7 +62,13 @@ of their cities make sure to join their meetups.
         </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        &nbsp;
+        <a href="https://www.meetup.com/PHP-User-Group-Stuttgart/" target="_blank" class="blockspace">
+            <img src="@baseUrl@/assets/images/supporters/phpugs.png" alt="PHP Usergroup Stuttgart" class="img-rounded img-responsive">
+            <p class="text-center blockspace">
+                PHP Usergroup<br>
+                Stuttgart
+            </p>
+        </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
         <a href="https://www.meetup.com/sfugberlin/" target="_blank" class="blockspace">
@@ -74,6 +80,12 @@ of their cities make sure to join their meetups.
         </a>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-        &nbsp;
+        <a href="https://www.meetup.com/PHP-Usergroup-Karlsruhe/" target="_blank" class="blockspace">
+            <img src="@baseUrl@/assets/images/supporters/phpugka.png" alt="PHP Usergroup Karlsruhe" class="img-rounded img-responsive">
+            <p class="text-center blockspace">
+                PHP Usergroup<br>
+                Karlsruhe
+            </p>
+        </a>
     </div>
 </div>
