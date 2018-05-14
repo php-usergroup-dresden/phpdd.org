@@ -61,4 +61,19 @@ of their cities make sure to join their meetups.
             </p>
         </a>
     </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        &nbsp;
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <a href="https://www.meetup.com/sfugberlin/" target="_blank" class="blockspace">
+            <img src="@baseUrl@/assets/images/supporters/sfugberlin.png" alt="Symfony Usergroup Berlin" class="img-rounded img-responsive">
+            <p class="text-center blockspace">
+                Symfony Usergroup<br>
+                Berlin
+            </p>
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        &nbsp;
+    </div>
 </div>
