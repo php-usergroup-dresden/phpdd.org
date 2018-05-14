@@ -2199,13 +2199,6 @@
                 "/speakers.html": "Speakers/Trainers"
             }
         },
-        "https://2018.phpdd.org/supporters.html": {
-            "title": "Supporters",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/supporters.html": "Supporters"
-            }
-        },
         "https://2018.phpdd.org/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -8255,6 +8248,15 @@
             }
         }
     },
+    "stuttgart": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
     "symfony": {
         "https://2018.phpdd.org/supporters.html": {
             "title": "Supporters",
@@ -8265,6 +8267,15 @@
         }
     },
     "berlin": {
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "karlsruhe": {
         "https://2018.phpdd.org/supporters.html": {
             "title": "Supporters",
             "breadcrumb": {
