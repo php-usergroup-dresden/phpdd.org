@@ -6,7 +6,7 @@ Please give a big shout-out to all our speakers and trainers who spent a tremend
 to gather and spread their knowledge all around the community, who step up on a stage and share their **PHP**assion with you.
 
 <a name="jenny-wong"></a>
-## JENNY WONG <span class="text-muted">- KEYNOTE SPEAKER</span>
+## 🇬🇧 JENNY WONG <span class="text-muted">- KEYNOTE SPEAKER</span>
 
 ---
 
@@ -42,9 +42,48 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+<a name="luka-muzinic"></a>
+## 🇭🇷 LUKA MUZINIC <span class="text-muted">- WORKSHOP TRAINER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/lmuzinic" target="_blank" title="Luka Muzinic on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/luka-muzinic.jpg" alt="Luka Muzinic" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/workshops.html#pragmatic-tdd">
+                Workshop: Pragmatic TDD
+            </a>
+        </p>
+        <p>
+            Passionate about being a developer, teacher and mentor for newcomers into world 
+            of programming. Works for Code4Hire, remote team of software engineers, 
+            offering outsourcing and consulting services. Organiser of 
+            <a href="https://twitter.com/webcampzagreb" target="_blank">@webcampzagreb</a> 
+            conference. Enjoys playing and watching sports that Croatians find odd and unpopular. 
+        </p><p>
+            In his free time, he reads fantasy novels and likes to cook.
+        </p>
+        <p>
+            <a href="https://twitter.com/lmuzinic" title="Luka Muzinic at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @lmuzinic
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/lmuzinic" title="Luka Muzinic at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/lmuzinic
+            </a>
+        </p>
+    </div>
+</div>
+
 
 <a name="arne-blankerts"></a>
-## ARNE BLANKERTS <span class="text-muted">- WORKSHOP TRAINER</span>
+## 🇩🇪 ARNE BLANKERTS <span class="text-muted">- WORKSHOP TRAINER</span>
 
 ---
 
@@ -77,7 +116,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="sebastian-heuer"></a>
-## SEBASTIAN HEUER <span class="text-muted">- WORKSHOP TRAINER</span>
+## 🇩🇪 SEBASTIAN HEUER <span class="text-muted">- WORKSHOP TRAINER</span>
 
 ---
 
