@@ -47,8 +47,8 @@ We are commited to creating a unique community experience - an event where every
 </div>
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <a href="@cfp_url@" target="_blank" title="Submit your workshop">
-            <img src="https://placehold.it/439x300/f3f3f3/000000/?text=%20%20FULL-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
+        <a href="@baseUrl@/workshops.html#pragmatic-event-sourcing" title="Prgamatic Event Sourcing">
+            <img src="@baseUrl@/assets/images/workshops/fullday-pragmatic-event-sourcing.png" class="img-responsive img-tutorial" alt="Pragmatic Event Sourcing - Full-day workshop">
         </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
