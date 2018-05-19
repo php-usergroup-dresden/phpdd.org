@@ -42,6 +42,77 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+
+<a name="arne-blankerts"></a>
+## ARNE BLANKERTS <span class="text-muted">- WORKSHOP TRAINER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/arneblankerts" target="_blank" title="Arne Blankerts on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/arne-blankerts.png" alt="Arne Blankerts" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/workshops.html#pragmatic-event-sourcing">
+                Workshop: Pragmatic Event Sourcing
+            </a>
+        </p>
+        <p>
+            Arne Blankerts has created solutions far ahead of the times already years ago. 
+            He helps to create sustainable software and tailored infrastructures, and finds security 
+            issues with magic intuition. 
+        </p><p>
+            In his free time, he reads fantasy novels and likes to cook.
+        </p>
+        <p>
+            <a href="https://twitter.com/arneblankerts" title="Arne Blankerts at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @arneblankerts
+            </a>
+        </p>
+    </div>
+</div>
+
+<a name="sebastian-heuer"></a>
+## SEBASTIAN HEUER <span class="text-muted">- WORKSHOP TRAINER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/belanur" target="_blank" title="Sebastian Heuer on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/sebastian-heuer_300x300.jpg" alt="Sebastian Heuer" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/workshops.html#pragmatic-event-sourcing">
+                Workshop: Pragmatic Event Sourcing
+            </a>
+        </p>
+        <p>
+           Sebastian Heuer plans and writes software for the web since the early 2000s. 
+           He focusses on clean software architectures and high-quality, easy to understand code.
+        </p><p> 
+           Apart from his position as Developer Advocate at kartenmacherei.de, he engages in several open-source projects 
+           (like phar.io) and helps teams to write solid and maintainable software.
+        </p>
+        <p>
+            <a href="https://twitter.com/belanur" title="Sebastian Heuer at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @belanur
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/belanur" title="Sebastian Heuer at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/belanur
+            </a>
+        </p>
+    </div>
+</div>
+
 ---
 
 <p class="text-center blockspace">
