@@ -47,6 +47,7 @@
       "template": "Templates/Page.twig",
       "contentFile": "Home.md",
       "children": [
+        "/workshops.html",
         "/speakers.html",
         "/tickets.html",
         "/diversity-scholarship-application.html",
@@ -86,6 +87,28 @@
       "renderer": "twig",
       "template": "Templates/500.twig",
       "contentFile": "",
+      "children": []
+    },
+    "/workshops.html": {
+      "pageLevel": 2,
+      "navName": "Workshops",
+      "pageTitle": "Workshops",
+      "description": "Workshops at the PHP Developer Days 2018",
+      "language": "en",
+      "imageUrl": "/assets/images/socialcard.png",
+      "tags": [
+        "Speakers",
+        "Trainers",
+        "Workshop",
+        "Talk",
+        "Stage",
+        "Dresden",
+        "Community"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Workshops.md",
       "children": []
     },
     "/speakers.html": {
