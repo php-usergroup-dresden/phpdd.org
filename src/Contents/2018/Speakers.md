@@ -81,6 +81,40 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+<a name="christopher-riley"></a>
+## 🇬🇧 CHRISTOPHER RILEY <span class="text-muted">- WORKSHOP TRAINER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/carnage" target="_blank" title="Christopher Riley on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/christopher-riley.jpg" alt="Christopher Riley" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/workshops.html#hack-this-workshop">
+                Workshop: Hack this workshop!
+            </a>
+        </p>
+        <p>
+            Chris is a freelance consultant based in York, Uk with experience working in the public sector, 
+            small and large companies throughout North Yorkshire. Chris has over 10 years experience with 
+            PHP and has a keen focus on both software architecture and none functional requirements such as 
+            security, performance and maintainability. 
+        </p><p>
+            In his free time, Chris can often be found producing or playing with experimental libraries and 
+            organising the PHP Yorkshire conference.
+        </p>
+        <p>
+            <a href="https://twitter.com/carnage" title="Christopher Riley at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @carnage
+            </a>
+        </p>
+    </div>
+</div>
 
 <a name="arne-blankerts"></a>
 ## 🇩🇪 ARNE BLANKERTS <span class="text-muted">- WORKSHOP TRAINER</span>
@@ -110,6 +144,82 @@ to gather and spread their knowledge all around the community, who step up on a 
         <p>
             <a href="https://twitter.com/arneblankerts" title="Arne Blankerts at Twitter" target="_blank">
                 <i class="fa fa-twitter"></i> @arneblankerts
+            </a>
+        </p>
+    </div>
+</div>
+
+<a name="clinton-ingrams"></a>
+## 🇬🇧 CLINTON INGRAMS <span class="text-muted">- WORKSHOP TRAINER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/cfing99" target="_blank" title="Clinton Ingrams on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/clinton-ingrams.jpg" alt="Clinton Ingrams" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/workshops.html#pentesting-dos-and-donts">
+                Workshop: Pentesting - Do's and Dont's
+            </a>
+        </p>
+        <p>
+           Clinton has been teaching programming (and many other IT-related topics) for over 30 years at FE and HE level. He completed his Masters degree in IT at De Montfort University (Leicester) in 1998, and has been there ever since as a Senior Lecturer. Having first downloaded PHP in 2000, he was invited to start teaching it in 2004.
+        </p><p>
+           He is currently delivering PHP and pentesting modules to second and final year undergraduate students, and, as a member of the DMU Cyber Technology Institute, has a particular interest in the security of web applications. Recent innovations have been contributing to first year Scala and Internetworks modules. He has also been involved with industrial/commercial partnerships such as KTPs and consultancy, and has spent many happy months delivering degree modules in Malaysia, Singapore and China.
+        </p><p>
+           A regular attender of PHP community activities, he is a co-coordinator of PHP East Midlands, and has delivered several talks and workshops, mostly on Cyber Security related topics. You may have seen him hosting talk streams at PHPNW and PHP Yorkshire.
+        </p><p>
+           Any spare time is spent with his family, and his double basses.
+        </p>
+        <p>
+            <a href="https://twitter.com/cfing99" title="Clinton Ingrams at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @cfing99
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/cfing99" title="Clinton Ingrams at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/cfing99
+            </a>
+        </p>
+    </div>
+</div>
+
+<a name="wim-godden"></a>
+## 🇧🇪 WIM GODDEN <span class="text-muted">- WORKSHOP TRAINER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/wimgtr" target="_blank" title="Wim Godden on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/wim-godden.jpg" alt="Wim Godden" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/workshops.html#your-app-lives-on-a-network">
+                Workshop: Your app lives on a network - networking for PHP devs
+            </a>
+        </p>
+        <p>
+           Wim Godden has been working with open source technologies since 1997 and has been 
+           involved in open source projects such as PHPCompatibility and OpenX. 
+           Next to web development, he's worked with a wide range of technologies 
+           (from database clusters to Internet backbone design) and focuses a lot of his time 
+           on high-scalability projects and on coaching/training web engineers.
+        </p>
+        <p>
+            <a href="https://twitter.com/wimgtr" title="Wim Godden at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @wimgtr
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/wimg" title="Wim Godden at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/wimg
             </a>
         </p>
     </div>
@@ -147,6 +257,41 @@ to gather and spread their knowledge all around the community, who step up on a 
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/belanur" title="Sebastian Heuer at joind.in" target="_blank">
                 <i class="fa fa-comment"></i> joind.in/user/belanur
+            </a>
+        </p>
+    </div>
+</div>
+
+<a name="jeroen-van-der-gulik"></a>
+## 🇳🇱 JEROEN VAN DER GULIK <span class="text-muted">- WORKSHOP TRAINER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/n0x13" target="_blank" title="Jeroen van der Gulik on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/jeroen-van-der-gulik.jpg" alt="Jeroen van der Gulik" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/workshops.html#event-storming-for-fun-and-profit">
+                Workshop: Event Storming for fun and profit!
+            </a>
+        </p>
+        <p>
+           Jeroen is co-founder of Isset, software architect, consultant, coach and occasional speaker. Often brought in at large companies to enable change and innovation projects. His company specializes in video streaming/transcoding and publishing platforms. Co-organizer of DDDNL and boardgames enthousiast. 
+        </p><p>
+           He also likes cats and penguins.
+        </p>
+        <p>
+            <a href="https://twitter.com/n0x13" title="Jeroen van der Gulik at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @n0x13
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/n0xie" title="Jeroen van der Gulik at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/n0xie
             </a>
         </p>
     </div>
