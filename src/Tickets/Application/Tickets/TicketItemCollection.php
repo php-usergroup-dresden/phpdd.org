@@ -8,6 +8,11 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\CollectsTicketItems;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
+use function count;
+use function current;
+use function key;
+use function next;
+use function reset;
 
 /**
  * Class TicketItemCollection
@@ -109,6 +114,6 @@ final class TicketItemCollection implements CollectsTicketItems
 
 	public function count() : int
 	{
-		return \count( $this->ticketItems );
+		return count( $this->ticketItems );
 	}
 }
