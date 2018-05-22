@@ -98,7 +98,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	}
 
 	/**
-	 * @param TicketItem $ticketItem
+	 * @param TicketItem $ticketItemElement
 	 * @param TicketItem ...$ticketItems
 	 *
 	 * @throws AllowedTicketCountExceededException
@@ -108,9 +108,9 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	{
 		$this->orderTicket( $ticketItem );
 
-		foreach ( $ticketItems as $ticketItem )
+		foreach ( $ticketItems as $ticketItemElement )
 		{
-			$this->orderTicket( $ticketItem );
+			$this->orderTicket( $ticketItemElement );
 		}
 	}
 
@@ -128,7 +128,9 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 
 		if ( $ticketCountType >= $maxCountType )
 		{
-			throw new AllowedTicketCountExceededException( sprintf( 'Allowed ticket count of %d exceeded.', $maxCountType ) );
+			throw new AllowedTicketCountExceededException(
+				sprintf( 'Allowed ticket count of %d exceeded.', $maxCountType )
+			);
 		}
 
 		$attendeeName               = $ticketItem->getAttendeeName();
@@ -138,7 +140,11 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		if ( $ticketCountTypeForAttendee >= $maxCountTypeForAttendee )
 		{
 			throw new AllowedTicketCountPerAttendeeExceededException(
-				sprintf( 'Allowed ticket count of %d for attendee %s exceeded.', $maxCountTypeForAttendee, $attendeeName->toString() )
+				sprintf(
+					'Allowed ticket count of %d for attendee %s exceeded.',
+					$maxCountTypeForAttendee,
+					$attendeeName->toString()
+				)
 			);
 		}
 
@@ -189,7 +195,12 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		$discountItems = new DiscountItemCollection();
 		foreach ( $this->ticketItems as $ticketItem )
 		{
-			$discountItems->add( $ticketItem->getDiscountItem() );
+			$discountItem = $ticketItem->getDiscountItem();
+			
+			if ( null !== $discountItem )
+			{
+				$discountItems->add( $discountItem );
+			}
 		}
 
 		return $discountItems;
