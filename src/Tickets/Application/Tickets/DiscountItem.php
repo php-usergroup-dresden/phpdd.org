@@ -10,6 +10,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountDescription;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
+use function in_array;
 
 /**
  * Class DiscountItem
@@ -69,6 +70,6 @@ final class DiscountItem
 
 	public function isAllowedForTicket( TicketName $ticketName ) : bool
 	{
-		return in_array( $ticketName, $this->allowedTickets );
+		return in_array( $ticketName, $this->allowedTickets, false );
 	}
 }
