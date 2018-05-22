@@ -27,7 +27,11 @@ final class TicketAvailabilityValidator implements ValidatesTicketAvailability
 	/** @var CollectsTicketItems */
 	private $ticketItems;
 
-	public function __construct( TicketsConfig $ticketsConfig, ProvidesReservedTicketCount $reservedTicketCounts, CollectsTicketItems $ticketItems )
+	public function __construct(
+		TicketsConfig $ticketsConfig,
+		ProvidesReservedTicketCount $reservedTicketCounts,
+		CollectsTicketItems $ticketItems
+	)
 	{
 		$this->ticketsConfig        = $ticketsConfig;
 		$this->reservedTicketCounts = $reservedTicketCounts;
@@ -40,7 +44,10 @@ final class TicketAvailabilityValidator implements ValidatesTicketAvailability
 
 		try
 		{
-			$ticketConfig = $this->ticketsConfig->findTicketConfigByTypeAndName( $ticket->getType(), $ticket->getName() );
+			$ticketConfig = $this->ticketsConfig->findTicketConfigByTypeAndName(
+				$ticket->getType(),
+				$ticket->getName()
+			);
 		}
 		catch ( TicketConfigNotFoundException $e )
 		{
@@ -53,6 +60,6 @@ final class TicketAvailabilityValidator implements ValidatesTicketAvailability
 
 		$availability = $seats - $ordered - $reservedCount;
 
-		return $availability > 0;
+		return $availability >= 0;
 	}
 }
