@@ -24,6 +24,22 @@
 
 ---
 
+## Unit\Application\Tickets\TicketAvailabilityValidatorTest
+
+- [x] Returns Fale If Ticket Config Was Not Found (💚 1)
+- [x] Can Check If Tickets Are Available (💚 1)
+
+---
+
+## Unit\Application\Tickets\TicketItemCollectionTest
+
+- [x] Can Get Count For Ticket (💚 1)
+- [x] Can Get Count For Type And Attendee Name (💚 1)
+- [x] Can Get Count For Type (💚 1)
+- [x] Can Iterate Over Collection (💚 1)
+
+---
+
 ## Unit\Application\Tickets\TicketItemTest
 
 - [x] Can Create Instance (💚 1)
@@ -36,6 +52,7 @@
 ## Unit\Application\Tickets\TicketOrderBillingAddressTest
 
 - [x] Can Get Address As String (💚 1)
+- [x] Can Get Address Values (💚 1)
 
 ---
 
@@ -49,6 +66,17 @@
 - [x] Throws Exception For Exceeding Max Conference Ticket Count Per Attendee (💚 1)
 - [x] Same Attendee Can Order AWorkshop Ticket For Each Slot (💚 1)
 - [x] Can Get Totals (💚 1)
+- [x] Ticket Items Without Discount Item Do Not Add Discounts (💚 1)
+
+---
+
+## Unit\Application\Tickets\TicketTest
+
+- [x] Can Get Values (💚 1)
+- [x] Can Check If Tickets Are Equal (💚 1)
+- [x] Tickets Are Not Equal If Ticket Name Is Different (💚 1)
+- [x] Tickets Are Not Equal If Ticket Type Is Different (💚 1)
+- [x] Tickets Are Not Equal If Ticket Description Is Different (💚 1)
 
 ---
 
@@ -202,4 +230,4 @@
 
 ---
 
-Report created at 2018-05-22 20:08:34 (UTC)
+Report created at 2018-05-22 21:54:10 (UTC)
