@@ -354,4 +354,38 @@ final class TicketOrderTest extends TestCase
 		$this->assertSame( '-5500', $ticketOrder->getDiscountTotal()->getMoney()->getAmount() );
 		$this->assertSame( '53400', $ticketOrder->getPaymentTotal()->getMoney()->getAmount() );
 	}
+
+	/**
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
+	 * @throws \InvalidArgumentException
+	 * @throws \PHPUnit\Framework\ExpectationFailedException
+	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+	 * @throws \Exception
+	 */
+	public function testTicketItemsWithoutDiscountItemDoNotAddDiscounts() : void
+	{
+		/** @var TicketOrderId $orderId */
+		$orderId     = TicketOrderId::generate();
+		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate() );
+		$johnDoe     = new AttendeeName( 'John Doe' );
+
+		$ticket = $this->getWorkshopTicket(
+			TicketTypes::WORKSHOP_SLOT_A,
+			'Workshop Ticket Slot A',
+			'Workshop description slot A',
+			$this->getMoney( 25000 )
+		);
+
+		$ticketItem = new TicketItem( $ticket, $johnDoe );
+
+		$ticketOrder->orderTickets( $ticketItem );
+
+		$this->assertCount( 0, $ticketOrder->getDiscountItems() );
+
+		$expectedMoney = $this->getMoney( 0 );
+
+		$this->assertTrue( $expectedMoney->equals( $ticketOrder->getDiscountTotal()->getMoney() ) );
+	}
 }
