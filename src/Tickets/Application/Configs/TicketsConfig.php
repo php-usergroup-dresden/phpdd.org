@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Configs;
 
@@ -9,23 +6,24 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\Exceptions\TicketConfigNot
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
 
-/**
- * Class TicketsConfig
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Configs
- */
 final class TicketsConfig
 {
 	/** @var array */
 	private $configData;
 
-	public function __construct()
+	public function __construct( array $configData )
 	{
-		$this->configData = require __DIR__ . '/../../../../config/Tickets.php';
+		$this->configData = $configData;
+	}
+
+	public static function fromConfigFile() : self
+	{
+		return new self( (array)require __DIR__ . '/../../../../config/Tickets.php' );
 	}
 
 	public function getTicketConfigs() : \Generator
 	{
-		foreach ( (array)$this->configData as $ticketName => $ticketData )
+		foreach ( $this->configData as $ticketName => $ticketData )
 		{
 			yield new TicketConfig(
 				(string)$ticketName,
@@ -52,7 +50,9 @@ final class TicketsConfig
 	{
 		if ( !isset( $this->configData[ $ticketName->toString() ] ) )
 		{
-			throw new TicketConfigNotFoundException( 'Could not find ticket config with name: ' . $ticketName->toString() );
+			throw new TicketConfigNotFoundException(
+				'Could not find ticket config with name: ' . $ticketName->toString()
+			);
 		}
 
 		if ( $this->configData[ $ticketName->toString() ]['type'] !== $ticketType->toString() )

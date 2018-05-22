@@ -17,9 +17,14 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses\HtmlPage;
  */
 final class TicketSelectionRequestHandler extends AbstractRequestHandler implements HandlesGetRequest
 {
+	/**
+	 * @param ProvidesReadRequestData $request
+	 *
+	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException
+	 */
 	public function handle( ProvidesReadRequestData $request )
 	{
-		$ticketsConfig = new TicketsConfig();
+		$ticketsConfig = TicketsConfig::fromConfigFile();
 		$data          = [
 			'ticketConfigs' => $ticketsConfig->getTicketConfigs(),
 		];
