@@ -369,6 +369,40 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+<a name="james-titcumb"></a>
+## 🇬🇧 JAMES TITCUMB <span class="text-muted">- CONFERENCE SPEAKER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/asgrim" target="_blank" title="James Titcumb on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/james-titcumb.png" alt="James Titcumb" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/talks.html#climbing-the-abstract-syntax-tree">
+                Talk: Climbing the Abstract Syntax Tree
+            </a>
+        </p>
+        <p>
+           James is a consultant, trainer and developer at Roave. He is a prolific contributor to various open source projects and is a Zend Certified Engineer. 
+           He also founded the UK based PHP Hampshire user group and PHP South Coast conference.
+        </p>
+        <p>
+            <a href="https://twitter.com/asgrim" title="James Titcumb at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @asgrim
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/Asgrim" title="James Titcumb at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/Asgrim
+            </a>
+        </p>
+    </div>
+</div>
+
 ---
 
 <p class="text-center blockspace">

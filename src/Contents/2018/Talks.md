@@ -36,3 +36,18 @@ To avoid disruptions when frequently deploying new versions, developers must ado
 I will also talk about zero downtime deployments. They are less about development practices and more about deployment automation and webserver configuration. Some tips might even make your application perform faster!
 
 ---
+
+<a name="climbing-the-abstract-syntax-tree"></a>
+## Climbing the Abstract Syntax Tree
+
+By [James Titcumb](@baseUrl@/speakers.html#james-titcumb)
+
+The new Abstract Syntax Tree (AST) in PHP 7 means the way our PHP code is being executed has changed. Understanding this new fundamental compilation step is key to understanding how our code is being run.
+
+To demonstrate, James will show how a basic compiler works and how introducing an AST simplifies this process. We’ll look into how these magical time-warp techniques* can also be used in your code to introspect, analyse and modify code in a way that was never possible before.
+
+After seeing this talk, you'll have a great insight as to the wonders of an AST, and how it can be applied to both compilers and userland code.
+
+(*actual magic or time-warp not guaranteed)
+
+---

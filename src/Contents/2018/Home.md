@@ -112,6 +112,11 @@ We are commited to creating a unique community experience - an event where every
             <img src="@baseUrl@/assets/images/talks/ondrej-mirtes-database-migrations.png" class="img-responsive">
         </a>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+        <a href="@baseUrl@/talks.html#climbing-the-abstract-syntax-tree">
+            <img src="@baseUrl@/assets/images/talks/james-titcumb-ast.png" class="img-responsive">
+        </a>
+    </div>
 </div>
 
 <a name="scholarship-sponsors"></a>
