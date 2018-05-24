@@ -260,6 +260,45 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+<a name="mark-baker"></a>
+## 🇬🇧 Mark Baker <span class="text-muted">- CONFERENCE SPEAKER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/Mark_Baker" target="_blank" title="Mark Baker on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/mark-baker.png" alt="Mark Baker" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/talks.html#does-the-spl-still-have-any-relevance-in-the-brave-new-world-of-php7">
+                Talk: Does the SPL still have any relevance in the Brave New World of PHP7?
+            </a>
+        </p>
+        <p>
+           Mark is Lead/Senior Developer at Paybreak, a fintech company based in Altrincham near Manchester, UK.
+        </p><p>   
+           He has worked in the computer software industry since before symbolics.com was registered as a domain name, before "cyberspace" was first mentioned in fiction, when Linus Torvalds and Rasmus Lerdorf were still at high school, and Mrs. Zuckerberg had yet to give birth to a bouncing baby social network enabler; and has developed for the Web in many different languages since the days when the Tim Berners-Lee's creation comprised less than 1,000 sites.
+        </p><p>  
+           Over those years he has contributed to a number of open source projects: including a minor submission to PHP's SPL. Currently he is coordinator and lead developer for the PHPExcel library, and a coordinator and developer on the PHPOffice library suite. Most recently, he has been working on new datastructures such as Tries, Quadtrees and Matrices; hoping that he'll eventually be able to get them included in SPL.
+        </p><p>   
+           His particular interests include PHP integration with office suites, Generators, Textual analysis, Geodata and geographic information systems, and "big data" and data analysis. 
+        </p>
+        <p>
+            <a href="https://twitter.com/Mark_Baker" title="Mark Baker at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @Mark_Baker
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/Mark%20Baker" title="Mark Baker at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/Mark Baker
+            </a>
+        </p>
+    </div>
+</div>
+
 ---
 
 <p class="text-center blockspace">

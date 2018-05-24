@@ -92,64 +92,16 @@ We are commited to creating a unique community experience - an event where every
 </div>
 
 <a name="sessions"></a>
-## OUR SESSIONS
+## OUR CONFERENCE TALKS
 
 ---
 
-
 <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-        <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <a href="@baseUrl@/talks.html#does-the-spl-still-have-any-relevance-in-the-brave-new-world-of-php7">
+            <img src="@baseUrl@/assets/images/talks/mark-baker-spl-in-php7.png" class="img-responsive">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-        <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
-        </a>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-        <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
-        </a>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-        <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
-        </a>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-        <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
-        </a>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-        <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
-        </a>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">&nbsp;</div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-        <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
-        </a>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-        <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
-        </a>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-        <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
-        </a>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">
-        <a href="@cfp_url@" target="_blank" title="Submit your talk">
-            <img src="https://placehold.it/117x111/f3f3f3/000000/?text=TBA" class="img-responsive img-speaker">
-        </a>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2">&nbsp;</div>
 </div>
 
 <a name="scholarship-sponsors"></a>

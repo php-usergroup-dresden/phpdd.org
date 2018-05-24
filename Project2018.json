@@ -48,6 +48,7 @@
       "contentFile": "Home.md",
       "children": [
         "/workshops.html",
+        "/talks.html",
         "/speakers.html",
         "/tickets.html",
         "/diversity-scholarship-application.html",
@@ -93,7 +94,7 @@
       "pageLevel": 2,
       "navName": "Workshops",
       "pageTitle": "Workshops",
-      "description": "Workshops at the PHP Developer Days 2018",
+      "description": "Workshops at the PHP Developer Days 2018 in Dresden, Germany",
       "language": "en",
       "imageUrl": "/assets/images/socialcard.png",
       "tags": [
@@ -111,11 +112,33 @@
       "contentFile": "Workshops.md",
       "children": []
     },
+    "/talks.html": {
+      "pageLevel": 2,
+      "navName": "Talks",
+      "pageTitle": "Talks",
+      "description": "Talks at the PHP Developer Days 2018 in Dresden, Germany",
+      "language": "en",
+      "imageUrl": "/assets/images/socialcard.png",
+      "tags": [
+        "Speakers",
+        "Session",
+        "Conference",
+        "Talk",
+        "Stage",
+        "Dresden",
+        "Community"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Talks.md",
+      "children": []
+    },
     "/speakers.html": {
       "pageLevel": 2,
       "navName": "Speakers/Trainers",
       "pageTitle": "Speakers/Trainers",
-      "description": "Speakers and Trainers at the PHP Developer Days 2018",
+      "description": "Speakers and Trainers at the PHP Developer Days 2018 in Dresden, Germany",
       "language": "en",
       "imageUrl": "/assets/images/socialcard.png",
       "tags": [
