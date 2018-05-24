@@ -60,3 +60,12 @@ By [Georgiana Gligor](@baseUrl@/speakers.html#georgiana-gligor)
 Practical lessons learned while revamping a US airline website to resist huge Black Friday and Cyber Monday traffic values. Using HTTP status codes and PHP cleverly, we have made parallel requests possible, so that the user experience is greatly enhanced, and we pre-cache resource-consuming user searches. All on a solid PHP foundation.
 
 ---
+
+<a name="application-metrics-with-prometheus"></a>
+## Application metrics with prometheus
+
+By [Rafael Dohms](@baseUrl@/speakers.html#rafael-dohms)
+
+We all know not to poke at alien life forms in another planet, right? But what about metrics, do you know how to pick, measure and draw conclusions from them? In this talk we will cover Service Level Indicators (SLI), Objectives (SLO), and how to use Prometheus, an open-source system monitoring and alert platform, to measure and make sense of them. Let's get back to some real science.
+
+---

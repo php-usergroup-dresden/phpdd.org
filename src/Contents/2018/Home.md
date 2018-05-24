@@ -122,6 +122,11 @@ We are commited to creating a unique community experience - an event where every
             <img src="@baseUrl@/assets/images/talks/georgiana-gligor-website-performance.png" class="img-responsive">
         </a>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+        <a href="@baseUrl@/talks.html#application-metrics-with-prometheus">
+            <img src="@baseUrl@/assets/images/talks/rafael-dohms-prometheus.png" class="img-responsive">
+        </a>
+    </div>
 </div>
 
 <a name="scholarship-sponsors"></a>

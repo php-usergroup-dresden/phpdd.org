@@ -436,6 +436,41 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+<a name="rafael-dohms"></a>
+## 🇳🇱 RAFAEL DOHMS <span class="text-muted">- CONFERENCE SPEAKER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/rdohms" target="_blank" title="Rafael Dohms on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/rafael-dohms.jpg" alt="Rafael Dohms" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/talks.html#application-metrics-with-prometheus">
+                Talk: Application metrics with prometheus
+            </a>
+        </p>
+        <p>
+           A graduated Computer Engineer, Rafael Dohms has vast experience in the PHP ecosystem as a Developer, Speaker and Contributor. Addicted in building communities he has founded various groups where ever he lives, currently he is to blame for AmsterdamPHP. Developer by career but teacher by vocation he travels the world sharing interest in quality code, innovation and building careers. In his free time you will likely find him gaming or contributing to open source projects.
+        </p><p> 
+           His contribution hit list includes many projects, from PHP itself to frameworks like Symfony, Zend and projects such as Doctrine and Composer. His hobby is mentoring new Speakers that eventually take speaking slots away from him in future events, a strategy he still thinks is not very smart. Not one to listen to himself he keeps mentoring and suggesting developers everywhere create their own User Groups to grow their networks and knowledge.
+        </p>
+        <p>
+            <a href="https://twitter.com/rdohms" title="Rafael Dohms at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @rdohms
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/rdohms" title="Rafael Dohms at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/rdohms
+            </a>
+        </p>
+    </div>
+</div>
+
 ---
 
 <p class="text-center blockspace">
