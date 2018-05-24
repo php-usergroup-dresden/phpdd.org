@@ -102,6 +102,11 @@ We are commited to creating a unique community experience - an event where every
             <img src="@baseUrl@/assets/images/talks/mark-baker-spl-in-php7.png" class="img-responsive">
         </a>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <a href="@baseUrl@/talks.html#getting-started-with-kubernetes">
+            <img src="@baseUrl@/assets/images/talks/bastian-hofmann-kubernetes.png" class="img-responsive">
+        </a>
+    </div>
 </div>
 
 <a name="scholarship-sponsors"></a>

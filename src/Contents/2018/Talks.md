@@ -10,3 +10,16 @@ And PHP7's performance improvements allow us to write our own Datastructures (ba
 So does SPL still have any purpose or value in this new world of PHP7? Let's find out!
 
 ---
+
+<a name="getting-started-with-kubernetes"></a>
+## Getting started with Kubernetes
+
+By [Bastian Hofmann](@baseUrl@/speakers.html#bastian-hofmann)
+
+Kubernetes is a very powerful container orchestration platform that is quickly gaining traction and gives you lots of 
+benefits in deploying, running and scaling your microservice web application. But it has also a steep learning curve. 
+
+In this talk I will introduce you to Kubernetes, why you would want to use it and all the tooling around Kubernetes 
+with the help of practical examples.
+
+---

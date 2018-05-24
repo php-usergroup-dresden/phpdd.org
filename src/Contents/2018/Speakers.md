@@ -299,6 +299,43 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+<a name="bastian-hofmann"></a>
+## 🇩🇪 Bastian Hofmann <span class="text-muted">- CONFERENCE SPEAKER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/BastianHofmann" target="_blank" title="Bastian Hofmann on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/bastian-hofmann.jpg" alt="Bastian Hofmann" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/talks.html#getting-started-with-kubernetes">
+                Talk: Getting started with Kubernetes
+            </a>
+        </p>
+        <p>
+           Bastian is a System Engineer at SysEleven, a full-service hosting company, where he focuses on bringing the 
+           power Kubernetes to its customers. Before that he was caring about performance, monitoring, web-security and 
+           developer productivity at ResearchGate, the social network for researchers and scientists. When he is not 
+           developing stuff or looking at graphs, he frequently speaks at international conferences on software 
+           architecture, scaling web applications and open standards and protocols.
+        </p>
+        <p>
+            <a href="https://twitter.com/BastianHofmann" title="Bastian Hofmann at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @BastianHofmann
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/bhofmann" title="Bastian Hofmann at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/bhofmann
+            </a>
+        </p>
+    </div>
+</div>
+
 ---
 
 <p class="text-center blockspace">
