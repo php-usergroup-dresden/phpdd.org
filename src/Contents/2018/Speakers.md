@@ -337,7 +337,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="ondrej-mirtes"></a>
-## 🇩🇪 ONDŘEJ MIRTES <span class="text-muted">- CONFERENCE SPEAKER</span>
+## 🇨🇿 ONDŘEJ MIRTES <span class="text-muted">- CONFERENCE SPEAKER</span>
 
 ---
 
