@@ -29,6 +29,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://2018.phpdd.org/talks.html</loc>
+    <image:image>
+      <image:loc>https://2018.phpdd.org/assets/images/socialcard.png</image:loc>
+      <image:caption>Talks</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://2018.phpdd.org/speakers.html</loc>
     <image:image>
       <image:loc>https://2018.phpdd.org/assets/images/socialcard.png</image:loc>
