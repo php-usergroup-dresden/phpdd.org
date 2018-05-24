@@ -403,6 +403,39 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+<a name="georgiana-gligor"></a>
+## 🇷🇴 GEORGIANA GLIGOR <span class="text-muted">- CONFERENCE SPEAKER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/gbtekkie" target="_blank" title="Georgiana Gligor on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/georgiana-gligor.jpg" alt="Georgiana Gligor" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/talks.html#large-scale-website-performance-optimisation-tricks">
+                Talk: Large-scale website performance optimisation tricks
+            </a>
+        </p>
+        <p>
+           After using PHP for more than a decade, Georgiana a living proof that geek girls are an asset to any team. She loves taming the Force of the DevOps dark side and mentoring team mates in achieving craftsmanship. Over the past couple of years Georgiana dived deep into Artificial Intelligence, using Watson and Rainbird to deliver real-life applications. This also led her into starting a PhD in Systems Engineering.
+        </p>
+        <p>
+            <a href="https://twitter.com/gbtekkie" title="Georgiana Gligor at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @gbtekkie
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/tekkie" title="Georgiana Gligor at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/tekkie
+            </a>
+        </p>
+    </div>
+</div>
+
 ---
 
 <p class="text-center blockspace">

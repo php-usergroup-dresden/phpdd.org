@@ -117,6 +117,11 @@ We are commited to creating a unique community experience - an event where every
             <img src="@baseUrl@/assets/images/talks/james-titcumb-ast.png" class="img-responsive">
         </a>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+        <a href="@baseUrl@/talks.html#large-scale-website-performance-optimisation-tricks">
+            <img src="@baseUrl@/assets/images/talks/georgiana-gligor-website-performance.png" class="img-responsive">
+        </a>
+    </div>
 </div>
 
 <a name="scholarship-sponsors"></a>

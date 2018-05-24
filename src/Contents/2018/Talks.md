@@ -51,3 +51,12 @@ After seeing this talk, you'll have a great insight as to the wonders of an AST,
 (*actual magic or time-warp not guaranteed)
 
 ---
+
+<a name="large-scale-website-performance-optimisation-tricks"></a>
+## Large-scale website performance optimisation tricks
+
+By [Georgiana Gligor](@baseUrl@/speakers.html#georgiana-gligor)
+
+Practical lessons learned while revamping a US airline website to resist huge Black Friday and Cyber Monday traffic values. Using HTTP status codes and PHP cleverly, we have made parallel requests possible, so that the user experience is greatly enhanced, and we pre-cache resource-consuming user searches. All on a solid PHP foundation.
+
+---
