@@ -1,5 +1,9 @@
+# OUR FULL- AND HALF-DAY WORKSHOPS
+
 <a name="pragmatic-tdd"></a>
-## PRAGMATIC TDD <span class="text-muted">- FULL-DAY WORKSHOP</span>
+## PRAGMATIC TDD <span class="small text-muted">- FULL-DAY WORKSHOP</span>
+
+---
 
 By [Luka Muzinic](@baseUrl@/speakers.html#luka-muzinic)
 
@@ -9,10 +13,11 @@ In real world, where you get paid by code that ships, developer strive to write 
 
 This workshop is for developers who start their projects by drawing model of the database first, developers who are overwhelmed by number of testing tools or don’t know where to start and developers who simply want to level up their game.
 
----
 
 <a name="pragmatic-event-sourcing"></a>
-## PRAGMATIC EVENT SOURCING <span class="text-muted">- FULL-DAY WORKSHOP</span>
+## PRAGMATIC EVENT SOURCING <span class="small text-muted">- FULL-DAY WORKSHOP</span>
+
+---
 
 By [Arne Blankerts](@baseUrl@/speakers.html#arne-blankerts) and 
 [Sebastian Heuer](@baseUrl@/speakers.html#sebastian-heuer)
@@ -23,10 +28,11 @@ In this workshop, we will create a solid, event-sourced web application from scr
  
 Make sure to bring your laptop!
 
----
 
 <a name="hack-this-workshop"></a>
-## HACK THIS WORKSHOP! <span class="text-muted">- HALF-DAY WORKSHOP</span>
+## HACK THIS WORKSHOP! <span class="small text-muted">- HALF-DAY WORKSHOP</span>
+
+---
 
 By [Christopher Riley](@baseUrl@/speakers.html#christopher-riley)
 
@@ -34,22 +40,34 @@ In this workshop we will take a look at common security failings from a new pers
  
 All the sites will be run locally inside docker containers so don't worry about breaking any laws! Obviously this means that you will need to bring a laptop which is capable of running docker containers in order to participate in this workshop.
 
----
 
 <a name="pentesting-dos-and-donts"></a>
-## PENTESTING DO's & DONT's <span class="text-muted">- HALF-DAY WORKSHOP</span>
+## PENTESTING DO's & DONT's <span class="small text-muted">- HALF-DAY WORKSHOP</span>
+
+---
 
 By [Clinton Ingrams](@baseUrl@/speakers.html#clinton-ingrams)
 
 This workshop is a necessarily short introduction to the work of a pentester. 
 We will consider ethical issues, legal requirements, learning environments, tools used, and then we will explore the basics of an actual pentest. We will reference the OWASP Top 10, but we will also look at the contents of a scoping document, and how to structure a pentest by selecting relevant ideas from a range of pentesting methodologies.
 
----
 
 <a name="event-storming-for-fun-and-profit"></a>
-## EVENT STORMING FOR FUN AND PROFIT! <span class="text-muted">- HALF-DAY WORKSHOP</span>
+## EVENT STORMING FOR FUN AND PROFIT! <span class="small text-muted">- HALF-DAY WORKSHOP</span>
+
+---
 
 By [Jeroen van der Gulik](@baseUrl@/speakers.html#jeroen-van-der-gulik)
 
 One of the challenges we face on a day-to-day basis is getting the right and correct information from our product owners or clients. 
 This can be both frustrating and decremental to the velocity of your team. No one likes to work on features that when delivered someone says "well... that wasn't exactly what I had in mind" But now we have Stickies! So many stickies! It's a whirlpool of stickies, what is this madness? In this interactive workshop, we will explore all the facets of Event Storming as a modelling technique to get a clear and precise mental model of how a feature is supposed to work, all using the power of stickies! As we go through the user story, we'll explain the different types of stickies, why they matter, and show why EventStorming is such an effective format.
+
+---
+
+<p class="text-center blockspace">
+    Stay tuned for the announcement of more amazing workshops.<br> 
+    Check in again later or follow us on Twitter 
+    <a href="https://twitter.com/PHPDD" title="PHP Developer Days 2018 at Twitter" target="_blank">
+        <i class="fa fa-twitter"></i> @PHPDD
+    </a> for updates.
+</p>

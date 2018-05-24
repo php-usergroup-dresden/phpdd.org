@@ -6,7 +6,7 @@ Please give a big shout-out to all our speakers and trainers who spent a tremend
 to gather and spread their knowledge all around the community, who step up on a stage and share their **PHP**assion with you.
 
 <a name="jenny-wong"></a>
-## 🇬🇧 JENNY WONG <span class="text-muted">- KEYNOTE SPEAKER</span>
+## 🇬🇧 JENNY WONG <span class="small text-muted">- KEYNOTE SPEAKER</span>
 
 ---
 
@@ -43,7 +43,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="luka-muzinic"></a>
-## 🇭🇷 LUKA MUZINIC <span class="text-muted">- WORKSHOP TRAINER</span>
+## 🇭🇷 LUKA MUZINIC <span class="small text-muted">- WORKSHOP TRAINER</span>
 
 ---
 
@@ -82,7 +82,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="christopher-riley"></a>
-## 🇬🇧 CHRISTOPHER RILEY <span class="text-muted">- WORKSHOP TRAINER</span>
+## 🇬🇧 CHRISTOPHER RILEY <span class="small text-muted">- WORKSHOP TRAINER</span>
 
 ---
 
@@ -117,7 +117,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="arne-blankerts"></a>
-## 🇩🇪 ARNE BLANKERTS <span class="text-muted">- WORKSHOP TRAINER</span>
+## 🇩🇪 ARNE BLANKERTS <span class="small text-muted">- WORKSHOP TRAINER</span>
 
 ---
 
@@ -150,7 +150,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="clinton-ingrams"></a>
-## 🇬🇧 CLINTON INGRAMS <span class="text-muted">- WORKSHOP TRAINER</span>
+## 🇬🇧 CLINTON INGRAMS <span class="small text-muted">- WORKSHOP TRAINER</span>
 
 ---
 
@@ -189,7 +189,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="sebastian-heuer"></a>
-## 🇩🇪 SEBASTIAN HEUER <span class="text-muted">- WORKSHOP TRAINER</span>
+## 🇩🇪 SEBASTIAN HEUER <span class="small text-muted">- WORKSHOP TRAINER</span>
 
 ---
 
@@ -226,7 +226,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="jeroen-van-der-gulik"></a>
-## 🇳🇱 JEROEN VAN DER GULIK <span class="text-muted">- WORKSHOP TRAINER</span>
+## 🇳🇱 JEROEN VAN DER GULIK <span class="small text-muted">- WORKSHOP TRAINER</span>
 
 ---
 
@@ -261,7 +261,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="mark-baker"></a>
-## 🇬🇧 MARK BAKER <span class="text-muted">- CONFERENCE SPEAKER</span>
+## 🇬🇧 MARK BAKER <span class="small text-muted">- CONFERENCE SPEAKER</span>
 
 ---
 
@@ -300,7 +300,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="bastian-hofmann"></a>
-## 🇩🇪 BASTIAN HOFMANN <span class="text-muted">- CONFERENCE SPEAKER</span>
+## 🇩🇪 BASTIAN HOFMANN <span class="small text-muted">- CONFERENCE SPEAKER</span>
 
 ---
 
@@ -337,7 +337,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="ondrej-mirtes"></a>
-## 🇨🇿 ONDŘEJ MIRTES <span class="text-muted">- CONFERENCE SPEAKER</span>
+## 🇨🇿 ONDŘEJ MIRTES <span class="small text-muted">- CONFERENCE SPEAKER</span>
 
 ---
 
@@ -370,7 +370,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="james-titcumb"></a>
-## 🇬🇧 JAMES TITCUMB <span class="text-muted">- CONFERENCE SPEAKER</span>
+## 🇬🇧 JAMES TITCUMB <span class="small text-muted">- CONFERENCE SPEAKER</span>
 
 ---
 
@@ -404,7 +404,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="georgiana-gligor"></a>
-## 🇷🇴 GEORGIANA GLIGOR <span class="text-muted">- CONFERENCE SPEAKER</span>
+## 🇷🇴 GEORGIANA GLIGOR <span class="small text-muted">- CONFERENCE SPEAKER</span>
 
 ---
 
@@ -437,7 +437,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="rafael-dohms"></a>
-## 🇳🇱 RAFAEL DOHMS <span class="text-muted">- CONFERENCE SPEAKER</span>
+## 🇳🇱 RAFAEL DOHMS <span class="small text-muted">- CONFERENCE SPEAKER</span>
 
 ---
 
@@ -472,7 +472,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="theo-fidry"></a>
-## 🇪🇸 THÉO FIDRY <span class="text-muted">- CONFERENCE SPEAKER</span>
+## 🇪🇸 THÉO FIDRY <span class="small text-muted">- CONFERENCE SPEAKER</span>
 
 ---
 
@@ -511,7 +511,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 <p class="text-center blockspace">
     Stay tuned for the announcement of more amazing speakers.<br> 
     Check in again later or follow us on Twitter 
-    <a href="https://twitter.com/miss_jwo" title="Jenny Wong at Twitter" target="_blank">
+    <a href="https://twitter.com/PHPDD" title="PHP Developer Days 2018 at Twitter" target="_blank">
         <i class="fa fa-twitter"></i> @PHPDD
     </a> for updates.
 </p>

@@ -1,5 +1,9 @@
+# OUR CONFERENCE TALKS
+
 <a name="does-the-spl-still-have-any-relevance-in-the-brave-new-world-of-php7"></a>
 ## Does the SPL still have any relevance in the Brave New World of PHP7?
+
+---
 
 By [Mark Baker](@baseUrl@/speakers.html#mark-baker)
 
@@ -9,10 +13,10 @@ And PHP7's performance improvements allow us to write our own Datastructures (ba
 
 So does SPL still have any purpose or value in this new world of PHP7? Let's find out!
 
----
-
 <a name="getting-started-with-kubernetes"></a>
 ## Getting started with Kubernetes
+
+---
 
 By [Bastian Hofmann](@baseUrl@/speakers.html#bastian-hofmann)
 
@@ -22,10 +26,11 @@ benefits in deploying, running and scaling your microservice web application. Bu
 In this talk I will introduce you to Kubernetes, why you would want to use it and all the tooling around Kubernetes 
 with the help of practical examples.
 
----
 
 <a name="zero-downtime-database-migrations-and-deployments"></a>
 ## Zero Downtime Database Migrations and Deployments
+
+---
 
 By [Ondřej Mirtes](@baseUrl@/speakers.html#ondrej-mirtes)
 
@@ -35,10 +40,10 @@ To avoid disruptions when frequently deploying new versions, developers must ado
 
 I will also talk about zero downtime deployments. They are less about development practices and more about deployment automation and webserver configuration. Some tips might even make your application perform faster!
 
----
-
 <a name="climbing-the-abstract-syntax-tree"></a>
 ## Climbing the Abstract Syntax Tree
+
+---
 
 By [James Titcumb](@baseUrl@/speakers.html#james-titcumb)
 
@@ -50,31 +55,40 @@ After seeing this talk, you'll have a great insight as to the wonders of an AST,
 
 (*actual magic or time-warp not guaranteed)
 
----
-
 <a name="large-scale-website-performance-optimisation-tricks"></a>
 ## Large-scale website performance optimisation tricks
+
+---
 
 By [Georgiana Gligor](@baseUrl@/speakers.html#georgiana-gligor)
 
 Practical lessons learned while revamping a US airline website to resist huge Black Friday and Cyber Monday traffic values. Using HTTP status codes and PHP cleverly, we have made parallel requests possible, so that the user experience is greatly enhanced, and we pre-cache resource-consuming user searches. All on a solid PHP foundation.
 
----
 
 <a name="application-metrics-with-prometheus"></a>
 ## Application metrics with prometheus
+
+---
 
 By [Rafael Dohms](@baseUrl@/speakers.html#rafael-dohms)
 
 We all know not to poke at alien life forms in another planet, right? But what about metrics, do you know how to pick, measure and draw conclusions from them? In this talk we will cover Service Level Indicators (SLI), Objectives (SLO), and how to use Prometheus, an open-source system monitoring and alert platform, to measure and make sense of them. Let's get back to some real science.
 
----
-
 <a name="mutation-testing-better-code-by-making-bugs"></a>
 ## Mutation testing: better code by making bugs
+
+---
 
 By [Théo Fidry](@baseUrl@/speakers.html#theo-fidry)
 
 Mutation testing: better code by making bugs Do you test your code? What about your tests? Your tests are code, you need to write, refactor and maintain them. This is not cheap so how do you make sure you are testing enough but not too much? Discover Mutation Testing, a fun tool to make your code better by introducing bugs.
 
 ---
+
+<p class="text-center blockspace">
+    Stay tuned for the announcement of more amazing talks.<br> 
+    Check in again later or follow us on Twitter 
+    <a href="https://twitter.com/PHPDD" title="PHP Developer Days 2018 at Twitter" target="_blank">
+        <i class="fa fa-twitter"></i> @PHPDD
+    </a> for updates.
+</p>

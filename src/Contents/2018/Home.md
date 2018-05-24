@@ -132,6 +132,15 @@ We are commited to creating a unique community experience - an event where every
             <img src="@baseUrl@/assets/images/talks/theo-fidry-mutation-testing.png" class="img-responsive">
         </a>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+        <img src="https://placehold.it/439x140/f3f3f3/000000/?text=TBA" class="img-responsive">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+        <img src="https://placehold.it/439x140/f3f3f3/000000/?text=TBA" class="img-responsive">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+        <img src="https://placehold.it/439x140/f3f3f3/000000/?text=TBA" class="img-responsive">
+    </div>
 </div>
 
 <a name="scholarship-sponsors"></a>
