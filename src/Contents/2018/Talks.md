@@ -23,3 +23,16 @@ In this talk I will introduce you to Kubernetes, why you would want to use it an
 with the help of practical examples.
 
 ---
+
+<a name="zero-downtime-database-migrations-and-deployments"></a>
+## Zero Downtime Database Migrations and Deployments
+
+By [Ondřej Mirtes](@baseUrl@/speakers.html#ondrej-mirtes)
+
+To survive in a competitive market, a software team must be able to deploy new versions of their application as frequently as possible, delivering new features, improvements and bugfixes for their users and stakeholders. Deployments should not be limited to a certain time or to a certain number, otherwise they become a bottleneck for the development process.
+
+To avoid disruptions when frequently deploying new versions, developers must adopt a set of practices and workflows that allow changing the database schema in production without users even noticing. As a result, the development process becomes much more safe and smooth.
+
+I will also talk about zero downtime deployments. They are less about development practices and more about deployment automation and webserver configuration. Some tips might even make your application perform faster!
+
+---

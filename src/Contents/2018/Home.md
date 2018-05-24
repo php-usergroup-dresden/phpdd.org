@@ -97,14 +97,19 @@ We are commited to creating a unique community experience - an event where every
 ---
 
 <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
         <a href="@baseUrl@/talks.html#does-the-spl-still-have-any-relevance-in-the-brave-new-world-of-php7">
             <img src="@baseUrl@/assets/images/talks/mark-baker-spl-in-php7.png" class="img-responsive">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
         <a href="@baseUrl@/talks.html#getting-started-with-kubernetes">
             <img src="@baseUrl@/assets/images/talks/bastian-hofmann-kubernetes.png" class="img-responsive">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+        <a href="@baseUrl@/talks.html#zero-downtime-database-migrations-and-deployments">
+            <img src="@baseUrl@/assets/images/talks/ondrej-mirtes-database-migrations.png" class="img-responsive">
         </a>
     </div>
 </div>

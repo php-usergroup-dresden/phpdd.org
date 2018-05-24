@@ -261,7 +261,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="mark-baker"></a>
-## 🇬🇧 Mark Baker <span class="text-muted">- CONFERENCE SPEAKER</span>
+## 🇬🇧 MARK BAKER <span class="text-muted">- CONFERENCE SPEAKER</span>
 
 ---
 
@@ -300,7 +300,7 @@ to gather and spread their knowledge all around the community, who step up on a 
 </div>
 
 <a name="bastian-hofmann"></a>
-## 🇩🇪 Bastian Hofmann <span class="text-muted">- CONFERENCE SPEAKER</span>
+## 🇩🇪 BASTIAN HOFMANN <span class="text-muted">- CONFERENCE SPEAKER</span>
 
 ---
 
@@ -331,6 +331,39 @@ to gather and spread their knowledge all around the community, who step up on a 
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/bhofmann" title="Bastian Hofmann at joind.in" target="_blank">
                 <i class="fa fa-comment"></i> joind.in/user/bhofmann
+            </a>
+        </p>
+    </div>
+</div>
+
+<a name="ondrej-mirtes"></a>
+## 🇩🇪 ONDŘEJ MIRTES <span class="text-muted">- CONFERENCE SPEAKER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/OndrejMirtes" target="_blank" title="Ondřej Mirtes on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/ondrej-mirtes.jpg" alt="Ondřej Mirtes" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/talks.html#zero-downtime-database-migrations-and-deployments">
+                Talk: Zero Downtime Database Migrations and Deployments
+            </a>
+        </p>
+        <p>
+           Ondřej works as the CTO at Slevomat.cz, moving between product and software development. 
+           He enjoys quality assurance and frequent deployment of innovations for the end users. 
+           He shares his experience at conferences across Europe, offers his expertise as a consultant, and organizes 
+           trainings. He also created PHPStan, a popular static analyzer that focuses on finding bugs in code without 
+           running it.
+        </p>
+        <p>
+            <a href="https://twitter.com/OndrejMirtes" title="Ondřej Mirtes at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @OndrejMirtes
             </a>
         </p>
     </div>
