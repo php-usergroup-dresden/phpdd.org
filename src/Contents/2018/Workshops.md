@@ -46,20 +46,6 @@ We will consider ethical issues, legal requirements, learning environments, tool
 
 ---
 
-<a name="your-app-lives-on-a-network"></a>
-## YOUR APP LIVES ON A NETWORK - NETWORKING FOR PHP DEVS <span class="text-muted">- HALF-DAY WORKSHOP</span>
-
-By [Wim Godden](@baseUrl@/speakers.html#wim-godden)
-
-As PHP developers, our job is to build web applications. But how can we build applications that rely 
-on networking if we don't know how these networks and the big network that connects them all (this thing called the Internet) 
-actually work? In this tutorial, we walk through the basics of networking, before diving into all the essentials 
-every PHP developer should know, from TCP/UDP over IP addressing (IPv4/6), source/destination ports, sockets, DNS, 
-switching, firewalling and even more advanced protocols such as OSPF, VRRP and BGP. Prepare for an eye-opener when 
-you realize how much a typical app relies on all of these (and many more) working flawlessly... and how you can prepare your app for failure in the chain.
-
----
-
 <a name="event-storming-for-fun-and-profit"></a>
 ## EVENT STORMING FOR FUN AND PROFIT! <span class="text-muted">- HALF-DAY WORKSHOP</span>
 

@@ -188,43 +188,6 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
-<a name="wim-godden"></a>
-## 🇧🇪 WIM GODDEN <span class="text-muted">- WORKSHOP TRAINER</span>
-
----
-
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
-        <a href="https://twitter.com/wimgtr" target="_blank" title="Wim Godden on Twitter">
-            <img src="@baseUrl@/assets/images/speakers/wim-godden.jpg" alt="Wim Godden" class="img-responsive img-rounded blockspace">
-        </a>
-    </div>
-    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
-        <p>
-            <br>
-            <a href="@baseUrl@/workshops.html#your-app-lives-on-a-network">
-                Workshop: Your app lives on a network - networking for PHP devs
-            </a>
-        </p>
-        <p>
-           Wim Godden has been working with open source technologies since 1997 and has been 
-           involved in open source projects such as PHPCompatibility and OpenX. 
-           Next to web development, he's worked with a wide range of technologies 
-           (from database clusters to Internet backbone design) and focuses a lot of his time 
-           on high-scalability projects and on coaching/training web engineers.
-        </p>
-        <p>
-            <a href="https://twitter.com/wimgtr" title="Wim Godden at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @wimgtr
-            </a>
-            &nbsp;|&nbsp;
-            <a href="https://joind.in/user/wimg" title="Wim Godden at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/wimg
-            </a>
-        </p>
-    </div>
-</div>
-
 <a name="sebastian-heuer"></a>
 ## 🇩🇪 SEBASTIAN HEUER <span class="text-muted">- WORKSHOP TRAINER</span>
 
