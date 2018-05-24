@@ -471,6 +471,41 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+<a name="theo-fidry"></a>
+## 🇪🇸 THÉO FIDRY <span class="text-muted">- CONFERENCE SPEAKER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/tfidry" target="_blank" title="Théo Fidry on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/theo-fidry.jpg" alt="Théo Fidry" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/talks.html#mutation-testing-better-code-by-making-bugs">
+                Talk: Mutation testing: better code by making bugs
+            </a>
+        </p>
+        <p>
+           I'm a web developer at cwd.at in Austria (working from London) and Open Source contributor doing mostly PHP (framework agnostic, Symfony, Laravel) and more occasionally JavaScript, TypeScript and Java.
+        </p><p> 
+           Writing readable, testable and scalable code is my religion.
+        </p>
+        <p>
+            <a href="https://twitter.com/tfidry" title="Théo Fidry at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @tfidry
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/theofidry" title="Théo Fidry at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> https://joind.in/user/theofidry
+            </a>
+        </p>
+    </div>
+</div>
+
 ---
 
 <p class="text-center blockspace">

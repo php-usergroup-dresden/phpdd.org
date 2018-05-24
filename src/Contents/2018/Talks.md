@@ -69,3 +69,12 @@ By [Rafael Dohms](@baseUrl@/speakers.html#rafael-dohms)
 We all know not to poke at alien life forms in another planet, right? But what about metrics, do you know how to pick, measure and draw conclusions from them? In this talk we will cover Service Level Indicators (SLI), Objectives (SLO), and how to use Prometheus, an open-source system monitoring and alert platform, to measure and make sense of them. Let's get back to some real science.
 
 ---
+
+<a name="mutation-testing-better-code-by-making-bugs"></a>
+## Mutation testing: better code by making bugs
+
+By [Théo Fidry](@baseUrl@/speakers.html#theo-fidry)
+
+Mutation testing: better code by making bugs Do you test your code? What about your tests? Your tests are code, you need to write, refactor and maintain them. This is not cheap so how do you make sure you are testing enough but not too much? Discover Mutation Testing, a fun tool to make your code better by introducing bugs.
+
+---

@@ -127,6 +127,11 @@ We are commited to creating a unique community experience - an event where every
             <img src="@baseUrl@/assets/images/talks/rafael-dohms-prometheus.png" class="img-responsive">
         </a>
     </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+        <a href="@baseUrl@/talks.html#mutation-testing-better-code-by-making-bugs">
+            <img src="@baseUrl@/assets/images/talks/theo-fidry-mutation-testing.png" class="img-responsive">
+        </a>
+    </div>
 </div>
 
 <a name="scholarship-sponsors"></a>
