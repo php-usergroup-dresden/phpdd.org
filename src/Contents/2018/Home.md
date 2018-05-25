@@ -97,49 +97,51 @@ We are commited to creating a unique community experience - an event where every
 ---
 
 <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <a href="@baseUrl@/talks.html#does-the-spl-still-have-any-relevance-in-the-brave-new-world-of-php7">
-            <img src="@baseUrl@/assets/images/talks/mark-baker-spl-in-php7.png" class="img-responsive">
+            <img src="@baseUrl@/assets/images/talks/mark-baker-spl-in-php7.png" class="img-responsive img-tutorial">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <a href="@baseUrl@/talks.html#getting-started-with-kubernetes">
-            <img src="@baseUrl@/assets/images/talks/bastian-hofmann-kubernetes.png" class="img-responsive">
+            <img src="@baseUrl@/assets/images/talks/bastian-hofmann-kubernetes.png" class="img-responsive img-tutorial">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <a href="@baseUrl@/talks.html#zero-downtime-database-migrations-and-deployments">
-            <img src="@baseUrl@/assets/images/talks/ondrej-mirtes-database-migrations.png" class="img-responsive">
+            <img src="@baseUrl@/assets/images/talks/ondrej-mirtes-database-migrations.png" class="img-responsive img-tutorial">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <a href="@baseUrl@/talks.html#climbing-the-abstract-syntax-tree">
-            <img src="@baseUrl@/assets/images/talks/james-titcumb-ast.png" class="img-responsive">
+            <img src="@baseUrl@/assets/images/talks/james-titcumb-ast.png" class="img-responsive img-tutorial">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <a href="@baseUrl@/talks.html#large-scale-website-performance-optimisation-tricks">
-            <img src="@baseUrl@/assets/images/talks/georgiana-gligor-website-performance.png" class="img-responsive">
+            <img src="@baseUrl@/assets/images/talks/georgiana-gligor-website-performance.png" class="img-responsive img-tutorial">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <a href="@baseUrl@/talks.html#application-metrics-with-prometheus">
-            <img src="@baseUrl@/assets/images/talks/rafael-dohms-prometheus.png" class="img-responsive">
+            <img src="@baseUrl@/assets/images/talks/rafael-dohms-prometheus.png" class="img-responsive img-tutorial">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <a href="@baseUrl@/talks.html#mutation-testing-better-code-by-making-bugs">
-            <img src="@baseUrl@/assets/images/talks/theo-fidry-mutation-testing.png" class="img-responsive">
+            <img src="@baseUrl@/assets/images/talks/theo-fidry-mutation-testing.png" class="img-responsive img-tutorial">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
-        <img src="https://placehold.it/439x140/f3f3f3/000000/?text=TBA" class="img-responsive">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <a href="@baseUrl@/talks.html#profiling-php-applications">
+            <img src="@baseUrl@/assets/images/talks/ike-devolder-profiling-php.png" class="img-responsive img-tutorial">
+        </a>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
-        <img src="https://placehold.it/439x140/f3f3f3/000000/?text=TBA" class="img-responsive">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <img src="https://placehold.it/439x140/f3f3f3/000000/?text=TBA" class="img-responsive img-tutorial">
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 blockspace">
-        <img src="https://placehold.it/439x140/f3f3f3/000000/?text=TBA" class="img-responsive">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <img src="https://placehold.it/439x140/f3f3f3/000000/?text=TBA" class="img-responsive img-tutorial">
     </div>
 </div>
 

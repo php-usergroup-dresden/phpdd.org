@@ -4,7 +4,6 @@
 ## Does the SPL still have any relevance in the Brave New World of PHP7?
 
 ---
-
 By [Mark Baker](@baseUrl@/speakers.html#mark-baker)
 
 Largely ignored under PHP5, the SPL (Standard PHP Library) offered a powerful toolbox for developers, ranging from it's horrendously named collection of Iterators, and a series of Interfaces allowing us to build our own, to DataStructures, and Object Oriented file handling classes. Fast and powerful, the SPL provided a stable and well-tested library of classes and functions. But with all the performance and memory improvements of PHP7, SPL has remained unchanged, and feels like it has been left behind. Now, Generators provide a simpler replacement for writing our own Iterators without all the boilerplate code that SPL's core Iterators require, especially with the introduction of "yield from" in PHP7 for recursive Iterators.
@@ -82,6 +81,21 @@ We all know not to poke at alien life forms in another planet, right? But what a
 By [Théo Fidry](@baseUrl@/speakers.html#theo-fidry)
 
 Mutation testing: better code by making bugs Do you test your code? What about your tests? Your tests are code, you need to write, refactor and maintain them. This is not cheap so how do you make sure you are testing enough but not too much? Discover Mutation Testing, a fun tool to make your code better by introducing bugs.
+
+<a name="profiling-php-applications"></a>
+## Profiling PHP Applications
+
+---
+
+By [Ike Devolder](@baseUrl@/speakers.html#ike-devolder)
+
+Help my client is complaining some parts of the application are slow. Now what?
+
+Profiling!
+
+What is profiling and how can we measure the performance of our application? There are several tools we can use. Once we have the tools, how do we approach profiling. What to look for. And caveats to avoid when profiling. To finish up, we should avoid that our client is complaining about performance, how can we pro actively use profiling to improve our application.
+
+When finished we will end up with a nice toolbox of profiling tools and good ideas how to do profiling and avoid some common mistakes that might distract you from the real opimisation.
 
 ---
 

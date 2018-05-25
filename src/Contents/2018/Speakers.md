@@ -506,6 +506,37 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+<a name="ike-devolder"></a>
+## 🇧🇪 IKE DEVOLDER <span class="small text-muted">- CONFERENCE SPEAKER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/BlackIkeEagle" target="_blank" title="Ike Devolder on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/ike-devolder.jpg" alt="Ike Devolder" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/talks.html#profiling-php-applications">
+                Talk: Profiling PHP Applications
+            </a>
+        </p>
+        <p>
+           Ike is a developer at Studio Emma (Belgium). Mainly focussed on DevOps and PHP development. 
+           But also building some tooling in python and being git manual. Setting up development environments with 
+           vagrant and docker to make sure everyone can have the same environment to do their job.
+        </p>
+        <p>
+            <a href="https://twitter.com/BlackIkeEagle" title="Ike Devolder at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @BlackIkeEagle
+            </a>
+        </p>
+    </div>
+</div>
+
 ---
 
 <p class="text-center blockspace">
