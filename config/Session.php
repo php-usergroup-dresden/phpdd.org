@@ -10,7 +10,7 @@ return [
 	'cookieSettings' => [
 		'lifetime' => 86400,
 		'path'     => '/',
-		'domain'   => '127.0.0.1:8080',
+		'domain'   => '',
 		'secure'   => false,
 		'httpOnly' => true,
 	],
