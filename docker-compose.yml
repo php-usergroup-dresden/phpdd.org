@@ -1,7 +1,7 @@
 version: '3.1'
 
 services:
-  db:
+  redis:
     image: redis:4
     container_name: phpdd18-redis
     restart: always
@@ -9,3 +9,14 @@ services:
       - ./data/redis:/data
     ports:
       - 6379:6379
+
+  readis:
+    image: hollodotme/readis:2
+    container_name: phpdd18-readis
+    restart: always
+    volumes:
+      - ./data/readis:/code/config:ro
+    ports:
+      - 8079:80
+    depends_on:
+      - redis
