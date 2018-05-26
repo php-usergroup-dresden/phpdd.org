@@ -2,15 +2,15 @@
 
 return [
 	'sessionHandler' => [
-		'name'        => 'PHPDDSID',
-		'handler'     => 'files',
-		'savePath'    => sys_get_temp_dir(),
+		'name'        => 'PHPDD18SID',
+		'handler'     => 'redis',
+		'savePath'    => 'tcp://127.0.0.1:6379?database=0&weight=1',
 		'maxLifetime' => 86400,
 	],
 	'cookieSettings' => [
 		'lifetime' => 86400,
 		'path'     => '/',
-		'domain'   => '127.0.0.1:8018',
+		'domain'   => '127.0.0.1:8080',
 		'secure'   => false,
 		'httpOnly' => true,
 	],
