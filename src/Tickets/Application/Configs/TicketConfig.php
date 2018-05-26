@@ -5,6 +5,7 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Configs;
 
+use DateTimeImmutable;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketDescription;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketPrice;
@@ -46,7 +47,17 @@ final class TicketConfig
 	/** @var string */
 	private $image;
 
-	public function __construct( string $name, string $description, int $price, int $seats, int $maxSeatsPerOrder, string $type, string $validFrom, string $validTo, string $image )
+	public function __construct(
+		string $name,
+		string $description,
+		int $price,
+		int $seats,
+		int $maxSeatsPerOrder,
+		string $type,
+		string $validFrom,
+		string $validTo,
+		string $image
+	)
 	{
 		$this->name             = $name;
 		$this->description      = $description;
@@ -93,14 +104,22 @@ final class TicketConfig
 		return new TicketType( $this->type );
 	}
 
-	public function getValidFrom() : \DateTimeImmutable
+	/**
+	 * @throws \Exception
+	 * @return DateTimeImmutable
+	 */
+	public function getValidFrom() : DateTimeImmutable
 	{
-		return new \DateTimeImmutable( $this->validFrom );
+		return new DateTimeImmutable( $this->validFrom );
 	}
 
-	public function getValidTo() : \DateTimeImmutable
+	/**
+	 * @throws \Exception
+	 * @return DateTimeImmutable
+	 */
+	public function getValidTo() : DateTimeImmutable
 	{
-		return new \DateTimeImmutable( $this->validTo );
+		return new DateTimeImmutable( $this->validTo );
 	}
 
 	public function getImage() : string
@@ -108,9 +127,13 @@ final class TicketConfig
 		return $this->image;
 	}
 
+	/**
+	 * @throws \Exception
+	 * @return bool
+	 */
 	public function isAvailable() : bool
 	{
-		$now = new \DateTimeImmutable();
+		$now = new DateTimeImmutable();
 
 		return $this->getValidFrom() < $now && $now < $this->getValidTo();
 	}
