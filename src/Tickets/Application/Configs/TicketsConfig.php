@@ -2,6 +2,7 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Configs;
 
+use Generator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\Exceptions\TicketConfigNotFoundException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
@@ -21,7 +22,10 @@ final class TicketsConfig
 		return new self( (array)require __DIR__ . '/../../../../config/Tickets.php' );
 	}
 
-	public function getTicketConfigs() : \Generator
+	/**
+	 * @return TicketConfig[]|Generator
+	 */
+	public function getTicketConfigs() : Generator
 	{
 		foreach ( $this->configData as $ticketName => $ticketData )
 		{
