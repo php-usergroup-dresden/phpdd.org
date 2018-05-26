@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Read;
 
 use IceHawk\IceHawk\Interfaces\HandlesGetRequest;
 use IceHawk\IceHawk\Interfaces\ProvidesReadRequestData;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Repositories\TicketOrderRepository;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketInfos;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\AbstractRequestHandler;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses\HtmlPage;
 
@@ -20,13 +20,24 @@ final class TicketSelectionRequestHandler extends AbstractRequestHandler impleme
 	/**
 	 * @param ProvidesReadRequestData $request
 	 *
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException
+	 * @throws RuntimeException
+	 * @throws \InvalidArgumentException
 	 */
 	public function handle( ProvidesReadRequestData $request )
 	{
-		$ticketsConfig = TicketsConfig::fromConfigFile();
-		$data          = [
-			'ticketConfigs' => $ticketsConfig->getTicketConfigs(),
+		$session            = $this->getEnv()->getSession();
+		$database           = $this->getEnv()->getDatabase();
+		$ticketsConfig      = TicketsConfig::fromConfigFile();
+		$reservationService = new TicketOrderRepository( $database );
+
+		$ticketInfos = new TicketInfos( $ticketsConfig, $reservationService );
+
+		$ticketSelectForm = $session->getTicketSelectionForm();
+		$ticketSelectForm->renewToken();
+
+		$data = [
+			'ticketInfos'      => $ticketInfos->getTickets(),
+			'ticketSelectForm' => $ticketSelectForm,
 		];
 
 		(new HtmlPage( $this->getEnv() ))->respond( 'Tickets/Read/Pages/Selection.twig', $data );

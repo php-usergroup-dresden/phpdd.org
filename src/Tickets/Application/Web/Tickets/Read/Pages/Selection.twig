@@ -5,9 +5,17 @@
     <h1>BUY TICKETS</h1>
     <hr class="blockspace">
 
-    <form method="post" action="/init-ticket-order" id="init-ticket-order-form">
+    {% if ticketSelectForm.hasFeedback('general') %}
+        <div class="blockspace alert alert-danger">
+            {{ ticketSelectForm.getFeedback('general').getMessage() }}
+        </div>
+    {% endif %}
 
-        {% for ticket in ticketConfigs %}
+    <!--suppress HtmlUnknownTarget -->
+    <form method="post" action="/tickets/select" id="select-tickets-order-form">
+        <input type="hidden" name="token" value="{{ ticketSelectForm.getToken() }}">
+
+        {% for ticket in ticketInfos %}
             <div class="row">
                 <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
                     <img src="{{ ticket.getImage }}" alt="{{ ticket.getName }}"
@@ -20,7 +28,7 @@
                     </p>
                     <p>
                         <b>{{ ticket.getPrice.getMoney|formatMoney }}</b><sup>*</sup>
-                        <small class="text-muted"> | {{ ticket.getSeats }} seats available</small>
+                        <small class="text-muted"> | {{ ticket.getAvailableSeats }} seats available</small>
                     </p>
                     <p>
                         <small class="text-muted">
@@ -36,11 +44,12 @@
                     </p>
                 </div>
                 <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
-                    <label for="quantity[{{ ticket.getName }}]" class="sr-only">Quantity</label>
-                    <select id="quantity[{{ ticket.getName }}]" name="quantity[{{ ticket.getName }}]"
+                    <label for="quantity[{{ ticket.getType }}][{{ ticket.getName }}]" class="sr-only">Quantity</label>
+                    <select id="quantity[{{ ticket.getType }}][{{ ticket.getName }}]"
+                            name="quantity[{{ ticket.getType }}][{{ ticket.getName }}]"
                             class="form-control"{% if not ticket.isAvailable %} disabled{% endif %}>
                         {% for i in 0..ticket.getMaxSeatsPerOrder %}
-                            <option value="{{ i }}">{{ i }}</option>
+                            <option value="{{ i }}"{% if ticketSelectForm.get('quantity')[ticket.getType][ticket.getName] == i %} selected{% endif %}>{{ i }}</option>
                         {% endfor %}
                     </select>
                 </div>
@@ -54,6 +63,11 @@
             </div>
         </div>
 
+        {% if ticketSelectForm.hasFeedback('general') %}
+            <div class="blockspace alert alert-danger">
+                {{ ticketSelectForm.getFeedback('general').getMessage() }}
+            </div>
+        {% endif %}
 
         <div class="row blockspace">
             <div class="col-xs-12">
