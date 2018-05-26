@@ -17,12 +17,15 @@ abstract class TicketTypes
 
 	public const WORKSHOP_SLOT_C = 'workshop-slot-c';
 
+	public const WORKSHOP_SLOT_D = 'workshop-slot-d';
+
 	public const CONFERENCE      = 'conference';
 
 	public const ALL             = [
 		self::WORKSHOP_SLOT_A,
 		self::WORKSHOP_SLOT_B,
 		self::WORKSHOP_SLOT_C,
+		self::WORKSHOP_SLOT_D,
 		self::CONFERENCE,
 	];
 
@@ -30,5 +33,6 @@ abstract class TicketTypes
 		self::WORKSHOP_SLOT_A,
 		self::WORKSHOP_SLOT_B,
 		self::WORKSHOP_SLOT_C,
+		self::WORKSHOP_SLOT_D,
 	];
 }
