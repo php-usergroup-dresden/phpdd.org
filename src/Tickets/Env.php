@@ -8,6 +8,8 @@ namespace PHPUGDD\PHPDD\Website\Tickets;
 use Money\Currencies\ISOCurrencies;
 use Money\Formatter\IntlMoneyFormatter;
 use Money\MoneyFormatter;
+use PDO;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\MySqlConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\SentryConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\TwigConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\ErrorHandling\SentryClient;
@@ -111,6 +113,23 @@ final class Env extends AbstractObjectPool implements ProvidesInfrastructure
 				$twig->addFilter( new \Twig_Filter( 'formatMoney', [$moneyFormatter, 'formatMoneyValue'] ) );
 
 				return $twig;
+			}
+		);
+	}
+
+	public function getDatabase() : PDO
+	{
+		return $this->getSharedInstance(
+			'database',
+			function ()
+			{
+				$mysqlConfig = MySqlConfig::fromConfigFile();
+
+				return new PDO(
+					$mysqlConfig->getDsn(),
+					$mysqlConfig->getUser(),
+					$mysqlConfig->getPassword()
+				);
 			}
 		);
 	}

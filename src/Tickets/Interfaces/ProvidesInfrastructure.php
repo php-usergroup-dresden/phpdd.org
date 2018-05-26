@@ -6,6 +6,7 @@
 namespace PHPUGDD\PHPDD\Website\Tickets\Interfaces;
 
 use Money\MoneyFormatter;
+use PDO;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\ErrorHandling\SentryClient;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Rendering\Twig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Session;
@@ -27,4 +28,6 @@ interface ProvidesInfrastructure
 	public function getMoneyFormatter() : MoneyFormatter;
 
 	public function getTemplateRenderer() : Twig;
+
+	public function getDatabase() : PDO;
 }
