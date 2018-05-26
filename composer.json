@@ -14,6 +14,7 @@
     "php": ">=7.2",
     "moneyphp/money": "~3.1.3",
     "icehawk/icehawk": "~2.2.0",
+    "icehawk/forms": "~1.0.0",
     "icehawk/session-forms-bridge": "~1.0.0",
     "twig/twig": "~2.4.4",
     "sentry/sentry": "~1.9.0",

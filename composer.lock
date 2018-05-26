@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf16e8776384796eb0479319a4dfab24",
+    "content-hash": "e897ab358749fa2195efd246c34700b8",
     "packages": [
         {
             "name": "fortuneglobe/types",
