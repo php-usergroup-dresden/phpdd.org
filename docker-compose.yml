@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  db:
+    image: redis:4
+    container_name: phpdd18-redis
+    restart: always
+    volumes:
+      - ./data/redis:/data
+    ports:
+      - 6379:6379
