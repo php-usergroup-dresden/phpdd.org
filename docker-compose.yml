@@ -20,3 +20,17 @@ services:
       - 8079:80
     depends_on:
       - redis
+
+  mysql:
+    image: mysql/mysql-server:5.5
+    container_name: phpdd18-mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=phpdd18
+      - MYSQL_USER=phpdd18
+      - MYSQL_PASSWORD=phpdd18
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    ports:
+      - 3306:3306

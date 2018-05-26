@@ -4,4 +4,5 @@
 /build/logs/
 /public/2018/media/*
 /data/redis/*
+/data/mysql/*
 !.gitkeep
