@@ -13,6 +13,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItem;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItemCollection;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketDescription;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
@@ -89,12 +90,14 @@ final class TicketAvailabilityValidatorTest extends TestCase
 	 */
 	public function testReturnsFaleIfTicketConfigWasNotFound() : void
 	{
-		$ticket     = new Ticket(
+		$ticket = new Ticket(
+			new TicketId( 'PHPDD18-WS-07' ),
 			new TicketType( TicketTypes::WORKSHOP_SLOT_A ),
 			new TicketName( 'Ticket name' ),
 			new TicketDescription( 'Ticket description' ),
 			new TicketPrice( $this->getMoney( 12300 ) )
 		);
+
 		$johnDoe    = new AttendeeName( 'John Doe' );
 		$ticketItem = new TicketItem( $ticket, $johnDoe );
 
@@ -135,6 +138,6 @@ final class TicketAvailabilityValidatorTest extends TestCase
 		$johnDoe             = new AttendeeName( 'John Doe' );
 		$workshopBTicketItem = new TicketItem( $workshopBTicket, $johnDoe );
 
-		$this->assertFalse( $this->validator->isAvailable( $workshopBTicketItem ) );
+		$this->assertTrue( $this->validator->isAvailable( $workshopBTicketItem ) );
 	}
 }

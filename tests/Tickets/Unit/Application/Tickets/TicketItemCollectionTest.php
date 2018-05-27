@@ -8,6 +8,10 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Ticket;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItem;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItemCollection;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketDescription;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 use PHPUnit\Framework\TestCase;
@@ -76,18 +80,20 @@ final class TicketItemCollectionTest extends TestCase
 	 */
 	public function testCanGetCountForTicket() : void
 	{
-		$otherWorkshopTicketA = $this->getWorkshopTicket(
-			TicketTypes::WORKSHOP_SLOT_A,
-			'Other Workshop Ticket Slot A',
-			'Other Workshop description Slot A',
-			$this->getMoney( 25000 )
+		$otherWorkshopTicketA = new Ticket(
+			new TicketId( 'PHPDD18-WS-07' ),
+			new TicketType( TicketTypes::WORKSHOP_SLOT_A ),
+			new TicketName( 'Other Workshop Ticket Slot A' ),
+			new TicketDescription( 'Other Workshop description Slot A' ),
+			new TicketPrice( $this->getMoney( 25000 ) )
 		);
 
-		$workshopTicketB = $this->getWorkshopTicket(
-			TicketTypes::WORKSHOP_SLOT_B,
-			'Workshop Ticket Slot B',
-			'Workshop description Slot B',
-			$this->getMoney( 25000 )
+		$workshopTicketB = new Ticket(
+			new TicketId( 'PHPDD18-WS-08' ),
+			new TicketType( TicketTypes::WORKSHOP_SLOT_B ),
+			new TicketName( 'Other Workshop Ticket Slot A' ),
+			new TicketDescription( 'Other Workshop description Slot A' ),
+			new TicketPrice( $this->getMoney( 25000 ) )
 		);
 
 		$this->assertSame( 3, $this->collection->getCountForTicket( $this->conferenceTicket ) );

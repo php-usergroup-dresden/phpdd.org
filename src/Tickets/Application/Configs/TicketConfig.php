@@ -7,6 +7,7 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Configs;
 
 use DateTimeImmutable;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketDescription;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
@@ -19,6 +20,9 @@ use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 final class TicketConfig
 {
 	use MoneyProviding;
+
+	/** @var string */
+	private $id;
 
 	/** @var string */
 	private $name;
@@ -48,6 +52,7 @@ final class TicketConfig
 	private $image;
 
 	public function __construct(
+		string $id,
 		string $name,
 		string $description,
 		int $price,
@@ -59,6 +64,7 @@ final class TicketConfig
 		string $image
 	)
 	{
+		$this->id               = $id;
 		$this->name             = $name;
 		$this->description      = $description;
 		$this->price            = $price;
@@ -68,6 +74,11 @@ final class TicketConfig
 		$this->validFrom        = $validFrom;
 		$this->validTo          = $validTo;
 		$this->image            = $image;
+	}
+
+	public function getId() : TicketId
+	{
+		return new TicketId( $this->id );
 	}
 
 	public function getName() : TicketName

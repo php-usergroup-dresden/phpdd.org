@@ -1,7 +1,8 @@
 <?php declare(strict_types=1);
 
 return [
-	'Workshop Ticket Slot A1'      => [
+	'PHPDD18-WS-01' => [
+		'name'             => 'Workshop Ticket Slot A1',
 		'description'      => 'Half-day workshop from 09:00am to 1:30pm on September 21st 2018',
 		'price'            => 14900,
 		'seats'            => 25,
@@ -11,7 +12,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/tickets/workshop.png',
 	],
-	'Workshop Ticket Slot A2'      => [
+	'PHPDD18-WS-02' => [
+		'name'             => 'Workshop Ticket Slot A2',
 		'description'      => 'Half-day workshop from 02:30pm to 07:00pm on September 21st 2018',
 		'price'            => 14900,
 		'seats'            => 25,
@@ -21,7 +23,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/tickets/workshop.png',
 	],
-	'Workshop Ticket Slot B1'      => [
+	'PHPDD18-WS-03' => [
+		'name'             => 'Workshop Ticket Slot B1',
 		'description'      => 'Half-day workshop from 09:00am to 01:30pm on September 21st 2018',
 		'price'            => 14900,
 		'seats'            => 25,
@@ -31,7 +34,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/tickets/workshop.png',
 	],
-	'Workshop Ticket Slot B2'      => [
+	'PHPDD18-WS-04' => [
+		'name'             => 'Workshop Ticket Slot B2',
 		'description'      => 'Half-day workshop from 02:30pm to 07:00pm on September 21st 2018',
 		'price'            => 14900,
 		'seats'            => 2,
@@ -41,7 +45,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/tickets/workshop.png',
 	],
-	'Workshop Ticket Slot C1'      => [
+	'PHPDD18-WS-05' => [
+		'name'             => 'Workshop Ticket Slot C1',
 		'description'      => 'Full-day workshop from 09:00am to 07:00pm on September 21st 2018',
 		'price'            => 24900,
 		'seats'            => 3,
@@ -51,7 +56,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/tickets/workshop.png',
 	],
-	'Early Bird Conference Ticket' => [
+	'PHPDD18-ES-01' => [
+		'name'             => 'Early Bird Conference Ticket',
 		'description'      => 'Grants access to all conference session on September 22nd 2018.',
 		'price'            => 6900,
 		'seats'            => 50,
@@ -61,7 +67,8 @@ return [
 		'validTo'          => '2018-05-31 23:59:59',
 		'image'            => '/assets/images/tickets/early-bird.png',
 	],
-	'Conference Ticket'            => [
+	'PHPDD18-CT-01' => [
+		'name'             => 'Conference Ticket',
 		'description'      => 'Grants access to all conference session on September 22nd 2018.',
 		'price'            => 9900,
 		'seats'            => 400,

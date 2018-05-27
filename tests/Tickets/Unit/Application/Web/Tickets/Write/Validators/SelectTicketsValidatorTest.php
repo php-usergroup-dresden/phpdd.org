@@ -20,7 +20,8 @@ final class SelectTicketsValidatorTest extends TestCase
 	protected function setUp()
 	{
 		$ticketConfig = [
-			'TicketNameA' => [
+			'PHPDD18-CT-01' => [
+				'name'             => 'TicketNameA',
 				'type'             => TicketTypes::CONFERENCE,
 				'description'      => '',
 				'image'            => '',
@@ -30,8 +31,9 @@ final class SelectTicketsValidatorTest extends TestCase
 				'validFrom'        => (new DateTimeImmutable( '-1 day' ))->format( 'Y-m-d H:i:s' ),
 				'validTo'          => (new DateTimeImmutable( '+1 day' ))->format( 'Y-m-d H:i:s' ),
 			],
-			# Not available but not selected ticket
-			'TicketNameB' => [
+			# Not available but selected ticket
+			'PHPDD18-EB-01' => [
+				'name'             => 'TicketNameB',
 				'type'             => TicketTypes::CONFERENCE,
 				'description'      => '',
 				'image'            => '',
@@ -41,8 +43,9 @@ final class SelectTicketsValidatorTest extends TestCase
 				'validFrom'        => (new DateTimeImmutable( '-2 day' ))->format( 'Y-m-d H:i:s' ),
 				'validTo'          => (new DateTimeImmutable( '-1 day' ))->format( 'Y-m-d H:i:s' ),
 			],
-			# Not available but not selected ticket
-			'TicketNameC' => [
+			# Not available but selected ticket
+			'PHPDD18-WS-01' => [
+				'name'             => 'TicketNameC',
 				'type'             => TicketTypes::WORKSHOP_SLOT_A,
 				'description'      => '',
 				'image'            => '',
@@ -52,7 +55,8 @@ final class SelectTicketsValidatorTest extends TestCase
 				'validFrom'        => (new DateTimeImmutable( '-2 day' ))->format( 'Y-m-d H:i:s' ),
 				'validTo'          => (new DateTimeImmutable( '-1 day' ))->format( 'Y-m-d H:i:s' ),
 			],
-			'TicketNameD' => [
+			'PHPDD18-WS-02' => [
+				'name'             => 'TicketNameD',
 				'type'             => TicketTypes::WORKSHOP_SLOT_A,
 				'description'      => '',
 				'image'            => '',
@@ -80,6 +84,7 @@ final class SelectTicketsValidatorTest extends TestCase
 	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
 	 *
 	 * @dataProvider invalidTicketSelectionInputProvider
+	 * @throws \Exception
 	 */
 	public function testValidationOfTicketSelectionFails( array $input, array $expectedMessages ) : void
 	{
@@ -107,14 +112,8 @@ final class SelectTicketsValidatorTest extends TestCase
 			[
 				'input'            => [
 					'quantity' => [
-						TicketTypes::CONFERENCE      => [
-							'TicketNameA' => 0,
-							'TicketNameB' => 0,
-						],
-						TicketTypes::WORKSHOP_SLOT_A => [
-							'TicketNameC' => 0,
-							'TicketNameD' => 0,
-						],
+						'PHPDD18-WS-02' => 0,
+						'PHPDD18-CT-01' => 0,
 					],
 				],
 				'expectedMessages' => ['general' => ['Please select at least one ticket.']],
@@ -122,14 +121,8 @@ final class SelectTicketsValidatorTest extends TestCase
 			[
 				'input'            => [
 					'quantity' => [
-						TicketTypes::CONFERENCE      => [
-							'TicketNameA' => 0,
-							'TicketNameB' => 1,
-						],
-						TicketTypes::WORKSHOP_SLOT_A => [
-							'TicketNameC' => 1,
-							'TicketNameD' => 0,
-						],
+						'PHPDD18-CT-01' => 0,
+						'PHPDD18-EB-01' => 1,
 					],
 				],
 				'expectedMessages' => ['general' => ['Please select only currently available tickets.']],
@@ -137,10 +130,8 @@ final class SelectTicketsValidatorTest extends TestCase
 			[
 				'input'            => [
 					'quantity' => [
-						'TicketTypeA' => [
-							'TicketNameA' => 1,
-							'TicketNameB' => 1,
-						],
+						'PHPDD18-EB-01' => 1,
+						'PHPDD18-WS-01' => 1,
 					],
 				],
 				'expectedMessages' => ['general' => ['Please select only currently available tickets.']],
@@ -174,14 +165,8 @@ final class SelectTicketsValidatorTest extends TestCase
 			[
 				'input' => [
 					'quantity' => [
-						TicketTypes::CONFERENCE      => [
-							'TicketNameA' => 1,
-							'TicketNameB' => 0,
-						],
-						TicketTypes::WORKSHOP_SLOT_A => [
-							'TicketNameC' => 0,
-							'TicketNameD' => 3,
-						],
+						'PHPDD18-CT-01' => 1,
+						'PHPDD18-WS-02' => 1,
 					],
 				],
 			],

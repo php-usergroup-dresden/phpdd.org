@@ -4,8 +4,7 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Configs;
 
 use Generator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\Exceptions\TicketConfigNotFoundException;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 
 final class TicketsConfig
 {
@@ -27,10 +26,11 @@ final class TicketsConfig
 	 */
 	public function getTicketConfigs() : Generator
 	{
-		foreach ( $this->configData as $ticketName => $ticketData )
+		foreach ( $this->configData as $ticketId => $ticketData )
 		{
 			yield new TicketConfig(
-				(string)$ticketName,
+				(string)$ticketId,
+				(string)$ticketData['name'],
 				(string)$ticketData['description'],
 				(int)$ticketData['price'],
 				(int)$ticketData['seats'],
@@ -44,36 +44,25 @@ final class TicketsConfig
 	}
 
 	/**
-	 * @param TicketType $ticketType
-	 * @param TicketName $ticketName
+	 * @param TicketId $ticketId
 	 *
-	 * @return TicketConfig
 	 * @throws TicketConfigNotFoundException
+	 * @return TicketConfig
 	 */
-	public function findTicketConfigByTypeAndName( TicketType $ticketType, TicketName $ticketName ) : TicketConfig
+	public function findTicketById( TicketId $ticketId ) : TicketConfig
 	{
-		if ( !isset( $this->configData[ $ticketName->toString() ] ) )
+		if ( !isset( $this->configData[ $ticketId->toString() ] ) )
 		{
 			throw new TicketConfigNotFoundException(
-				'Could not find ticket config with name: ' . $ticketName->toString()
+				'Could not find ticket config with ID: ' . $ticketId->toString()
 			);
 		}
 
-		if ( $this->configData[ $ticketName->toString() ]['type'] !== $ticketType->toString() )
-		{
-			throw new TicketConfigNotFoundException(
-				sprintf(
-					'Could not find ticket config with name "%s" and type "%s".',
-					$ticketName->toString(),
-					$ticketType->toString()
-				)
-			);
-		}
-
-		$ticketData = $this->configData[ $ticketName->toString() ];
+		$ticketData = $this->configData[ $ticketId->toString() ];
 
 		return new TicketConfig(
-			$ticketName->toString(),
+			$ticketId->toString(),
+			(string)$ticketData['name'],
 			(string)$ticketData['description'],
 			(int)$ticketData['price'],
 			(int)$ticketData['seats'],

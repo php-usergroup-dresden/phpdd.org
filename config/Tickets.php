@@ -1,7 +1,8 @@
 <?php declare(strict_types=1);
 
 return [
-	'WORKSHOP - PRAGMATIC TDD'                      => [
+	'PHPDD18-WS-01' => [
+		'name'             => 'WORKSHOP - PRAGMATIC TDD',
 		'description'      => 'Trainer: Luka Mužinić<br>Full-day workshop from 09:00am to 7:00pm on September 21st 2018',
 		'price'            => 24900,
 		'seats'            => 25,
@@ -11,7 +12,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/speakers/luka-muzinic.jpg',
 	],
-	'WORKSHOP - PRGAMATIC EVENT SOURCING'           => [
+	'PHPDD18-WS-02' => [
+		'name'             => 'WORKSHOP - PRGAMATIC EVENT SOURCING',
 		'description'      => 'Trainers: Arne Blankerts & Sebastian Heuer<br>Full-day workshop from 09:00am to 7:00pm on September 21st 2018',
 		'price'            => 24900,
 		'seats'            => 25,
@@ -21,7 +23,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/speakers/arne-sebastian.png',
 	],
-	'WORKSHOP - HACK THIS WORKSHOP!'                => [
+	'PHPDD18-WS-03' => [
+		'name'             => 'WORKSHOP - HACK THIS WORKSHOP!',
 		'description'      => 'Trainer: Christopher Riley<br>Half-day workshop from 09:00am to 01:30pm on September 21st 2018',
 		'price'            => 14900,
 		'seats'            => 25,
@@ -31,7 +34,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/speakers/christopher-riley.jpg',
 	],
-	"WORKSHOP - PENTESTING DO's & DONT's"           => [
+	'PHPDD18-WS-04' => [
+		'name'             => "WORKSHOP - PENTESTING DO's & DONT's",
 		'description'      => 'Trainer: Clinton Ingrams<br>Half-day workshop from 02:30pm to 07:00pm on September 21st 2018',
 		'price'            => 14900,
 		'seats'            => 25,
@@ -41,7 +45,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/speakers/clinton-ingrams.jpg',
 	],
-	'WORKSHOP - EVENT STORMING FOR FUN AND PROFIT!' => [
+	'PHPDD18-WS-05' => [
+		'name'             => 'WORKSHOP - EVENT STORMING FOR FUN AND PROFIT!',
 		'description'      => 'Trainer: Jeroen van der Gulik<br>Half-day workshop from 09:00am to 01:30pm on September 21st 2018',
 		'price'            => 14900,
 		'seats'            => 25,
@@ -51,7 +56,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/speakers/jeroen-van-der-gulik.jpg',
 	],
-	'WORKSHOP - TBA'                                => [
+	'PHPDD18-WS-06' => [
+		'name'             => 'WORKSHOP - TBA',
 		'description'      => 'Trainer: TBA<br>Half-day workshop from 02:30pm to 07:00pm on September 21st 2018',
 		'price'            => 14900,
 		'seats'            => 25,
@@ -61,7 +67,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/tickets/workshop.png',
 	],
-	'Early Bird Conference Ticket'                  => [
+	'PHPDD18-EB-01' => [
+		'name'             => 'Early Bird Conference Ticket',
 		'description'      => 'Grants access to all conference activity on September 22, 2018.',
 		'price'            => 7900,
 		'seats'            => 50,
@@ -71,7 +78,8 @@ return [
 		'validTo'          => '2018-09-15 23:59:59',
 		'image'            => '/assets/images/tickets/early-bird.png',
 	],
-	'Conference Ticket'                             => [
+	'PHPDD18-CT-01' => [
+		'name'             => 'Conference Ticket',
 		'description'      => 'Grants access to all conference activity on September 22, 2018.',
 		'price'            => 11900,
 		'seats'            => 400,

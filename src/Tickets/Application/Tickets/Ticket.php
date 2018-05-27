@@ -1,21 +1,18 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketDescription;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
 
-/**
- * Class Ticket
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Tickets
- */
 final class Ticket
 {
+	/** @var TicketId */
+	private $id;
+
 	/** @var TicketType */
 	private $type;
 
@@ -28,12 +25,24 @@ final class Ticket
 	/** @var TicketPrice */
 	private $price;
 
-	public function __construct( TicketType $type, TicketName $name, TicketDescription $description, TicketPrice $price )
+	public function __construct(
+		TicketId $id,
+		TicketType $type,
+		TicketName $name,
+		TicketDescription $description,
+		TicketPrice $price
+	)
 	{
+		$this->id          = $id;
 		$this->type        = $type;
 		$this->name        = $name;
 		$this->description = $description;
 		$this->price       = $price;
+	}
+
+	public function getId() : TicketId
+	{
+		return $this->id;
 	}
 
 	public function getType() : TicketType
@@ -58,10 +67,6 @@ final class Ticket
 
 	public function equals( Ticket $other ) : bool
 	{
-		$typeEquals        = $this->type->equals( $other->getType() );
-		$nameEquals        = $this->name->equals( $other->getName() );
-		$descriptionEquals = $this->description->equals( $other->getDescription() );
-
-		return ($typeEquals && $nameEquals && $descriptionEquals);
+		return $this->id->equals( $other->getId() );
 	}
 }

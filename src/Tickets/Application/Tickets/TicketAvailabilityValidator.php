@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
@@ -12,10 +9,6 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesReserve
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketItemInformation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ValidatesTicketAvailability;
 
-/**
- * Class TicketAvailabilityValidator
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Tickets
- */
 final class TicketAvailabilityValidator implements ValidatesTicketAvailability
 {
 	/** @var TicketsConfig */
@@ -44,10 +37,7 @@ final class TicketAvailabilityValidator implements ValidatesTicketAvailability
 
 		try
 		{
-			$ticketConfig = $this->ticketsConfig->findTicketConfigByTypeAndName(
-				$ticket->getType(),
-				$ticket->getName()
-			);
+			$ticketConfig = $this->ticketsConfig->findTicketById( $ticket->getId() );
 		}
 		catch ( TicketConfigNotFoundException $e )
 		{
