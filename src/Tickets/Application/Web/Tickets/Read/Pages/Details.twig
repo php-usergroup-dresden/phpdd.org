@@ -38,25 +38,37 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="form-group">
-                    <label for="companyName">Company <span class="text-muted">(optional)</span></label>
-                    <input type="text" name="companyName" id="companyName" class="form-control">
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('companyName') %} has-error{% endif %}">
+                    <label class="control-label" for="companyName">Company <span
+                                class="text-muted">(optional)</span></label>
+                    <input type="text" name="companyName" id="companyName" class="form-control"
+                           value="{{ ticketDetailsForm.get('companyName') }}">
+                    <span class="text-danger">{{ ticketDetailsForm.getFeedback('companyName').getMessage }}</span>
                 </div>
-                <div class="form-group">
-                    <label for="firstname">Firstname <span class="text-danger">*</span></label>
-                    <input type="text" name="firstname" id="firstname" class="form-control">
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('firstname') %} has-error{% endif %}">
+                    <label class="control-label" for="firstname">Firstname <span class="text-danger">*</span></label>
+                    <input type="text" name="firstname" id="firstname" class="form-control"
+                           value="{{ ticketDetailsForm.get('firstname') }}">
+                    <span class="text-danger">{{ ticketDetailsForm.getFeedback('firstname').getMessage }}</span>
                 </div>
-                <div class="form-group">
-                    <label for="lastname">Lastname <span class="text-danger">*</span></label>
-                    <input type="text" name="lastname" id="lastname" class="form-control">
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('lastname') %} has-error{% endif %}">
+                    <label class="control-label" for="lastname">Lastname <span class="text-danger">*</span></label>
+                    <input type="text" name="lastname" id="lastname" class="form-control"
+                           value="{{ ticketDetailsForm.get('lastname') }}">
+                    <span class="text-danger">{{ ticketDetailsForm.getFeedback('lastname').getMessage }}</span>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email address <span class="text-danger">*</span></label>
-                    <input type="email" name="email" id="email" class="form-control">
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('email') %} has-error{% endif %}">
+                    <label class="control-label" for="email">Email address <span class="text-danger">*</span></label>
+                    <input type="email" name="email" id="email" class="form-control"
+                           value="{{ ticketDetailsForm.get('email') }}">
+                    <span class="text-danger">{{ ticketDetailsForm.getFeedback('email').getMessage }}</span>
                 </div>
-                <div class="form-group">
-                    <label for="emailRepeat">Repeat email address <span class="text-danger">*</span></label>
-                    <input type="email" name="emailRepeat" id="emailRepeat" class="form-control">
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('emailRepeat') %} has-error{% endif %}">
+                    <label class="control-label" for="emailRepeat">Repeat email address <span
+                                class="text-danger">*</span></label>
+                    <input type="email" name="emailRepeat" id="emailRepeat" class="form-control"
+                           value="{{ ticketDetailsForm.get('emailRepeat') }}">
+                    <span class="text-danger">{{ ticketDetailsForm.getFeedback('emailRepeat').getMessage }}</span>
                 </div>
                 <div class="form-group">
                     <p>
@@ -80,34 +92,46 @@
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="form-group">
-                    <label for="streetWithNumber">Street with No. <span class="text-danger">*</span></label>
-                    <input type="text" name="streetWithNumber" id="streetWithNumber" class="form-control">
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('streetWithNumber') %} has-error{% endif %}">
+                    <label class="control-label" for="streetWithNumber">Street with No. <span
+                                class="text-danger">*</span></label>
+                    <input type="text" name="streetWithNumber" id="streetWithNumber" class="form-control"
+                           value="{{ ticketDetailsForm.get('streetWithNumber') }}">
+                    <span class="text-danger">{{ ticketDetailsForm.getFeedback('streetWithNumber').getMessage }}</span>
                 </div>
-                <div class="form-group">
-                    <label for="addressAddon">Address addon <span class="text-muted">(optional)</span></label>
-                    <input type="text" name="addressAddon" id="addressAddon" class="form-control">
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('addressAddon') %} has-error{% endif %}">
+                    <label class="control-label" for="addressAddon">Address addon <span
+                                class="text-muted">(optional)</span></label>
+                    <input type="text" name="addressAddon" id="addressAddon" class="form-control"
+                           value="{{ ticketDetailsForm.get('addressAddon') }}">
+                    <span class="text-danger">{{ ticketDetailsForm.getFeedback('addressAddon').getMessage }}</span>
                 </div>
-                <div class="form-group">
-                    <label for="zipCode">ZIP <span class="text-danger">*</span></label>
-                    <input type="text" name="zipCode" id="zipCode" class="form-control">
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('zipCode') %} has-error{% endif %}">
+                    <label class="control-label" for="zipCode">ZIP <span class="text-danger">*</span></label>
+                    <input type="text" name="zipCode" id="zipCode" class="form-control"
+                           value="{{ ticketDetailsForm.get('zipCode') }}">
+                    <span class="text-danger">{{ ticketDetailsForm.getFeedback('zipCode').getMessage }}</span>
                 </div>
-                <div class="form-group">
-                    <label for="city">City <span class="text-danger">*</span></label>
-                    <input type="text" name="city" id="city" class="form-control">
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('city') %} has-error{% endif %}">
+                    <label class="control-label" for="city">City <span class="text-danger">*</span></label>
+                    <input type="text" name="city" id="city" class="form-control"
+                           value="{{ ticketDetailsForm.get('city') }}">
+                    <span class="text-danger">{{ ticketDetailsForm.getFeedback('city').getMessage }}</span>
                 </div>
-                <div class="form-group">
-                    <label for="countryCode">Country <span class="text-danger">*</span></label>
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('countryCode') %} has-error{% endif %}">
+                    <label class="control-label" for="countryCode">Country <span class="text-danger">*</span></label>
                     <select name="countryCode" id="countryCode" class="form-control">
                         <option value="">-- Please select --</option>
                         {% for code, name in countryCodes %}
-                            <option value="{{ code }}">{{ name }}</option>
+                            <option value="{{ code }}"{% if ticketDetailsForm.get('countryCode') == code %} selected{% endif %}>{{ name }}</option>
                         {% endfor %}
                     </select>
+                    <span class="text-danger">{{ ticketDetailsForm.getFeedback('countryCode').getMessage }}</span>
                 </div>
-                <div class="form-group">
-                    <label for="vatNumber">VAT Number </label>
-                    <input type="text" name="vatNumber" id="vatNumber" class="form-control">
+                <div class="form-group{% if ticketDetailsForm.hasFeedback('vatNumber') %} has-error{% endif %}">
+                    <label class="control-label" for="vatNumber">VAT Number </label>
+                    <input type="text" name="vatNumber" id="vatNumber" class="form-control"
+                           value="{{ ticketDetailsForm.get('vatNumber') }}">
                     <span class="help-block small">
                         <i class="fa fa-info-circle"></i>
                         The VAT number is required for companies located outside of Germany.
@@ -148,25 +172,27 @@
                 </div>
             </div>
             {% for i in 0..ticket.getQuantity-1 %}
+                {% set attendeeKey = 'attendees[' ~ ticket.getId ~ '][' ~ i ~ ']' %}
+                {% set discountKey = 'discounts[' ~ ticket.getId ~ '][' ~ i ~ ']' %}
                 <div class="row">
                     <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9">
-                        <div class="form-group">
-                            <label for="attendees[{{ ticket.getId }}][{{ i }}]">
+                        <div class="form-group{% if ticketDetailsForm.hasFeedback(attendeeKey) %} has-error{% endif %}">
+                            <label class="control-label" for="{{ attendeeKey }}">
                                 Fullname of {{ i+1 }}. attendee <span class="text-danger">*</span>
                             </label>
-                            <input type="text" name="attendees[{{ ticket.getId }}][{{ i }}]"
-                                   id="attendees[{{ ticket.getId }}][{{ i }}]"
-                                   class="form-control">
+                            <input type="text" name="{{ attendeeKey }}" id="{{ attendeeKey }}" class="form-control"
+                                   value="{{ ticketDetailsForm.get('attendees')[ticket.getId.toString][i] }}">
+                            <span class="text-danger">{{ ticketDetailsForm.getFeedback(attendeeKey).getMessage }}</span>
                         </div>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
-                        <div class="form-group">
-                            <label for="discounts[{{ ticket.getId }}][{{ i }}]">
+                        <div class="form-group{% if ticketDetailsForm.hasFeedback(discountKey) %} has-error{% endif %}">
+                            <label class="control-label" for="{{ discountKey }}">
                                 Discount code <span class="text-muted">(optional)</span>
                             </label>
-                            <input type="text" name="discounts[{{ ticket.getId }}][{{ i }}]"
-                                   id="attendees[{{ ticket.getId }}][{{ i }}]"
-                                   class="form-control">
+                            <input type="text" name="{{ discountKey }}" id="{{ discountKey }}" class="form-control"
+                                   value="{{ ticketDetailsForm.get('discounts')[ticket.getId.toString][i] }}">
+                            <span class="text-danger">{{ ticketDetailsForm.getFeedback(discountKey).getMessage }}</span>
                         </div>
                     </div>
                 </div>
@@ -196,7 +222,7 @@
             <div class="col-xs-7 col-sm-7 col-md-9 col-lg-9">
                 <p>
                     With a voluntary donation, you can help us get people from under-represented groups to attend our
-                    conference. With a max. donation of &euro;800 you become a sponsor
+                    conference. With a max. donation of &euro;800 you automatically become an official sponsor
                     of our <a href="/become-sponsor.html" target="_blank">diversity scholarship program</a>.
                     <b>#DiversityMatters</b>
                 </p>
