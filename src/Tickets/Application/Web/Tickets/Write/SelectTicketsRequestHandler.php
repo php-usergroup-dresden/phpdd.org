@@ -2,10 +2,7 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write;
 
-use IceHawk\Forms\Exceptions\InvalidTokenString;
 use IceHawk\Forms\Feedback;
-use IceHawk\Forms\Form;
-use IceHawk\Forms\Security\Token;
 use IceHawk\IceHawk\Interfaces\HandlesPostRequest;
 use IceHawk\IceHawk\Interfaces\ProvidesWriteRequestData;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Bridges\UserInput;
@@ -13,25 +10,30 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\AbstractRequestHandler;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses\Redirect;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\SelectTicketsValidator;
-use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\ErrorHandling\Severity;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Traits\CsrfTokenChecking;
 
 final class SelectTicketsRequestHandler extends AbstractRequestHandler implements HandlesPostRequest
 {
+	use CsrfTokenChecking;
+
 	private const FAIL_URL    = '/tickets/';
 
 	private const SUCCESS_URL = '/tickets/details/';
 
 	/**
 	 * @param ProvidesWriteRequestData $request
+	 *
+	 * @throws \Exception
 	 */
 	public function handle( ProvidesWriteRequestData $request )
 	{
 		$input            = $request->getInput();
 		$session          = $this->getEnv()->getSession();
+		$errorHandler     = $this->getEnv()->getErrorHandler();
 		$ticketSelectForm = $session->getTicketSelectionForm();
 		$ticketSelectForm->resetFeedbacks();
 
-		if ( $this->csrfCheckFailed( $ticketSelectForm, (string)$input->get( 'token' ) ) )
+		if ( $this->csrfCheckFailed( $ticketSelectForm, (string)$input->get( 'token' ), $errorHandler ) )
 		{
 			$ticketSelectForm->addFeedback( 'general', new Feedback( 'Invalid request. Please try again.' ) );
 
@@ -59,28 +61,6 @@ final class SelectTicketsRequestHandler extends AbstractRequestHandler implement
 		$ticketSelectForm->setData( ['selectedTickets' => $selectedTickets] );
 
 		(new Redirect())->respond( self::SUCCESS_URL );
-	}
-
-	private function csrfCheckFailed( Form $form, string $inputToken ) : bool
-	{
-		try
-		{
-			$token = Token::fromString( $inputToken );
-		}
-		catch ( InvalidTokenString $e )
-		{
-			$this->getEnv()->getErrorHandler()->captureException(
-				$e,
-				Severity::INFO,
-				[
-					'formId' => $form->getFormId()->toString(),
-				]
-			);
-
-			return true;
-		}
-
-		return !$form->isTokenValid( $token );
 	}
 
 	private function getSelectedTickets( array $quantities ) : array

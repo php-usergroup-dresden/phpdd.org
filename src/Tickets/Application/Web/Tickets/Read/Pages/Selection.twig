@@ -45,12 +45,12 @@
                     </p>
                 </div>
                 <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
-                    <label for="quantity[{{ ticket.getType }}][{{ ticket.getName }}]" class="sr-only">Quantity</label>
-                    <select id="quantity[{{ ticket.getType }}][{{ ticket.getName }}]"
-                            name="quantity[{{ ticket.getType }}][{{ ticket.getName }}]"
+                    <label for="quantity[{{ ticket.getId }}]" class="sr-only">Quantity</label>
+                    <select id="quantity[{{ ticket.getId }}]"
+                            name="quantity[{{ ticket.getId }}]"
                             class="form-control"{% if not ticket.isAvailable %} disabled{% endif %}>
                         {% for i in 0..ticket.getMaxSeatsPerOrder %}
-                            <option value="{{ i }}"{% if ticketSelectForm.get('selectedTickets')[ticket.getType().toString][ticket.getName().toString] == i %} selected{% endif %}>{{ i }}</option>
+                            <option value="{{ i }}"{% if ticketSelectForm.get('selectedTickets')[ticket.getId().toString] == i %} selected{% endif %}>{{ i }}</option>
                         {% endfor %}
                     </select>
                 </div>
