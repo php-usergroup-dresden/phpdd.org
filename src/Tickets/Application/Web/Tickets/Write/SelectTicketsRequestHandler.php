@@ -67,14 +67,11 @@ final class SelectTicketsRequestHandler extends AbstractRequestHandler implement
 	{
 		$selectedTickets = [];
 
-		foreach ( $quantities as $type => $tickets )
+		foreach ( $quantities as $id => $quantity )
 		{
-			foreach ( $tickets as $name => $quantity )
+			if ( 0 !== (int)$quantity )
 			{
-				if ( 0 !== (int)$quantity )
-				{
-					$selectedTickets[ $type ][ $name ] = (int)$quantity;
-				}
+				$selectedTickets[ $id ] = (int)$quantity;
 			}
 		}
 
