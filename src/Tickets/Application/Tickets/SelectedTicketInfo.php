@@ -5,6 +5,7 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesSelectedTicketInformation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketDescription;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
@@ -21,6 +22,11 @@ final class SelectedTicketInfo implements ProvidesSelectedTicketInformation
 	{
 		$this->ticketConfig = $ticketConfig;
 		$this->quantity     = $quantity;
+	}
+
+	public function getId() : TicketId
+	{
+		return $this->ticketConfig->getId();
 	}
 
 	public function getType() : TicketType
