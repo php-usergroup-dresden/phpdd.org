@@ -33,6 +33,7 @@ final class TicketInfos
 		foreach ( $this->ticketsConfig->getTicketConfigs() as $ticketConfig )
 		{
 			$ticket = new Ticket(
+				$ticketConfig->getId(),
 				$ticketConfig->getType(),
 				$ticketConfig->getName(),
 				$ticketConfig->getDescription(),

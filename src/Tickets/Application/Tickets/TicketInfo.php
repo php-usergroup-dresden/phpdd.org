@@ -6,6 +6,7 @@ use DateTimeImmutable;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketInformation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketDescription;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
@@ -23,6 +24,11 @@ final class TicketInfo implements ProvidesTicketInformation
 	{
 		$this->ticketConfig   = $ticketConfig;
 		$this->availableSeats = max( 0, $ticketConfig->getSeats() - $reservedSeats );
+	}
+
+	public function getId() : TicketId
+	{
+		return $this->ticketConfig->getId();
 	}
 
 	public function getType() : TicketType
