@@ -18,7 +18,7 @@
         {% for ticket in ticketInfos %}
             <div class="row">
                 <div class="col-xs-4 col-sm-3 col-md-2 col-lg-2">
-                    <img src="{{ ticket.getImage }}" alt="{{ ticket.getName }}"
+                    <img src="{{ project.getBaseUrl }}{{ ticket.getImage }}" alt="{{ ticket.getName }}"
                          class="img-rounded img-responsive">
                 </div>
                 <div class="col-xs-6 col-sm-8 col-md-9 col-lg-9">
