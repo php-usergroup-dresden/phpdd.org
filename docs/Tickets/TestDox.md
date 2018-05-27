@@ -213,7 +213,7 @@
 
 ## Unit\Application\Types\TicketTypeTest
 
-- [x] Can Create Instance For Valid Ticket Types (💚 4)
+- [x] Can Create Instance For Valid Ticket Types (💚 5)
 - [x] Throws Exception For Invalid Ticket Type (💚 1)
 
 ---
@@ -230,4 +230,11 @@
 
 ---
 
-Report created at 2018-05-22 21:54:10 (UTC)
+## Unit\Application\Web\Tickets\Write\Validators\SelectTicketsValidatorTest
+
+- [x] Validation Of Ticket Selection Fails (💚 5)
+- [x] Validation Ticket Selection Passes (💚 1)
+
+---
+
+Report created at 2018-05-27 00:29:43 (UTC)
