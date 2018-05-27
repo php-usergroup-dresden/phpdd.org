@@ -5,8 +5,191 @@
     <h1>BUY TICKETS</h1>
     <hr class="blockspace">
 
-    {{ dump(selectedTickets) }}
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <a href="/tickets/" class="text-muted">
+                <i class="fa fa-arrow-left"></i> BACK
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
+            <!--suppress HtmlUnknownTarget -->
+            <form action="/tickets/abort/" method="post">
+                <button type="submit" class="btn-link" style="margin: 0; padding: 0;">
+                    <span class="text-danger">
+                        <i class="fa fa-ban"></i> ABORT
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
 
-    <a href="/tickets/" class="text-muted">&laquo; BACK</a>
+    <!--suppress HtmlUnknownTarget -->
+    <form method="post" action="/tickets/save-details/" id="save-ticket-details-form">
+
+        <h2>Billing information</h2>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <label for="companyName">Company <span class="text-muted">(optional)</span></label>
+                    <input type="text" name="companyName" id="companyName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="firstname">Firstname <span class="text-danger">*</span></label>
+                    <input type="text" name="firstname" id="firstname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="lastname">Lastname <span class="text-danger">*</span></label>
+                    <input type="text" name="lastname" id="lastname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address <span class="text-danger">*</span></label>
+                    <input type="text" name="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="emailRepeat">Repeat email address <span class="text-danger">*</span></label>
+                    <input type="text" name="emailRepeat" id="emailRepeat" class="form-control">
+                </div>
+                <div class="form-group">
+                    <p>
+                        We will use this email address to send you:
+                    </p>
+                    <ul style="padding-left: 15px;">
+                        <li>
+                            A ticket purchase confirmation incl. the PDF invoice
+                        </li>
+                        <li>
+                            The PDF tickets for all of your attendees
+                        </li>
+                        <li>
+                            Organisational information regarding the event
+                        </li>
+                    </ul>
+                    <p>
+                        We will <b>NOT</b> give this email address to third parties or use this email
+                        address to send you any advertisements.
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <label for="streetWithNumber">Street with No. <span class="text-danger">*</span></label>
+                    <input type="text" name="streetWithNumber" id="streetWithNumber" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="addressAddon">Address addon <span class="text-muted">(optional)</span></label>
+                    <input type="text" name="addressAddon" id="addressAddon" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="zipCode">ZIP <span class="text-danger">*</span></label>
+                    <input type="text" name="zipCode" id="zipCode" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="city">City <span class="text-danger">*</span></label>
+                    <input type="text" name="city" id="city" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="countryCode">Country <span class="text-danger">*</span></label>
+                    <select name="countryCode" id="countryCode" class="form-control">
+                        <option value="">-- Please select --</option>
+                        {% for code, name in countryCodes %}
+                            <option value="{{ code }}">{{ name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="vatNumber">VAT Number </label>
+                    <input type="text" name="vatNumber" id="vatNumber" class="form-control">
+                    <span class="help-block small">
+                        <i class="fa fa-info-circle"></i>
+                        The VAT number is required for companies located outside of Germany.
+                    </span>
+                </div>
+                <div class="form-group">
+                    <span class="text-danger">
+                        * Required fields
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Attendee information / Discounts</h2>
+        <p>
+            For our swag, insurance reasons and as a requirement from the venue, we need to know the name of all
+            attendees. Please enter the names accordingly for each selected ticket. If you have a discount code,
+            please enter it at the appropriate ticket.
+        </p>
+
+        {% for ticket in selectedTickets.getTickets %}
+            <div class="row">
+                <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9">
+                    <h4><span class="text-muted">{{ ticket.getQuantity }}x</span> {{ ticket.getName }}</h4>
+                    <p class="small">
+                        {{ ticket.getDescription|raw }}
+                    </p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 text-right">
+                    <h3>
+                        {{ ticket.getPrice.getMoney.multiply(ticket.getQuantity)|formatMoney }}
+                    </h3>
+                    <small>
+                        ({{ ticket.getQuantity }}x {{ ticket.getPrice.getMoney|formatMoney }})
+                    </small>
+                </div>
+            </div>
+            {% for i in 0..ticket.getQuantity-1 %}
+                <div class="row">
+                    <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9">
+                        <div class="form-group">
+                            <label for="attendees[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]">
+                                Fullname of {{ i+1 }}. attendee <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" name="attendees[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]"
+                                   id="attendees[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                        <div class="form-group">
+                            <label for="discounts[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]">
+                                Discount code <span class="text-muted">(optional)</span>
+                            </label>
+                            <input type="text" name="discounts[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]"
+                                   id="attendees[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]"
+                                   class="form-control">
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <hr>
+        {% endfor %}
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <p>
+                    <span class="text-danger">* Required fields</span>
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-right">
+                <h3>
+                    Subtotal {{ selectedTickets.getTotalPrice|formatMoney }}
+                </h3>
+                <small>(incl. VAT, excl. discounts & payment fee)</small>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row blockspace">
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-danger btn-lg btn-block">
+                    GO TO PAYMENT <i class="fa fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+    </form>
 
 {% endblock %}
