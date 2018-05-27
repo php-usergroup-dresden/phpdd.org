@@ -5,8 +5,9 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators
 use hollodotme\FluidValidator\FluidValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\CountryCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\AbstractUserInputValidator;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Interfaces\ValidatesUserInput;
 
-final class BillingInformationValidator extends AbstractUserInputValidator
+final class BillingInformationValidator extends AbstractUserInputValidator implements ValidatesUserInput
 {
 	protected function validate( FluidValidator $validator ) : void
 	{

@@ -5,8 +5,9 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators
 use hollodotme\FluidValidator\FluidValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Bridges\UserInput;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\AbstractUserInputValidator;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Interfaces\ValidatesUserInput;
 
-final class AttendeeValidator extends AbstractUserInputValidator
+final class AttendeeValidator extends AbstractUserInputValidator implements ValidatesUserInput
 {
 	/** @var string */
 	private $attendeeKey;
