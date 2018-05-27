@@ -49,7 +49,7 @@
                             name="quantity[{{ ticket.getType }}][{{ ticket.getName }}]"
                             class="form-control"{% if not ticket.isAvailable %} disabled{% endif %}>
                         {% for i in 0..ticket.getMaxSeatsPerOrder %}
-                            <option value="{{ i }}"{% if ticketSelectForm.get('quantity')[ticket.getType][ticket.getName] == i %} selected{% endif %}>{{ i }}</option>
+                            <option value="{{ i }}"{% if ticketSelectForm.get('selectedTickets')[ticket.getType().toString][ticket.getName().toString] == i %} selected{% endif %}>{{ i }}</option>
                         {% endfor %}
                     </select>
                 </div>
