@@ -7,6 +7,7 @@ use Money\Money;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\Exceptions\TicketConfigNotFoundException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesSelectedTicketInformation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 
@@ -26,6 +27,9 @@ final class SelectedTicketInfos
 		$this->selectedTickets = $selectedTickets;
 	}
 
+	/**
+	 * @return ProvidesSelectedTicketInformation[]|Generator
+	 */
 	public function getTickets() : Generator
 	{
 		foreach ( $this->getSelectedTicketConfigs() as $selectedTicketConfig => $quantity )
