@@ -8,15 +8,22 @@ use IceHawk\Forms\FormId;
 
 final class Session extends AbstractSession
 {
-	private const TICKET_SELECTION_FORM = 'ticketSelectionForm';
+	private const TICKET_SELECTION_FORM_ID = 'ticketSelectionForm';
+
+	private const TICKET_DETAILS_FORM_ID   = 'ticketDetailsForm';
 
 	public function getTicketSelectionForm() : Form
 	{
-		return $this->getForm( new FormId( self::TICKET_SELECTION_FORM ) );
+		return $this->getForm( new FormId( self::TICKET_SELECTION_FORM_ID ) );
+	}
+
+	public function getTicketDetailsForm() : Form
+	{
+		return $this->getForm( new FormId( self::TICKET_DETAILS_FORM_ID ) );
 	}
 
 	public function resetTicketOrderProcess() : void
 	{
-		$this->unsetForm( new FormId( self::TICKET_SELECTION_FORM ) );
+		$this->unsetForm( new FormId( self::TICKET_SELECTION_FORM_ID ) );
 	}
 }
