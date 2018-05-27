@@ -26,10 +26,11 @@
                     <p>
                         {{ ticket.getDescription|raw }}
                     </p>
-                    <p>
-                        <b>{{ ticket.getPrice.getMoney|formatMoney }}</b><sup>*</sup>
+                    <h3>
+                        {{ ticket.getPrice.getMoney|formatMoney }} <sup>*</sup>
                         <small class="text-muted"> | {{ ticket.getAvailableSeats }} seats available</small>
-                    </p>
+                    </h3>
+
                     <p>
                         <small class="text-muted">
                             Available from {{ ticket.getValidFrom|formatDate }}
@@ -59,7 +60,7 @@
 
         <div class="row blockspace">
             <div class="col-xs-12">
-                <sup>*</sup> Plus a small fee depending on your payment type.
+                <sup>*</sup> Incl. VAT, excl. payment fee
             </div>
         </div>
 
@@ -72,7 +73,7 @@
         <div class="row blockspace">
             <div class="col-xs-12">
                 <button type="submit" class="btn btn-danger btn-lg btn-block">
-                    <i class="fa fa-ticket"></i> Order tickets now
+                    ORDER TICKETS NOW <i class="fa fa-arrow-right"></i>
                 </button>
             </div>
         </div>
