@@ -7,6 +7,7 @@
 
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <!--suppress HtmlUnknownTarget -->
             <a href="/tickets/" class="text-muted">
                 <i class="fa fa-arrow-left"></i> BACK
             </a>
@@ -23,8 +24,15 @@
         </div>
     </div>
 
+    {% if ticketDetailsForm.hasFeedback('general') %}
+        <div class="blockspace alert alert-danger">
+            {{ ticketDetailsForm.getFeedback('general').getMessage() }}
+        </div>
+    {% endif %}
+
     <!--suppress HtmlUnknownTarget -->
     <form method="post" action="/tickets/save-details/" id="save-ticket-details-form">
+        <input type="hidden" name="token" value="{{ ticketDetailsForm.getToken }}">
 
         <h2>Billing information</h2>
 
@@ -44,11 +52,11 @@
                 </div>
                 <div class="form-group">
                     <label for="email">Email address <span class="text-danger">*</span></label>
-                    <input type="text" name="email" id="email" class="form-control">
+                    <input type="email" name="email" id="email" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="emailRepeat">Repeat email address <span class="text-danger">*</span></label>
-                    <input type="text" name="emailRepeat" id="emailRepeat" class="form-control">
+                    <input type="email" name="emailRepeat" id="emailRepeat" class="form-control">
                 </div>
                 <div class="form-group">
                     <p>
@@ -143,21 +151,21 @@
                 <div class="row">
                     <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9">
                         <div class="form-group">
-                            <label for="attendees[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]">
+                            <label for="attendees[{{ ticket.getId }}][{{ i }}]">
                                 Fullname of {{ i+1 }}. attendee <span class="text-danger">*</span>
                             </label>
-                            <input type="text" name="attendees[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]"
-                                   id="attendees[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]"
+                            <input type="text" name="attendees[{{ ticket.getId }}][{{ i }}]"
+                                   id="attendees[{{ ticket.getId }}][{{ i }}]"
                                    class="form-control">
                         </div>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
                         <div class="form-group">
-                            <label for="discounts[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]">
+                            <label for="discounts[{{ ticket.getId }}][{{ i }}]">
                                 Discount code <span class="text-muted">(optional)</span>
                             </label>
-                            <input type="text" name="discounts[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]"
-                                   id="attendees[{{ ticket.getType }}][{{ ticket.getName }}][{{ i }}]"
+                            <input type="text" name="discounts[{{ ticket.getId }}][{{ i }}]"
+                                   id="attendees[{{ ticket.getId }}][{{ i }}]"
                                    class="form-control">
                         </div>
                     </div>
@@ -181,6 +189,49 @@
         </div>
 
         <hr>
+
+        <h2>Diversity donation</h2>
+
+        <div class="row">
+            <div class="col-xs-7 col-sm-7 col-md-9 col-lg-9">
+                <p>
+                    With a voluntary donation, you can help us get people from under-represented groups to attend our
+                    conference. With a max. donation of &euro;800 you become a sponsor
+                    of our <a href="/become-sponsor.html" target="_blank">diversity scholarship program</a>.
+                    <b>#DiversityMatters</b>
+                </p>
+                <div class="form-group">
+                    <label for="diversityDonation">Your contribution</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            &euro;
+                        </span>
+                        <input type="number" value="0" step="1" min="0" max="800" list="defaultDonations"
+                               name="diversityDonation"
+                               id="diversityDonation" class="form-control" style="max-width: 150px">
+                    </div>
+                    <datalist id="defaultDonations">
+                        <option value="10">
+                        <option value="50">
+                        <option value="100">
+                        <option value="250">
+                        <option value="500">
+                        <option value="800">
+                    </datalist>
+                </div>
+            </div>
+            <div class="col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                <img src="{{ project.getBaseUrl }}/assets/images/rainbowlephpant.png" alt="RainbowLePHPant">
+            </div>
+        </div>
+
+        <hr>
+
+        {% if ticketDetailsForm.hasFeedback('general') %}
+            <div class="blockspace alert alert-danger">
+                {{ ticketDetailsForm.getFeedback('general').getMessage() }}
+            </div>
+        {% endif %}
 
         <div class="row blockspace">
             <div class="col-xs-12">
