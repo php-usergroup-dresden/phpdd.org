@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
@@ -20,10 +17,6 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderTotal;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 
-/**
- * Class TicketOrder
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Tickets
- */
 final class TicketOrder implements ProvidesTicketOrderInformation
 {
 	use MoneyProviding;
@@ -196,7 +189,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		foreach ( $this->ticketItems as $ticketItem )
 		{
 			$discountItem = $ticketItem->getDiscountItem();
-			
+
 			if ( null !== $discountItem )
 			{
 				$discountItems->add( $discountItem );

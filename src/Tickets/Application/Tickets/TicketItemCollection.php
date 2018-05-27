@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
@@ -14,10 +11,6 @@ use function key;
 use function next;
 use function reset;
 
-/**
- * Class TicketItemCollection
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Tickets
- */
 final class TicketItemCollection implements CollectsTicketItems
 {
 	/** @var array|TicketItem[] */
@@ -49,17 +42,10 @@ final class TicketItemCollection implements CollectsTicketItems
 
 		foreach ( $this->ticketItems as $ticketItem )
 		{
-			if ( !$ticket->getType()->equals( $ticketItem->getTicket()->getType() ) )
+			if ( $ticket->equals( $ticketItem->getTicket() ) )
 			{
-				continue;
+				$count++;
 			}
-
-			if ( !$ticket->getName()->equals( $ticketItem->getTicket()->getName() ) )
-			{
-				continue;
-			}
-
-			$count++;
 		}
 
 		return $count;

@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
@@ -12,10 +9,6 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketI
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 
-/**
- * Class TicketItem
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Tickets
- */
 final class TicketItem implements ProvidesTicketItemInformation
 {
 	use MoneyProviding;

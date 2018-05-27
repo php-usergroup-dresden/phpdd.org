@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
@@ -15,10 +12,6 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\StreetWithNumber;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\VatNumber;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\ZipCode;
 
-/**
- * Class TicketOrderBillingAddress
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Tickets
- */
 final class TicketOrderBillingAddress
 {
 	/** @var Firstname */
