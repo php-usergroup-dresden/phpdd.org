@@ -5,6 +5,12 @@
 * Environment: `Development`  
 * Base namespace: `PHPUGDD\PHPDD\Website\Tests\Tickets`  
 
+## Unit\Application\Bridges\UserInputTest
+
+- [x] Can Get Values Trimmed (💚 1)
+
+---
+
 ## Unit\Application\Tickets\DiscountItemCollectionTest
 
 - [x] Can Rewind Collection (💚 1)
@@ -74,9 +80,7 @@
 
 - [x] Can Get Values (💚 1)
 - [x] Can Check If Tickets Are Equal (💚 1)
-- [x] Tickets Are Not Equal If Ticket Name Is Different (💚 1)
-- [x] Tickets Are Not Equal If Ticket Type Is Different (💚 1)
-- [x] Tickets Are Not Equal If Ticket Description Is Different (💚 1)
+- [x] Tickets Are Not Equal If Ticket Id Is Different (💚 1)
 
 ---
 
@@ -169,6 +173,12 @@
 
 ---
 
+## Unit\Application\Types\TicketIdTest
+
+- [x] Throws Exception When Constructed With Invalid Ticket Id (💚 9)
+
+---
+
 ## Unit\Application\Types\TicketNameTest
 
 - [x] Throws Exception When Constructed With Empty String (💚 6)
@@ -230,6 +240,29 @@
 
 ---
 
+## Unit\Application\Web\Tickets\Write\Validators\AttendeeValidatorTest
+
+- [x] Validation Fails For Empty Attendee Name (💚 1)
+- [x] Validation Passes (💚 1)
+
+---
+
+## Unit\Application\Web\Tickets\Write\Validators\BillingInformationValidatorTest
+
+- [x] Validation Fails For Empty Input (💚 1)
+- [x] Validation Fails If ACompany Outside Germany Does Not Provide AVat Number (💚 1)
+- [x] Validation Fails If The Repeated Email Is Not The Same (💚 1)
+- [x] Validation Passes (💚 1)
+
+---
+
+## Unit\Application\Web\Tickets\Write\Validators\DiscountValidatorTest
+
+- [x] Validation Fails For Invalid Discount Code (💚 1)
+- [x] Validation Passes (💚 1)
+
+---
+
 ## Unit\Application\Web\Tickets\Write\Validators\SelectTicketsValidatorTest
 
 - [x] Validation Of Ticket Selection Fails (💚 5)
@@ -237,4 +270,4 @@
 
 ---
 
-Report created at 2018-05-27 00:29:43 (UTC)
+Report created at 2018-05-27 21:59:52 (UTC)
