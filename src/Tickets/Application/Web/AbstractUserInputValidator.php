@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Web;
 
@@ -10,10 +7,6 @@ use hollodotme\FluidValidator\FluidValidator;
 use hollodotme\FluidValidator\MessageCollectors\GroupedListMessageCollector;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Bridges\UserInput;
 
-/**
- * Class AbstractUserInputValidator
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Web
- */
 abstract class AbstractUserInputValidator
 {
 	/** @var FluidValidator */
