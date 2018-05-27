@@ -7,8 +7,7 @@ use Money\Money;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\Exceptions\TicketConfigNotFoundException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 
 final class SelectedTicketInfos
@@ -37,34 +36,30 @@ final class SelectedTicketInfos
 
 	private function getSelectedTicketConfigs() : Generator
 	{
-		foreach ( $this->selectedTickets as $type => $tickets )
+		foreach ( $this->selectedTickets as $id => $quantity )
 		{
-			$ticketType = new TicketType( $type );
-			foreach ( $tickets as $name => $quantity )
+			if ( 0 === (int)$quantity )
 			{
-				if ( 0 === (int)$quantity )
-				{
-					continue;
-				}
-
-				$ticketName   = new TicketName( $name );
-				$ticketConfig = $this->getTicketConfigByTypeAndName( $ticketType, $ticketName );
-
-				if ( null === $ticketConfig )
-				{
-					continue;
-				}
-
-				yield $ticketConfig => (int)$quantity;
+				continue;
 			}
+
+			$ticketId     = new TicketId( $id );
+			$ticketConfig = $this->getTicketConfigById( $ticketId );
+
+			if ( null === $ticketConfig )
+			{
+				continue;
+			}
+
+			yield $ticketConfig => (int)$quantity;
 		}
 	}
 
-	private function getTicketConfigByTypeAndName( TicketType $ticketType, TicketName $ticketName ) : ?TicketConfig
+	private function getTicketConfigById( TicketId $ticketId ) : ?TicketConfig
 	{
 		try
 		{
-			return $this->ticketsConfig->findTicketConfigByTypeAndName( $ticketType, $ticketName );
+			return $this->ticketsConfig->findTicketById( $ticketId );
 		}
 		catch ( TicketConfigNotFoundException $e )
 		{
