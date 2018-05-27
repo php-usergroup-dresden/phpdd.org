@@ -9,9 +9,8 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Bridges\UserInput;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\Exceptions\TicketConfigNotFoundException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
-use function array_sum;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
+use function array_keys;
 use function is_array;
 
 final class SelectTicketsValidator
@@ -38,6 +37,7 @@ final class SelectTicketsValidator
 	}
 
 	/**
+	 * @throws \Exception
 	 * @return bool
 	 */
 	public function failed() : bool
@@ -69,6 +69,7 @@ final class SelectTicketsValidator
 	}
 
 	/**
+	 * @throws \Exception
 	 * @return bool
 	 */
 	public function passed() : bool
@@ -79,12 +80,9 @@ final class SelectTicketsValidator
 	private function noTicketWasSelected( array $quantities ) : bool
 	{
 		$countSelected = 0;
-		foreach ( $quantities as $type => $tickets )
+		foreach ( $quantities as $id => $quantity )
 		{
-			if ( is_array( $tickets ) )
-			{
-				$countSelected += array_sum( $tickets );
-			}
+			$countSelected += (int)$quantity;
 		}
 
 		return $countSelected === 0;
@@ -93,6 +91,7 @@ final class SelectTicketsValidator
 	/**
 	 * @param array $quantities
 	 *
+	 * @throws \Exception
 	 * @return bool
 	 */
 	private function notAvailableTicketsSelected( array $quantities ) : bool
@@ -106,6 +105,7 @@ final class SelectTicketsValidator
 				$countNotAvailable += (int)!$ticketConfig->isAvailable();
 			}
 		}
+			/** @noinspection PhpRedundantCatchClauseInspection */
 		catch ( TicketConfigNotFoundException | InvalidArgumentException $e )
 		{
 			$countNotAvailable++;
@@ -118,32 +118,15 @@ final class SelectTicketsValidator
 	 * @param array $quantities
 	 *
 	 * @throws TicketConfigNotFoundException
-	 * @throws InvalidArgumentException
-	 *
 	 * @return TicketConfig[]|Generator
 	 */
 	private function getTicketConfigs( array $quantities ) : Generator
 	{
-		foreach ( $quantities as $type => $tickets )
+		foreach ( array_keys( $quantities ) as $id )
 		{
-			if ( !is_array( $tickets ) )
-			{
-				continue;
-			}
+			$ticketId = new TicketId( (string)$id );
 
-			$ticketType = new TicketType( $type );
-
-			foreach ( $tickets as $name => $quantity )
-			{
-				if ( $quantity === 0 )
-				{
-					continue;
-				}
-
-				$ticketName = new TicketName( $name );
-
-				yield $this->ticketsConfig->findTicketConfigByTypeAndName( $ticketType, $ticketName );
-			}
+			yield $this->ticketsConfig->findTicketById( $ticketId );
 		}
 	}
 
