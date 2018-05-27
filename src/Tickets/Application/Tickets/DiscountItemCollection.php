@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
@@ -12,10 +9,6 @@ use function current;
 use function key;
 use function next;
 
-/**
- * Class DiscountItemCollection
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Tickets
- */
 final class DiscountItemCollection implements Countable, Iterator
 {
 	/** @var array|DiscountItem[] */

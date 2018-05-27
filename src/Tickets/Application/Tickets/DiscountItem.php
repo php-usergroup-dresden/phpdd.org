@@ -1,7 +1,4 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
@@ -12,10 +9,6 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 use function in_array;
 
-/**
- * Class DiscountItem
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Tickets
- */
 final class DiscountItem
 {
 	/** @var DiscountName */
