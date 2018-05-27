@@ -22,7 +22,7 @@ final class Session extends AbstractSession
 		return $this->getForm( new FormId( self::TICKET_DETAILS_FORM_ID ) );
 	}
 
-	public function resetTicketOrderProcess() : void
+	public function abortTicketOrder() : void
 	{
 		$this->unsetForm( new FormId( self::TICKET_SELECTION_FORM_ID ) );
 	}
