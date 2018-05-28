@@ -734,6 +734,13 @@
                 "/workshops.html": "Workshops"
             }
         },
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
         "https://2018.phpdd.org/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -1177,6 +1184,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
             }
         },
         "https://2018.phpdd.org/speakers.html": {
@@ -3584,6 +3598,13 @@
                 "/workshops.html": "Workshops"
             }
         },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        },
         "https://2018.phpdd.org/side-events.html": {
             "title": "Side events",
             "breadcrumb": {
@@ -4699,6 +4720,13 @@
                 "/index.html": "Home",
                 "/workshops.html": "Workshops"
             }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
         }
     },
     "applied": {
@@ -4773,6 +4801,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
             }
         }
     },
@@ -5088,6 +5123,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
             }
         },
         "https://2018.phpdd.org/speakers.html": {
@@ -6610,6 +6652,13 @@
                 "/index.html": "Home",
                 "/workshops.html": "Workshops"
             }
+        },
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
         }
     },
     "basis": {
@@ -7284,6 +7333,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
             }
         },
         "https://2018.phpdd.org/speakers.html": {
@@ -10393,6 +10449,13 @@
                 "/talks.html": "Talks"
             }
         },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        },
         "https://2018.phpdd.org/privacy.html": {
             "title": "Privacy",
             "breadcrumb": {
@@ -10801,6 +10864,362 @@
             }
         }
     },
+    "asynchronous": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "request": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "processing": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "jan": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "gregor": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "emge": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "triebel": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "modern": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
+    "apis": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "often": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "handle": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        }
+    },
+    "heavy": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "load": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "tasks": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "requiring": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "intense": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "disk": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "queries": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "importantly": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "operations": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "processed": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "asynchronously": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "comparing": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "few": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "messaging": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "queuing": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "pitfalls": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "obstacles": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "implementing": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "long": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
+    "processes": {
+        "https://2018.phpdd.org/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        }
+    },
     "please": {
         "https://2018.phpdd.org/speakers.html": {
             "title": "Speakers/Trainers",
@@ -11104,15 +11523,6 @@
             }
         }
     },
-    "often": {
-        "https://2018.phpdd.org/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
     "found": {
         "https://2018.phpdd.org/speakers.html": {
             "title": "Speakers/Trainers",
@@ -11392,15 +11802,6 @@
         }
     },
     "whilst": {
-        "https://2018.phpdd.org/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "messaging": {
         "https://2018.phpdd.org/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -15276,6 +15677,144 @@
             }
         }
     },
+    "goethe": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "bachelor": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "political": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "law": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "freelancing": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "self": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "taught": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "joined": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "garden": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "concepts": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "germany": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.org/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.org/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.org/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "regularly": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "jan0707": {
+        "https://2018.phpdd.org/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
     "buy": {
         "https://2018.phpdd.org/tickets.html": {
             "title": "Buy tickets",
@@ -15756,15 +16295,6 @@
             }
         }
     },
-    "handle": {
-        "https://2018.phpdd.org/diversity-scholarship-application.html": {
-            "title": "Diversity scholarships",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/diversity-scholarship-application.html": "Scholarships"
-            }
-        }
-    },
     "publish": {
         "https://2018.phpdd.org/diversity-scholarship-application.html": {
             "title": "Diversity scholarships",
@@ -15907,29 +16437,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
-            }
-        }
-    },
-    "germany": {
-        "https://2018.phpdd.org/diversity-scholarship-application.html": {
-            "title": "Diversity scholarships",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/diversity-scholarship-application.html": "Scholarships"
-            }
-        },
-        "https://2018.phpdd.org/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
-            }
-        },
-        "https://2018.phpdd.org/supporters.html": {
-            "title": "Supporters",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/supporters.html": "Supporters"
             }
         }
     },
@@ -16558,15 +17065,6 @@
         }
     },
     "considered": {
-        "https://2018.phpdd.org/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
-            }
-        }
-    },
-    "modern": {
         "https://2018.phpdd.org/venue.html": {
             "title": "The venue",
             "breadcrumb": {
