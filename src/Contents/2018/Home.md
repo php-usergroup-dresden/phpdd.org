@@ -138,7 +138,9 @@ We are commited to creating a unique community experience - an event where every
         </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <img src="https://placehold.it/439x140/f3f3f3/000000/?text=TBA" class="img-responsive img-tutorial">
+        <a href="@baseUrl@/talks.html#asynchronous-request-processing">
+            <img src="@baseUrl@/assets/images/talks/jan-gregor-emge-triebel-async-request-processing.png" class="img-responsive img-tutorial">
+        </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <img src="https://placehold.it/439x140/f3f3f3/000000/?text=TBA" class="img-responsive img-tutorial">

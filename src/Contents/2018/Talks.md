@@ -97,6 +97,18 @@ What is profiling and how can we measure the performance of our application? The
 
 When finished we will end up with a nice toolbox of profiling tools and good ideas how to do profiling and avoid some common mistakes that might distract you from the real opimisation.
 
+<a name="asynchronous-request-processing"></a>
+## Asynchronous Request Processing
+
+---
+
+By [Jan Gregor Emge-Triebel](@baseUrl@/speakers.html#jan-gregor-emge-triebel)
+
+Modern web applications or apis often handle heavy load tasks, requiring intense disk i/o or complex database queries. 
+I will demonstrate how and - more importantly - why such operations should be processed asynchronously. 
+We will be comparing a few messaging/queuing libraries and cover some of the most common pitfalls and obstacles 
+developers face when implementing asynchronous processing and face long running php processes for the first time.
+
 ---
 
 <p class="text-center blockspace">

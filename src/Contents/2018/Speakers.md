@@ -537,6 +537,42 @@ to gather and spread their knowledge all around the community, who step up on a 
     </div>
 </div>
 
+<a name="jan-gregor-emge-triebel"></a>
+## 🇩🇪 JAN GREGOR EMGE-TRIEBEL <span class="small text-muted">- CONFERENCE SPEAKER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/Jan0707" target="_blank" title="Jan Gregor Emge-Triebel on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/jan-gregor-emge-triebel.jpg" alt="Jan Gregor Emge-Triebel" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/talks.html#asynchronous-request-processing">
+                Talk: Asynchronous Request Processing
+            </a>
+        </p>
+        <p>
+           Jan Gregor Emge-Triebel graduated from Goethe University with a bachelor’s degree in political science and 
+           public law. After some freelancing as a self-taught full-stack developer he joined Garden of Concepts as 
+           lead developer. When not working he can be found at various user groups throughout Germany where he speaks 
+           regularly, but also likes to listen and learn.
+        </p>
+        <p>
+            <a href="https://twitter.com/Jan0707" title="Jan Gregor Emge-Triebel at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @Jan0707
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/Jan0707" title="Jan Gregor Emge-Triebel at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> https://joind.in/user/Jan0707
+            </a>
+        </p>
+    </div>
+</div>
+
 ---
 
 <p class="text-center blockspace">
