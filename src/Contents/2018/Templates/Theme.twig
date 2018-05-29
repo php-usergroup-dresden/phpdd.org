@@ -283,7 +283,7 @@
 <script type="text/javascript"
         src="{{ project.getUrl('/assets/js/countdown.js') ~ '?' ~ ('now'|date('YmdHis')) }}"></script>
 <script>
-    var mySVGsToInject = document.querySelectorAll('img.svg-inject');
+    const mySVGsToInject = document.querySelectorAll('img.svg-inject');
     SVGInjector(mySVGsToInject);
 </script>
 <script>

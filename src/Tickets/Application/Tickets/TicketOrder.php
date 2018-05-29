@@ -50,8 +50,6 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	/**
 	 * @param TicketOrderId   $orderId
 	 * @param TicketOrderDate $orderDate
-	 *
-	 * @throws \InvalidArgumentException
 	 */
 	public function __construct( TicketOrderId $orderId, TicketOrderDate $orderDate )
 	{
@@ -91,7 +89,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	}
 
 	/**
-	 * @param TicketItem $ticketItemElement
+	 * @param TicketItem $ticketItem
 	 * @param TicketItem ...$ticketItems
 	 *
 	 * @throws AllowedTicketCountExceededException

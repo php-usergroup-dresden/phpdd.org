@@ -1,6 +1,7 @@
 {% extends "Templates/Page.twig" %}
 
 {% block stylesheets %}
+    <!--suppress HtmlUnknownTarget -->
     <link rel="stylesheet" href="{{ project.getBaseUrl }}/assets/css/blueimp-gallery.min.css">
 {% endblock %}
 
@@ -11,11 +12,13 @@
 {% endblock %}
 
 {% block javascripts %}
+    <!--suppress HtmlUnknownTarget -->
     <script src="{{ project.getBaseUrl }}/assets/js/jquery.blueimp-gallery.min.js"></script>
+    <!--suppress JSUnresolvedVariable, JSUnresolvedFunction -->
     <script>
         $(function () {
             'use strict';
-            var carouselLinks = [
+            const carouselLinks = [
                 { href: "{{ project.getBaseUrl }}/media/photos-orig/IMG_7579.jpg" },
                 { href: "{{ project.getBaseUrl }}/media/photos-orig/IMG_7580.jpg" },
                 { href: "{{ project.getBaseUrl }}/media/photos-orig/IMG_7581.jpg" },

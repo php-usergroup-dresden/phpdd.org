@@ -146,7 +146,8 @@ final class ProjectConfig
 	public function getChildrenOf( PageConfig $pageConfig ) : \Generator
 	{
 		yield from $this->getPageConfigsByFilter(
-			function ( array $configData, string $uri ) use ( $pageConfig )
+			function ( /** @noinspection PhpUnusedParameterInspection */
+				array $configData, string $uri ) use ( $pageConfig )
 			{
 				return \in_array( $uri, $pageConfig->getChildren(), true );
 			}
@@ -161,14 +162,14 @@ final class ProjectConfig
 	 */
 	public function getPageConfigForUri( string $uri ) : PageConfig
 	{
-		$pageConfigs = $this->getPageConfigsByFilter(
-			function ( array $pageConfig, string $configUri ) use ( $uri )
-			{
-				return ($configUri === $uri);
-			}
+		$pageConfigs = iterator_to_array(
+			$this->getPageConfigsByFilter(
+				function ( array $pageConfig, string $configUri ) use ( $uri )
+				{
+					return ($configUri === $uri);
+				}
+			)
 		);
-
-		$pageConfigs = iterator_to_array( $pageConfigs );
 
 		if ( \count( $pageConfigs ) === 1 )
 		{
@@ -194,15 +195,16 @@ final class ProjectConfig
 		}
 
 		$parentLevel = $pageConfig->getPageLevel() - 1;
-		$pageConfigs = $this->getPageConfigsByFilter(
-			function ( array $configData ) use ( $parentLevel, $pageUri )
-			{
-				return (($configData['pageLevel'] ?? -1) === $parentLevel)
-					   && \in_array( $pageUri, $configData['children'] ?? [], true );
-			}
-		);
 
-		$pageConfigs = iterator_to_array( $pageConfigs );
+		$pageConfigs = iterator_to_array(
+			$this->getPageConfigsByFilter(
+				function ( array $configData ) use ( $parentLevel, $pageUri )
+				{
+					return (($configData['pageLevel'] ?? -1) === $parentLevel)
+						   && \in_array( $pageUri, $configData['children'] ?? [], true );
+				}
+			)
+		);
 
 		if ( \count( $pageConfigs ) === 1 )
 		{
