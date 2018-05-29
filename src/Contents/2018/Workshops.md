@@ -65,6 +65,8 @@ This can be both frustrating and decremental to the velocity of your team. No on
 <a name="your-app-lives-on-a-network"></a>
 ## YOUR APP LIVES ON A NETWORK - NETWORKING FOR PHP DEVS <span class="small text-muted">- HALF-DAY WORKSHOP</span>
 
+---
+
 By [Wim Godden](@baseUrl@/speakers.html#wim-godden)
 
 As PHP developers, our job is to build web applications. But how can we build applications that rely 
