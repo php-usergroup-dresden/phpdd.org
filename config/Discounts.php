@@ -1,32 +1,52 @@
 <?php declare(strict_types=1);
 
+$phpugddMemberCodes = [
+	'E11318494Z',
+	'A97218901G',
+	'D87318324E',
+];
+
+$phpugSupporterCodes = [
+	'Z00918356Z',
+	'L34818444E',
+	'P95318357E',
+];
+
 return [
-	'PHPUGDD member discount'   => [
-		'description'    => 'Discount for PHP USERGROUP DRESDEN e.V. members',
-		'discount'       => -3000,
+	'10% PHPUGDD member discount full-day workshop' => [
+		'description'    => 'As a member of the PHP USERGROUP DRESDEN e.V. you pay 10% less for a full-day workshop ticket.',
+		'discount'       => -2490,
 		'allowedTickets' => [
-			'Workshop Ticket Slot A1',
-			'Workshop Ticket Slot A2',
-			'Workshop Ticket Slot B1',
-			'Workshop Ticket Slot B2',
-			'Workshop Ticket Slot C1',
-			'Conference Ticket',
+			'PHPDD18-WS-01',
+			'PHPDD18-WS-02',
 		],
-		'codes'          => [
-			'X930372K',
-			'N200476A',
-			'E960551O',
-		],
+		'codes'          => $phpugddMemberCodes,
 	],
-	'Free UG conference ticket' => [
-		'description'    => 'Free ticket for attendees of a user group',
-		'discount'       => -9900,
+	'10% PHPUGDD member discount half-day workshop' => [
+		'description'    => 'As a member of the PHP USERGROUP DRESDEN e.V. you pay 10% less for a half-day workshop ticket.',
+		'discount'       => -1490,
 		'allowedTickets' => [
-			'Conference Ticket',
+			'PHPDD18-WS-03',
+			'PHPDD18-WS-04',
+			'PHPDD18-WS-05',
+			'PHPDD18-WS-06',
 		],
-		'codes'          => [
-			'X930372K',
-			'N200476A',
+		'codes'          => $phpugddMemberCodes,
+	],
+	'10% PHPUGDD member discount conference'        => [
+		'description'    => 'As a member of the PHP USERGROUP DRESDEN e.V. you pay 10% less a the conference ticket.',
+		'discount'       => -1190,
+		'allowedTickets' => [
+			'PHPDD18-CT-01',
 		],
+		'codes'          => $phpugddMemberCodes,
+	],
+	'50% discount on conference ticket'             => [
+		'description'    => 'As an attendee of a supporting user group, you pay half the price for the conference ticket!',
+		'discount'       => -5950,
+		'allowedTickets' => [
+			'PHPDD18-CT-01',
+		],
+		'codes'          => $phpugSupporterCodes,
 	],
 ];
