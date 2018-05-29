@@ -287,16 +287,19 @@ We are commited to creating a unique community experience - an event where every
 ---
 
 <div class="row">
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-        <a href="https://www.rheinwerk-verlag.de" target="_blank" title="Rheinwerk Verlag">
-            <img src="@baseUrl@/assets/images/sponsors/rheinwerk-verlag.png" alt="Rheinwerk Verlag" class="img-responsive img-sponsor">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+        <a href="https://www.dpunkt.de" target="_blank" title="dpunkt Verlag">
+            <img src="@baseUrl@/assets/images/sponsors/dpunkt_verlag.png" alt="dpunkt Verlag" class="img-responsive img-sponsor">
         </a>
     </div>
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
         <a href="https://mitp.de" target="_blank" title="mitp Verlag">
             <img src="@baseUrl@/assets/images/sponsors/mitp-verlag.png" alt="mitp Verlag" class="img-responsive img-sponsor">
         </a>
     </div>
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+        <a href="https://www.rheinwerk-verlag.de" target="_blank" title="Rheinwerk Verlag">
+            <img src="@baseUrl@/assets/images/sponsors/rheinwerk-verlag.png" alt="Rheinwerk Verlag" class="img-responsive img-sponsor">
+        </a>
+    </div>
 </div>
