@@ -256,7 +256,7 @@
 
 ---
 
-## Unit\Application\Web\Tickets\Write\Validators\DiscountValidatorTest
+## Unit\Application\Web\Tickets\Write\Validators\DiscountCodeValidatorTest
 
 - [x] Validation Fails For Invalid Discount Code (💚 1)
 - [x] Validation Passes (💚 1)
@@ -270,4 +270,4 @@
 
 ---
 
-Report created at 2018-05-27 21:59:52 (UTC)
+Report created at 2018-05-29 23:34:41 (UTC)
