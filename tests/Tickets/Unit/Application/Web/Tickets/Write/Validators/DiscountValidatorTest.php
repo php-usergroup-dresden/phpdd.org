@@ -3,6 +3,7 @@
 namespace PHPUGDD\PHPDD\Website\Tests\Tickets\Unit\Application\Web\Tickets\Write\Validators;
 
 use PHPUGDD\PHPDD\Website\Tickets\Application\Bridges\UserInput;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesDiscountCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\DiscountValidator;
 use PHPUnit\Framework\TestCase;
 
@@ -14,8 +15,14 @@ final class DiscountValidatorTest extends TestCase
 	 */
 	public function testValidationFailsForInvalidDiscountCode() : void
 	{
+		$discountCodeProviderStub = $this->getMockBuilder( ProvidesDiscountCodes::class )
+		                                 ->getMockForAbstractClass();
+		$discountCodeProviderStub->method( 'getDiscountCodes' )->willReturn( [] );
+
+		/** @var ProvidesDiscountCodes $discountCodeProviderStub */
+
 		$userInput = new UserInput( ['discountCode' => '1234567890'] );
-		$validator = new DiscountValidator( $userInput, 'PHPDD18-CT-01', 0 );
+		$validator = new DiscountValidator( $userInput, $discountCodeProviderStub, 'PHPDD18-CT-01', 0 );
 
 		$expectedMessages = [
 			'discounts[PHPDD18-CT-01][0]' => [
@@ -34,15 +41,21 @@ final class DiscountValidatorTest extends TestCase
 	 */
 	public function testValidationPasses() : void
 	{
+		$discountCodeProviderStub = $this->getMockBuilder( ProvidesDiscountCodes::class )
+		                                 ->getMockForAbstractClass();
+		$discountCodeProviderStub->method( 'getDiscountCodes' )->willReturn( ['M70918400A'] );
+
+		/** @var ProvidesDiscountCodes $discountCodeProviderStub */
+
 		$userInput = new UserInput( ['discountCode' => 'M70918400A'] );
-		$validator = new DiscountValidator( $userInput, 'PHPDD18-CT-01', 0 );
+		$validator = new DiscountValidator( $userInput, $discountCodeProviderStub, 'PHPDD18-CT-01', 0 );
 
 		$this->assertFalse( $validator->failed() );
 		$this->assertTrue( $validator->passed() );
 		$this->assertSame( [], $validator->getMessages() );
 
 		$userInput = new UserInput( ['discountCode' => ''] );
-		$validator = new DiscountValidator( $userInput, 'PHPDD18-CT-01', 0 );
+		$validator = new DiscountValidator( $userInput, $discountCodeProviderStub, 'PHPDD18-CT-01', 0 );
 
 		$this->assertFalse( $validator->failed() );
 		$this->assertTrue( $validator->passed() );

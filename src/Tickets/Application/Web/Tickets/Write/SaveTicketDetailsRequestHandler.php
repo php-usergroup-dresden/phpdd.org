@@ -8,6 +8,7 @@ use IceHawk\IceHawk\Interfaces\HandlesPostRequest;
 use IceHawk\IceHawk\Interfaces\ProvidesWriteRequestData;
 use IceHawk\IceHawk\Interfaces\ProvidesWriteRequestInputData;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Bridges\UserInput;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\DiscountsConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\SelectedTicketInfos;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\AbstractRequestHandler;
@@ -80,6 +81,8 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 		$attendees = (array)$input->get( 'attendees', [] );
 		$discounts = (array)$input->get( 'discounts', [] );
 
+		$discountConfigs = DiscountsConfig::fromConfigFile();
+
 		foreach ( $selectedTicketInfos->getTickets() as $selectedTicketInfo )
 		{
 			for ( $i = 0; $i < $selectedTicketInfo->getQuantity(); $i++ )
@@ -94,7 +97,9 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 				$discountCode      = $discounts[ $ticketId ][ $i ] ?? '';
 				$discountUserInput = new UserInput( ['discountCode' => $discountCode] );
 
-				$userInputValidator->add( new DiscountValidator( $discountUserInput, $ticketId, $i ) );
+				$userInputValidator->add(
+					new DiscountValidator( $discountUserInput, $discountConfigs, $ticketId, $i )
+				);
 			}
 		}
 
