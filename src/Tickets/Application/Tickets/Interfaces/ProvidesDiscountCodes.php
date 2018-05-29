@@ -4,5 +4,5 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces;
 
 interface ProvidesDiscountCodes
 {
-	public function getDiscountCodes() : array;
+	public function getDiscountCodesForTicketId( string $ticketId ) : array;
 }

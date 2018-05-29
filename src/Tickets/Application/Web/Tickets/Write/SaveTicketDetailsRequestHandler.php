@@ -17,7 +17,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Interfaces\Valid
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\AttendeeValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\BillingInformationValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\CompositeValidator;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\DiscountValidator;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\DiscountCodeValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Traits\CsrfTokenChecking;
 use function implode;
 
@@ -54,8 +54,9 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 		$ticketsConfig       = TicketsConfig::fromConfigFile();
 		$selectedTickets     = (array)$ticketSelectionForm->get( 'selectedTickets' );
 		$selectedTicketInfos = new SelectedTicketInfos( $ticketsConfig, $selectedTickets );
+		$discountConfigs     = DiscountsConfig::fromConfigFile();
 
-		$userInputValidator = $this->getUserInputValidator( $selectedTicketInfos, $input );
+		$userInputValidator = $this->getUserInputValidator( $selectedTicketInfos, $discountConfigs, $input );
 
 		if ( $userInputValidator->failed() )
 		{
@@ -72,6 +73,7 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 
 	private function getUserInputValidator(
 		SelectedTicketInfos $selectedTicketInfos,
+		DiscountsConfig $discountsConfig,
 		ProvidesWriteRequestInputData $input
 	) : ValidatesUserInput
 	{
@@ -80,8 +82,6 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 
 		$attendees = (array)$input->get( 'attendees', [] );
 		$discounts = (array)$input->get( 'discounts', [] );
-
-		$discountConfigs = DiscountsConfig::fromConfigFile();
 
 		foreach ( $selectedTicketInfos->getTickets() as $selectedTicketInfo )
 		{
@@ -98,7 +98,7 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 				$discountUserInput = new UserInput( ['discountCode' => $discountCode] );
 
 				$userInputValidator->add(
-					new DiscountValidator( $discountUserInput, $discountConfigs, $ticketId, $i )
+					new DiscountCodeValidator( $discountUserInput, $discountsConfig, $ticketId, $i )
 				);
 			}
 		}

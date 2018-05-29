@@ -8,8 +8,11 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesDiscoun
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\AbstractUserInputValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Interfaces\ValidatesUserInput;
 
-final class DiscountValidator extends AbstractUserInputValidator implements ValidatesUserInput
+final class DiscountCodeValidator extends AbstractUserInputValidator implements ValidatesUserInput
 {
+	/** @var string */
+	private $ticketId;
+
 	/** @var string */
 	private $discountKey;
 
@@ -24,6 +27,7 @@ final class DiscountValidator extends AbstractUserInputValidator implements Vali
 	)
 	{
 		parent::__construct( $userInput );
+		$this->ticketId             = $ticketId;
 		$this->discountCodeProvider = $discountCodeProvider;
 		$this->discountKey          = sprintf( 'discounts[%s][%d]', $ticketId, $discountIndex );
 	}
@@ -39,7 +43,7 @@ final class DiscountValidator extends AbstractUserInputValidator implements Vali
 		          ->ifPassed( 1 )
 		          ->isOneStringOf(
 			          'discountCode',
-			          $this->discountCodeProvider->getDiscountCodes(),
+			          $this->discountCodeProvider->getDiscountCodesForTicketId( $this->ticketId ),
 			          [$this->discountKey => 'Code is invalid for this ticket.']
 		          );
 	}
