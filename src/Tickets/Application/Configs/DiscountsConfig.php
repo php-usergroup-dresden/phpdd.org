@@ -4,6 +4,7 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Configs;
 
 use Fortuneglobe\Types\Exceptions\InvalidArgumentException;
 use Generator;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\Exceptions\DiscountConfigNotFoundException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesDiscountCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountDescription;
@@ -94,9 +95,10 @@ final class DiscountsConfig implements ProvidesDiscountCodes
 	 *
 	 * @throws InvalidArgumentException
 	 * @throws \InvalidArgumentException
-	 * @return null|DiscountConfig
+	 * @throws DiscountConfigNotFoundException
+	 * @return DiscountConfig
 	 */
-	public function getDiscountConfigByTicketIdAndCode( string $ticketId, string $code ) : ?DiscountConfig
+	public function getDiscountConfigByTicketIdAndCode( string $ticketId, string $code ) : DiscountConfig
 	{
 		foreach ( $this->configData as $name => $discountConfig )
 		{
@@ -139,6 +141,6 @@ final class DiscountsConfig implements ProvidesDiscountCodes
 			);
 		}
 
-		return null;
+		throw new DiscountConfigNotFoundException( 'Could not find discount config.' );
 	}
 }
