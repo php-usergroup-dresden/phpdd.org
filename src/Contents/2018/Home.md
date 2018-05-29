@@ -56,12 +56,9 @@ We are commited to creating a unique community experience - an event where every
             <img src="@baseUrl@/assets/images/workshops/halfday-event-storming-for-fun-and-profit.png" class="img-responsive img-tutorial">
         </a>
         <br>
-        <a href="@cfp_url@" target="_blank" title="Submit your workshop">
-            <img src="https://placehold.it/439x140/f3f3f3/000000/?text=%20%20HALF-DAY%0D%0AWORKSHOP" class="img-responsive img-tutorial">
-        </a>
-        <!--<a href="@baseUrl@/workshops.html#your-app-lives-on-a-network" title="Your app lives on a network - networking for PHP devs">
+        <a href="@baseUrl@/workshops.html#your-app-lives-on-a-network" title="Your app lives on a network - networking for PHP devs">
             <img src="@baseUrl@/assets/images/workshops/halfday-your-app-lives-on-a-network.png" class="img-responsive img-tutorial">
-        </a>-->
+        </a>
     </div>
 </div>
 
