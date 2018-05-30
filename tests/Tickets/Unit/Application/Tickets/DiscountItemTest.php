@@ -7,7 +7,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountDescription;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountPrice;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 use PHPUnit\Framework\TestCase;
 
@@ -28,7 +28,7 @@ final class DiscountItemTest extends TestCase
 		$discountDescription = new DiscountDescription( 'Discount description' );
 		$discountPrice       = new DiscountPrice( $this->getMoney( -3000 ) );
 		$allowedTickets      = [];
-		$ticketName          = new TicketName( 'Conference ticket' );
+		$ticketId            = new TicketId( 'PHPDD18-CT-01' );
 
 		$discountItem = new DiscountItem(
 			$discountName,
@@ -42,11 +42,11 @@ final class DiscountItemTest extends TestCase
 		$this->assertSame( $discountCode, $discountItem->getCode() );
 		$this->assertSame( $discountDescription, $discountItem->getDescription() );
 		$this->assertSame( $discountPrice, $discountItem->getDiscountPrice() );
-		$this->assertFalse( $discountItem->isAllowedForTicket( $ticketName ) );
+		$this->assertFalse( $discountItem->isAllowedForTicket( $ticketId ) );
 	}
 
 	/**
-	 * @param string $ticketName
+	 * @param string $ticketId
 	 * @param bool   $expectedResult
 	 *
 	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
@@ -57,7 +57,7 @@ final class DiscountItemTest extends TestCase
 	 * @dataProvider allowedTicketNameProvider
 	 */
 	public function testCanCheckIfDiscountIsAllowedForACertainTicketName(
-		string $ticketName,
+		string $ticketId,
 		bool $expectedResult
 	) : void
 	{
@@ -65,8 +65,8 @@ final class DiscountItemTest extends TestCase
 		$discountCode        = new DiscountCode( 'P95318357E' );
 		$discountDescription = new DiscountDescription( 'Discount description' );
 		$discountPrice       = new DiscountPrice( $this->getMoney( -3000 ) );
-		$allowedticketName   = new TicketName( 'Conference ticket' );
-		$allowedTickets      = [$allowedticketName];
+		$allowedticketIds    = new TicketId( 'PHPDD18-CT-01' );
+		$allowedTickets      = [$allowedticketIds];
 
 		$discountItem = new DiscountItem(
 			$discountName,
@@ -76,18 +76,18 @@ final class DiscountItemTest extends TestCase
 			$allowedTickets
 		);
 
-		$this->assertSame( $expectedResult, $discountItem->isAllowedForTicket( new TicketName( $ticketName ) ) );
+		$this->assertSame( $expectedResult, $discountItem->isAllowedForTicket( new TicketId( $ticketId ) ) );
 	}
 
 	public function allowedTicketNameProvider() : array
 	{
 		return [
 			[
-				'ticketName'     => 'Conference ticket',
+				'ticketId'       => 'PHPDD18-CT-01',
 				'expectedResult' => true,
 			],
 			[
-				'ticketName'     => 'Workshop ticket',
+				'ticketId'       => 'PHPDD18-WS-01',
 				'expectedResult' => false,
 			],
 		];
