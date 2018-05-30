@@ -44,10 +44,6 @@ final class SelectedTicketInfo implements ProvidesSelectedTicketInformation
 		return $this->ticketConfig->getDescription();
 	}
 
-	/**
-	 * @throws \InvalidArgumentException
-	 * @return TicketPrice
-	 */
 	public function getPrice() : TicketPrice
 	{
 		return $this->ticketConfig->getPrice();
@@ -58,4 +54,14 @@ final class SelectedTicketInfo implements ProvidesSelectedTicketInformation
 		return $this->quantity;
 	}
 
+	public function getTicket() : Ticket
+	{
+		return new Ticket(
+			$this->getId(),
+			$this->getType(),
+			$this->getName(),
+			$this->getDescription(),
+			$this->getPrice()
+		);
+	}
 }
