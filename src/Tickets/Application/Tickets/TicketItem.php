@@ -66,13 +66,13 @@ final class TicketItem implements ProvidesTicketItemInformation
 	 */
 	private function guardTicketIsAllowedForDiscount( DiscountItem $discountItem ) : void
 	{
-		if ( !$discountItem->isAllowedForTicket( $this->ticket->getName() ) )
+		if ( !$discountItem->isAllowedForTicket( $this->ticket->getId() ) )
 		{
 			throw new DiscountNotAllowedForTicketException(
 				sprintf(
 					'Discount "%s" is not allowed for ticket "%s".',
 					$discountItem->getName(),
-					$this->ticket->getName()
+					$this->ticket->getId()
 				)
 			);
 		}
