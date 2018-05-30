@@ -11,6 +11,22 @@
 
 ---
 
+## Unit\Application\Configs\DiscountsConfigTest
+
+- [x] Can Get Discount Configs (💚 1)
+- [x] Can Get Discount Codes For Ticket Id (💚 3)
+- [x] Can Get Discount Config By Ticket Id And Code (💚 4)
+- [x] Throws Exception If Discount Config Not Found For Ticket Id And Code (💚 1)
+
+---
+
+## Unit\Application\Configs\TicketsConfigTest
+
+- [x] Can Find Ticket By Id (💚 2)
+- [x] Can Get Ticket Configs (💚 1)
+
+---
+
 ## Unit\Application\Tickets\DiscountItemCollectionTest
 
 - [x] Can Rewind Collection (💚 1)
@@ -117,8 +133,7 @@
 
 ## Unit\Application\Types\DiscountCodeTest
 
-- [x] Can Create Instance From Valid Codes (💚 3)
-- [x] Can Generate ADiscount Code (💚 1)
+- [x] Can Create Instance From Valid Codes (💚 2)
 - [x] Throws Exception For Invalid Codes (💚 3)
 
 ---
@@ -266,8 +281,8 @@
 ## Unit\Application\Web\Tickets\Write\Validators\SelectTicketsValidatorTest
 
 - [x] Validation Of Ticket Selection Fails (💚 5)
-- [x] Validation Ticket Selection Passes (💚 1)
+- [x] Validation Of Ticket Selection Passes (💚 1)
 
 ---
 
-Report created at 2018-05-29 23:34:41 (UTC)
+Report created at 2018-05-30 09:25:33 (UTC)
