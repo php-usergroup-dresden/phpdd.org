@@ -18,6 +18,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\Atten
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\BillingInformationValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\CompositeValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\DiscountCodeValidator;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\DiversityDonationValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Traits\CsrfTokenChecking;
 use function implode;
 
@@ -102,6 +103,13 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 				);
 			}
 		}
+
+		$diversityDonationInput = new UserInput(
+			[
+				'diversityDonation' => (int)$input->get( 'diversityDonation' ),
+			]
+		);
+		$userInputValidator->add( new DiversityDonationValidator( $diversityDonationInput ) );
 
 		return $userInputValidator;
 	}
