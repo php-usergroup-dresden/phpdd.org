@@ -35,7 +35,7 @@ final class TicketOrderBillingAddressTest extends TestCase
 			null
 		);
 
-		$expectedString = "ACME Inc.\nJohn Doe\nACME Plaza 123\nc/o Cats & Dogs\nUS-98765 Uptown Hollywood";
+		$expectedString = "ACME Inc.\nJohn Doe\nACME Plaza 123\nc/o Cats & Dogs\nUS-98765 Uptown Hollywood\nVAT number: N/A";
 
 		$this->assertSame( $expectedString, $address->toString() );
 	}
