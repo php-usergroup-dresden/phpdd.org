@@ -24,7 +24,7 @@ final class DiscountItemTest extends TestCase
 	public function testCanConstructFromValues() : void
 	{
 		$discountName        = new DiscountName( 'Test discount' );
-		$discountCode        = new DiscountCode( 'O000000O' );
+		$discountCode        = new DiscountCode( 'P95318357E' );
 		$discountDescription = new DiscountDescription( 'Discount description' );
 		$discountPrice       = new DiscountPrice( $this->getMoney( -3000 ) );
 		$allowedTickets      = [];
@@ -62,7 +62,7 @@ final class DiscountItemTest extends TestCase
 	) : void
 	{
 		$discountName        = new DiscountName( 'Test discount' );
-		$discountCode        = new DiscountCode( 'O000000O' );
+		$discountCode        = new DiscountCode( 'P95318357E' );
 		$discountDescription = new DiscountDescription( 'Discount description' );
 		$discountPrice       = new DiscountPrice( $this->getMoney( -3000 ) );
 		$allowedticketName   = new TicketName( 'Conference ticket' );

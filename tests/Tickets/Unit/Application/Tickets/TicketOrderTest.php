@@ -328,14 +328,14 @@ final class TicketOrderTest extends TestCase
 
 		$workshopDiscount   = $this->getDiscountItem(
 			'Workshop discount',
-			'9D8C7B6A',
+			'D87318324E',
 			'Reduces ticket price',
 			$this->getMoney( -3500 ),
 			['Workshop Ticket Slot B']
 		);
 		$conferenceDiscount = $this->getDiscountItem(
 			'Conference discount',
-			'A2B3C4D5',
+			'P95318357E',
 			'Reduces ticket price',
 			$this->getMoney( -2000 ),
 			['Conference Ticket']

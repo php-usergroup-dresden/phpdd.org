@@ -40,6 +40,7 @@ final class TicketItemTest extends TestCase
 	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountExceededTicketPriceException
 	 * @throws \InvalidArgumentException
 	 * @throws \PHPUnit\Framework\ExpectationFailedException
+	 * @throws DiscountNotAllowedForTicketException
 	 *
 	 * @dataProvider validDiscountItemProvider
 	 */
@@ -63,7 +64,7 @@ final class TicketItemTest extends TestCase
 			[
 				'discountItem' => $this->getDiscountItem(
 					'Member discount',
-					'1AAAAAA1',
+					'D87318324E',
 					'Reduces price for members',
 					$this->getMoney( -8900 ),
 					['Conference Ticket']
@@ -72,7 +73,7 @@ final class TicketItemTest extends TestCase
 			[
 				'discountItem' => $this->getDiscountItem(
 					'Member discount',
-					'1AAAAAA1',
+					'D87318324E',
 					'Reduces price for members',
 					$this->getMoney( -7900 ),
 					['Conference Ticket']
@@ -81,7 +82,7 @@ final class TicketItemTest extends TestCase
 			[
 				'discountItem' => $this->getDiscountItem(
 					'Member discount',
-					'1AAAAAA1',
+					'P95318357E',
 					'Reduces price for members',
 					$this->getMoney( 0 ),
 					['Conference Ticket']
@@ -103,7 +104,7 @@ final class TicketItemTest extends TestCase
 
 		$discountItem = $this->getDiscountItem(
 			'Member discount',
-			'1AAAAAA1',
+			'P95318357E',
 			'Reduces price for members',
 			$this->getMoney( -9000 ),
 			[$ticket->getName()->toString()]
@@ -127,7 +128,7 @@ final class TicketItemTest extends TestCase
 
 		$discountItem = $this->getDiscountItem(
 			'Member discount',
-			'1AAAAAA1',
+			'D87318324E',
 			'Reduces price for members',
 			$this->getMoney( -3000 ),
 			[]

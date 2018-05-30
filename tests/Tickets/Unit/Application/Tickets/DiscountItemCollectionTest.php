@@ -30,7 +30,7 @@ final class DiscountItemCollectionTest extends TestCase
 	{
 		$this->discountItemOne = $this->getDiscountItem(
 			'Discount One',
-			'O111111O',
+			'D87318324E',
 			'Discount Description One',
 			$this->getMoney( -1000 ),
 			[]
@@ -38,7 +38,7 @@ final class DiscountItemCollectionTest extends TestCase
 
 		$this->discountItemTwo = $this->getDiscountItem(
 			'Discount Two',
-			'O222222O',
+			'P95318357E',
 			'Discount Description Two',
 			$this->getMoney( -2000 ),
 			[]
@@ -74,7 +74,7 @@ final class DiscountItemCollectionTest extends TestCase
 	 * @throws \PHPUnit\Framework\ExpectationFailedException
 	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
 	 */
-	public function testCurrent()
+	public function testCurrent() : void
 	{
 		$this->assertSame( $this->discountItemOne, $this->discountItemCollection->current() );
 
@@ -88,11 +88,11 @@ final class DiscountItemCollectionTest extends TestCase
 	 * @throws \InvalidArgumentException
 	 * @throws \PHPUnit\Framework\ExpectationFailedException
 	 */
-	public function testAdd()
+	public function testAdd() : void
 	{
 		$discountItemThree = $this->getDiscountItem(
 			'Discount Three',
-			'O333333O',
+			'D87318324E',
 			'Discount Description Three',
 			$this->getMoney( -3000 ),
 			[]
@@ -107,7 +107,7 @@ final class DiscountItemCollectionTest extends TestCase
 	 * @throws \PHPUnit\Framework\ExpectationFailedException
 	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
 	 */
-	public function testKey()
+	public function testKey() : void
 	{
 		$this->assertSame( 0, $this->discountItemCollection->key() );
 
@@ -120,7 +120,7 @@ final class DiscountItemCollectionTest extends TestCase
 	 * @throws \PHPUnit\Framework\ExpectationFailedException
 	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
 	 */
-	public function testValid()
+	public function testValid() : void
 	{
 		$this->discountItemCollection->next();
 		$this->discountItemCollection->next();
@@ -132,7 +132,7 @@ final class DiscountItemCollectionTest extends TestCase
 	 * @throws \PHPUnit\Framework\ExpectationFailedException
 	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
 	 */
-	public function testCount()
+	public function testCount() : void
 	{
 		$this->assertSame( 2, $this->discountItemCollection->count() );
 	}
@@ -141,7 +141,7 @@ final class DiscountItemCollectionTest extends TestCase
 	 * @throws \PHPUnit\Framework\ExpectationFailedException
 	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
 	 */
-	public function testNext()
+	public function testNext() : void
 	{
 		$this->discountItemCollection->next();
 		$this->discountItemCollection->next();

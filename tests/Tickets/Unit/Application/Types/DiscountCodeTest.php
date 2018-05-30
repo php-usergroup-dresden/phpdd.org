@@ -37,38 +37,23 @@ final class DiscountCodeTest extends TestCase
 	{
 		return [
 			[
-				'code' => 'A1B2C3D4',
+				'code' => 'D87318324E',
 			],
 			[
-				'code' => 'AAAAAAA1',
-			],
-			[
-				'code' => '1AAAAAAA',
+				'code' => 'P95318357E',
 			],
 		];
 	}
 
 	/**
-	 * @throws \Exception
-	 * @throws \PHPUnit\Framework\Exception
-	 */
-	public function testCanGenerateADiscountCode() : void
-	{
-		$discountCode = DiscountCode::generate();
-
-		$this->assertInstanceOf( DiscountCode::class, $discountCode );
-	}
-
-	/**
 	 * @param string $code
-	 * @param string $expectedExceptionMessage
 	 *
 	 * @dataProvider invalidDiscountCodeProvider
 	 */
-	public function testThrowsExceptionForInvalidCodes( string $code, string $expectedExceptionMessage ) : void
+	public function testThrowsExceptionForInvalidCodes( string $code ) : void
 	{
 		$this->expectException( InvalidArgumentException::class );
-		$this->expectExceptionMessage( $expectedExceptionMessage );
+		$this->expectExceptionMessage( 'Invalid discount code provided.' );
 
 		new DiscountCode( $code );
 	}
@@ -79,18 +64,15 @@ final class DiscountCodeTest extends TestCase
 			[
 				# Code is too short
 				[
-					'code'                     => 'A1234B',
-					'expectedExceptionMessage' => 'Invalid discount code provided.',
+					'code' => 'A1234B',
 				],
 				# Code has no uppercase letters
 				[
-					'code'                     => 'a123456b',
-					'expectedExceptionMessage' => 'Discount code has no uppercase letters.',
+					'code' => 'a12318456b',
 				],
 				# Code has no digits
 				[
-					'code'                     => 'ABCDEFGH',
-					'expectedExceptionMessage' => 'Discount code has no digits.',
+					'code' => 'ABCDEFGHIJ',
 				],
 			]
 		);
