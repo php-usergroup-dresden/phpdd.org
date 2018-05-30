@@ -264,6 +264,11 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		$discountTotal = $this->getDiscountTotal();
 		$money         = $orderTotal->getMoney()->subtract( $discountTotal->getMoney()->absolute() );
 
+		if ( null !== $this->diversityDonation )
+		{
+			$money = $money->add( $this->diversityDonation->getMoney() );
+		}
+
 		return new TicketOrderPaymentTotal( $money );
 	}
 }
