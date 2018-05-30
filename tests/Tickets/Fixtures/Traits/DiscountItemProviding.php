@@ -11,7 +11,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountDescription;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountPrice;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 
 /**
  * Trait DiscountItemProviding
@@ -20,12 +20,12 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 trait DiscountItemProviding
 {
 	/**
-	 * @param string $name
-	 * @param string $code
-	 * @param string $description
+	 * @param string       $name
+	 * @param string       $code
+	 * @param string       $description
 	 * @param \Money\Money $discountPrice
 	 *
-	 * @param array $allowedTickets
+	 * @param array        $allowedTickets
 	 *
 	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
 	 * @return \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\DiscountItem
@@ -44,9 +44,9 @@ trait DiscountItemProviding
 			new DiscountDescription( $description ),
 			new DiscountPrice( $discountPrice ),
 			array_map(
-				function ( $ticketName )
+				function ( $ticketId )
 				{
-					return new TicketName( $ticketName );
+					return new TicketId( $ticketId );
 				},
 				$allowedTickets
 			)
