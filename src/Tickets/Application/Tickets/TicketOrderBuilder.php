@@ -102,7 +102,9 @@ final class TicketOrderBuilder
 			}
 		}
 
-		$diversityDonation = new DiversityDonation( $this->getMoney( (int)$ticketDetails['diversityDonation'] ) );
+		$diversityDonation = new DiversityDonation(
+			$this->getMoney( (int)$ticketDetails['diversityDonation'] * 100 )
+		);
 		$ticketOrder->donateToDiversity( $diversityDonation );
 
 		return $ticketOrder;
