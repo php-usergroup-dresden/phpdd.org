@@ -11,7 +11,6 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
-use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
 
 /**
  * Class TicketConfig
@@ -19,18 +18,16 @@ use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
  */
 final class TicketConfig
 {
-	use MoneyProviding;
-
-	/** @var string */
+	/** @var TicketId */
 	private $id;
 
-	/** @var string */
+	/** @var TicketName */
 	private $name;
 
-	/** @var string */
+	/** @var TicketDescription */
 	private $description;
 
-	/** @var int */
+	/** @var TicketPrice */
 	private $price;
 
 	/** @var int */
@@ -39,28 +36,28 @@ final class TicketConfig
 	/** @var int */
 	private $maxSeatsPerOrder;
 
-	/** @var string */
+	/** @var TicketType */
 	private $type;
 
-	/** @var string */
+	/** @var DateTimeImmutable */
 	private $validFrom;
 
-	/** @var string */
+	/** @var DateTimeImmutable */
 	private $validTo;
 
 	/** @var string */
 	private $image;
 
 	public function __construct(
-		string $id,
-		string $name,
-		string $description,
-		int $price,
+		TicketId $id,
+		TicketName $name,
+		TicketDescription $description,
+		TicketPrice $price,
 		int $seats,
 		int $maxSeatsPerOrder,
-		string $type,
-		string $validFrom,
-		string $validTo,
+		TicketType $type,
+		DateTimeImmutable $validFrom,
+		DateTimeImmutable $validTo,
 		string $image
 	)
 	{
@@ -78,26 +75,25 @@ final class TicketConfig
 
 	public function getId() : TicketId
 	{
-		return new TicketId( $this->id );
+		return $this->id;
 	}
 
 	public function getName() : TicketName
 	{
-		return new TicketName( $this->name );
+		return $this->name;
 	}
 
 	public function getDescription() : TicketDescription
 	{
-		return new TicketDescription( $this->description );
+		return $this->description;
 	}
 
 	/**
 	 * @return TicketPrice
-	 * @throws \InvalidArgumentException
 	 */
 	public function getPrice() : TicketPrice
 	{
-		return new TicketPrice( $this->getMoney( $this->price ) );
+		return $this->price;
 	}
 
 	public function getSeats() : int
@@ -112,25 +108,23 @@ final class TicketConfig
 
 	public function getType() : TicketType
 	{
-		return new TicketType( $this->type );
+		return $this->type;
 	}
 
 	/**
-	 * @throws \Exception
 	 * @return DateTimeImmutable
 	 */
 	public function getValidFrom() : DateTimeImmutable
 	{
-		return new DateTimeImmutable( $this->validFrom );
+		return $this->validFrom;
 	}
 
 	/**
-	 * @throws \Exception
 	 * @return DateTimeImmutable
 	 */
 	public function getValidTo() : DateTimeImmutable
 	{
-		return new DateTimeImmutable( $this->validTo );
+		return $this->validTo;
 	}
 
 	public function getImage() : string
