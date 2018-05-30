@@ -24,39 +24,9 @@ final class DiscountCode extends AbstractStringType
 	 */
 	protected function guardValueIsValid( string $value ) : void
 	{
-		if ( 8 !== strlen( $value ) )
+		if ( !preg_match( '#^[A-Z]\d{3}18\d{3}[A-Z]$#', $value ) )
 		{
 			throw new InvalidArgumentException( 'Invalid discount code provided.' );
 		}
-
-		if ( !preg_match( '#[A-Z]#', $value ) )
-		{
-			throw new InvalidArgumentException( 'Discount code has no uppercase letters.' );
-		}
-
-		if ( !preg_match( '#\d#', $value ) )
-		{
-			throw new InvalidArgumentException( 'Discount code has no digits.' );
-		}
-	}
-
-	/**
-	 * @return DiscountCode
-	 * @throws \Exception
-	 */
-	public static function generate() : self
-	{
-		$chars  = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
-		$length = strlen( $chars ) - 1;
-		$code   = '';
-
-		for ( $i = 0; $i < 8; $i++ )
-		{
-			$max   = $i === 1 ? 7 : $length;
-			$index = random_int( 0, $max );
-			$code  .= $chars[ $index ];
-		}
-
-		return new self( $code );
 	}
 }
