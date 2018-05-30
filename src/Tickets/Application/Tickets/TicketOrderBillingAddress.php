@@ -112,15 +112,16 @@ final class TicketOrderBillingAddress
 	public function toString() : string
 	{
 		return sprintf(
-			"%s\n%s %s\n%s\n%s\n%s-%s %s",
-			$this->companyName->toString(),
+			"%s%s %s\n%s\n%s%s-%s %s\nVAT number: %s",
+			$this->companyName ? "{$this->companyName->toString()}\n" : '',
 			$this->firstname->toString(),
 			$this->lastname->toString(),
 			$this->streetWithNumber->toString(),
-			$this->addressAddon->toString(),
+			$this->addressAddon ? "{$this->addressAddon->toString()}\n" : '',
 			$this->countryCode->toString(),
 			$this->zipCode->toString(),
-			$this->city->toString()
+			$this->city->toString(),
+			$this->vatNumber ?: 'N/A'
 		);
 	}
 }
