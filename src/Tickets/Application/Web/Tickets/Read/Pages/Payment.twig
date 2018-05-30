@@ -24,4 +24,130 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h3>Bill to</h3>
+            <address>
+                {{ ticketOrder.getBillingAddress.toString|nl2br }}
+            </address>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h3>Send tickets &amp; invoice to</h3>
+            <p>
+                Email: {{ ticketOrder.getEmailAddress }}
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Ticket details</h3>
+
+    {% for ticketItem in ticketOrder.getTicketItems %}
+        <div class="row" style="{{ cycle(['background-color: #f9f9f9', ''], loop.index0) }}">
+            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9">
+                <h4>{{ ticketItem.getTicket.getName }}</h4>
+                {% if ticketItem.getDiscountItem %}
+                    <div class="text-danger">
+                        Discount code: {{ ticketItem.getDiscountItem.getCode }}
+                        | {{ ticketItem.getDiscountItem.getName }}
+                    </div>
+                {% endif %}
+                <p>
+                    {{ ticketItem.getTicket.getDescription|raw }}<br>
+                    Attendee: {{ ticketItem.getAttendeeName }}
+                </p>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 text-right">
+                <h4>{{ ticketItem.getTicket.getPrice.getMoney|formatMoney }}</h4>
+                {% if ticketItem.getDiscountItem %}
+                    <span class="text-danger">{{ ticketItem.getDiscountItem.getDiscountPrice.getMoney|formatMoney }}</span>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+
+    <hr>
+
+    <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9 text-right">
+            Subtotal
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 text-right">
+            {{ ticketOrder.getOrderTotal.getMoney|formatMoney }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9 text-right">
+            <span class="text-danger">Discount</span>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 text-right">
+            <span class="text-danger">{{ ticketOrder.getDiscountTotal.getMoney|formatMoney }}</span>
+        </div>
+    </div>
+    {% if ticketOrder.getDiversityDonation %}
+        <div class="row">
+            <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9 text-right">
+                <span class="text-success">Diversity donation</span>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 text-right">
+                <span class="text-success">{{ ticketOrder.getDiversityDonation.getMoney|formatMoney }}</span>
+            </div>
+        </div>
+    {% endif %}
+    <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9 text-right">
+            <h4>Total <small>(incl. VAT & payment fees)</small></h4>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 text-right">
+            <h4>{{ ticketOrder.getPaymentTotal.getMoney|formatMoney }}</h4>
+        </div>
+    </div>
+
+    <hr>
+
+    <!--suppress HtmlUnknownTarget -->
+    <form action="/tickets/buy" method="post" id="buy-tickets-form">
+        <div class="row blockspace">
+            <div class="col-xs-12">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="cocOptIn" value="1">
+                        By purchasing tickets I confirm that I have read the
+                        <a href="https://dresden-code-of-conduct.org/en/" target="_blank">Code of Conduct (CoC)</a>
+                        for this event and agree to its enforcement.
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row blockspace">
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-success btn-lg btn-block">
+                    PURCHASE TICKETS FOR {{ ticketOrder.getPaymentTotal.getMoney|formatMoney }}
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+    <div class="row">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <!--suppress HtmlUnknownTarget -->
+            <a href="/tickets/" class="text-muted">
+                <i class="fa fa-arrow-left"></i> BACK
+            </a>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
+            <!--suppress HtmlUnknownTarget -->
+            <form action="/tickets/abort/" method="post">
+                <button type="submit" class="btn-link" style="margin: 0; padding: 0;">
+                    <span class="text-danger">
+                        <i class="fa fa-ban"></i> ABORT
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
+
 {% endblock %}
