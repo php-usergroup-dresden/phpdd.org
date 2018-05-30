@@ -118,6 +118,7 @@ final class SelectTicketsValidator
 	 * @param array $quantities
 	 *
 	 * @throws TicketConfigNotFoundException
+	 * @throws InvalidArgumentException
 	 * @return TicketConfig[]|Generator
 	 */
 	private function getTicketConfigs( array $quantities ) : Generator

@@ -23,9 +23,9 @@ final class SelectTicketsValidatorTest extends TestCase
 			'PHPDD18-CT-01' => [
 				'name'             => 'TicketNameA',
 				'type'             => TicketTypes::CONFERENCE,
-				'description'      => '',
+				'description'      => 'Ticket Description A',
 				'image'            => '',
-				'price'            => 0,
+				'price'            => 11900,
 				'seats'            => 10,
 				'maxSeatsPerOrder' => 5,
 				'validFrom'        => (new DateTimeImmutable( '-1 day' ))->format( 'Y-m-d H:i:s' ),
@@ -35,9 +35,9 @@ final class SelectTicketsValidatorTest extends TestCase
 			'PHPDD18-EB-01' => [
 				'name'             => 'TicketNameB',
 				'type'             => TicketTypes::CONFERENCE,
-				'description'      => '',
+				'description'      => 'Ticket Description B',
 				'image'            => '',
-				'price'            => 0,
+				'price'            => 7900,
 				'seats'            => 10,
 				'maxSeatsPerOrder' => 5,
 				'validFrom'        => (new DateTimeImmutable( '-2 day' ))->format( 'Y-m-d H:i:s' ),
@@ -47,9 +47,9 @@ final class SelectTicketsValidatorTest extends TestCase
 			'PHPDD18-WS-01' => [
 				'name'             => 'TicketNameC',
 				'type'             => TicketTypes::WORKSHOP_SLOT_A,
-				'description'      => '',
+				'description'      => 'Ticket Description C',
 				'image'            => '',
-				'price'            => 0,
+				'price'            => 24900,
 				'seats'            => 10,
 				'maxSeatsPerOrder' => 3,
 				'validFrom'        => (new DateTimeImmutable( '-2 day' ))->format( 'Y-m-d H:i:s' ),
@@ -58,9 +58,9 @@ final class SelectTicketsValidatorTest extends TestCase
 			'PHPDD18-WS-02' => [
 				'name'             => 'TicketNameD',
 				'type'             => TicketTypes::WORKSHOP_SLOT_A,
-				'description'      => '',
+				'description'      => 'Ticket Description D',
 				'image'            => '',
-				'price'            => 0,
+				'price'            => 24900,
 				'seats'            => 10,
 				'maxSeatsPerOrder' => 3,
 				'validFrom'        => (new DateTimeImmutable( '-1 day' ))->format( 'Y-m-d H:i:s' ),
@@ -148,7 +148,7 @@ final class SelectTicketsValidatorTest extends TestCase
 	 *
 	 * @dataProvider validTicketSelectionInputProvider
 	 */
-	public function testValidationTicketSelectionPasses( array $input ) : void
+	public function testValidationOfTicketSelectionPasses( array $input ) : void
 	{
 		$userInput = new UserInput( $input );
 
