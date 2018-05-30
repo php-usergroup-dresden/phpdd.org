@@ -109,12 +109,15 @@ I will demonstrate how and - more importantly - why such operations should be pr
 We will be comparing a few messaging/queuing libraries and cover some of the most common pitfalls and obstacles 
 developers face when implementing asynchronous processing and face long running php processes for the first time.
 
+<a name="how-to-handle-shit"></a>
+## How to handle 💩
+
 ---
 
-<p class="text-center blockspace">
-    Stay tuned for the announcement of more amazing talks.<br> 
-    Check in again later or follow us on Twitter 
-    <a href="https://twitter.com/PHPDD" title="PHP Developer Days 2018 at Twitter" target="_blank">
-        <i class="fa fa-twitter"></i> @PHPDD
-    </a> for updates.
-</p>
+By [Andreas Heigl](@baseUrl@/speakers.html#andreas-heigl)
+
+You've got strange characters like "�" or "Ã¶" display in your application? Yes, handling non-English characters in application code, 
+files and databases can be a challenge, to say the least. Whether that's German Umlauts, Cyrillic letters, Asian Glyphs or Emojis: 
+It's always a mess in an international application. In this session you will see why that is and how handling characters 
+evolved in computing. You will also see how handling characters in applications and databases can be done less painfully. 
+And don't worry when EBCDIC, BOM or ISO-8859-7 are Greek to you and your Unicode is a bit rusty: we'll have a look at them too!

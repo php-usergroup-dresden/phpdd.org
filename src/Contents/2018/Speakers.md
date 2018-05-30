@@ -537,7 +537,42 @@ to gather and spread their knowledge all around the community, who step up on a 
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/theofidry" title="Théo Fidry at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> https://joind.in/user/theofidry
+                <i class="fa fa-comment"></i> joind.in/user/theofidry
+            </a>
+        </p>
+    </div>
+</div>
+
+<a name="andreas-heigl"></a>
+## 🇩🇪 ANDREAS HEIGL <span class="small text-muted">- CONFERENCE SPEAKER</span>
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-3 col-md-4">
+        <a href="https://twitter.com/heiglandreas" target="_blank" title="Andreas Heigl on Twitter">
+            <img src="@baseUrl@/assets/images/speakers/andreas-heigl.jpg" alt="Andreas Heigl" class="img-responsive img-rounded blockspace">
+        </a>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9 col-md-8">
+        <p>
+            <br>
+            <a href="@baseUrl@/talks.html#how-to-handle-shit">
+                Talk: How to handle 💩
+            </a>
+        </p>
+        <p>
+           Andreas helps solving problems at a german corporate publishing company. He sometimes even uses code for that. 
+           Besides his family, his work as jack-of-all-trades and contributions to different open-source-projects he 
+           still finds the time to run PHPUGFFM, the PHP-Usergroup in Frankfurt/Main and maintain PHP.ug.
+        </p>
+        <p>
+            <a href="https://twitter.com/heiglandreas" title="Andreas Heigl at Twitter" target="_blank">
+                <i class="fa fa-twitter"></i> @heiglandreas
+            </a>
+            &nbsp;|&nbsp;
+            <a href="https://joind.in/user/heiglandreas" title="Andreas Heigl at joind.in" target="_blank">
+                <i class="fa fa-comment"></i> joind.in/user/heiglandreas
             </a>
         </p>
     </div>
@@ -609,13 +644,3 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
     </div>
 </div>
-
----
-
-<p class="text-center blockspace">
-    Stay tuned for the announcement of more amazing speakers.<br> 
-    Check in again later or follow us on Twitter 
-    <a href="https://twitter.com/PHPDD" title="PHP Developer Days 2018 at Twitter" target="_blank">
-        <i class="fa fa-twitter"></i> @PHPDD
-    </a> for updates.
-</p>
