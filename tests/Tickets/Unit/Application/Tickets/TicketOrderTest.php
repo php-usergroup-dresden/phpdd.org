@@ -331,14 +331,14 @@ final class TicketOrderTest extends TestCase
 			'D87318324E',
 			'Reduces ticket price',
 			$this->getMoney( -3500 ),
-			['Workshop Ticket Slot B']
+			['PHPDD18-WS-01']
 		);
 		$conferenceDiscount = $this->getDiscountItem(
 			'Conference discount',
 			'P95318357E',
 			'Reduces ticket price',
 			$this->getMoney( -2000 ),
-			['Conference Ticket']
+			['PHPDD18-CT-01']
 		);
 
 		$ticketItemSlotA      = new TicketItem( $ticketSlotA, $johnDoe );
