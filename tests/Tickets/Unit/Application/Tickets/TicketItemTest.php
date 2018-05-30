@@ -67,7 +67,7 @@ final class TicketItemTest extends TestCase
 					'D87318324E',
 					'Reduces price for members',
 					$this->getMoney( -8900 ),
-					['Conference Ticket']
+					['PHPDD18-CT-01']
 				),
 			],
 			[
@@ -76,7 +76,7 @@ final class TicketItemTest extends TestCase
 					'D87318324E',
 					'Reduces price for members',
 					$this->getMoney( -7900 ),
-					['Conference Ticket']
+					['PHPDD18-CT-01']
 				),
 			],
 			[
@@ -85,7 +85,7 @@ final class TicketItemTest extends TestCase
 					'P95318357E',
 					'Reduces price for members',
 					$this->getMoney( 0 ),
-					['Conference Ticket']
+					['PHPDD18-CT-01']
 				),
 			],
 		];
@@ -107,7 +107,7 @@ final class TicketItemTest extends TestCase
 			'P95318357E',
 			'Reduces price for members',
 			$this->getMoney( -9000 ),
-			[$ticket->getName()->toString()]
+			[$ticket->getId()->toString()]
 		);
 
 		$this->expectException( DiscountExceededTicketPriceException::class );
@@ -136,7 +136,7 @@ final class TicketItemTest extends TestCase
 
 		$this->expectException( DiscountNotAllowedForTicketException::class );
 		$this->expectExceptionMessage(
-			'Discount "Member discount" is not allowed for ticket "Conference Ticket".'
+			'Discount "Member discount" is not allowed for ticket "PHPDD18-CT-01".'
 		);
 
 		$ticketItem->grantDiscount( $discountItem );
