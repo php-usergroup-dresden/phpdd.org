@@ -207,6 +207,11 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		return $this->billingAddress;
 	}
 
+	public function donateToDiversity( DiversityDonation $diversityDonation ) : void
+	{
+		$this->diversityDonation = $diversityDonation;
+	}
+
 	public function getDiversityDonation() : ?DiversityDonation
 	{
 		return $this->diversityDonation;
