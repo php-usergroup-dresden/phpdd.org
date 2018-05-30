@@ -278,6 +278,12 @@
 
 ---
 
+## Unit\Application\Web\Tickets\Write\Validators\DiversityDonationValidatorTest
+
+- [x] Validation Of Diversity Donation Fails If Amount Is Out Of Range (💚 2)
+
+---
+
 ## Unit\Application\Web\Tickets\Write\Validators\SelectTicketsValidatorTest
 
 - [x] Validation Of Ticket Selection Fails (💚 5)
@@ -285,4 +291,4 @@
 
 ---
 
-Report created at 2018-05-30 09:25:33 (UTC)
+Report created at 2018-05-30 21:31:00 (UTC)
