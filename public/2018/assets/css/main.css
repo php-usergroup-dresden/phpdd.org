@@ -292,7 +292,7 @@ h1.page-headline {
 }
 
 .teaser h1 {
-    color: rgba(0,0,0,.75);
+    color: rgba(0, 0, 0, .75);
     text-transform: uppercase;
     font-weight: bolder;
 }
@@ -372,4 +372,23 @@ footer {
         padding: 10px 0;
         text-align: center;
     }
+}
+
+.payment-methods .radio input[type="radio"] {
+    display: none;
+}
+
+.payment-methods .radio {
+    border: 2px solid #f9f9f9;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.payment-methods .radio:hover {
+    background-color: #f9f9f9;
+}
+
+.payment-methods .radio.active {
+    border: 2px solid #4b6597;
+    background-color: #f9f9f9;
 }
