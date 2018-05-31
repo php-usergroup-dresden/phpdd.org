@@ -27,6 +27,26 @@
 
 ---
 
+## Unit\Application\Payments\PaymentFeeCalculatorFactoryTest
+
+- [x] Can Get Calculator For Payment Provider (💚 2)
+
+---
+
+## Unit\Application\Payments\PaymentFeeCalculators\PaypalFeeCalculatorTest
+
+- [x] Get Payment Fee For Germany (💚 3)
+- [x] Get Payment Fee For Other Country (💚 3)
+
+---
+
+## Unit\Application\Payments\PaymentFeeCalculators\StripeFeeCalculatorTest
+
+- [x] Get Payment Fee For Germany (💚 3)
+- [x] Get Payment Fee For Other Country (💚 3)
+
+---
+
 ## Unit\Application\Tickets\DiscountItemCollectionTest
 
 - [x] Can Rewind Collection (💚 1)
@@ -176,6 +196,20 @@
 
 ---
 
+## Unit\Application\Types\PaymentFeeTest
+
+- [x] Can Get Money (💚 1)
+- [x] Throws Exception When Constructed With Negative Money (💚 1)
+
+---
+
+## Unit\Application\Types\PaymentProviderTest
+
+- [x] Throws Exception When Constructed With Invalid Payment Provider (💚 1)
+- [x] Can Construct From Valid Payment Provider (💚 2)
+
+---
+
 ## Unit\Application\Types\StreetWithNumberTest
 
 - [x] Throws Exception When Constructed With Empty String (💚 6)
@@ -284,6 +318,13 @@
 
 ---
 
+## Unit\Application\Web\Tickets\Write\Validators\PaymentProviderValidatorTest
+
+- [x] Validation Of Payment Provider Fails For Invalid Selection (💚 2)
+- [x] Validation Of Payment Provider Passes (💚 2)
+
+---
+
 ## Unit\Application\Web\Tickets\Write\Validators\SelectTicketsValidatorTest
 
 - [x] Validation Of Ticket Selection Fails (💚 5)
@@ -291,4 +332,4 @@
 
 ---
 
-Report created at 2018-05-30 21:31:00 (UTC)
+Report created at 2018-05-31 13:25:47 (UTC)
