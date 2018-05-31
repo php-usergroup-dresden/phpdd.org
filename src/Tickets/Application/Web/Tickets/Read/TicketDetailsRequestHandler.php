@@ -31,6 +31,7 @@ final class TicketDetailsRequestHandler extends AbstractRequestHandler implement
 		$selectedTicketInfos = new SelectedTicketInfos( $ticketsConfig, $selectedTickets );
 
 		$data = [
+			'ticketOrderId'     => $ticketSelectForm->get( 'ticketOrderId' ),
 			'selectedTickets'   => $selectedTicketInfos,
 			'ticketDetailsForm' => $ticketDetailsForm,
 			'countryCodes'      => array_combine( CountryCodes::ALL_SHORT, CountryCodes::ALL_LONG ),

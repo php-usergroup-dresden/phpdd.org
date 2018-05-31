@@ -3,7 +3,9 @@
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\DiscountsConfig;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\Exceptions\DiscountConfigNotFoundException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\PaymentFeeCalculatorFactory;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AddressAddon;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
@@ -40,13 +42,26 @@ final class TicketOrderBuilder
 	}
 
 	/**
-	 * @param array $selectedTickets
-	 * @param array $ticketDetails
+	 * @param string $ticketOrderId
+	 * @param array  $selectedTickets
+	 * @param array  $ticketDetails
 	 *
+	 * @throws Exceptions\AllowedTicketCountExceededException
+	 * @throws Exceptions\AllowedTicketCountPerAttendeeExceededException
+	 * @throws Exceptions\DiscountExceededTicketPriceException
+	 * @throws Exceptions\DiscountNotAllowedForTicketException
+	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
+	 * @throws \InvalidArgumentException
+	 * @throws DiscountConfigNotFoundException
+	 * @throws RuntimeException
 	 * @throws \Exception
 	 * @return TicketOrder
 	 */
-	public function buildFromInputData( array $selectedTickets, array $ticketDetails ) : TicketOrder
+	public function buildFromInputData(
+		string $ticketOrderId,
+		array $selectedTickets,
+		array $ticketDetails
+	) : TicketOrder
 	{
 		$selectedTicketInfos = new SelectedTicketInfos( $this->ticketsConfig, $selectedTickets );
 
@@ -66,8 +81,11 @@ final class TicketOrderBuilder
 		$paymentFeeCalculator = (new PaymentFeeCalculatorFactory())->getCalculator( $paymentProvider );
 
 		/** @var TicketOrderId $ticketOrderId */
-		$ticketOrderId = TicketOrderId::generate();
-		$ticketOrder   = new TicketOrder( $ticketOrderId, new TicketOrderDate(), $paymentFeeCalculator );
+		$ticketOrder = new TicketOrder(
+			new TicketOrderId( $ticketOrderId ),
+			new TicketOrderDate(),
+			$paymentFeeCalculator
+		);
 		$ticketOrder->billTo( $billingAddress );
 
 		$emailAddress = new TicketOrderEmailAddress( (string)$ticketDetails['email'] );

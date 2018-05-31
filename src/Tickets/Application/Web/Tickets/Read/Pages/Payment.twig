@@ -3,6 +3,7 @@
 {% block content %}
 
     <h1>BUY TICKETS</h1>
+    <small>Order ID: {{ ticketOrder.getOrderId }}</small>
     <hr class="blockspace">
 
     <div class="row">
@@ -117,12 +118,12 @@
     <hr>
 
     <!--suppress HtmlUnknownTarget -->
-    <form action="/tickets/buy" method="post" id="buy-tickets-form">
+    <form action="/tickets/purchase" method="post" id="buy-tickets-form">
         <div class="row blockspace">
             <div class="col-xs-12">
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" name="cocOptIn" value="1">
+                        <input type="checkbox" name="cocOptIn" id="cocOptIn" value="1">
                         By purchasing tickets I confirm that I have read the
                         <a href="https://dresden-code-of-conduct.org/en/" target="_blank">Code of Conduct (CoC)</a>
                         for this event and agree to its enforcement.
@@ -132,10 +133,15 @@
         </div>
 
         <div class="row blockspace">
-            <div class="col-xs-12">
-                <button type="submit" class="btn btn-success btn-lg btn-block">
-                    PURCHASE TICKETS FOR {{ ticketOrder.getPaymentTotal.getMoney|formatMoney }}
+            <div class="col-xs-12 text-center">
+                <button type="submit" class="btn btn-success btn-lg btn-block" id="buttonPurchase" disabled>
+                    PURCHASE TICKETS for {{ ticketOrder.getPaymentTotal.getMoney|formatMoney }}
+                    via {{ ticketOrder.getPaymentProvider }}
                 </button>
+                <p class="blockspace">
+                    <i class="fa fa-info-circle"></i>
+                    You will be redirected to the {{ ticketOrder.getPaymentProvider }} payment service.
+                </p>
             </div>
         </div>
     </form>

@@ -25,11 +25,16 @@ final class TicketPaymentRequestHandler extends AbstractRequestHandler implement
 		$ticketSelectionForm = $session->getTicketSelectionForm();
 		$ticketDetailsForm   = $session->getTicketDetailsForm();
 		$selectedTickets     = $ticketSelectionForm->get( 'selectedTickets' );
+		$ticketOrderId       = (string)$ticketSelectionForm->get( 'ticketOrderId' );
 		$ticketDetails       = $ticketDetailsForm->getData();
 		$ticketsConfig       = TicketsConfig::fromConfigFile();
 		$discountsConfig     = DiscountsConfig::fromConfigFile();
 		$ticketOrderBuilder  = new TicketOrderBuilder( $ticketsConfig, $discountsConfig );
-		$ticketOrder         = $ticketOrderBuilder->buildFromInputData( $selectedTickets, $ticketDetails );
+		$ticketOrder         = $ticketOrderBuilder->buildFromInputData(
+			$ticketOrderId,
+			$selectedTickets,
+			$ticketDetails
+		);
 
 		$data = [
 			'ticketOrder' => $ticketOrder,

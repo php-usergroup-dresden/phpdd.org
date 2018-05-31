@@ -7,6 +7,7 @@ use IceHawk\IceHawk\Interfaces\HandlesPostRequest;
 use IceHawk\IceHawk\Interfaces\ProvidesWriteRequestData;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Bridges\UserInput;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\AbstractRequestHandler;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses\Redirect;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\SelectTicketsValidator;
@@ -58,7 +59,12 @@ final class SelectTicketsRequestHandler extends AbstractRequestHandler implement
 		}
 
 		$selectedTickets = $this->getSelectedTickets( $input->get( 'quantity' ) );
-		$ticketSelectForm->setData( ['selectedTickets' => $selectedTickets] );
+		$ticketSelectForm->setData(
+			[
+				'selectedTickets' => $selectedTickets,
+				'ticketOrderId'   => $ticketSelectForm->get( 'ticketOrderId' ) ?: TicketOrderId::generate()->toString(),
+			]
+		);
 
 		(new Redirect())->respond( self::SUCCESS_URL );
 	}
