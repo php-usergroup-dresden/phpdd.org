@@ -13,6 +13,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketO
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CountryCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiversityDonation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentFee;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentProvider;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDate;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDiscountTotal;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderEmailAddress;
@@ -52,8 +53,11 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	/** @var null|DiversityDonation */
 	private $diversityDonation;
 
-	/** @var null|PaymentFee */
+	/** @var CalculatesPaymentFee */
 	private $paymentFeeCalculator;
+
+	/** @var null|PaymentProvider */
+	private $paymentProvider;
 
 	/**
 	 * @param TicketOrderId        $orderId
@@ -190,6 +194,9 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		return $this->orderDate;
 	}
 
+	/**
+	 * @return CollectsTicketItems|TicketItem[]
+	 */
 	public function getTicketItems() : CollectsTicketItems
 	{
 		return $this->ticketItems;
@@ -314,5 +321,15 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		$money = $money->add( $this->getPaymentFee()->getMoney() );
 
 		return new TicketOrderPaymentTotal( $money );
+	}
+
+	public function payWith( PaymentProvider $paymentProvider ) : void
+	{
+		$this->paymentProvider = $paymentProvider;
+	}
+
+	public function getPaymentProvider() : ?PaymentProvider
+	{
+		return $this->paymentProvider;
 	}
 }

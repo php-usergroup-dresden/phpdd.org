@@ -112,6 +112,8 @@ final class TicketOrderBuilder
 		);
 		$ticketOrder->donateToDiversity( $diversityDonation );
 
+		$ticketOrder->payWith( $paymentProvider );
+
 		return $ticketOrder;
 	}
 }
