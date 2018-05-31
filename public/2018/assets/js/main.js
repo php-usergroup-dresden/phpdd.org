@@ -8,4 +8,10 @@ $(document).ready(function () {
         paymentMethods.find('div.radio').removeClass('active');
         radio.parents('div.radio').addClass('active');
     });
+    const cocOptIn = $('#cocOptIn');
+    const buttonPurchase = $('#buttonPurchase');
+    cocOptIn.change(function() {
+        const checked = $(this).prop('checked');
+        buttonPurchase.prop('disabled', !checked);
+    })
 });
