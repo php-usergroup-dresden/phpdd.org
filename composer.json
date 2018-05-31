@@ -19,7 +19,8 @@
     "twig/twig": "~2.4.4",
     "sentry/sentry": "~1.9.0",
     "fortuneglobe/types": "~1.0.0",
-    "hollodotme/fluid-validator": "~1.4.0"
+    "hollodotme/fluid-validator": "~1.4.0",
+    "paypal/rest-api-sdk-php": "~1.13.0"
   },
   "autoload": {
     "psr-4": {
