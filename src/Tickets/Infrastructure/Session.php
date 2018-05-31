@@ -12,6 +12,8 @@ final class Session extends AbstractSession
 
 	private const TICKET_DETAILS_FORM_ID   = 'ticketDetailsForm';
 
+	private const TICKET_PAYMENT_FORM_ID   = 'ticketPaymentForm';
+
 	public function getTicketSelectionForm() : Form
 	{
 		return $this->getForm( new FormId( self::TICKET_SELECTION_FORM_ID ) );
@@ -22,8 +24,15 @@ final class Session extends AbstractSession
 		return $this->getForm( new FormId( self::TICKET_DETAILS_FORM_ID ) );
 	}
 
+	public function getTicketPaymentForm() : Form
+	{
+		return $this->getForm( new FormId( self::TICKET_PAYMENT_FORM_ID ) );
+	}
+
 	public function abortTicketOrder() : void
 	{
 		$this->unsetForm( new FormId( self::TICKET_SELECTION_FORM_ID ) );
+		$this->unsetForm( new FormId( self::TICKET_DETAILS_FORM_ID ) );
+		$this->unsetForm( new FormId( self::TICKET_PAYMENT_FORM_ID ) );
 	}
 }

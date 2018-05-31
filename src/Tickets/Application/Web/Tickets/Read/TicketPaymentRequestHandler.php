@@ -24,6 +24,7 @@ final class TicketPaymentRequestHandler extends AbstractRequestHandler implement
 		$session             = $this->getEnv()->getSession();
 		$ticketSelectionForm = $session->getTicketSelectionForm();
 		$ticketDetailsForm   = $session->getTicketDetailsForm();
+		$ticketPaymentForm   = $session->getTicketPaymentForm();
 		$selectedTickets     = $ticketSelectionForm->get( 'selectedTickets' );
 		$ticketOrderId       = (string)$ticketSelectionForm->get( 'ticketOrderId' );
 		$ticketDetails       = $ticketDetailsForm->getData();
@@ -36,8 +37,11 @@ final class TicketPaymentRequestHandler extends AbstractRequestHandler implement
 			$ticketDetails
 		);
 
+		$ticketPaymentForm->renewToken();
+
 		$data = [
-			'ticketOrder' => $ticketOrder,
+			'ticketPaymentForm' => $ticketPaymentForm,
+			'ticketOrder'       => $ticketOrder,
 		];
 
 		(new HtmlPage( $this->getEnv() ))->respond( 'Tickets/Read/Pages/Payment.twig', $data );

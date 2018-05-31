@@ -35,13 +35,13 @@ final class PaypalAddress
 		string $countryCode
 	)
 	{
-		$this->firstname    = $firstname;
-		$this->lastname     = $lastname;
-		$this->addon        = $addon;
-		$this->street       = $streetWithNumber;
-		$this->zipCode      = $zipCode;
-		$this->city         = $city;
-		$this->countryCode  = $countryCode;
+		$this->firstname        = $firstname;
+		$this->lastname         = $lastname;
+		$this->addon            = $addon;
+		$this->streetWithNumber = $streetWithNumber;
+		$this->zipCode          = $zipCode;
+		$this->city             = $city;
+		$this->countryCode      = $countryCode;
 	}
 
 	public function getFirstname() : string

@@ -119,6 +119,7 @@
 
     <!--suppress HtmlUnknownTarget -->
     <form action="/tickets/purchase" method="post" id="buy-tickets-form">
+        <input type="hidden" name="token" value="{{ ticketPaymentForm.getToken }}">
         <div class="row blockspace">
             <div class="col-xs-12">
                 <div class="checkbox">
@@ -131,6 +132,12 @@
                 </div>
             </div>
         </div>
+
+        {% if ticketPaymentForm.hasFeedback('general') %}
+            <div class="blockspace alert alert-danger">
+                {{ ticketPaymentForm.getFeedback('general').getMessage() }}
+            </div>
+        {% endif %}
 
         <div class="row blockspace">
             <div class="col-xs-12 text-center">
