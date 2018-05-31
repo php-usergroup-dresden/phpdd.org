@@ -2,12 +2,17 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
+use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\CountryCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\InvalidArgumentException;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Interfaces\CalculatesPaymentFee;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\CollectsTicketItems;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketOrderInformation;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CountryCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiversityDonation;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentFee;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDate;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDiscountTotal;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderEmailAddress;
@@ -47,15 +52,24 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	/** @var null|DiversityDonation */
 	private $diversityDonation;
 
+	/** @var null|PaymentFee */
+	private $paymentFeeCalculator;
+
 	/**
-	 * @param TicketOrderId   $orderId
-	 * @param TicketOrderDate $orderDate
+	 * @param TicketOrderId        $orderId
+	 * @param TicketOrderDate      $orderDate
+	 * @param CalculatesPaymentFee $paymentFeeCalculator
 	 */
-	public function __construct( TicketOrderId $orderId, TicketOrderDate $orderDate )
+	public function __construct(
+		TicketOrderId $orderId,
+		TicketOrderDate $orderDate,
+		CalculatesPaymentFee $paymentFeeCalculator
+	)
 	{
-		$this->orderId     = $orderId;
-		$this->orderDate   = $orderDate;
-		$this->ticketItems = new TicketItemCollection();
+		$this->orderId              = $orderId;
+		$this->orderDate            = $orderDate;
+		$this->paymentFeeCalculator = $paymentFeeCalculator;
+		$this->ticketItems          = new TicketItemCollection();
 	}
 
 	public function isPlaceable() : bool
@@ -255,6 +269,34 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	}
 
 	/**
+	 * @throws \InvalidArgumentException
+	 * @throws InvalidArgumentException
+	 * @return PaymentFee
+	 */
+	public function getPaymentFee() : PaymentFee
+	{
+		$orderTotal    = $this->getOrderTotal();
+		$discountTotal = $this->getDiscountTotal();
+		$money         = $orderTotal->getMoney()->add( $discountTotal->getMoney() );
+
+		if ( null !== $this->diversityDonation )
+		{
+			$money = $money->add( $this->diversityDonation->getMoney() );
+		}
+
+		$countryCode = new CountryCode( CountryCodes::DE_SHORT );
+		if ( null !== $this->billingAddress )
+		{
+			$countryCode = $this->billingAddress->getCountryCode();
+		}
+
+		$paymentFee = $this->paymentFeeCalculator->getPaymentFee( $money, $countryCode );
+
+		return new PaymentFee( $paymentFee );
+	}
+
+	/**
+	 * @throws InvalidArgumentException
 	 * @return TicketOrderPaymentTotal
 	 * @throws \InvalidArgumentException
 	 */
@@ -268,6 +310,8 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		{
 			$money = $money->add( $this->diversityDonation->getMoney() );
 		}
+
+		$money = $money->add( $this->getPaymentFee()->getMoney() );
 
 		return new TicketOrderPaymentTotal( $money );
 	}

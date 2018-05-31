@@ -6,6 +6,7 @@ use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\DiscountItemProviding;
 use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\TicketProviding;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\CountryCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Interfaces\CalculatesPaymentFee;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItem;
@@ -43,7 +44,7 @@ final class TicketOrderTest extends TestCase
 		/** @var TicketOrderId $orderId */
 		$orderId     = TicketOrderId::generate();
 		$orderDate   = new TicketOrderDate( '2018-01-06 17:48:17' );
-		$ticketOrder = new TicketOrder( $orderId, $orderDate );
+		$ticketOrder = new TicketOrder( $orderId, $orderDate, $this->getPaymentFeeCalculatorStub() );
 
 		$this->assertInstanceOf( TicketOrder::class, $ticketOrder );
 
@@ -63,6 +64,19 @@ final class TicketOrderTest extends TestCase
 
 	/**
 	 * @throws \InvalidArgumentException
+	 * @return CalculatesPaymentFee
+	 */
+	private function getPaymentFeeCalculatorStub() : CalculatesPaymentFee
+	{
+		$stub = $this->getMockBuilder( CalculatesPaymentFee::class )->getMockForAbstractClass();
+		$stub->method( 'getPaymentFee' )->willReturn( $this->getMoney( 0 ) );
+
+		/** @var CalculatesPaymentFee $stub */
+		return $stub;
+	}
+
+	/**
+	 * @throws \InvalidArgumentException
 	 * @throws \PHPUnit\Framework\ExpectationFailedException
 	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
 	 * @throws \Exception
@@ -72,7 +86,7 @@ final class TicketOrderTest extends TestCase
 		/** @var TicketOrderId $orderId */
 		$orderId     = TicketOrderId::generate();
 		$orderDate   = new TicketOrderDate( '2018-01-06 17:48:17' );
-		$ticketOrder = new TicketOrder( $orderId, $orderDate );
+		$ticketOrder = new TicketOrder( $orderId, $orderDate, $this->getPaymentFeeCalculatorStub() );
 
 		$email = new TicketOrderEmailAddress( 'test@example.com' );
 
@@ -118,7 +132,7 @@ final class TicketOrderTest extends TestCase
 	{
 		/** @var TicketOrderId $orderId */
 		$orderId     = TicketOrderId::generate();
-		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate() );
+		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate(), $this->getPaymentFeeCalculatorStub() );
 		$ticketItems = [];
 
 		for ( $i = 0; $i < 11; $i++ )
@@ -144,7 +158,7 @@ final class TicketOrderTest extends TestCase
 	{
 		/** @var TicketOrderId $orderId */
 		$orderId     = TicketOrderId::generate();
-		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate() );
+		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate(), $this->getPaymentFeeCalculatorStub() );
 		$ticketItems = [];
 
 		for ( $i = 0; $i < 11; $i++ )
@@ -175,7 +189,7 @@ final class TicketOrderTest extends TestCase
 	{
 		/** @var TicketOrderId $orderId */
 		$orderId      = TicketOrderId::generate();
-		$ticketOrder  = new TicketOrder( $orderId, new TicketOrderDate() );
+		$ticketOrder  = new TicketOrder( $orderId, new TicketOrderDate(), $this->getPaymentFeeCalculatorStub() );
 		$ticketItems  = [];
 		$attendeeName = new AttendeeName( 'John Doe' );
 
@@ -207,7 +221,7 @@ final class TicketOrderTest extends TestCase
 	{
 		/** @var TicketOrderId $orderId */
 		$orderId      = TicketOrderId::generate();
-		$ticketOrder  = new TicketOrder( $orderId, new TicketOrderDate() );
+		$ticketOrder  = new TicketOrder( $orderId, new TicketOrderDate(), $this->getPaymentFeeCalculatorStub() );
 		$ticketItems  = [];
 		$attendeeName = new AttendeeName( 'John Doe' );
 
@@ -234,7 +248,7 @@ final class TicketOrderTest extends TestCase
 	{
 		/** @var TicketOrderId $orderId */
 		$orderId     = TicketOrderId::generate();
-		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate() );
+		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate(), $this->getPaymentFeeCalculatorStub() );
 		$johnDoe     = new AttendeeName( 'John Doe' );
 		$janeDoe     = new AttendeeName( 'Jane Doe' );
 
@@ -307,7 +321,7 @@ final class TicketOrderTest extends TestCase
 	{
 		/** @var TicketOrderId $orderId */
 		$orderId     = TicketOrderId::generate();
-		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate() );
+		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate(), $this->getPaymentFeeCalculatorStub() );
 		$johnDoe     = new AttendeeName( 'John Doe' );
 
 		$ticketSlotA = $this->getWorkshopTicket(
@@ -368,7 +382,7 @@ final class TicketOrderTest extends TestCase
 	{
 		/** @var TicketOrderId $orderId */
 		$orderId     = TicketOrderId::generate();
-		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate() );
+		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate(), $this->getPaymentFeeCalculatorStub() );
 		$johnDoe     = new AttendeeName( 'John Doe' );
 
 		$ticket = $this->getWorkshopTicket(

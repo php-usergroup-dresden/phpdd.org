@@ -4,6 +4,7 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\DiscountsConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\PaymentFeeCalculatorFactory;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AddressAddon;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\City;
@@ -13,6 +14,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiversityDonation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\Firstname;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\Lastname;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentProvider;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\StreetWithNumber;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDate;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderEmailAddress;
@@ -60,9 +62,12 @@ final class TicketOrderBuilder
 			$ticketDetails['vatNumber'] ? new VatNumber( (string)$ticketDetails['vatNumber'] ) : null
 		);
 
+		$paymentProvider      = new PaymentProvider( (string)$ticketDetails['paymentProvider'] );
+		$paymentFeeCalculator = (new PaymentFeeCalculatorFactory())->getCalculator( $paymentProvider );
+
 		/** @var TicketOrderId $ticketOrderId */
 		$ticketOrderId = TicketOrderId::generate();
-		$ticketOrder   = new TicketOrder( $ticketOrderId, new TicketOrderDate() );
+		$ticketOrder   = new TicketOrder( $ticketOrderId, new TicketOrderDate(), $paymentFeeCalculator );
 		$ticketOrder->billTo( $billingAddress );
 
 		$emailAddress = new TicketOrderEmailAddress( (string)$ticketDetails['email'] );
