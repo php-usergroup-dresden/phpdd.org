@@ -232,7 +232,8 @@
                         <span class="input-group-addon">
                             &euro;
                         </span>
-                        <input type="number" value="0" step="1" min="0" max="800" list="defaultDonations"
+                        <input type="number" value="{{ ticketDetailsForm.get('diversityDonation')|default('0') }}"
+                               step="1" min="0" max="800" list="defaultDonations"
                                name="diversityDonation"
                                id="diversityDonation" class="form-control" style="max-width: 150px">
                     </div>
@@ -250,6 +251,35 @@
                 <img src="{{ project.getBaseUrl }}/assets/images/rainbowlephpant.png" alt="RainbowLePHPant">
             </div>
         </div>
+
+        <hr>
+
+        <h2>Payment method</h2>
+
+        <div class="row payment-methods">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                <div class="radio{% if ticketDetailsForm.get('paymentProvider') in ['paypal', ''] %} active{% endif %}">
+                    <label>
+                        <input type="radio" name="paymentProvider" value="paypal"{% if ticketDetailsForm.get('paymentProvider') in ['paypal', ''] %} checked{% endif %}>
+                        <img src="{{ project.getBaseUrl }}/assets/images/payments/paypal.png" class="img-responsive">
+                    </label>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-center">
+                <div class="radio{% if ticketDetailsForm.get('paymentProvider') == 'stripe' %} active{% endif %}">
+                    <label>
+                        <input type="radio" name="paymentProvider" value="stripe"{% if ticketDetailsForm.get('paymentProvider') == 'stripe' %} checked{% endif %}>
+                        <img src="{{ project.getBaseUrl }}/assets/images/payments/stripe.png" class="img-responsive">
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        {% if ticketDetailsForm.hasFeedback('paymentProvider') %}
+            <div class="blockspace alert alert-danger">
+                {{ ticketDetailsForm.getFeedback('paymentProvider').getMessage() }}
+            </div>
+        {% endif %}
 
         <hr>
 
