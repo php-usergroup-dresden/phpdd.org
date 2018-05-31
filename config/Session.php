@@ -4,7 +4,7 @@ return [
 	'sessionHandler' => [
 		'name'        => 'PHPDD18SID',
 		'handler'     => 'redis',
-		'savePath'    => 'tcp://127.0.0.1:6379?database=0&weight=1',
+		'savePath'    => 'tcp://phpdd18-redis:6379?database=0&weight=1',
 		'maxLifetime' => 86400,
 	],
 	'cookieSettings' => [
