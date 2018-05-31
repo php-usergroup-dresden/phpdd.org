@@ -4,9 +4,9 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Constants;
 
 abstract class PaymentProviders
 {
-	public const PAYPAL = 'paypal';
+	public const PAYPAL = 'PayPal';
 
-	public const STRIPE = 'stripe';
+	public const STRIPE = 'Stripe';
 
 	public const ALL    = [
 		self::PAYPAL,
