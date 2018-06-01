@@ -14,6 +14,10 @@ final class PurchaseOptInsValidator extends AbstractUserInputValidator implement
 			'cocOptIn',
 			'1',
 			['general' => 'Please confirm that you read our Code of Conduct and agree to its enforcement.']
+		)->isEqual(
+			'termsOptIn',
+			'1',
+			['general' => 'Please confirm that you read and accepted the Terms & Conditions of this event.']
 		);
 	}
 }
