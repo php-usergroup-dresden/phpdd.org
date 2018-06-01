@@ -10,6 +10,8 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrderBuilder;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\AbstractRequestHandler;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses\HtmlPage;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses\Redirect;
+use function count;
 
 final class TicketPaymentRequestHandler extends AbstractRequestHandler implements HandlesGetRequest
 {
@@ -25,13 +27,21 @@ final class TicketPaymentRequestHandler extends AbstractRequestHandler implement
 		$ticketSelectionForm = $session->getTicketSelectionForm();
 		$ticketDetailsForm   = $session->getTicketDetailsForm();
 		$ticketPaymentForm   = $session->getTicketPaymentForm();
-		$selectedTickets     = $ticketSelectionForm->get( 'selectedTickets' );
+		$selectedTickets     = (array)$ticketSelectionForm->get( 'selectedTickets' );
 		$ticketOrderId       = (string)$ticketSelectionForm->get( 'ticketOrderId' );
 		$ticketDetails       = $ticketDetailsForm->getData();
 		$ticketsConfig       = TicketsConfig::fromConfigFile();
 		$discountsConfig     = DiscountsConfig::fromConfigFile();
-		$ticketOrderBuilder  = new TicketOrderBuilder( $ticketsConfig, $discountsConfig );
-		$ticketOrder         = $ticketOrderBuilder->buildFromInputData(
+
+		if ( 0 === count( $selectedTickets ) )
+		{
+			(new Redirect())->respond( '/tickets/' );
+
+			return;
+		}
+
+		$ticketOrderBuilder = new TicketOrderBuilder( $ticketsConfig, $discountsConfig );
+		$ticketOrder        = $ticketOrderBuilder->buildFromInputData(
 			$ticketOrderId,
 			$selectedTickets,
 			$ticketDetails
