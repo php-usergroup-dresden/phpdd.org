@@ -6,16 +6,18 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Interfaces\PaysTicketOrde
 use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Interfaces\ProvidesPaymentAuthorizationResult;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Interfaces\ProvidesPaymentExecutionResult;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrder;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PayerId;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentId;
 
 final class StripeService implements PaysTicketOrders
 {
 	public function authorize( TicketOrder $ticketOrder ) : ProvidesPaymentAuthorizationResult
 	{
-		// TODO: Implement authorize() method.
+		return new PaymentAuthorizationResult( ResultType::FAILED, 'Not implemented, yet.' );
 	}
 
-	public function execute() : ProvidesPaymentExecutionResult
+	public function execute( PaymentId $paymentId, PayerId $payerId ) : ProvidesPaymentExecutionResult
 	{
-		// TODO: Implement execute() method.
+		return new PaymentExecutionResult( ResultType::FAILED, 'Not implemented, yet.' );
 	}
 }
