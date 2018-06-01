@@ -132,6 +132,14 @@
                             for this event and agree to its enforcement.
                         </label>
                     </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="termsOptIn" id="termsOptIn" value="1">
+                            By purchasing tickets I confirm that I have read and agreed to the
+                            <a data-toggle="modal" data-target="#terms-and-conditions">Terms & Conditions</a>
+                            of this event.
+                        </label>
+                    </div>
                 </div>
             </div>
 
@@ -170,6 +178,14 @@
                             By purchasing tickets I confirm that I have read the
                             <a href="https://dresden-code-of-conduct.org/en/" target="_blank">Code of Conduct (CoC)</a>
                             for this event and agree to its enforcement.
+                        </label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="termsOptIn" id="termsOptIn" value="1">
+                            By purchasing tickets I confirm that I have read and agreed to the
+                            <a data-toggle="modal" data-target="#terms-and-conditions">Terms & Conditions</a>
+                            of this event.
                         </label>
                     </div>
                 </div>
@@ -220,5 +236,7 @@
             </form>
         </div>
     </div>
+
+    {% include 'Tickets/Read/Pages/Includes/TermsAndConditionsModal.twig' %}
 
 {% endblock %}

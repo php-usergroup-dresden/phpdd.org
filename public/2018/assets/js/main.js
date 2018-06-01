@@ -9,12 +9,26 @@ $(document).ready(function () {
         radio.parents('div.radio').addClass('active');
     });
     const cocOptIn = $('#cocOptIn');
+    const termsOptIn = $('#termsOptIn');
     const buttonPurchase = $('#buttonPurchase');
     const stripeButton = $('button.stripe-button-el');
+
+    function checkOptIns() {
+        console.log('checking');
+        let cocChecked = cocOptIn.prop('checked');
+        let termsChecked = termsOptIn.prop('checked');
+
+        console.log(cocChecked);
+        console.log(termsChecked);
+
+        buttonPurchase.prop('disabled', !(cocChecked && termsChecked));
+        stripeButton.prop('disabled', !(cocChecked && termsChecked));
+    }
     cocOptIn.change(function () {
-        const checked = $(this).prop('checked');
-        buttonPurchase.prop('disabled', !checked);
-        stripeButton.prop('disabled', !checked);
+        checkOptIns();
     });
-    stripeButton.prop('disabled', true);
+    termsOptIn.change(function () {
+        checkOptIns();
+    });
+    checkOptIns();
 });
