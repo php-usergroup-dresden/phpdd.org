@@ -2,7 +2,10 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Interfaces;
 
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PayerId;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentId;
+
 interface ExecutesPayment
 {
-	public function execute( string $paymentId, string $payerId ) : ProvidesPaymentExecutionResult;
+	public function execute( PaymentId $paymentId, PayerId $payerId ) : ProvidesPaymentExecutionResult;
 }
