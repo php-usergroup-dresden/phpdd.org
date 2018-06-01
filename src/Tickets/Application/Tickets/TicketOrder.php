@@ -10,6 +10,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCo
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\CollectsTicketItems;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketOrderInformation;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CountryCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiversityDonation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentFee;
@@ -22,6 +23,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderPaymentTotal;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderTotal;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketType;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
+use function in_array;
 
 final class TicketOrder implements ProvidesTicketOrderInformation
 {
@@ -145,16 +147,23 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 			);
 		}
 
-		$attendeeName               = $ticketItem->getAttendeeName();
-		$ticketCountTypeForAttendee = $this->ticketItems->getCountForTypeAndAttendeeName( $ticketType, $attendeeName );
-		$maxCountTypeForAttendee    = $this->getMaxCountForTicketTypePerAttendee( $ticketType );
+		$attendeeName = $ticketItem->getAttendeeName();
 
-		if ( $ticketCountTypeForAttendee >= $maxCountTypeForAttendee )
+		if ( $this->attendeeHasConflictingWorkshops( $attendeeName, $ticketType ) )
 		{
 			throw new AllowedTicketCountPerAttendeeExceededException(
 				sprintf(
-					'Allowed ticket count of %d for attendee %s exceeded.',
-					$maxCountTypeForAttendee,
+					'%s cannot attend conflicting workshops.',
+					$attendeeName->toString()
+				)
+			);
+		}
+
+		if ( $this->attendeeHasConferenceTicket( $attendeeName, $ticketType ) )
+		{
+			throw new AllowedTicketCountPerAttendeeExceededException(
+				sprintf(
+					'%s cannot attend the conference twice at the same time.',
 					$attendeeName->toString()
 				)
 			);
@@ -167,7 +176,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	{
 		$maxCount = self::CONFERENCE_TICKETS_MAX;
 
-		if ( \in_array( $ticketType->toString(), TicketTypes::WORKSHOPS, true ) )
+		if ( in_array( $ticketType->toString(), TicketTypes::HALFDAY_WORKSHOPS, true ) )
 		{
 			$maxCount = self::WORKSHOP_TICKETS_MAX;
 		}
@@ -175,16 +184,53 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		return $maxCount;
 	}
 
-	private function getMaxCountForTicketTypePerAttendee( TicketType $ticketType ) : int
+	private function attendeeHasConflictingWorkshops( AttendeeName $attendeeName, TicketType $ticketType ) : bool
 	{
-		$maxCount = self::CONFERENCE_TICKETS_PER_ATTENDEE;
-
-		if ( \in_array( $ticketType->toString(), TicketTypes::WORKSHOPS, true ) )
+		if ( $this->attendeeHasWorkshopTicketOfSameType( $attendeeName, $ticketType ) )
 		{
-			$maxCount = self::WORKSHOP_SLOT_TICKETS_PER_ATTENDEE;
+			return true;
 		}
 
-		return $maxCount;
+		$fulldayWorkshop       = new TicketType( TicketTypes::FULLDAY_WORKSHOP );
+		$countFulldayWorkshops = $this->ticketItems->getCountForTypeAndAttendeeName( $fulldayWorkshop, $attendeeName );
+		$hasFulldayWorkshop    = ($countFulldayWorkshops > 0);
+
+		if ( $hasFulldayWorkshop && in_array( $ticketType->toString(), TicketTypes::HALFDAY_WORKSHOPS, true ) )
+		{
+			return true;
+		}
+
+		$countHalfDayWorkshops = 0;
+		foreach ( TicketTypes::HALFDAY_WORKSHOPS as $halfdayWorkshopType )
+		{
+			$halfdayWorkshop       = new TicketType( $halfdayWorkshopType );
+			$countFulldayWorkshops += $this->ticketItems->getCountForTypeAndAttendeeName(
+				$halfdayWorkshop,
+				$attendeeName
+			);
+		}
+
+		return $countFulldayWorkshops > 0 && $ticketType->equals( $fulldayWorkshop );
+	}
+
+	private function attendeeHasWorkshopTicketOfSameType( AttendeeName $attendeeName, TicketType $ticketType ) : bool
+	{
+		if ( !in_array( $ticketType->toString(), TicketTypes::ALL_WORKSHOPS, true ) )
+		{
+			return false;
+		}
+
+		return $this->ticketItems->getCountForTypeAndAttendeeName( $ticketType, $attendeeName ) > 0;
+	}
+
+	private function attendeeHasConferenceTicket( AttendeeName $attendeeName, TicketType $ticketType ) : bool
+	{
+		if ( TicketTypes::CONFERENCE !== $ticketType->toString() )
+		{
+			return false;
+		}
+
+		return $this->ticketItems->getCountForTypeAndAttendeeName( $ticketType, $attendeeName ) > 0;
 	}
 
 	public function getOrderId() : TicketOrderId

@@ -10,7 +10,10 @@ use IceHawk\IceHawk\Interfaces\ProvidesWriteRequestInputData;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Bridges\UserInput;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\DiscountsConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Repositories\TicketOrderRepository;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\SelectedTicketInfos;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrderBuilder;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\AbstractRequestHandler;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses\Redirect;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Interfaces\ValidatesUserInput;
@@ -21,6 +24,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\Disco
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\DiversityDonationValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\Validators\PaymentProviderValidator;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Traits\CsrfTokenChecking;
+use Throwable;
 use function implode;
 
 final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler implements HandlesPostRequest
@@ -33,6 +37,11 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 
 	private const GENERAL_ERROR_MESSAGE = 'Your data is not valid yet. Please check the red error messages.';
 
+	/**
+	 * @param ProvidesWriteRequestData $request
+	 *
+	 * @throws RuntimeException
+	 */
 	public function handle( ProvidesWriteRequestData $request )
 	{
 		$input               = $request->getInput();
@@ -40,6 +49,7 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 		$ticketSelectionForm = $session->getTicketSelectionForm();
 		$ticketDetailsForm   = $session->getTicketDetailsForm();
 		$errorHandler        = $this->getEnv()->getErrorHandler();
+		$ticketOrderId       = (string)$ticketSelectionForm->get( 'ticketOrderId' );
 
 		$ticketDetailsForm->resetFeedbacks();
 		$ticketDetailsForm->setData( $input->getData() );
@@ -70,9 +80,38 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 			return;
 		}
 
+		$ticketsConfig      = TicketsConfig::fromConfigFile();
+		$discountsConfig    = DiscountsConfig::fromConfigFile();
+		$ticketOrderBuilder = new TicketOrderBuilder( $ticketsConfig, $discountsConfig );
+
+		try
+		{
+			$ticketOrderBuilder->buildFromInputData(
+				$ticketOrderId,
+				$selectedTickets,
+				$input->getData()
+			);
+		}
+		catch ( Throwable $e )
+		{
+			$ticketDetailsForm->addFeedback( 'general', new Feedback( $e->getMessage() ) );
+
+			(new Redirect())->respond( self::FAIL_URL );
+
+			return;
+		}
+
 		(new Redirect())->respond( self::SUCESS_URL );
 	}
 
+	/**
+	 * @param SelectedTicketInfos           $selectedTicketInfos
+	 * @param DiscountsConfig               $discountsConfig
+	 * @param ProvidesWriteRequestInputData $input
+	 *
+	 * @throws RuntimeException
+	 * @return ValidatesUserInput
+	 */
 	private function getUserInputValidator(
 		SelectedTicketInfos $selectedTicketInfos,
 		DiscountsConfig $discountsConfig,
@@ -84,6 +123,9 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 
 		$attendees = (array)$input->get( 'attendees', [] );
 		$discounts = (array)$input->get( 'discounts', [] );
+
+		$ticketOrderRepository = new TicketOrderRepository( $this->getEnv()->getDatabase() );
+		$redeemedDiscountCodes = $ticketOrderRepository->getRedeemedDiscountCodes();
 
 		foreach ( $selectedTicketInfos->getTickets() as $selectedTicketInfo )
 		{
@@ -100,7 +142,13 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 				$discountUserInput = new UserInput( ['discountCode' => $discountCode] );
 
 				$userInputValidator->add(
-					new DiscountCodeValidator( $discountUserInput, $discountsConfig, $ticketId, $i )
+					new DiscountCodeValidator(
+						$discountUserInput,
+						$discountsConfig,
+						$redeemedDiscountCodes,
+						$ticketId,
+						$i
+					)
 				);
 			}
 		}

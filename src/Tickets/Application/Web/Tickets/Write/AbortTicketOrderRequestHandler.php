@@ -14,7 +14,7 @@ final class AbortTicketOrderRequestHandler extends AbstractRequestHandler implem
 	public function handle( ProvidesWriteRequestData $request )
 	{
 		$session = $this->getEnv()->getSession();
-		$session->abortTicketOrder();
+		$session->resetTicketOrder();
 
 		(new Redirect())->respond( self::SUCESS_URL );
 	}

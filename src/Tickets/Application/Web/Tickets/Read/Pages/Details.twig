@@ -157,13 +157,13 @@
 
         {% for ticket in selectedTickets.getTickets %}
             <div class="row">
-                <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9">
+                <div class="col-xs-7 col-sm-7 col-md-8 col-lg-8">
                     <h4><span class="text-muted">{{ ticket.getQuantity }}x</span> {{ ticket.getName }}</h4>
                     <p class="small">
                         {{ ticket.getDescription|raw }}
                     </p>
                 </div>
-                <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 text-right">
+                <div class="col-xs-5 col-sm-5 col-md-4 col-lg-4 text-right">
                     <h3>
                         {{ ticket.getPrice.getMoney.multiply(ticket.getQuantity)|formatMoney }}
                     </h3>
@@ -176,7 +176,7 @@
                 {% set attendeeKey = 'attendees[' ~ ticket.getId ~ '][' ~ i ~ ']' %}
                 {% set discountKey = 'discounts[' ~ ticket.getId ~ '][' ~ i ~ ']' %}
                 <div class="row">
-                    <div class="col-xs-8 col-sm-8 col-md-9 col-lg-9">
+                    <div class="col-xs-7 col-sm-7 col-md-8 col-lg-8">
                         <div class="form-group{% if ticketDetailsForm.hasFeedback(attendeeKey) %} has-error{% endif %}">
                             <label class="control-label" for="{{ attendeeKey }}">
                                 Fullname of {{ i+1 }}. attendee <span class="text-danger">*</span>
@@ -186,7 +186,7 @@
                             <span class="text-danger">{{ ticketDetailsForm.getFeedback(attendeeKey).getMessage }}</span>
                         </div>
                     </div>
-                    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                    <div class="col-xs-5 col-sm-5 col-md-4 col-lg-4">
                         <div class="form-group{% if ticketDetailsForm.hasFeedback(discountKey) %} has-error{% endif %}">
                             <label class="control-label" for="{{ discountKey }}">
                                 Discount code <span class="text-muted">(optional)</span>

@@ -137,6 +137,8 @@ final class PaypalSuccessRequestHandler extends AbstractRequestHandler implement
 
 		$redirectUrl = sprintf( '/tickets/done/%s', $ticketOrder->getOrderId()->toString() );
 
+		$session->resetTicketOrder();
+
 		(new Redirect())->respond( $redirectUrl );
 	}
 

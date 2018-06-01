@@ -39,7 +39,7 @@ final class TicketItemCollectionTest extends TestCase
 		$this->collection       = new TicketItemCollection();
 		$this->conferenceTicket = $this->getConferenceTicket( $this->getMoney( 11900 ) );
 		$this->workshopTicket   = $this->getWorkshopTicket(
-			TicketTypes::WORKSHOP_SLOT_A,
+			TicketTypes::FULLDAY_WORKSHOP,
 			'Workshop Ticket Slot A',
 			'Workshop description slot A',
 			$this->getMoney( 25000 )
@@ -82,7 +82,7 @@ final class TicketItemCollectionTest extends TestCase
 	{
 		$otherWorkshopTicketA = new Ticket(
 			new TicketId( 'PHPDD18-WS-07' ),
-			new TicketType( TicketTypes::WORKSHOP_SLOT_A ),
+			new TicketType( TicketTypes::FULLDAY_WORKSHOP ),
 			new TicketName( 'Other Workshop Ticket Slot A' ),
 			new TicketDescription( 'Other Workshop description Slot A' ),
 			new TicketPrice( $this->getMoney( 25000 ) )
@@ -90,9 +90,9 @@ final class TicketItemCollectionTest extends TestCase
 
 		$workshopTicketB = new Ticket(
 			new TicketId( 'PHPDD18-WS-08' ),
-			new TicketType( TicketTypes::WORKSHOP_SLOT_B ),
-			new TicketName( 'Other Workshop Ticket Slot A' ),
-			new TicketDescription( 'Other Workshop description Slot A' ),
+			new TicketType( TicketTypes::FULLDAY_WORKSHOP ),
+			new TicketName( 'Other Workshop Ticket Slot B' ),
+			new TicketDescription( 'Other Workshop description Slot B' ),
 			new TicketPrice( $this->getMoney( 25000 ) )
 		);
 
@@ -110,8 +110,8 @@ final class TicketItemCollectionTest extends TestCase
 	{
 		$attendeeName = new AttendeeName( 'John Doe' );
 		$conference   = new TicketType( TicketTypes::CONFERENCE );
-		$workshopA    = new TicketType( TicketTypes::WORKSHOP_SLOT_A );
-		$workshopB    = new TicketType( TicketTypes::WORKSHOP_SLOT_B );
+		$workshopA    = new TicketType( TicketTypes::FULLDAY_WORKSHOP );
+		$workshopB    = new TicketType( TicketTypes::HALFDAY_WORKSHOP_B );
 
 		$this->assertSame(
 			2,
@@ -145,8 +145,8 @@ final class TicketItemCollectionTest extends TestCase
 	public function testCanGetCountForType() : void
 	{
 		$conference = new TicketType( TicketTypes::CONFERENCE );
-		$workshopA  = new TicketType( TicketTypes::WORKSHOP_SLOT_A );
-		$workshopB  = new TicketType( TicketTypes::WORKSHOP_SLOT_B );
+		$workshopA  = new TicketType( TicketTypes::FULLDAY_WORKSHOP );
+		$workshopB  = new TicketType( TicketTypes::HALFDAY_WORKSHOP_B );
 
 		$this->assertSame( 3, $this->collection->getCountForType( $conference ) );
 		$this->assertSame( 5, $this->collection->getCountForType( $workshopA ) );

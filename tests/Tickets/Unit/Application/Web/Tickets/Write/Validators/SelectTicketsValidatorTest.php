@@ -46,7 +46,7 @@ final class SelectTicketsValidatorTest extends TestCase
 			# Not available but selected ticket
 			'PHPDD18-WS-01' => [
 				'name'             => 'TicketNameC',
-				'type'             => TicketTypes::WORKSHOP_SLOT_A,
+				'type'             => TicketTypes::FULLDAY_WORKSHOP,
 				'description'      => 'Ticket Description C',
 				'image'            => '',
 				'price'            => 24900,
@@ -57,7 +57,7 @@ final class SelectTicketsValidatorTest extends TestCase
 			],
 			'PHPDD18-WS-02' => [
 				'name'             => 'TicketNameD',
-				'type'             => TicketTypes::WORKSHOP_SLOT_A,
+				'type'             => TicketTypes::FULLDAY_WORKSHOP,
 				'description'      => 'Ticket Description D',
 				'image'            => '',
 				'price'            => 24900,

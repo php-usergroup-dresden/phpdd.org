@@ -11,28 +11,29 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Constants;
  */
 abstract class TicketTypes
 {
-	public const WORKSHOP_SLOT_A = 'workshop-slot-a';
+	public const FULLDAY_WORKSHOP   = 'fullday-workshop';
 
-	public const WORKSHOP_SLOT_B = 'workshop-slot-b';
+	public const HALFDAY_WORKSHOP_A = 'halfday-workshop-a';
 
-	public const WORKSHOP_SLOT_C = 'workshop-slot-c';
+	public const HALFDAY_WORKSHOP_B = 'halfday-workshop-b';
 
-	public const WORKSHOP_SLOT_D = 'workshop-slot-d';
+	public const CONFERENCE         = 'conference';
 
-	public const CONFERENCE      = 'conference';
-
-	public const ALL             = [
-		self::WORKSHOP_SLOT_A,
-		self::WORKSHOP_SLOT_B,
-		self::WORKSHOP_SLOT_C,
-		self::WORKSHOP_SLOT_D,
+	public const ALL                = [
+		self::FULLDAY_WORKSHOP,
+		self::HALFDAY_WORKSHOP_A,
+		self::HALFDAY_WORKSHOP_B,
 		self::CONFERENCE,
 	];
 
-	public const WORKSHOPS       = [
-		self::WORKSHOP_SLOT_A,
-		self::WORKSHOP_SLOT_B,
-		self::WORKSHOP_SLOT_C,
-		self::WORKSHOP_SLOT_D,
+	public const ALL_WORKSHOPS      = [
+		self::FULLDAY_WORKSHOP,
+		self::HALFDAY_WORKSHOP_A,
+		self::HALFDAY_WORKSHOP_B,
+	];
+
+	public const HALFDAY_WORKSHOPS  = [
+		self::HALFDAY_WORKSHOP_A,
+		self::HALFDAY_WORKSHOP_B,
 	];
 }

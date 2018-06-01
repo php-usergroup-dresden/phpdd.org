@@ -24,7 +24,7 @@ final class DiscountCodeValidatorTest extends TestCase
 		/** @var ProvidesDiscountCodes $discountCodeProviderStub */
 
 		$userInput = new UserInput( ['discountCode' => '1234567890'] );
-		$validator = new DiscountCodeValidator( $userInput, $discountCodeProviderStub, 'PHPDD18-CT-01', 0 );
+		$validator = new DiscountCodeValidator( $userInput, $discountCodeProviderStub, [], 'PHPDD18-CT-01', 0 );
 
 		$expectedMessages = [
 			'discounts[PHPDD18-CT-01][0]' => [
@@ -52,14 +52,14 @@ final class DiscountCodeValidatorTest extends TestCase
 		/** @var ProvidesDiscountCodes $discountCodeProviderStub */
 
 		$userInput = new UserInput( ['discountCode' => 'M70918400A'] );
-		$validator = new DiscountCodeValidator( $userInput, $discountCodeProviderStub, 'PHPDD18-CT-01', 0 );
+		$validator = new DiscountCodeValidator( $userInput, $discountCodeProviderStub, [], 'PHPDD18-CT-01', 0 );
 
 		$this->assertFalse( $validator->failed() );
 		$this->assertTrue( $validator->passed() );
 		$this->assertSame( [], $validator->getMessages() );
 
 		$userInput = new UserInput( ['discountCode' => ''] );
-		$validator = new DiscountCodeValidator( $userInput, $discountCodeProviderStub, 'PHPDD18-CT-01', 0 );
+		$validator = new DiscountCodeValidator( $userInput, $discountCodeProviderStub, [], 'PHPDD18-CT-01', 0 );
 
 		$this->assertFalse( $validator->failed() );
 		$this->assertTrue( $validator->passed() );

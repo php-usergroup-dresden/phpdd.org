@@ -8,6 +8,7 @@ use PDOException;
 use PDOStatement;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\InvalidArgumentException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesRedeemedDiscountCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesReservedTicketCount;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Ticket;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItem;
@@ -18,7 +19,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
 use Throwable;
 use function json_encode;
 
-final class TicketOrderRepository implements ProvidesReservedTicketCount
+final class TicketOrderRepository implements ProvidesReservedTicketCount, ProvidesRedeemedDiscountCodes
 {
 	/** @var PDO */
 	private $database;
@@ -291,5 +292,19 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount
 
 			throw $e;
 		}
+	}
+
+	/**
+	 * @throws RuntimeException
+	 * @return array
+	 */
+	public function getRedeemedDiscountCodes() : array
+	{
+		$query     = 'SELECT DISTINCT `discountCode` FROM `ticketOrderItems` WHERE discountCode IS NOT NULL';
+		$statement = $this->database->query( $query );
+
+		$this->guardStatementSucceeded( $statement );
+
+		return (array)$statement->fetchAll( PDO::FETCH_COLUMN, 0 );
 	}
 }

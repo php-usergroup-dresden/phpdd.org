@@ -19,21 +19,31 @@ final class DiscountCodeValidator extends AbstractUserInputValidator implements 
 	/** @var ProvidesDiscountCodes */
 	private $discountCodeProvider;
 
+	/** @var array */
+	private $redeemedDiscountCodes;
+
 	public function __construct(
 		UserInput $userInput,
 		ProvidesDiscountCodes $discountCodeProvider,
+		array $redeemedDiscountCodes,
 		string $ticketId,
 		int $discountIndex
 	)
 	{
 		parent::__construct( $userInput );
-		$this->ticketId             = $ticketId;
-		$this->discountCodeProvider = $discountCodeProvider;
-		$this->discountKey          = sprintf( 'discounts[%s][%d]', $ticketId, $discountIndex );
+		$this->ticketId              = $ticketId;
+		$this->discountCodeProvider  = $discountCodeProvider;
+		$this->redeemedDiscountCodes = $redeemedDiscountCodes;
+		$this->discountKey           = sprintf( 'discounts[%s][%d]', $ticketId, $discountIndex );
 	}
 
 	protected function validate( FluidValidator $validator ) : void
 	{
+		$availableDiscountCodes = array_diff(
+			$this->discountCodeProvider->getDiscountCodesForTicketId( $this->ticketId ),
+			$this->redeemedDiscountCodes
+		);
+
 		$validator->ifIsNonEmptyString( 'discountCode', 2 )
 		          ->matchesRegex(
 			          'discountCode',
@@ -43,7 +53,7 @@ final class DiscountCodeValidator extends AbstractUserInputValidator implements 
 		          ->ifPassed( 1 )
 		          ->isOneStringOf(
 			          'discountCode',
-			          $this->discountCodeProvider->getDiscountCodesForTicketId( $this->ticketId ),
+			          $availableDiscountCodes,
 			          [$this->discountKey => 'Code is invalid for this ticket.']
 		          );
 	}

@@ -106,7 +106,8 @@
 - [x] Throws Exception For Exceeding Max Workshop Ticket Count (💚 1)
 - [x] Throws Exception For Exceeding Max Workshop Ticket Count Per Attendee (💚 1)
 - [x] Throws Exception For Exceeding Max Conference Ticket Count Per Attendee (💚 1)
-- [x] Same Attendee Can Order AWorkshop Ticket For Each Slot (💚 1)
+- [x] Same Attendee Cannot Order Conflicting Workshop Tickets (💚 7)
+- [x] Same Attendee Cannot Order Multiple Conference Tickets (💚 1)
 - [x] Can Get Totals (💚 1)
 - [x] Ticket Items Without Discount Item Do Not Add Discounts (💚 1)
 
@@ -196,10 +197,22 @@
 
 ---
 
+## Unit\Application\Types\PayerIdTest
+
+- [x] Throws Exception For Empty Values (💚 6)
+
+---
+
 ## Unit\Application\Types\PaymentFeeTest
 
 - [x] Can Get Money (💚 1)
 - [x] Throws Exception When Constructed With Negative Money (💚 1)
+
+---
+
+## Unit\Application\Types\PaymentIdTest
+
+- [x] Throws Exception For Empty Values (💚 6)
 
 ---
 
@@ -272,7 +285,7 @@
 
 ## Unit\Application\Types\TicketTypeTest
 
-- [x] Can Create Instance For Valid Ticket Types (💚 5)
+- [x] Can Create Instance For Valid Ticket Types (💚 4)
 - [x] Throws Exception For Invalid Ticket Type (💚 1)
 
 ---
@@ -332,4 +345,4 @@
 
 ---
 
-Report created at 2018-05-31 23:13:20 (UTC)
+Report created at 2018-06-01 14:27:56 (UTC)

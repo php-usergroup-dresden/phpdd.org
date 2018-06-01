@@ -2,6 +2,7 @@
 
 namespace PHPUGDD\PHPDD\Website\Tests\Tickets\Unit\Application\Tickets;
 
+use Generator;
 use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\DiscountItemProviding;
 use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\TicketProviding;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\CountryCodes;
@@ -164,7 +165,7 @@ final class TicketOrderTest extends TestCase
 		for ( $i = 0; $i < 11; $i++ )
 		{
 			$ticket = $this->getWorkshopTicket(
-				TicketTypes::WORKSHOP_SLOT_A,
+				TicketTypes::FULLDAY_WORKSHOP,
 				'Workshop Ticket',
 				'Workshop description',
 				$this->getMoney( 25000 )
@@ -196,7 +197,7 @@ final class TicketOrderTest extends TestCase
 		for ( $i = 0; $i < 2; $i++ )
 		{
 			$ticket = $this->getWorkshopTicket(
-				TicketTypes::WORKSHOP_SLOT_A,
+				TicketTypes::FULLDAY_WORKSHOP,
 				'Workshop Ticket',
 				'Workshop description',
 				$this->getMoney( 25000 )
@@ -238,73 +239,162 @@ final class TicketOrderTest extends TestCase
 	}
 
 	/**
+	 * @param array $workshopTickets
+	 *
 	 * @throws AllowedTicketCountExceededException
 	 * @throws AllowedTicketCountPerAttendeeExceededException
-	 * @throws \PHPUnit\Framework\Exception
 	 * @throws \InvalidArgumentException
 	 * @throws \Exception
+	 * @dataProvider conflictingWorkshopTicketsProvider
 	 */
-	public function testSameAttendeeCanOrderAWorkshopTicketForEachSlot() : void
+	public function testSameAttendeeCannotOrderConflictingWorkshopTickets( array $workshopTickets ) : void
 	{
 		/** @var TicketOrderId $orderId */
 		$orderId     = TicketOrderId::generate();
 		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate(), $this->getPaymentFeeCalculatorStub() );
 		$johnDoe     = new AttendeeName( 'John Doe' );
-		$janeDoe     = new AttendeeName( 'Jane Doe' );
 
-		$ticketSlotA = $this->getWorkshopTicket(
-			TicketTypes::WORKSHOP_SLOT_A,
-			'Workshop Ticket Slot A',
-			'Workshop description slot A',
-			$this->getMoney( 25000 )
+		$ticketItems = [];
+		foreach ( $workshopTickets as $workshopTicket )
+		{
+			$ticketItems[] = new TicketItem( $workshopTicket, $johnDoe );
+		}
+
+		$this->expectException( AllowedTicketCountPerAttendeeExceededException::class );
+		$this->expectExceptionMessage( 'John Doe cannot attend conflicting workshops.' );
+
+		$ticketOrder->orderTickets( ...$ticketItems );
+	}
+
+	/**
+	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
+	 * @throws \InvalidArgumentException
+	 * @return Generator
+	 */
+	public function conflictingWorkshopTicketsProvider() : Generator
+	{
+		# Two fullday workshops cannot be combined
+
+		$fulldayWorkshopA = $this->getWorkshopTicket(
+			TicketTypes::FULLDAY_WORKSHOP,
+			'Full day workshop A',
+			'Full day workshop description A',
+			$this->getMoney( 24900 )
 		);
 
-		$ticketSlotB = $this->getWorkshopTicket(
-			TicketTypes::WORKSHOP_SLOT_B,
-			'Workshop Ticket Slot B',
-			'Workshop description slot B',
-			$this->getMoney( 25000 )
+		$fulldayWorkshopB = $this->getWorkshopTicket(
+			TicketTypes::FULLDAY_WORKSHOP,
+			'Full day workshop B',
+			'Full day workshop description B',
+			$this->getMoney( 24900 )
 		);
 
-		# John Doe can order a workshop ticket for slot A
-		$ticketOrder->orderTickets( new TicketItem( $ticketSlotA, $johnDoe ) );
+		yield [
+			'workshopTickets' => [$fulldayWorkshopA, $fulldayWorkshopB],
+		];
 
-		$this->assertCount( 1, $ticketOrder->getTicketItems() );
+		# Fullday & halfday workshops cannot be combined
 
-		# John Doe can order a workshop ticket for slot B
-		$ticketOrder->orderTickets( new TicketItem( $ticketSlotB, $johnDoe ) );
+		$fulldayWorkshop = $this->getWorkshopTicket(
+			TicketTypes::FULLDAY_WORKSHOP,
+			'Full day workshop',
+			'Full day workshop description',
+			$this->getMoney( 24900 )
+		);
 
-		$this->assertCount( 2, $ticketOrder->getTicketItems() );
+		$halfdayWorkshop = $this->getWorkshopTicket(
+			TicketTypes::HALFDAY_WORKSHOP_A,
+			'Half day workshop A',
+			'Half day workshop description A',
+			$this->getMoney( 14900 )
+		);
 
-		# John Doe cannot order another workshop ticket for slot A
-		try
-		{
-			$ticketOrder->orderTickets( new TicketItem( $ticketSlotA, $johnDoe ) );
-		}
-		catch ( \Throwable $e )
-		{
-			$this->assertInstanceOf( AllowedTicketCountPerAttendeeExceededException::class, $e );
-		}
+		yield [
+			'workshopTickets' => [$fulldayWorkshop, $halfdayWorkshop],
+		];
 
-		# Jane Doe can order a workshop ticket for slot A
-		$ticketOrder->orderTickets( new TicketItem( $ticketSlotA, $janeDoe ) );
+		# And vice versa
 
-		$this->assertCount( 3, $ticketOrder->getTicketItems() );
+		yield [
+			'workshopTickets' => [clone $halfdayWorkshop, clone $fulldayWorkshop],
+		];
 
-		# Jane Doe can order a workshop ticket for slot B
-		$ticketOrder->orderTickets( new TicketItem( $ticketSlotB, $janeDoe ) );
+		# To halfday workshops in the same time slot cannot be combined
 
-		$this->assertCount( 4, $ticketOrder->getTicketItems() );
+		$halfdayWorkshopA1 = $this->getWorkshopTicket(
+			TicketTypes::HALFDAY_WORKSHOP_A,
+			'Half day workshop A1',
+			'Half day workshop description A1',
+			$this->getMoney( 14900 )
+		);
 
-		# Jane Doe cannot order another workshop ticket for slot A
-		try
-		{
-			$ticketOrder->orderTickets( new TicketItem( $ticketSlotB, $janeDoe ) );
-		}
-		catch ( \Throwable $e )
-		{
-			$this->assertInstanceOf( AllowedTicketCountPerAttendeeExceededException::class, $e );
-		}
+		$halfdayWorkshopA2 = $this->getWorkshopTicket(
+			TicketTypes::HALFDAY_WORKSHOP_A,
+			'Half day workshop A2',
+			'Half day workshop description A2',
+			$this->getMoney( 14900 )
+		);
+
+		yield [
+			'workshopTickets' => [$halfdayWorkshopA1, $halfdayWorkshopA2],
+		];
+
+		# And vice versa
+
+		yield [
+			'workshopTickets' => [$halfdayWorkshopA2, $halfdayWorkshopA1],
+		];
+
+		# To halfday workshops in the same time slot cannot be combined
+
+		$halfdayWorkshopB1 = $this->getWorkshopTicket(
+			TicketTypes::HALFDAY_WORKSHOP_B,
+			'Half day workshop B1',
+			'Half day workshop description B1',
+			$this->getMoney( 14900 )
+		);
+
+		$halfdayWorkshopB2 = $this->getWorkshopTicket(
+			TicketTypes::HALFDAY_WORKSHOP_B,
+			'Half day workshop B2',
+			'Half day workshop description B2',
+			$this->getMoney( 14900 )
+		);
+
+		yield [
+			'workshopTickets' => [$halfdayWorkshopB1, $halfdayWorkshopB2],
+		];
+
+		# And vice versa
+
+		yield [
+			'workshopTickets' => [$halfdayWorkshopB2, $halfdayWorkshopB1],
+		];
+	}
+
+	/**
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
+	 * @throws \InvalidArgumentException
+	 * @throws \Exception
+	 */
+	public function testSameAttendeeCannotOrderMultipleConferenceTickets() : void
+	{
+		/** @var TicketOrderId $orderId */
+		$orderId     = TicketOrderId::generate();
+		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate(), $this->getPaymentFeeCalculatorStub() );
+		$johnDoe     = new AttendeeName( 'John Doe' );
+
+		$ticketItems = [
+			new TicketItem( $this->getConferenceTicket( $this->getMoney( 119 ) ), $johnDoe ),
+			new TicketItem( $this->getConferenceTicket( $this->getMoney( 119 ) ), $johnDoe ),
+		];
+
+		$this->expectException( AllowedTicketCountPerAttendeeExceededException::class );
+		$this->expectExceptionMessage( 'John Doe cannot attend the conference twice at the same time.' );
+
+		$ticketOrder->orderTickets( ...$ticketItems );
 	}
 
 	/**
@@ -325,14 +415,14 @@ final class TicketOrderTest extends TestCase
 		$johnDoe     = new AttendeeName( 'John Doe' );
 
 		$ticketSlotA = $this->getWorkshopTicket(
-			TicketTypes::WORKSHOP_SLOT_A,
+			TicketTypes::HALFDAY_WORKSHOP_A,
 			'Workshop Ticket Slot A',
 			'Workshop description slot A',
 			$this->getMoney( 25000 )
 		);
 
 		$ticketSlotB = $this->getWorkshopTicket(
-			TicketTypes::WORKSHOP_SLOT_B,
+			TicketTypes::HALFDAY_WORKSHOP_B,
 			'Workshop Ticket Slot B',
 			'Workshop description slot B',
 			$this->getMoney( 25000 )
@@ -386,7 +476,7 @@ final class TicketOrderTest extends TestCase
 		$johnDoe     = new AttendeeName( 'John Doe' );
 
 		$ticket = $this->getWorkshopTicket(
-			TicketTypes::WORKSHOP_SLOT_A,
+			TicketTypes::FULLDAY_WORKSHOP,
 			'Workshop Ticket Slot A',
 			'Workshop description slot A',
 			$this->getMoney( 25000 )

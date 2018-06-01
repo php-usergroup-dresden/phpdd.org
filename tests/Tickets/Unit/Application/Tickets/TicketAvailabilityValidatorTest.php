@@ -59,7 +59,7 @@ final class TicketAvailabilityValidatorTest extends TestCase
 		$ticketItemCollection->add(
 			new TicketItem(
 				$this->getWorkshopTicket(
-					TicketTypes::WORKSHOP_SLOT_B,
+					TicketTypes::HALFDAY_WORKSHOP_B,
 					'Workshop Ticket Slot B2',
 					'Half-day workshop from 02:30pm to 07:00pm on September 21st 2018',
 					$this->getMoney( 14900 )
@@ -92,7 +92,7 @@ final class TicketAvailabilityValidatorTest extends TestCase
 	{
 		$ticket = new Ticket(
 			new TicketId( 'PHPDD18-WS-07' ),
-			new TicketType( TicketTypes::WORKSHOP_SLOT_A ),
+			new TicketType( TicketTypes::FULLDAY_WORKSHOP ),
 			new TicketName( 'Ticket name' ),
 			new TicketDescription( 'Ticket description' ),
 			new TicketPrice( $this->getMoney( 12300 ) )
@@ -119,7 +119,7 @@ final class TicketAvailabilityValidatorTest extends TestCase
 		$this->assertTrue( $this->validator->isAvailable( $conferenceTicketItem ) );
 
 		$workshopCTicket     = $this->getWorkshopTicket(
-			TicketTypes::WORKSHOP_SLOT_C,
+			TicketTypes::HALFDAY_WORKSHOP_A,
 			'Workshop Ticket Slot C1',
 			'Full-day workshop from 09:00am to 07:00pm on September 21st 2018',
 			$this->getMoney( 24900 )
@@ -130,7 +130,7 @@ final class TicketAvailabilityValidatorTest extends TestCase
 		$this->assertTrue( $this->validator->isAvailable( $workshopCTicketItem ) );
 
 		$workshopBTicket     = $this->getWorkshopTicket(
-			TicketTypes::WORKSHOP_SLOT_B,
+			TicketTypes::HALFDAY_WORKSHOP_B,
 			'Workshop Ticket Slot B2',
 			'Half-day workshop from 02:30pm to 07:00pm on September 21st 2018',
 			$this->getMoney( 14900 )
