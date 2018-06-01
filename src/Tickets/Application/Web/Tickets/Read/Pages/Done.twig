@@ -1,0 +1,41 @@
+{% extends "Theme.twig" %}
+
+{% block content %}
+
+    <h1>THANK YOU!</h1>
+
+    <hr class="blockspace">
+
+    <h2>Your purchase is complete!</h2>
+
+    <p class="blockspace">
+        Your ticket order ID is: {{ ticketOrderId }}.<br>
+        Order date: {{ orderDate }}
+    </p>
+    <p>
+        You'll receive a confirmation email containing your tickets and invoice in PDF format in the next minutes.
+    </p>
+    <p>
+        We're looking forward to see you in Dresden in September!
+    </p>
+    <p class="blockspace">
+        <b>Your #PHPDD18 team</b><br>
+        <small>
+            Holger Woltersdorf, Marcel Führer, Patrick Pächnatz<br>
+            Sandro Keil, Tommy Mühle, Ralf Junghanns, Alexander Hippe
+        </small>
+    </p>
+
+    <hr>
+
+    <p>
+        PS: If you have any feedback on the ticket order process, just let us know and send us an email to
+        <a href="mailto: orga@phpug-dresden.org?subject=Feedback%20ticket%20order">orga@phpug-dresden.org</a>.
+    </p>
+    <p class="blockspace">
+        <a href="{{ project.getBaseUrl }}" class="btn btn-success">
+            Go back to the event website
+        </a>
+    </p>
+
+{% endblock %}

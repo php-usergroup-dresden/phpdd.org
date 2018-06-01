@@ -5,15 +5,16 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Configs;
 
+use IceHawk\IceHawk\Constants\HttpMethod;
 use IceHawk\IceHawk\Defaults\Traits\DefaultCookieProviding;
 use IceHawk\IceHawk\Defaults\Traits\DefaultEventSubscribing;
-use IceHawk\IceHawk\Defaults\Traits\DefaultRequestBypassing;
 use IceHawk\IceHawk\Defaults\Traits\DefaultRequestInfoProviding;
 use IceHawk\IceHawk\Interfaces\ConfiguresIceHawk;
 use IceHawk\IceHawk\Interfaces\RespondsFinallyToReadRequest;
 use IceHawk\IceHawk\Interfaces\RespondsFinallyToWriteRequest;
 use IceHawk\IceHawk\Routing\Patterns\NamedRegExp;
 use IceHawk\IceHawk\Routing\ReadRoute;
+use IceHawk\IceHawk\Routing\RequestBypass;
 use IceHawk\IceHawk\Routing\WriteRoute;
 use PHPUGDD\PHPDD\Website\Tickets\Application\FinalResponders\FinalReadResponder;
 use PHPUGDD\PHPDD\Website\Tickets\Application\FinalResponders\FinalWriteResponder;
@@ -29,7 +30,6 @@ final class IceHawkConfig implements ConfiguresIceHawk
 
 	use DefaultCookieProviding;
 	use DefaultEventSubscribing;
-	use DefaultRequestBypassing;
 	use DefaultRequestInfoProviding;
 
 	public function getReadRoutes() : \Generator
@@ -43,6 +43,17 @@ final class IceHawkConfig implements ConfiguresIceHawk
 				new $handlerClass( $this->getEnv() )
 			);
 		}
+	}
+
+	public function getRequestBypasses()
+	{
+		return [
+			new RequestBypass(
+				new NamedRegExp( '^/tickets/paypal-success/?$' ),
+				'/tickets/paypal-success/',
+				HttpMethod::POST
+			),
+		];
 	}
 
 	public function getWriteRoutes() : \Generator
