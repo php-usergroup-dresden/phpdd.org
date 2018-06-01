@@ -2,9 +2,12 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Repositories;
 
+use DateTimeImmutable;
 use PDO;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesReservedTicketCount;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Ticket;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrder;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentId;
 
 final class TicketOrderRepository implements ProvidesReservedTicketCount
 {
@@ -21,5 +24,13 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount
 		// TODO: Query the database for real reserved count
 
 		return 23;
+	}
+
+	public function placeTicketOrder( TicketOrder $ticketOrder ) : void
+	{
+	}
+
+	public function markPaymentAsExecuted( PaymentId $paymentId, DateTimeImmutable $executedAt ) : void
+	{
 	}
 }
