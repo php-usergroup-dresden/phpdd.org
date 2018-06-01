@@ -1,18 +1,14 @@
 <?php declare(strict_types=1);
-/**
- * @author hollodotme
- */
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses;
 
 use IceHawk\IceHawk\Constants\HttpCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\ProjectConfig;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\InfrastructureInjecting;
+use function file_get_contents;
+use function file_put_contents;
 
-/**
- * Class Page
- * @package PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses
- */
 final class HtmlPage
 {
 	use InfrastructureInjecting;
@@ -25,13 +21,26 @@ final class HtmlPage
 	 * @param array  $data
 	 * @param int    $httpCode
 	 *
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException
+	 * @throws RuntimeException
 	 */
 	public function respond( string $template, array $data, int $httpCode = HttpCode::OK ) : void
 	{
-		$templateRenderer = $this->getEnv()->getTemplateRenderer();
-
 		header( 'Content-Type: text/html; charset=utf-8', true, $httpCode );
+		echo $this->getContent( $template, $data );
+
+		flush();
+	}
+
+	/**
+	 * @param string $template
+	 * @param array  $data
+	 *
+	 * @throws RuntimeException
+	 * @return string
+	 */
+	private function getContent( string $template, array $data ) : string
+	{
+		$templateRenderer = $this->getEnv()->getTemplateRenderer();
 
 		$content       = $templateRenderer->renderWithData( $template, $this->getMergedData( $data ) );
 		$projectConfig = $this->getProjectConfig();
@@ -40,8 +49,28 @@ final class HtmlPage
 		$replace = array_values( $projectConfig->getReplacements() );
 		$content = str_replace( $search, $replace, $content );
 
-		echo $content;
+		return $content;
+	}
 
+	/**
+	 * @param string $filePath
+	 * @param string $template
+	 * @param array  $data
+	 *
+	 * @throws RuntimeException
+	 * @return bool
+	 */
+	public function saveToFile( string $filePath, string $template, array $data ) : bool
+	{
+		$content = $this->getContent( $template, $data );
+
+		return (bool)file_put_contents( $filePath, $content );
+	}
+
+	public function respondWithFile( string $filePath, int $httpCode = HttpCode::OK ) : void
+	{
+		header( 'Content-Type: text/html; charset=utf-8', true, $httpCode );
+		echo file_get_contents( $filePath );
 		flush();
 	}
 
@@ -70,7 +99,7 @@ final class HtmlPage
 	 * @param array $data
 	 *
 	 * @return array
-	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException
+	 * @throws RuntimeException
 	 */
 	private function getMergedData( array $data ) : array
 	{
