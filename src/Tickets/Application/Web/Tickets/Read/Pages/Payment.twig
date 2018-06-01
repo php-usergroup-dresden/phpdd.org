@@ -117,42 +117,90 @@
 
     <hr>
 
-    <!--suppress HtmlUnknownTarget -->
-    <form action="/tickets/purchase" method="post" id="buy-tickets-form">
-        <input type="hidden" name="token" value="{{ ticketPaymentForm.getToken }}">
-        <div class="row blockspace">
-            <div class="col-xs-12">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="cocOptIn" id="cocOptIn" value="1">
-                        By purchasing tickets I confirm that I have read the
-                        <a href="https://dresden-code-of-conduct.org/en/" target="_blank">Code of Conduct (CoC)</a>
-                        for this event and agree to its enforcement.
-                    </label>
+    {% if ticketOrder.getPaymentProvider.toString == 'PayPal' %}
+
+        <!--suppress HtmlUnknownTarget -->
+        <form action="/tickets/purchase" method="post" id="buy-tickets-form">
+            <input type="hidden" name="token" value="{{ ticketPaymentForm.getToken }}">
+            <div class="row blockspace">
+                <div class="col-xs-12">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="cocOptIn" id="cocOptIn" value="1">
+                            By purchasing tickets I confirm that I have read the
+                            <a href="https://dresden-code-of-conduct.org/en/" target="_blank">Code of Conduct (CoC)</a>
+                            for this event and agree to its enforcement.
+                        </label>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        {% if ticketPaymentForm.hasFeedback('general') %}
-            <div class="blockspace alert alert-danger">
-                {{ ticketPaymentForm.getFeedback('general').getMessage() }}
+            {% if ticketPaymentForm.hasFeedback('general') %}
+                <div class="blockspace alert alert-danger">
+                    {{ ticketPaymentForm.getFeedback('general').getMessage() }}
+                </div>
+            {% endif %}
+
+            <div class="row blockspace">
+                <div class="col-xs-12 text-center">
+                    <button type="submit" class="btn btn-success btn-lg btn-block" id="buttonPurchase" disabled>
+                        PURCHASE TICKETS for {{ ticketOrder.getPaymentTotal.getMoney|formatMoney }}
+                        via {{ ticketOrder.getPaymentProvider }}
+                    </button>
+                    <p class="blockspace">
+                        <i class="fa fa-info-circle"></i>
+                        You will be redirected to the {{ ticketOrder.getPaymentProvider }} payment service.
+                    </p>
+                </div>
             </div>
-        {% endif %}
+        </form>
 
-        <div class="row blockspace">
-            <div class="col-xs-12 text-center">
-                <button type="submit" class="btn btn-success btn-lg btn-block" id="buttonPurchase" disabled>
-                    PURCHASE TICKETS for {{ ticketOrder.getPaymentTotal.getMoney|formatMoney }}
-                    via {{ ticketOrder.getPaymentProvider }}
-                </button>
-                <p class="blockspace">
-                    <i class="fa fa-info-circle"></i>
-                    You will be redirected to the {{ ticketOrder.getPaymentProvider }} payment service.
-                </p>
+    {% endif %}
+
+    {% if ticketOrder.getPaymentProvider.toString == 'Stripe' %}
+
+        <!--suppress HtmlUnknownTarget -->
+        <form action="/tickets/stripe-success" method="post" id="stripe-purchase-form">
+            <input type="hidden" name="token" value="{{ ticketPaymentForm.getToken }}">
+            <div class="row blockspace">
+                <div class="col-xs-12">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="cocOptIn" id="cocOptIn" value="1">
+                            By purchasing tickets I confirm that I have read the
+                            <a href="https://dresden-code-of-conduct.org/en/" target="_blank">Code of Conduct (CoC)</a>
+                            for this event and agree to its enforcement.
+                        </label>
+                    </div>
+                </div>
             </div>
-        </div>
-    </form>
 
+            <div class="row blockspace">
+                <div class="col-xs-12 text-center">
+                    <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_srWBSMZLD4nyFc0cPSyKK2lk"
+                            data-amount="{{ ticketOrder.getPaymentTotal.getMoney.getAmount }}"
+                            data-name="PHP USERGROUP DRESDEN e.V."
+                            data-description="#PHPDD18 ticket order • {{ ticketOrder.getTicketItems.count }} ticket(s)"
+                            data-image="{{ project.getBaseUrl }}/assets/images/payments/phpugdd-logo.png"
+                            data-locale="en"
+                            data-zip-code="true"
+                            data-currency="EUR"
+                            data-email="{{ ticketOrder.getEmailAddress.toString }}"
+                            data-allow-remember-me="false"
+                            data-label="PURCHASE TICKETS for {{ ticketOrder.getPaymentTotal.getMoney|formatMoney }} via Stripe">
+                    </script>
+                    <p class="blockspace">
+                        <i class="fa fa-info-circle"></i>
+                        You will be redirected to the {{ ticketOrder.getPaymentProvider }} payment service.
+                    </p>
+                </div>
+            </div>
+
+        </form>
+
+    {% endif %}
 
     <div class="row">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
