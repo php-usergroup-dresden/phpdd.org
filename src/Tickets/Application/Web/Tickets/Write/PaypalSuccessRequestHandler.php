@@ -39,6 +39,7 @@ final class PaypalSuccessRequestHandler extends AbstractRequestHandler implement
 	 *
 	 * @throws RuntimeException
 	 * @throws \Exception
+	 * @throws Throwable
 	 */
 	public function handle( ProvidesWriteRequestData $request )
 	{
@@ -114,10 +115,12 @@ final class PaypalSuccessRequestHandler extends AbstractRequestHandler implement
 
 		$paymentService = (new PaymentServiceFactory())->getPaymentService( $paymentProvider );
 
-		$execResult = $paymentService->execute( $paymentId, $payerId );
+		$execResult = $paymentService->execute( $paymentId, $payerId, $ticketOrder->getPaymentTotal() );
 
 		if ( $execResult->failed() )
 		{
+			$ticketOrderRepository->removeTicketOrder( $ticketOrder->getOrderId() );
+
 			$ticketDetailsForm->addFeedback(
 				'paymentProvider',
 				new Feedback(
