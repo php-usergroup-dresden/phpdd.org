@@ -258,11 +258,16 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 	/**
 	 * @param PaymentId         $paymentId
 	 * @param DateTimeImmutable $executedAt
+	 * @param array             $metaData
 	 *
 	 * @throws PDOException
 	 * @throws Throwable
 	 */
-	public function markPaymentAsExecuted( PaymentId $paymentId, DateTimeImmutable $executedAt ) : void
+	public function markPaymentAsExecuted(
+		PaymentId $paymentId,
+		DateTimeImmutable $executedAt,
+		array $metaData = []
+	) : void
 	{
 		$this->database->beginTransaction();
 
@@ -270,7 +275,8 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 		{
 			$query = 'UPDATE `ticketOrderPayments` 
 					  SET `status` = :status, 
-					  	  `executedAt` = :executedAt 
+					  	  `executedAt` = :executedAt,
+					  	  `metaData` = IFNULL(:metaData, `metaData`)
 					  WHERE paymentId = :paymentId LIMIT 1';
 
 			$statement = $this->database->prepare( $query );
@@ -279,6 +285,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 					'status'     => 'executed',
 					'paymentId'  => $paymentId->toString(),
 					'executedAt' => $executedAt->format( 'c' ),
+					'metaData'   => !empty( $metaData ) ? json_encode( $metaData ) : null,
 				]
 			);
 
@@ -306,5 +313,56 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 		$this->guardStatementSucceeded( $statement );
 
 		return (array)$statement->fetchAll( PDO::FETCH_COLUMN, 0 );
+	}
+
+	/**
+	 * @param TicketOrderId $ticketOrderId
+	 *
+	 * @throws PDOException
+	 * @throws Throwable
+	 */
+	public function removeTicketOrder( TicketOrderId $ticketOrderId ) : void
+	{
+		$this->database->beginTransaction();
+
+		try
+		{
+			$params    = ['orderId' => $ticketOrderId->toString()];
+			$statement = $this->database->prepare(
+				'DELETE FROM `ticketOrderPayments` WHERE `orderId` = :orderId LIMIT 1'
+			);
+			$statement->execute( $params );
+
+			$this->guardStatementSucceeded( $statement );
+
+			$statement = $this->database->prepare(
+				'DELETE FROM `ticketOrderItems` WHERE `orderId` = :orderId LIMIT 1'
+			);
+			$statement->execute( $params );
+
+			$this->guardStatementSucceeded( $statement );
+
+			$statement = $this->database->prepare(
+				'DELETE FROM `ticketOrderAddresses` WHERE `orderId` = :orderId LIMIT 1'
+			);
+			$statement->execute( $params );
+
+			$this->guardStatementSucceeded( $statement );
+
+			$statement = $this->database->prepare(
+				'DELETE FROM `ticketOrders` WHERE `orderId` = :orderId LIMIT 1'
+			);
+			$statement->execute( $params );
+
+			$this->guardStatementSucceeded( $statement );
+
+			$this->database->commit();
+		}
+		catch ( Throwable $e )
+		{
+			$this->database->rollBack();
+
+			throw $e;
+		}
 	}
 }
