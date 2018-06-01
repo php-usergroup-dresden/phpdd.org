@@ -18,7 +18,8 @@ set :keep_releases, 3
 set :shared_files, []
 set :shared_dirs, [
     "public/2017/media",
-    "public/2018/downloads"
+    "public/2018/downloads",
+    "data/static",
 ]
 
 # Optional settings:
