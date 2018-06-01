@@ -59,6 +59,9 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	/** @var null|PaymentProvider */
 	private $paymentProvider;
 
+	/** @var null|TicketOrderPayment */
+	private $payment;
+
 	/**
 	 * @param TicketOrderId        $orderId
 	 * @param TicketOrderDate      $orderDate
@@ -331,5 +334,15 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	public function getPaymentProvider() : ?PaymentProvider
 	{
 		return $this->paymentProvider;
+	}
+
+	public function assignPayment( TicketOrderPayment $ticketOrderPayment ) : void
+	{
+		$this->payment = $ticketOrderPayment;
+	}
+
+	public function getPayment() : ?TicketOrderPayment
+	{
+		return $this->payment;
 	}
 }
