@@ -20,7 +20,7 @@ final class MySqlConfig
 	public function getDsn() : string
 	{
 		return sprintf(
-			'mysql:host=%s;port=%d;database=%s',
+			'mysql:host=%s;port=%d;dbname=%s',
 			(string)$this->configData['host'],
 			(int)$this->configData['port'],
 			(string)$this->configData['database']
