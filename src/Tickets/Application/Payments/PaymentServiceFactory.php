@@ -9,7 +9,9 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\PaymentServices\PaypalSer
 use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\PaymentServices\StripeService;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentProvider;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\PaypalClientConfig;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\StripeConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Paypal\PaypalClient;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Stripe\StripeClient;
 
 final class PaymentServiceFactory
 {
@@ -30,7 +32,9 @@ final class PaymentServiceFactory
 				break;
 
 			case PaymentProviders::STRIPE:
-				return new StripeService();
+				$stripeClient = new StripeClient( StripeConfig::fromConfigFile() );
+
+				return new StripeService( $stripeClient );
 				break;
 
 			default:

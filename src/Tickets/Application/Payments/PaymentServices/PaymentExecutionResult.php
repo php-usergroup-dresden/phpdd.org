@@ -19,6 +19,14 @@ final class PaymentExecutionResult extends AbstractResult implements ProvidesPay
 		return $instance;
 	}
 
+	public static function fromStripeCharge( $stripeCharge ) : self
+	{
+		$instance            = new self( ResultType::SUCCEEDED );
+		$instance->paymentId = new PaymentId( $stripeCharge['id'] );
+
+		return $instance;
+	}
+
 	public function getPaymentId() : PaymentId
 	{
 		return $this->paymentId;

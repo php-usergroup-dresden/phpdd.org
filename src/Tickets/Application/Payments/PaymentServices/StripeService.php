@@ -8,16 +8,65 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Interfaces\ProvidesPaymen
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrder;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PayerId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentId;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderPaymentTotal;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Stripe\StripeClient;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Stripe\StripeExecuteRequest;
+use Throwable;
 
 final class StripeService implements PaysTicketOrders
 {
-	public function authorize( TicketOrder $ticketOrder ) : ProvidesPaymentAuthorizationResult
+	/** @var StripeClient */
+	private $stripeClient;
+
+	public function __construct( StripeClient $stripeClient )
 	{
-		return new PaymentAuthorizationResult( ResultType::FAILED, 'Not implemented, yet.' );
+		$this->stripeClient = $stripeClient;
 	}
 
-	public function execute( PaymentId $paymentId, PayerId $payerId ) : ProvidesPaymentExecutionResult
+	public function authorize( TicketOrder $ticketOrder ) : ProvidesPaymentAuthorizationResult
 	{
-		return new PaymentExecutionResult( ResultType::FAILED, 'Not implemented, yet.' );
+		return new PaymentAuthorizationResult( ResultType::FAILED, 'Not implemented.' );
+	}
+
+	public function execute(
+		PaymentId $paymentId,
+		PayerId $payerId,
+		TicketOrderPaymentTotal $paymentTotal
+	) : ProvidesPaymentExecutionResult
+	{
+		$execRequest = new StripeExecuteRequest(
+			$paymentId->toString(),
+			'Ticket purchase for PHPDD18',
+			$paymentTotal->getMoney()->getAmount(),
+			$paymentTotal->getMoney()->getCurrency()->getCode()
+		);
+
+		try
+		{
+			$stripeCharge = $this->stripeClient->executePayment( $execRequest );
+
+			return PaymentExecutionResult::fromStripeCharge( $stripeCharge );
+		}
+		catch ( \Stripe\Error\Card $e )
+		{
+			return new PaymentExecutionResult(
+				ResultType::FAILED,
+				'Your card was declined. Please use another payment provider.'
+			);
+		}
+		catch ( \Stripe\Error\RateLimit $e )
+		{
+			return new PaymentExecutionResult(
+				ResultType::FAILED,
+				'We could not process your payment at the moment. Please try again later.'
+			);
+		}
+		catch ( Throwable $e )
+		{
+			return new PaymentExecutionResult(
+				ResultType::FAILED,
+				'We could not process your payment at the moment. Please try again later.'
+			);
+		}
 	}
 }
