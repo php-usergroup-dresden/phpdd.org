@@ -12,6 +12,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Interfaces\ProvidesPaymen
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrder;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PayerId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentId;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderPaymentTotal;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Paypal\Data\PaypalAddress;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Paypal\Data\PaypalCart;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Paypal\Data\PaypalCartItem;
@@ -138,12 +139,18 @@ final class PaypalService implements PaysTicketOrders
 	}
 
 	/**
-	 * @param PaymentId $paymentId
-	 * @param PayerId   $payerId
+	 * @param PaymentId               $paymentId
+	 * @param PayerId                 $payerId
+	 *
+	 * @param TicketOrderPaymentTotal $paymentTotal
 	 *
 	 * @return ProvidesPaymentExecutionResult
 	 */
-	public function execute( PaymentId $paymentId, PayerId $payerId ) : ProvidesPaymentExecutionResult
+	public function execute(
+		PaymentId $paymentId,
+		PayerId $payerId,
+		TicketOrderPaymentTotal $paymentTotal
+	) : ProvidesPaymentExecutionResult
 	{
 		$execRequest = new PaypalExecuteRequest( $paymentId->toString(), $payerId->toString() );
 
