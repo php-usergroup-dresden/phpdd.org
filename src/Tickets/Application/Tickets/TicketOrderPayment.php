@@ -2,7 +2,6 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
-use DateTimeImmutable;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PayerId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentProvider;
@@ -18,17 +17,14 @@ final class TicketOrderPayment
 	/** @var PayerId */
 	private $payerId;
 
-	/** @var DateTimeImmutable */
-	private $executedAt;
-
 	/** @var array */
 	private $metaData;
 
 	/**
-	 * @param PaymentProvider   $paymentProvider
-	 * @param PaymentId         $paymentId
-	 * @param PayerId           $payerId
-	 * @param array             $metaData
+	 * @param PaymentProvider $paymentProvider
+	 * @param PaymentId       $paymentId
+	 * @param PayerId         $payerId
+	 * @param array           $metaData
 	 */
 	public function __construct(
 		PaymentProvider $paymentProvider,

@@ -164,7 +164,10 @@ final class ProjectConfig
 	{
 		$pageConfigs = iterator_to_array(
 			$this->getPageConfigsByFilter(
-				function ( array $pageConfig, string $configUri ) use ( $uri )
+				function (
+					/** @noinspection PhpUnusedParameterInspection */
+					array $pageConfig, string $configUri
+				) use ( $uri )
 				{
 					return ($configUri === $uri);
 				}

@@ -21,7 +21,7 @@ final class TicketSelectionRequestHandler extends AbstractRequestHandler impleme
 	 * @param ProvidesReadRequestData $request
 	 *
 	 * @throws RuntimeException
-	 * @throws \InvalidArgumentException
+	 * @throws \Exception
 	 */
 	public function handle( ProvidesReadRequestData $request )
 	{

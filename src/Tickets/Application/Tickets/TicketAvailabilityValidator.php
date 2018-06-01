@@ -2,12 +2,12 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
-use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\Exceptions\TicketConfigNotFoundException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\CollectsTicketItems;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesReservedTicketCount;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketItemInformation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ValidatesTicketAvailability;
+use Throwable;
 
 final class TicketAvailabilityValidator implements ValidatesTicketAvailability
 {
@@ -39,7 +39,7 @@ final class TicketAvailabilityValidator implements ValidatesTicketAvailability
 		{
 			$ticketConfig = $this->ticketsConfig->findTicketById( $ticket->getId() );
 		}
-		catch ( TicketConfigNotFoundException $e )
+		catch ( Throwable $e )
 		{
 			return false;
 		}

@@ -4,12 +4,12 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
 use Generator;
 use Money\Money;
-use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\Exceptions\TicketConfigNotFoundException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesSelectedTicketInformation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
+use Throwable;
 
 final class SelectedTicketInfos
 {
@@ -65,7 +65,7 @@ final class SelectedTicketInfos
 		{
 			return $this->ticketsConfig->findTicketById( $ticketId );
 		}
-		catch ( TicketConfigNotFoundException $e )
+		catch ( Throwable $e )
 		{
 			return null;
 		}

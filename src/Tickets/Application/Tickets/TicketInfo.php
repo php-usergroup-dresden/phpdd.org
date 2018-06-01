@@ -51,10 +51,6 @@ final class TicketInfo implements ProvidesTicketInformation
 		return $this->ticketConfig->getImage();
 	}
 
-	/**
-	 * @throws \InvalidArgumentException
-	 * @return TicketPrice
-	 */
 	public function getPrice() : TicketPrice
 	{
 		return $this->ticketConfig->getPrice();

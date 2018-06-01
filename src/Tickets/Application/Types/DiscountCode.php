@@ -8,8 +8,6 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Types;
 use Fortuneglobe\Types\AbstractStringType;
 use Fortuneglobe\Types\Exceptions\InvalidArgumentException;
 use function preg_match;
-use function random_int;
-use function strlen;
 
 /**
  * Class DiscountCode

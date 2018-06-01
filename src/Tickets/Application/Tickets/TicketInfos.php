@@ -25,7 +25,7 @@ final class TicketInfos
 	}
 
 	/**
-	 * @throws \InvalidArgumentException
+	 * @throws \Exception
 	 * @return Generator
 	 */
 	public function getTickets() : Generator

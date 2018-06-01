@@ -138,8 +138,8 @@ final class PaypalService implements PaysTicketOrders
 	}
 
 	/**
-	 * @param string $paymentId
-	 * @param string $payerId
+	 * @param PaymentId $paymentId
+	 * @param PayerId   $payerId
 	 *
 	 * @return ProvidesPaymentExecutionResult
 	 */

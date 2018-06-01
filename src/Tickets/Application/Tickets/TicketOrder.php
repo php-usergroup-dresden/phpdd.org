@@ -31,11 +31,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 
 	private const WORKSHOP_TICKETS_MAX               = 10;
 
-	private const WORKSHOP_SLOT_TICKETS_PER_ATTENDEE = 1;
-
 	private const CONFERENCE_TICKETS_MAX             = 10;
-
-	private const CONFERENCE_TICKETS_PER_ATTENDEE    = 1;
 
 	/** @var TicketOrderId */
 	private $orderId;
@@ -204,13 +200,13 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		foreach ( TicketTypes::HALFDAY_WORKSHOPS as $halfdayWorkshopType )
 		{
 			$halfdayWorkshop       = new TicketType( $halfdayWorkshopType );
-			$countFulldayWorkshops += $this->ticketItems->getCountForTypeAndAttendeeName(
+			$countHalfDayWorkshops += $this->ticketItems->getCountForTypeAndAttendeeName(
 				$halfdayWorkshop,
 				$attendeeName
 			);
 		}
 
-		return $countFulldayWorkshops > 0 && $ticketType->equals( $fulldayWorkshop );
+		return $countHalfDayWorkshops > 0 && $ticketType->equals( $fulldayWorkshop );
 	}
 
 	private function attendeeHasWorkshopTicketOfSameType( AttendeeName $attendeeName, TicketType $ticketType ) : bool
