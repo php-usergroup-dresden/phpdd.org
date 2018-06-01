@@ -345,4 +345,11 @@
 
 ---
 
-Report created at 2018-06-01 14:54:41 (UTC)
+## Unit\Application\Web\Tickets\Write\Validators\StripeSuccessValidatorTest
+
+- [x] Validation Fails If Stripe Token Is Empty Or Null (💚 1)
+- [x] Validation Fails If Stripe Email Is Empty Or Null (💚 1)
+
+---
+
+Report created at 2018-06-01 21:06:07 (UTC)
