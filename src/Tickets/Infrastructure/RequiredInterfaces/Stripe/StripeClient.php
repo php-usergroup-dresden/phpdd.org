@@ -19,7 +19,10 @@ final class StripeClient
 	}
 
 	/**
+	 * @noinspection PhpDocRedundantThrowsInspection
+	 *
 	 * @param StripeExecuteRequest $request
+	 *
 	 * @throws \Stripe\Error\Card
 	 * @throws \Stripe\Error\RateLimit
 	 * @throws \Stripe\Error\InvalidRequest
