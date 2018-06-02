@@ -45,12 +45,18 @@ task :deploy => :remote_environment do
 
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
+    invoke :'composer_install'
 
     on :launch do
       invoke :'reload_env'
       invoke :'deploy:cleanup'
     end
   end
+end
+
+desc "Composer install"
+task :composer_install do
+    command 'composer install -a --no-interaction --no-dev'
 end
 
 desc "Reloading nginx and php-fpm"
