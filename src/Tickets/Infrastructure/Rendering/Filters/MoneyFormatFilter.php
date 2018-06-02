@@ -9,6 +9,7 @@ use Money\Currency;
 use Money\Money;
 use Money\MoneyFormatter;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Rendering\Exceptions\MissingCurrencyCodeException;
+use function is_scalar;
 
 /**
  * Class MoneyFormatFilter
@@ -39,9 +40,9 @@ final class MoneyFormatFilter
 			return $this->formatter->format( $moneyValue );
 		}
 
-		if ( null !== $currencyCode && \is_int( $moneyValue ) )
+		if ( null !== $currencyCode && is_scalar( $moneyValue ) )
 		{
-			$money = new Money( $moneyValue, new Currency( $currencyCode ) );
+			$money = new Money( (int)$moneyValue, new Currency( $currencyCode ) );
 
 			return $this->formatter->format( $money );
 		}
