@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<div class="ticket-container">
+    <div class="ticket-details">
+        <h1>#PHPDD18 TICKET</h1>
+        <h2>{{ ticketItem.ticketName }}</h2>
+        <p>
+            {{ ticketItem.ticketDescription|raw }}
+        </p>
+        <h3>{{ ticketItem.attendeeName }}</h3>
+        <p>
+            <img src="{{ imageDir }}/phpdd18-logo.svg">
+        </p>
+    </div>
+    <div class="qrcode">
+        <img src="{{ qrCodeFilePath }}">
+    </div>
+</div>
+<br>
+<br>
+<div class="terms">
+    <h3>Terms &amp; Conditions</h3>
+    <h5>1. Data correctness</h5>
+    <p>
+        By purchasing tickets you confirm that all given data is reliable and mirror true facts.
+        In case of misrepresentation of facts, we reserve the right to decline access to the event,
+        decline cancelation and/or refunding.
+    </p>
+    <h5>2. Access to the event</h5>
+    <p>
+        Each attendee gets an individual ticket for each workshop and/or the conference.
+        Attendees only get access to these activities after the appropriate tickets were exhibited to
+        the organizers at the venue. Tickets can be shown in digital or non-digital form.
+    </p>
+    <p>
+        All side events and catering at the venue are included in the ticket prices.
+    </p>
+    <h5>3. Delivery of tickets</h5>
+    <p>
+        Tickets will be delivered as PDF files via email to the given address of the buyer.
+    </p>
+    <h5>4. Production & delivery of the ticket purchase invoice</h5>
+    <p>
+        As a German small business we are not allowed to tag the VAT portion of prices
+        on the invoice. Within the EU the reverse charge regulation is applied
+        (see: https://www.vatglobal.com/reporting-obligations-vat-guides/the-reverse-charge-mechanism).
+    </p>
+    <p>
+        The invoice will be delivered as a PDF file via email to the given address of the buyer.
+    </p>
+    <h5>5. Cancelation & refunding</h5>
+    <p>
+        Cancelation is possible until 3 weeks before the event (deadline: August 31, 2018).
+    </p>
+    <p>
+        In case of a cancelation before September 1, 2018 we will refund the invoiced amount excluding a
+        refund fee of max. &euro;25. The refund fee depends on the used payment method. We will charge the
+        lowest possible refund fee.
+    </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+body {
+    font-size: 10.5pt;
+    font-family: "Helvetica", "Arial", sans-serif;
+    hyphens: auto;
+    height: 343mm; /* 297 - 10 (top) - 20 (bottom) */
+    line-height: 140%;
+    margin: 0;
+    padding: 0;
+}
+
+.ticket-container {
+    border: 3px solid #000000;
+    padding: 10px 0 10px 10px;
+}
+
+.ticket-container .ticket-details {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+}
+
+.ticket-container .qrcode {
+    display: inline-block;
+    width: 35%;
+    text-align: right;
+}
+
+.terms {
+    font-size: small;
+    color: #505050;
+}
