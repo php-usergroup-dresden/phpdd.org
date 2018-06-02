@@ -264,6 +264,7 @@
                         <input type="radio" name="paymentProvider"
                                value="PayPal"{% if ticketDetailsForm.get('paymentProvider') in ['PayPal', ''] %} checked{% endif %}>
                         <img src="{{ project.getBaseUrl }}/assets/images/payments/paypal.png" class="img-responsive">
+                        <br><small>PayPal balance, Credit Card, Bank account</small>
                     </label>
                 </div>
             </div>
@@ -273,6 +274,7 @@
                         <input type="radio" name="paymentProvider"
                                value="Stripe"{% if ticketDetailsForm.get('paymentProvider') == 'Stripe' %} checked{% endif %}>
                         <img src="{{ project.getBaseUrl }}/assets/images/payments/stripe.png" class="img-responsive">
+                        <br><small>Credit Cards</small>
                     </label>
                 </div>
             </div>
