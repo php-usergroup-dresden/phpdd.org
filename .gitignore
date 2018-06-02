@@ -6,4 +6,5 @@
 /data/mysql/*
 /data/static/*
 /data/backups/*
+/data/mail/attachments/*
 !.gitkeep
