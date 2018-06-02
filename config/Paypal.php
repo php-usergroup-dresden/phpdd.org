@@ -2,8 +2,8 @@
 
 return [
 	'authEndpoint' => 'sandbox',
-	'clientId'     => 'AbInKqyHMp9KeyMVSGs0y7U3Tn6hae7YS-xeidHiyYJBpv8SLEYeMvjsvkBTlUuX4lXavTr0tUOznYIP',
-	'clientSecret' => 'ECFmrw-G68mTRrBmC8kKXDle-kgYxzF6OdRi64KoBoNcVZ1D89MrSIbjrN7GrE2GcoNHDpfOPZJCQeug',
+	'clientId'     => 'AevvVnC7mDcbrvy6KoCAhVVcSp8uFkHCvJAyEReC84UOEERohqT8JgqApiEYDtdUKejvKqbxV2AI92F-',
+	'clientSecret' => 'EGoXFgdGKw4HGLbrriUjhfPO_AeHbBqXKbUIA87YwgHvlbaBbKgCVq9KgRt8-R7baxESirVlmpOz4Ydf',
 	'redirectUrl'  => 'https://2018.phpdd.dev/tickets/',
 	'scopes'       => 'profile email address phone https://uri.paypal.com/services/paypalattributes',
 	'cancelUrl'    => 'https://2018.phpdd.dev/tickets/paypal-canceled',
