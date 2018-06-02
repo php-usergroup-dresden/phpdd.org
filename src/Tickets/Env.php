@@ -9,6 +9,7 @@ use Money\Currencies\ISOCurrencies;
 use Money\Formatter\IntlMoneyFormatter;
 use Money\MoneyFormatter;
 use PDO;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\EmailConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\MySqlConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\SentryConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\TwigConfig;
@@ -18,6 +19,8 @@ use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Rendering\Filters\MoneyFormatFi
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Rendering\Twig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Session;
 use PHPUGDD\PHPDD\Website\Tickets\Interfaces\ProvidesInfrastructure;
+use Swift_Mailer;
+use Swift_SmtpTransport;
 
 /**
  * Class Env
@@ -130,6 +133,38 @@ final class Env extends AbstractObjectPool implements ProvidesInfrastructure
 					$mysqlConfig->getUser(),
 					$mysqlConfig->getPassword()
 				);
+			}
+		);
+	}
+
+	public function getEmailConfig() : EmailConfig
+	{
+		return $this->getSharedInstance(
+			'emailConfig',
+			function ()
+			{
+				return EmailConfig::fromConfigFile();
+			}
+		);
+	}
+
+	public function getMailer() : Swift_Mailer
+	{
+		$emailConfig = $this->getEmailConfig();
+
+		return $this->getSharedInstance(
+			'mailer',
+			function () use ( $emailConfig )
+			{
+				$transport = new Swift_SmtpTransport(
+					$emailConfig->getSmtpHost(),
+					$emailConfig->getSmtpPort(),
+					$emailConfig->useTls() ? 'tls' : null
+				);
+				$transport->setUsername( $emailConfig->getSmtpUser() );
+				$transport->setPassword( $emailConfig->getSmtpPassword() );
+
+				return new Swift_Mailer( $transport );
 			}
 		);
 	}

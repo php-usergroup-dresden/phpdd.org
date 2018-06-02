@@ -7,9 +7,11 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Interfaces;
 
 use Money\MoneyFormatter;
 use PDO;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\EmailConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\ErrorHandling\SentryClient;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Rendering\Twig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Session;
+use Swift_Mailer;
 
 /**
  * Interface ProvidesInfrastructure
@@ -30,4 +32,8 @@ interface ProvidesInfrastructure
 	public function getTemplateRenderer() : Twig;
 
 	public function getDatabase() : PDO;
+
+	public function getEmailConfig() : EmailConfig;
+
+	public function getMailer() : Swift_Mailer;
 }
