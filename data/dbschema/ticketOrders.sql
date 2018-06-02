@@ -142,4 +142,38 @@ CREATE TABLE IF NOT EXISTS `ticketOrderMails` (
 ALTER TABLE `ticketOrderMails`
   ADD CONSTRAINT `orderMailsRelation` FOREIGN KEY (`orderId`) REFERENCES `ticketOrders` (`orderId`);
 
+DROP TABLE IF EXISTS `ticketOrderInvoices`;
+CREATE TABLE IF NOT EXISTS `ticketOrderInvoices` (
+  `id`        INT(10) UNSIGNED NOT NULL AUTO_INCREMENT
+  COMMENT 'Record-ID',
+  `orderId`   VARCHAR(100)     NOT NULL
+  COMMENT 'Ticket order ID',
+  `invoiceId` VARCHAR(50)      NOT NULL
+  COMMENT 'Invoice ID',
+  `date`      DATETIME         NOT NULL
+  COMMENT 'Date invoice was created',
+  `pdf` LONGBLOB NOT NULL
+  COMMENT 'PDF invoice',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `orderId` (`orderId`),
+  UNIQUE KEY `invoiceId` (`invoiceId`)
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8
+  COMMENT ='Ticket order invoices'
+  AUTO_INCREMENT = 1;
+
+ALTER TABLE `ticketOrderInvoices`
+  ADD CONSTRAINT `orderInvoicesRelation` FOREIGN KEY (`orderId`) REFERENCES `ticketOrders` (`orderId`);
+
+DROP TABLE IF EXISTS `ticketOrderInvoiceSequence`;
+CREATE TABLE IF NOT EXISTS `ticketOrderInvoiceSequence` (
+  `sequence` INT(10) UNSIGNED NOT NULL
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = utf8
+  COMMENT ='Ticket order invoice sequence';
+
+INSERT INTO `ticketOrderInvoiceSequence` (sequence) VALUES (1);
+
 SET FOREIGN_KEY_CHECKS = 1;
