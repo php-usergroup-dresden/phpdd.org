@@ -17,18 +17,20 @@ set :keep_releases, 3
 # They will be linked in the 'deploy:link_shared_paths' step.
 set :shared_files, [
     "config/Discounts.php",
+    "config/Email.php",
     "config/MySql.php",
     "config/Paypal.php",
+    "config/phpbu.xml",
     "config/Sentry.php",
     "config/Session.php",
     "config/Stripe.php",
     "config/Twig.php",
-    "config/phpbu.xml"
 ]
 set :shared_dirs, [
     "public/2017/media",
     "public/2018/downloads",
-    "data/static"
+    "data/static/done"
+    "data/mail/attachments"
 ]
 
 # Optional settings:
