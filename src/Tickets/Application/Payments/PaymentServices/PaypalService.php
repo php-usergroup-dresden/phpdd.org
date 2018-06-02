@@ -13,6 +13,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrder;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PayerId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderPaymentTotal;
+use PHPUGDD\PHPDD\Website\Tickets\Env;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Paypal\Data\PaypalAddress;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Paypal\Data\PaypalCart;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Paypal\Data\PaypalCartItem;
@@ -134,6 +135,9 @@ final class PaypalService implements PaysTicketOrders
 		}
 		catch ( Throwable $e )
 		{
+			$errorHandler = (new Env())->getErrorHandler();
+			$errorHandler->captureException( $e );
+
 			return new PaymentAuthorizationResult( ResultType::FAILED, $e->getMessage() );
 		}
 	}
@@ -162,6 +166,9 @@ final class PaypalService implements PaysTicketOrders
 		}
 		catch ( Throwable $e )
 		{
+			$errorHandler = (new Env())->getErrorHandler();
+			$errorHandler->captureException( $e );
+
 			return new PaymentExecutionResult( ResultType::FAILED, $e->getMessage() );
 		}
 	}
