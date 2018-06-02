@@ -4,6 +4,7 @@ $phpugddMemberCodes = [
 	'E11318494Z',
 	'A97218901G',
 	'D87318324E',
+	'X32718057T',
 ];
 
 $phpugSupporterCodes = [
