@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpbu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://schema.phpbu.de/5.0/phpbu.xsd">
+    <backups>
+        <backup name="phpdd18-DB">
+            <!-- source -->
+            <source type="mysqldump">
+                <option name="databases" value="phpdd18"/>
+                <option name="user" value="root"/>
+                <option name="password" value="root"/>
+            </source>
+            <!-- where should the backup be stored -->
+            <target dirname="data/backups/phpdd18"
+                    filename="mysqldump-%Y%m%d-%H%i.sql"
+                    compress="bzip2"/>
+            <!-- check the created backup -->
+            <check type="SizeMin" value="10K"/>
+            <!-- cleanup the backup location -->
+            <!-- as soon as all created backups exceed 500MB remove oldest backups -->
+            <cleanup type="outdated">
+                <option name="older" value="4D"/>
+            </cleanup>
+        </backup>
+        <backup name="phpdd18-Files">
+            <!-- source -->
+            <source type="tar">
+                <option name="path" value="/var/www/phpdd.org/shared"/>
+            </source>
+            <!-- where should the backup be stored -->
+            <target dirname="data/backups/phpdd18"
+                    filename="shared-%Y%m%d-%H%i.tar"
+                    compress="bzip2"/>
+            <!-- check the created backup -->
+            <check type="SizeMin" value="10K"/>
+            <!-- cleanup the backup location -->
+            <!-- as soon as all created backups exceed 500MB remove oldest backups -->
+            <cleanup type="outdated">
+                <option name="older" value="4D"/>
+            </cleanup>
+        </backup>
+    </backups>
+</phpbu>
