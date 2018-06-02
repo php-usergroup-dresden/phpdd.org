@@ -29,8 +29,8 @@ set :shared_files, [
 set :shared_dirs, [
     "public/2017/media",
     "public/2018/downloads",
-    "data/static/done"
-    "data/mail/attachments"
+    "data/static/done",
+    "data/mail/attachments",
 ]
 
 # Optional settings:
