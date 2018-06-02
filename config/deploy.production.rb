@@ -46,9 +46,11 @@ task :deploy => :remote_environment do
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
     invoke :'composer_install'
+    invoke :'generate_static_pages'
 
     on :launch do
       invoke :'reload_env'
+      invoce :'check_static_pages'
       invoke :'deploy:cleanup'
     end
   end
@@ -57,6 +59,18 @@ end
 desc "Composer install"
 task :composer_install do
     command 'composer install -a --no-interaction --no-dev'
+end
+
+desc "Generate static pages"
+task :generate_static_pages do
+    command 'php vendor/bin/spg.phar generate:pages -b https://2018.phpdd.org Project2018.json'
+    command 'php vendor/bin/spg.phar generate:sitemap -b https://2018.phpdd.org Project2018.json'
+    command 'php vendor/bin/spg.phar generate:search-index -b https://2018.phpdd.org Project2018.json'
+end
+
+desc "Check static pages"
+task :check_static_pages do
+    command 'php vendor/bin/spg.phar check:links -b https://2018.phpdd.org Project2018.json'
 end
 
 desc "Reloading nginx and php-fpm"
