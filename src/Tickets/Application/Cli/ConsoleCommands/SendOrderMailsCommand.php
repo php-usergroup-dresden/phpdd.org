@@ -447,11 +447,7 @@ final class SendOrderMailsCommand extends AbstractConsoleCommand
 
 		$email = new Swift_Message( self::EMAIL_SUBJECT );
 		$email->setBody( $emailContent, 'text/html', 'utf-8' );
-		$email->setTo(
-			[/*$ticketOrder->email*/
-			 'hw@hollo.me' => "{$billingAddress->firstname} {$billingAddress->lastname}",
-			]
-		);
+		$email->setTo( [$ticketOrder->email => "{$billingAddress->firstname} {$billingAddress->lastname}"] );
 		$email->setFrom( $emailConfig->getSender() );
 		$email->setReplyTo( $emailConfig->getReplyTo() );
 		$email->setBcc( $emailConfig->getBccRecipients() );
