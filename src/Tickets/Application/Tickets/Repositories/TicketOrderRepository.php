@@ -8,6 +8,7 @@ use PDOException;
 use PDOStatement;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\InvalidArgumentException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Invoices\Invoice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesRedeemedDiscountCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesReservedTicketCount;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Ticket;
@@ -16,6 +17,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrder;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketItemId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
+use stdClass;
 use Throwable;
 use function json_encode;
 
@@ -364,5 +366,243 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 
 			throw $e;
 		}
+	}
+
+	/**
+	 * @throws RuntimeException
+	 * @return array
+	 */
+	public function getTicketOrderIdsNotHavingEmailsSent() : array
+	{
+		$query = 'SELECT DISTINCT `to`.`orderId` 
+				  FROM `ticketOrders` AS `to` 
+				  LEFT JOIN `ticketOrderMails` AS `tom` USING(`orderId`)
+				  WHERE `tom`.orderId IS NULL
+				  ORDER BY `to`.`date` ASC
+				  LIMIT 10';
+
+		$statement = $this->database->query( $query );
+
+		$this->guardStatementSucceeded( $statement );
+
+		return (array)$statement->fetchAll( PDO::FETCH_COLUMN, 0 );
+	}
+
+	/**
+	 * @param string $ticketOrderId
+	 *
+	 * @throws RuntimeException
+	 * @return stdClass
+	 */
+	public function getTicketOrderRecord( string $ticketOrderId ) : stdClass
+	{
+		$query     = 'SELECT * FROM `ticketOrders` WHERE orderId = :orderId LIMIT 1';
+		$statement = $this->database->prepare( $query );
+		$statement->execute(
+			[
+				'orderId' => $ticketOrderId,
+			]
+		);
+
+		$this->guardStatementSucceeded( $statement );
+
+		$ticketOrder = $statement->fetchObject();
+
+		if ( false === $ticketOrder )
+		{
+			throw new RuntimeException( 'Ticket order not found: ' . $ticketOrderId );
+		}
+
+		return $ticketOrder;
+	}
+
+	/**
+	 * @param string $ticketOrderId
+	 *
+	 * @throws RuntimeException
+	 * @return stdClass
+	 */
+	public function getTicketOrderAddressRecord( string $ticketOrderId ) : stdClass
+	{
+		$query     = 'SELECT * FROM `ticketOrderAddresses` WHERE orderId = :orderId LIMIT 1';
+		$statement = $this->database->prepare( $query );
+		$statement->execute(
+			[
+				'orderId' => $ticketOrderId,
+			]
+		);
+
+		$this->guardStatementSucceeded( $statement );
+
+		$ticketOrder = $statement->fetchObject();
+
+		if ( false === $ticketOrder )
+		{
+			throw new RuntimeException( 'Ticket order address not found: ' . $ticketOrderId );
+		}
+
+		return $ticketOrder;
+	}
+
+	/**
+	 * @param string $ticketOrderId
+	 *
+	 * @throws RuntimeException
+	 * @return array
+	 */
+	public function getTicketOrderItems( string $ticketOrderId ) : array
+	{
+		$query     = 'SELECT * FROM `ticketOrderItems` WHERE `orderId` = :orderId';
+		$statement = $this->database->prepare( $query );
+		$statement->execute(
+			[
+				'orderId' => $ticketOrderId,
+			]
+		);
+
+		$this->guardStatementSucceeded( $statement );
+
+		return (array)$statement->fetchAll( PDO::FETCH_OBJ );
+	}
+
+	/**
+	 * @throws Throwable
+	 * @return int
+	 */
+	public function getNextInvoiceIdSequence() : int
+	{
+		$this->database->beginTransaction();
+
+		try
+		{
+			$query     = 'SELECT `sequence` FROM `ticketOrderInvoiceSequence` WHERE 1 FOR UPDATE';
+			$statement = $this->database->query( $query );
+
+			$this->guardStatementSucceeded( $statement );
+
+			$sequence = (int)($statement->fetchColumn() ?: 1);
+			$sequence++;
+
+			$query     = 'UPDATE `ticketOrderInvoiceSequence` SET `sequence` = :sequence LIMIT 1';
+			$statement = $this->database->prepare( $query );
+			$statement->execute(
+				[
+					'sequence' => $sequence,
+				]
+			);
+
+			$this->guardStatementSucceeded( $statement );
+
+			$this->database->commit();
+
+			return $sequence;
+		}
+		catch ( Throwable $e )
+		{
+			$this->database->rollBack();
+
+			throw $e;
+		}
+	}
+
+	/**
+	 * @param Invoice $invoice
+	 *
+	 * @throws PDOException
+	 * @throws Throwable
+	 */
+	public function addInvoice( Invoice $invoice ) : void
+	{
+		$this->database->beginTransaction();
+
+		try
+		{
+			$query = 'INSERT INTO `ticketOrderInvoices` (orderId, invoiceId, date, pdf) 
+					  VALUES (:orderId, :invoiceId, :date, :pdf)';
+
+			$statement = $this->database->prepare( $query );
+			$statement->execute(
+				[
+					'orderId'   => $invoice->getOrderId()->toString(),
+					'invoiceId' => $invoice->getId()->toString(),
+					'date'      => $invoice->getDate()->format( 'c' ),
+					'pdf'       => $invoice->getPdfFile()->getFileContent(),
+				]
+			);
+
+			$this->guardStatementSucceeded( $statement );
+
+			$this->database->commit();
+		}
+		catch ( Throwable $e )
+		{
+			$this->database->rollBack();
+
+			throw $e;
+		}
+	}
+
+	/**
+	 * @param TicketOrderId     $ticketOrderId
+	 * @param DateTimeImmutable $sentAt
+	 *
+	 * @throws PDOException
+	 * @throws Throwable
+	 */
+	public function markEmailAsSent( TicketOrderId $ticketOrderId, DateTimeImmutable $sentAt ) : void
+	{
+		$this->database->beginTransaction();
+
+		try
+		{
+			$query = 'INSERT INTO `ticketOrderMails` (orderId, sentAt) 
+					  VALUES (:orderId, :sentAt)
+					  ON DUPLICATE KEY UPDATE sentAt = :sentAt';
+
+			$statement = $this->database->prepare( $query );
+			$statement->execute(
+				[
+					'orderId' => $ticketOrderId->toString(),
+					'sentAt'  => $sentAt->format( 'c' ),
+				]
+			);
+
+			$this->guardStatementSucceeded( $statement );
+
+			$this->database->commit();
+		}
+		catch ( Throwable $e )
+		{
+			$this->database->rollBack();
+
+			throw $e;
+		}
+	}
+
+	/**
+	 * @param string $ticketOrderId
+	 *
+	 * @throws RuntimeException
+	 * @return null|stdClass
+	 */
+	public function getInvoiceRecordIfExists( string $ticketOrderId ) : ?stdClass
+	{
+		$query = 'SELECT `invoiceId`, `date`, `pdf` 
+				  FROM `ticketOrderInvoices` 
+				  WHERE `orderId` = :orderId 
+				  LIMIT 1';
+
+		$statement = $this->database->prepare( $query );
+		$statement->execute(
+			[
+				'orderId' => $ticketOrderId,
+			]
+		);
+
+		$this->guardStatementSucceeded( $statement );
+
+		$invoice = $statement->fetchObject();
+
+		return $invoice ?: null;
 	}
 }
