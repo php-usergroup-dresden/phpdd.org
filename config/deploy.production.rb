@@ -50,7 +50,7 @@ task :deploy => :remote_environment do
 
     on :launch do
       invoke :'reload_env'
-      invoce :'check_static_pages'
+      invoke :'check_static_pages'
       invoke :'deploy:cleanup'
     end
   end
