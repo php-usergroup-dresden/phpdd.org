@@ -6,6 +6,7 @@ use IceHawk\IceHawk\Constants\HttpCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\ProjectConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\InfrastructureInjecting;
+use function dirname;
 use function file_get_contents;
 use function file_put_contents;
 
@@ -78,9 +79,9 @@ final class HtmlPage
 	{
 		if ( null === $this->projectConfig )
 		{
-			$projectConfigFile = __DIR__ . '/../../../../../Project2018.json';
+			$projectConfigFile = dirname( __DIR__, 5 ) . '/Project2018.json';
 			$projectConfigData = $this->getDataFromProjectConfig( $projectConfigFile );
-			$projectConfigDir  = \dirname( $projectConfigFile );
+			$projectConfigDir  = dirname( $projectConfigFile );
 
 			$this->projectConfig = new ProjectConfig( $projectConfigDir, $projectConfigData );
 		}
@@ -90,9 +91,13 @@ final class HtmlPage
 
 	private function getDataFromProjectConfig( string $projectConfigFile ) : array
 	{
-		$configData = file_get_contents( $projectConfigFile );
+		$appConfig = $this->getEnv()->getAppConfig();
+		$jsonData  = file_get_contents( $projectConfigFile );
 
-		return json_decode( $configData, true );
+		$configData            = json_decode( $jsonData, true );
+		$configData['baseUrl'] = $appConfig->getBaseUrl();
+
+		return $configData;
 	}
 
 	/**

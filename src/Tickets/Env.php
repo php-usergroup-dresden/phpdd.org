@@ -9,6 +9,7 @@ use Money\Currencies\ISOCurrencies;
 use Money\Formatter\IntlMoneyFormatter;
 use Money\MoneyFormatter;
 use PDO;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\AppConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\EmailConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\MySqlConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\SentryConfig;
@@ -165,6 +166,17 @@ final class Env extends AbstractObjectPool implements ProvidesInfrastructure
 				$transport->setPassword( $emailConfig->getSmtpPassword() );
 
 				return new Swift_Mailer( $transport );
+			}
+		);
+	}
+
+	public function getAppConfig() : AppConfig
+	{
+		return $this->getSharedInstance(
+			'appConfig',
+			function ()
+			{
+				return AppConfig::fromConfigFile();
 			}
 		);
 	}
