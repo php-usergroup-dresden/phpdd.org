@@ -51,6 +51,7 @@ task :deploy => :remote_environment do
 
     on :launch do
       invoke :'reload_env'
+      invoke :'clear_twig_cache'
       invoke :'check_static_pages'
       invoke :'deploy:cleanup'
     end
@@ -72,6 +73,11 @@ end
 desc "Check static pages"
 task :check_static_pages do
     command 'php vendor/bin/spg.phar check:links -b https://2018.phpdd.org Project2018.json'
+end
+
+desc "Clear twig cache"
+task :clear_twig_cache do
+    command 'sudo rm -rf /var/www/phpdd.org/shared/twig/*'
 end
 
 desc "Reloading nginx and php-fpm"
