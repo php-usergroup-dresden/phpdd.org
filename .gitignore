@@ -2,8 +2,8 @@
 /.vagrant/
 /vendor/
 /build/logs/
-/public/2018/media/*
 /data/redis/*
 /data/mysql/*
 /data/static/*
+/data/backups/*
 !.gitkeep
