@@ -5,6 +5,7 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\CountryCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\InvalidArgumentException;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\LogicException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Interfaces\CalculatesPaymentFee;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException;
@@ -15,6 +16,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CountryCode;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiversityDonation;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentFee;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentProvider;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDate;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDiscountTotal;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderEmailAddress;
@@ -29,9 +31,9 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 {
 	use MoneyProviding;
 
-	private const WORKSHOP_TICKETS_MAX               = 10;
+	private const WORKSHOP_TICKETS_MAX   = 10;
 
-	private const CONFERENCE_TICKETS_MAX             = 10;
+	private const CONFERENCE_TICKETS_MAX = 10;
 
 	/** @var TicketOrderId */
 	private $orderId;
@@ -113,6 +115,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	 *
 	 * @throws AllowedTicketCountExceededException
 	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws LogicException
 	 */
 	public function orderTickets( TicketItem $ticketItem, TicketItem ...$ticketItems ) : void
 	{
@@ -129,6 +132,7 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 	 *
 	 * @throws AllowedTicketCountExceededException
 	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws LogicException
 	 */
 	private function orderTicket( TicketItem $ticketItem ) : void
 	{
@@ -162,6 +166,16 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 					'%s cannot attend the conference twice at the same time.',
 					$attendeeName->toString()
 				)
+			);
+		}
+
+		$ticketId     = $ticketItem->getTicket()->getId();
+		$discountItem = $ticketItem->getDiscountItem();
+
+		if ( $this->sameDiscountCodeUsedOnSameTicketForDifferentAttendee( $attendeeName, $ticketId, $discountItem ) )
+		{
+			throw new LogicException(
+				'Same discount code cannot be used for different attendees on the same ticket.'
 			);
 		}
 
@@ -227,6 +241,45 @@ final class TicketOrder implements ProvidesTicketOrderInformation
 		}
 
 		return $this->ticketItems->getCountForTypeAndAttendeeName( $ticketType, $attendeeName ) > 0;
+	}
+
+	private function sameDiscountCodeUsedOnSameTicketForDifferentAttendee(
+		AttendeeName $attendeeName,
+		TicketId $ticketId,
+		?DiscountItem $discountItem
+	) : bool
+	{
+		if ( null === $discountItem )
+		{
+			return false;
+		}
+
+		foreach ( $this->ticketItems as $ticketItem )
+		{
+			$ticketDiscountItem = $ticketItem->getDiscountItem();
+
+			if ( null === $ticketDiscountItem )
+			{
+				continue;
+			}
+
+			if ( !$ticketId->equals( $ticketItem->getTicket()->getId() ) )
+			{
+				continue;
+			}
+
+			if ( $attendeeName->equals( $ticketItem->getAttendeeName() ) )
+			{
+				continue;
+			}
+
+			if ( $discountItem->getCode()->equals( $ticketDiscountItem->getCode() ) )
+			{
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	public function getOrderId() : TicketOrderId
