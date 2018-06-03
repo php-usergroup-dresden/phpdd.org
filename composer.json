@@ -26,7 +26,8 @@
     "symfony/console": "~4.1.0",
     "mikehaertl/phpwkhtmltopdf": "~2.3.1",
     "swiftmailer/swiftmailer": "~5.4.9",
-    "endroid/qr-code": "~3.2.5"
+    "endroid/qr-code": "~3.2.5",
+    "maknz/slack": "~1.7.0"
   },
   "autoload": {
     "psr-4": {

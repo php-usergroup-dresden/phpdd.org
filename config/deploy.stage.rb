@@ -24,6 +24,7 @@ set :shared_files, [
     "config/phpbu.xml",
     "config/Sentry.php",
     "config/Session.php",
+    "config/Slack.php",
     "config/Stripe.php",
     "config/Twig.php",
 ]

@@ -5,12 +5,14 @@
 
 namespace PHPUGDD\PHPDD\Website\Tickets\Interfaces;
 
+use IntlDateFormatter;
 use Money\MoneyFormatter;
 use PDO;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\AppConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\EmailConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\ErrorHandling\SentryClient;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Rendering\Twig;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Slack\SlackClient;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Session;
 use Swift_Mailer;
 
@@ -24,9 +26,9 @@ interface ProvidesInfrastructure
 
 	public function getSession() : Session;
 
-	public function getDateFormatter() : \IntlDateFormatter;
+	public function getDateFormatter() : IntlDateFormatter;
 
-	public function getDateTimeFormatter() : \IntlDateFormatter;
+	public function getDateTimeFormatter() : IntlDateFormatter;
 
 	public function getMoneyFormatter() : MoneyFormatter;
 
@@ -39,4 +41,6 @@ interface ProvidesInfrastructure
 	public function getMailer() : Swift_Mailer;
 
 	public function getAppConfig() : AppConfig;
+
+	public function getSlackClient() : SlackClient;
 }

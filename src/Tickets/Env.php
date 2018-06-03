@@ -8,16 +8,19 @@ namespace PHPUGDD\PHPDD\Website\Tickets;
 use Money\Currencies\ISOCurrencies;
 use Money\Formatter\IntlMoneyFormatter;
 use Money\MoneyFormatter;
+use NumberFormatter;
 use PDO;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\AppConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\EmailConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\MySqlConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\SentryConfig;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\SlackConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\TwigConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\ErrorHandling\SentryClient;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Rendering\Filters\DateFormatFilter;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Rendering\Filters\MoneyFormatFilter;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Rendering\Twig;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Slack\SlackClient;
 use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Session;
 use PHPUGDD\PHPDD\Website\Tickets\Interfaces\ProvidesInfrastructure;
 use Swift_Mailer;
@@ -92,7 +95,7 @@ final class Env extends AbstractObjectPool implements ProvidesInfrastructure
 			{
 				$currencies = new ISOCurrencies();
 
-				$numberFormatter = new \NumberFormatter( self::LOCALE, \NumberFormatter::CURRENCY );
+				$numberFormatter = new NumberFormatter( self::LOCALE, NumberFormatter::CURRENCY );
 
 				return new IntlMoneyFormatter( $numberFormatter, $currencies );
 			}
@@ -177,6 +180,19 @@ final class Env extends AbstractObjectPool implements ProvidesInfrastructure
 			function ()
 			{
 				return AppConfig::fromConfigFile();
+			}
+		);
+	}
+
+	public function getSlackClient() : SlackClient
+	{
+		return $this->getSharedInstance(
+			'slackClient',
+			function ()
+			{
+				$config = SlackConfig::fromConfigFile();
+
+				return new SlackClient( $config );
 			}
 		);
 	}

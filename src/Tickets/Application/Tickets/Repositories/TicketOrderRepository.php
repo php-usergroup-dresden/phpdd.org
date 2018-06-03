@@ -15,11 +15,14 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesReserve
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Ticket;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItem;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrder;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketSaleSummary;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketItemId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Slack\Interfaces\ProvidesSummaryArray;
 use stdClass;
 use Throwable;
+use function array_merge;
 use function array_unique;
 use function count;
 use function json_encode;
@@ -638,5 +641,47 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 		$invoice = $statement->fetchObject();
 
 		return $invoice ?: null;
+	}
+
+	/**
+	 * @param DateTimeImmutable $date
+	 *
+	 * @throws RuntimeException
+	 * @return ProvidesSummaryArray
+	 */
+	public function getTicketSaleSummary( DateTimeImmutable $date ) : ProvidesSummaryArray
+	{
+		$queryDay = 'SELECT COUNT(1) AS `purchasesDay`, SUM(`orderTotal`) AS `totalDay` 
+					 FROM `ticketOrders` 
+					 WHERE `date` BETWEEN :start AND :end';
+
+		$queryOverall = 'SELECT COUNT(1) AS `purchasesOverall`, SUM(`orderTotal`) AS `totalOverall` 
+					     FROM `ticketOrders` WHERE 1';
+
+		$statementDay = $this->database->prepare( $queryDay );
+		$statementDay->execute(
+			[
+				'start' => $date->format( 'Y-m-d 00:00:00' ),
+				'end'   => $date->format( 'Y-m-d 23:59:59' ),
+			]
+		);
+
+		$this->guardStatementSucceeded( $statementDay );
+
+		$data = (array)$statementDay->fetch( PDO::FETCH_ASSOC );
+
+		$statementOverall = $this->database->query( $queryOverall );
+
+		$this->guardStatementSucceeded( $statementOverall );
+
+		$data = array_merge( $data, (array)$statementOverall->fetch( PDO::FETCH_ASSOC ) );
+
+		return new TicketSaleSummary(
+			$date,
+			(int)($data['purchasesDay'] ?? 0),
+			(int)($data['purchasesOverall'] ?? 0),
+			(int)($data['totalDay'] ?? 0),
+			(int)($data['totalOverall'] ?? 0)
+		);
 	}
 }
