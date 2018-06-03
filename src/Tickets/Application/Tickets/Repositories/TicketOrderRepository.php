@@ -678,10 +678,10 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 
 		return new TicketSaleSummary(
 			$date,
-			(int)($data['purchasesDay'] ?? 0),
-			(int)($data['purchasesOverall'] ?? 0),
-			(int)($data['totalDay'] ?? 0),
-			(int)($data['totalOverall'] ?? 0)
+			(int)($data['purchasesDay'] ?? '0'),
+			(int)($data['purchasesOverall'] ?? '0'),
+			(int)($data['totalDay'] ?? '0'),
+			(int)($data['totalOverall'] ?? '0')
 		);
 	}
 }
