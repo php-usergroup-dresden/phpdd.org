@@ -75,7 +75,7 @@ return [
 		'maxSeatsPerOrder' => 5,
 		'type'             => \PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes::CONFERENCE,
 		'validFrom'        => '2018-05-01 00:00:00',
-		'validTo'          => '2018-09-15 23:59:59',
+		'validTo'          => '2018-06-30 23:59:59',
 		'image'            => '/assets/images/tickets/early-bird.png',
 	],
 	'PHPDD18-CT-01' => [
