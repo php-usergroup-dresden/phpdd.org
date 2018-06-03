@@ -9,6 +9,7 @@ use PDOStatement;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\InvalidArgumentException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Invoices\Invoice;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountCodesAlreadyRedeemedException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesRedeemedDiscountCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesReservedTicketCount;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Ticket;
@@ -19,6 +20,8 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketItemId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
 use stdClass;
 use Throwable;
+use function array_unique;
+use function count;
 use function json_encode;
 
 final class TicketOrderRepository implements ProvidesReservedTicketCount, ProvidesRedeemedDiscountCodes
@@ -72,6 +75,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 	/**
 	 * @param TicketOrder $ticketOrder
 	 *
+	 * @throws DiscountCodesAlreadyRedeemedException
 	 * @throws PDOException
 	 * @throws Throwable
 	 */
@@ -81,6 +85,8 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 
 		try
 		{
+			$this->guardDiscountsWereNotRedeemedYet( $ticketOrder );
+
 			$this->addTicketOrderRecord( $ticketOrder );
 			$this->addTicketOrderAddressRecord( $ticketOrder );
 			$this->addTicketOrderItemRecords( $ticketOrder );
@@ -88,11 +94,39 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 
 			$this->database->commit();
 		}
-		catch ( Throwable $e )
+		catch ( DiscountCodesAlreadyRedeemedException | Throwable $e )
 		{
 			$this->database->rollBack();
 
 			throw $e;
+		}
+	}
+
+	/**
+	 * @param TicketOrder $ticketOrder
+	 *
+	 * @throws DiscountCodesAlreadyRedeemedException
+	 * @throws RuntimeException
+	 */
+	private function guardDiscountsWereNotRedeemedYet( TicketOrder $ticketOrder ) : void
+	{
+		$redeemedDiscountCodes = $this->getRedeemedDiscountCodes();
+		$discountItems         = $ticketOrder->getDiscountItems();
+		$discountCodes         = [];
+
+		foreach ( $discountItems as $discountItem )
+		{
+			$discountCodes[] = $discountItem->getCode()->toString();
+		}
+
+		$alreadyRedeemedCodes = array_unique( array_intersect( $discountCodes, $redeemedDiscountCodes ) );
+
+		if ( 0 !== count( $alreadyRedeemedCodes ) )
+		{
+			throw new DiscountCodesAlreadyRedeemedException(
+				'The following discount codes were already used. Please remove them from your order: '
+				. implode( ', ', $alreadyRedeemedCodes )
+			);
 		}
 	}
 

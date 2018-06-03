@@ -13,6 +13,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Constants\PaymentProviders;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\PaymentServiceFactory;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountCodesAlreadyRedeemedException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Repositories\TicketOrderRepository;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrderBuilder;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrderPayment;
@@ -95,6 +96,14 @@ final class StripeSuccessRequestHandler extends AbstractRequestHandler implement
 		{
 			$ticketOrderRepository = new TicketOrderRepository( $database );
 			$ticketOrderRepository->placeTicketOrder( $ticketOrder );
+		}
+		catch ( DiscountCodesAlreadyRedeemedException $e )
+		{
+			$ticketDetailsForm->addFeedback( 'general', new Feedback( $e->getMessage() ) );
+
+			(new Redirect())->respond( self::FAIL_URL_DETAILS );
+
+			return;
 		}
 		catch ( Throwable $e )
 		{
