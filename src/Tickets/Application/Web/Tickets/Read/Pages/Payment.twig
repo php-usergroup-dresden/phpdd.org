@@ -195,7 +195,7 @@
                 <div class="col-xs-12 text-center">
                     <script
                             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                            data-key="pk_test_srWBSMZLD4nyFc0cPSyKK2lk"
+                            data-key="{{ stripeConfig.getApiPublicKey }}"
                             data-amount="{{ ticketOrder.getPaymentTotal.getMoney.getAmount }}"
                             data-name="PHP USERGROUP DRESDEN e.V."
                             data-description="#PHPDD18 ticket order • {{ ticketOrder.getTicketItems.count }} ticket(s)"

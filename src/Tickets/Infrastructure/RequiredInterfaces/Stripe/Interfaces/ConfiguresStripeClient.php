@@ -4,7 +4,9 @@ namespace PHPUGDD\PHPDD\Website\Tickets\Infrastructure\RequiredInterfaces\Stripe
 
 interface ConfiguresStripeClient
 {
-	public function getApiKey() : string;
+	public function getApiSecretKey() : string;
+
+	public function getApiPublicKey() : string;
 
 	public function getStatementDescriptor() : string;
 }

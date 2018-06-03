@@ -11,6 +11,7 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrderBuilder;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\AbstractRequestHandler;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses\HtmlPage;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Web\Responses\Redirect;
+use PHPUGDD\PHPDD\Website\Tickets\Infrastructure\Configs\StripeConfig;
 use function count;
 
 final class TicketPaymentRequestHandler extends AbstractRequestHandler implements HandlesGetRequest
@@ -32,6 +33,7 @@ final class TicketPaymentRequestHandler extends AbstractRequestHandler implement
 		$ticketDetails       = $ticketDetailsForm->getData();
 		$ticketsConfig       = TicketsConfig::fromConfigFile();
 		$discountsConfig     = DiscountsConfig::fromConfigFile();
+		$stripeConfig        = StripeConfig::fromConfigFile();
 
 		if ( 0 === count( $selectedTickets ) )
 		{
@@ -52,6 +54,7 @@ final class TicketPaymentRequestHandler extends AbstractRequestHandler implement
 		$data = [
 			'ticketPaymentForm' => $ticketPaymentForm,
 			'ticketOrder'       => $ticketOrder,
+			'stripeConfig'      => $stripeConfig,
 		];
 
 		(new HtmlPage( $this->getEnv() ))->respond( 'Tickets/Read/Pages/Payment.twig', $data );

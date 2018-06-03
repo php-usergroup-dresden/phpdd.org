@@ -21,9 +21,14 @@ final class StripeConfig implements ConfiguresStripeClient
 		return new self( $configData );
 	}
 
-	public function getApiKey() : string
+	public function getApiSecretKey() : string
 	{
-		return (string)$this->configData['apiKey'];
+		return (string)$this->configData['apiSecretKey'];
+	}
+
+	public function getApiPublicKey() : string
+	{
+		return (string)$this->configData['apiPublicKey'];
 	}
 
 	public function getStatementDescriptor() : string

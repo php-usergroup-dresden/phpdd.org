@@ -35,7 +35,7 @@ final class StripeClient
 	 */
 	public function executePayment( StripeExecuteRequest $request ) : ApiResource
 	{
-		Stripe::setApiKey( $this->config->getApiKey() );
+		Stripe::setApiKey( $this->config->getApiSecretKey() );
 
 		$charge = Charge::create(
 			[
