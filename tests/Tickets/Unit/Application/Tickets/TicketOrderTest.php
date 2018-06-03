@@ -7,7 +7,9 @@ use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\DiscountItemProviding;
 use PHPUGDD\PHPDD\Website\Tests\Tickets\Fixtures\Traits\TicketProviding;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\CountryCodes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\LogicException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Payments\Interfaces\CalculatesPaymentFee;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\DiscountItem;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\AllowedTicketCountPerAttendeeExceededException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItem;
@@ -18,9 +20,14 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Types\AttendeeName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\City;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CompanyName;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\CountryCode;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountCode;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountDescription;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountName;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\DiscountPrice;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\Firstname;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\Lastname;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\StreetWithNumber;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderDate;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderEmailAddress;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
@@ -491,5 +498,73 @@ final class TicketOrderTest extends TestCase
 		$expectedMoney = $this->getMoney( 0 );
 
 		$this->assertTrue( $expectedMoney->equals( $ticketOrder->getDiscountTotal()->getMoney() ) );
+	}
+
+	/**
+	 * @throws AllowedTicketCountExceededException
+	 * @throws AllowedTicketCountPerAttendeeExceededException
+	 * @throws \Fortuneglobe\Types\Exceptions\InvalidArgumentException
+	 * @throws \InvalidArgumentException
+	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountExceededTicketPriceException
+	 * @throws \PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountNotAllowedForTicketException
+	 * @throws \PHPUnit\Framework\ExpectationFailedException
+	 * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+	 * @throws \Exception
+	 */
+	public function testCannotUseSameDiscountCodeForDifferentAttendeesOnSameTicket() : void
+	{
+		/** @var TicketOrderId $orderId */
+		$orderId     = TicketOrderId::generate();
+		$ticketOrder = new TicketOrder( $orderId, new TicketOrderDate(), $this->getPaymentFeeCalculatorStub() );
+		$johnDoe     = new AttendeeName( 'John Doe' );
+		$janeDoe     = new AttendeeName( 'Jane Doe' );
+
+		$ticketA = $this->getWorkshopTicket(
+			TicketTypes::FULLDAY_WORKSHOP,
+			'Workshop Ticket Slot A',
+			'Workshop description slot A',
+			$this->getMoney( 24900 )
+		);
+
+		$ticketB = $this->getWorkshopTicket(
+			TicketTypes::FULLDAY_WORKSHOP,
+			'Workshop Ticket Slot A',
+			'Workshop description slot A',
+			$this->getMoney( 24900 )
+		);
+
+		$ticketC = $this->getConferenceTicket( $this->getMoney( 11900 ) );
+
+		$ticketItemA = new TicketItem( $ticketA, $johnDoe );
+		$ticketItemB = new TicketItem( $ticketB, $janeDoe );
+		$ticketItemC = new TicketItem( $ticketC, $johnDoe );
+
+		$allowedTickets = [
+			new TicketId( 'PHPDD18-CT-01' ),
+			new TicketId( 'PHPDD18-WS-01' ),
+		];
+
+		$discountItem = new DiscountItem(
+			new DiscountName( 'Member discount' ),
+			new DiscountCode( 'L34818444E' ),
+			new DiscountDescription( '10% member discount' ),
+			new DiscountPrice( $this->getMoney( -2490 ) ),
+			$allowedTickets
+		);
+
+		$ticketItemA->grantDiscount( $discountItem );
+		$ticketItemB->grantDiscount( $discountItem );
+		$ticketItemC->grantDiscount( $discountItem );
+
+		$ticketOrder->orderTickets( $ticketItemA, $ticketItemC );
+
+		$this->assertCount( 2, $ticketOrder->getDiscountItems() );
+
+		$this->expectException( LogicException::class );
+		$this->expectExceptionMessage(
+			'Same discount code cannot be used for different attendees on the same ticket.'
+		);
+
+		$ticketOrder->orderTickets( $ticketItemB );
 	}
 }
