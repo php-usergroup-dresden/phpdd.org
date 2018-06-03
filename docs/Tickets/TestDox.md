@@ -110,6 +110,7 @@
 - [x] Same Attendee Cannot Order Multiple Conference Tickets (💚 1)
 - [x] Can Get Totals (💚 1)
 - [x] Ticket Items Without Discount Item Do Not Add Discounts (💚 1)
+- [x] Cannot Use Same Discount Code For Different Attendees On Same Ticket (💚 1)
 
 ---
 
@@ -352,4 +353,4 @@
 
 ---
 
-Report created at 2018-06-01 21:06:07 (UTC)
+Report created at 2018-06-03 11:12:48 (UTC)
