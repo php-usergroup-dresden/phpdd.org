@@ -392,3 +392,7 @@ footer {
     border: 2px solid #4b6597;
     background-color: #f9f9f9;
 }
+
+.row.alt {
+    background-color: #f6f6f6;
+}
