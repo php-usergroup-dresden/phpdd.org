@@ -47,6 +47,7 @@
       "template": "Templates/Page.twig",
       "contentFile": "Home.md",
       "children": [
+        "/schedule.html",
         "/workshops.html",
         "/talks.html",
         "/speakers.html",
@@ -88,6 +89,28 @@
       "renderer": "twig",
       "template": "Templates/500.twig",
       "contentFile": "",
+      "children": []
+    },
+    "/schedule.html": {
+      "pageLevel": 2,
+      "navName": "Schedule",
+      "pageTitle": "Schedule",
+      "description": "Schedule of the PHP Developer Days 2018 in Dresden, Germany",
+      "language": "en",
+      "imageUrl": "/assets/images/socialcard.png",
+      "tags": [
+        "Speakers",
+        "Trainers",
+        "Workshops",
+        "Talks",
+        "Schedule",
+        "Dresden",
+        "Community"
+      ],
+      "contentType": "markdown",
+      "renderer": "twig",
+      "template": "Templates/Page.twig",
+      "contentFile": "Schedule.md",
       "children": []
     },
     "/workshops.html": {
