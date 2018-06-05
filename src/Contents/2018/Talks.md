@@ -1,5 +1,17 @@
 # OUR CONFERENCE TALKS
 
+<a name="going-backstage-on-community-trends"></a>
+## Going backstage on Community trends: Bug or feature?
+
+---
+By [Jenny Wong](@baseUrl@/speakers.html#jenny-wong)
+
+Over the years, the PHP community has enjoyed an increase in events. This has given us more choice than ever over what we attend. At the same time, some of our favourite events have come to a close.
+
+As the community recalibrates, needs have changed and events are repeatedly being challenged. Organisers are burdened with finding the solutions, but is there a way for us all to help?
+
+With change comes an opportunity for growth. This is our chance to grow richer and stronger as a community.
+
 <a name="does-the-spl-still-have-any-relevance-in-the-brave-new-world-of-php7"></a>
 ## Does the SPL still have any relevance in the Brave New World of PHP7?
 

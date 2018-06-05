@@ -219,7 +219,7 @@ Breaks during the workshop day:
     <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
         <b><a href="@baseUrl@/talks.html#application-metrics-with-prometheus">Application metrics with Prometheus</a></b>
         <p>
-            Speaker: <a href="@baseUrl@/speakers.html#rafael-dohm">Rafael Dohms</a>
+            Speaker: <a href="@baseUrl@/speakers.html#rafael-dohms">Rafael Dohms</a>
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
