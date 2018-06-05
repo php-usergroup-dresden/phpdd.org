@@ -1,6 +1,6 @@
 # SCHEDULE
 
-<br class="blockspace">
+All workshops and talks will be presented in English language.
 
 ## WORKSHOP DAY - FRIDAY, SEPTEMBER 21
 
@@ -124,6 +124,12 @@
     </div>
 </div>
 
+Breaks during the workshop day:
+
+* COFFEE BREAK from 11:00am to 11:30am
+* LUNCH BREAK from 01:30pm to 02:30pm
+* COFFEE BREAK from 04:30pm to 05:00pm
+
 <div class="row blockspace">
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
         07:00pm
@@ -147,8 +153,6 @@
         &nbsp;
     </div>
 </div>
-
-<br class="blockspace">
 
 ## CONFERENCE DAY - SATURDAY, SEPTEMBER 22
 
@@ -372,7 +376,7 @@
         05:00pm - 06:00pm
     </div>
     <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
-        <b><span class="text-danger">UN</span>CONFERENCE (2 TALKS)</b>
+        <b><span style="color: #FF0000">UN</span>CONFERENCE (2 TALKS)</b>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
         ROOM CONF-02
@@ -399,7 +403,7 @@
         06:15pm - 07:15pm
     </div>
     <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
-        <b><span class="text-danger">UN</span>CONFERENCE (2 TALKS)</b>
+        <b><span style="color: #FF0000">UN</span>CONFERENCE (2 TALKS)</b>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
         ROOM CONF-02

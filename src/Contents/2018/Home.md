@@ -18,7 +18,8 @@
 
 After a very successful edition in 2017 we aim to push this community driven conference to the next level in 2018.
 For the first time we will offer a full day with workshops, so you can get the most out of our excellent trainers.
-On the second day our international speakers will provide you with great sessions in a single track.
+On the second day our international speakers will provide you with great talks and we have some fun 
+[side events](@baseUrl@/side-events.html) waiting for you.
 
 We are commited to creating a unique community experience - an event where everyone is among #<span class="text-danger">PHP</span>riends.
 
