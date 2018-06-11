@@ -353,4 +353,32 @@
 
 ---
 
-Report created at 2018-06-03 11:12:48 (UTC)
+## Unit\Infrastructure\Configs\AppConfigTest
+
+- [x] Can Get Base Url (💚 1)
+- [x] Can Get Instance From Config File (💚 1)
+
+---
+
+## Unit\Infrastructure\Configs\EmailConfigTest
+
+- [x] Can Get Values (💚 1)
+- [x] Can Get Instance From Config File (💚 1)
+
+---
+
+## Unit\Infrastructure\Configs\MySqlConfigTest
+
+- [x] Can Get Values From Config Data (💚 1)
+- [x] Can Get Instance From Config File (💚 1)
+
+---
+
+## Unit\Infrastructure\Configs\PaypalClientConfigTest
+
+- [x] Can Get Values From Config Data (💚 1)
+- [x] Can Get Instance From Config File (💚 1)
+
+---
+
+Report created at 2018-06-11 09:09:27 (UTC)
