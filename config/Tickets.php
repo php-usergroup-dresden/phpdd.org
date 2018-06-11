@@ -13,7 +13,7 @@ return [
 		'image'            => '/assets/images/speakers/luka-muzinic.jpg',
 	],
 	'PHPDD18-WS-02' => [
-		'name'             => 'WORKSHOP - PRGAMATIC EVENT SOURCING',
+		'name'             => 'WORKSHOP - PRAGMATIC EVENT SOURCING',
 		'description'      => 'Trainers: Arne Blankerts & Sebastian Heuer<br>Full-day workshop from 09:00am to 7:00pm on September 21st 2018',
 		'price'            => 24900,
 		'seats'            => 25,
