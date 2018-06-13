@@ -286,6 +286,7 @@ We are commited to creating a unique community experience - an event where every
     </div>
 </div>
 
+<a name="book-sponsors"></a>
 ## Our book sponsors
 
 ---
