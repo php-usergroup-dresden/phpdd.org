@@ -158,7 +158,11 @@ We are commited to creating a unique community experience - an event where every
             <img src="@baseUrl@/assets/images/sponsors/shopware.png" alt="shopware" class="img-responsive img-sponsor">
         </a>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"></div>
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+        <a href="https://usabilla.com" target="_blank" title="Usabilla - The Standard in User Feedback">
+            <img src="@baseUrl@/assets/images/sponsors/usabilla.png" alt="Usabilla" class="img-responsive img-sponsor">
+        </a>
+    </div>
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"></div>
     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3"></div>
 </div>
