@@ -651,37 +651,85 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 	 */
 	public function getTicketSaleSummary( DateTimeImmutable $date ) : ProvidesSummaryArray
 	{
-		$queryDay = 'SELECT COUNT(1) AS `purchasesDay`, SUM(`orderTotal`) AS `totalDay` 
-					 FROM `ticketOrders` 
-					 WHERE `date` BETWEEN :start AND :end';
+		$queryOrdersDay = 'SELECT 
+						COUNT(DISTINCT o.orderId) AS `purchasesDay`, 
+						SUM(o.`orderTotal`) AS `totalDay`, 
+						SUM(o.diversityDonation) AS `diversityDonationDay`
+					 FROM `ticketOrders` AS o
+					 WHERE o.`date` BETWEEN :start AND :end';
 
-		$queryOverall = 'SELECT COUNT(1) AS `purchasesOverall`, SUM(`orderTotal`) AS `totalOverall` 
-					     FROM `ticketOrders` WHERE 1';
+		$queryItemsDay = 'SELECT
+							COUNT(DISTINCT oi.itemId) AS `attendeesDay`
+						  FROM ticketOrderItems AS oi
+						  JOIN ticketOrders AS o USING (orderId)
+						  WHERE o.`date` BETWEEN :start AND :end';
 
-		$statementDay = $this->database->prepare( $queryDay );
-		$statementDay->execute(
+		$queryOrdersOverall = 'SELECT 
+							COUNT(DISTINCT o.orderId) AS `purchasesOverall`, 
+							SUM(`orderTotal`) AS `totalOverall`,
+							SUM(o.diversityDonation) AS `diversityDonationOverall`,
+							GROUP_CONCAT(DISTINCT oa.countryCode SEPARATOR \', \') AS `attendeeCountries`
+					     FROM `ticketOrders` AS o 
+					 	 JOIN `ticketOrderAddresses` AS oa USING (orderId)
+					     WHERE 1';
+
+		$queryItemsOverall = 'SELECT
+							COUNT(DISTINCT oi.itemId) AS `attendeesOverall`,
+							SUM(IF(oi.ticketId IN (\'PHPDD18-EB-01\', \'PHPDD18-CT-01\'), 1, 0))  AS `attendeesConference`,
+							SUM(IF(oi.ticketId IN (\'PHPDD18-EB-01\', \'PHPDD18-CT-01\'), 0, 1))  AS `attendeesWorkshops`
+						  FROM ticketOrderItems AS oi
+						  JOIN ticketOrders AS o USING (orderId)
+						  WHERE 1';
+
+		$statementOrdersDay = $this->database->prepare( $queryOrdersDay );
+		$statementOrdersDay->execute(
 			[
 				'start' => $date->format( 'Y-m-d 00:00:00' ),
 				'end'   => $date->format( 'Y-m-d 23:59:59' ),
 			]
 		);
 
-		$this->guardStatementSucceeded( $statementDay );
+		$this->guardStatementSucceeded( $statementOrdersDay );
 
-		$data = (array)$statementDay->fetch( PDO::FETCH_ASSOC );
+		$data = (array)$statementOrdersDay->fetch( PDO::FETCH_ASSOC );
 
-		$statementOverall = $this->database->query( $queryOverall );
+		$statementItemsDay = $this->database->prepare( $queryItemsDay );
+		$statementItemsDay->execute(
+			[
+				'start' => $date->format( 'Y-m-d 00:00:00' ),
+				'end'   => $date->format( 'Y-m-d 23:59:59' ),
+			]
+		);
 
-		$this->guardStatementSucceeded( $statementOverall );
+		$this->guardStatementSucceeded( $statementItemsDay );
 
-		$data = array_merge( $data, (array)$statementOverall->fetch( PDO::FETCH_ASSOC ) );
+		$data = array_merge( $data, (array)$statementItemsDay->fetch( PDO::FETCH_ASSOC ) );
+
+		$statementOrdersOverall = $this->database->query( $queryOrdersOverall );
+
+		$this->guardStatementSucceeded( $statementOrdersOverall );
+
+		$data = array_merge( $data, (array)$statementOrdersOverall->fetch( PDO::FETCH_ASSOC ) );
+
+		$statementItemsOverall = $this->database->query( $queryItemsOverall );
+
+		$this->guardStatementSucceeded( $statementItemsOverall );
+
+		$data = array_merge( $data, (array)$statementItemsOverall->fetch( PDO::FETCH_ASSOC ) );
 
 		return new TicketSaleSummary(
 			$date,
 			(int)($data['purchasesDay'] ?? '0'),
 			(int)($data['purchasesOverall'] ?? '0'),
 			(int)($data['totalDay'] ?? '0'),
-			(int)($data['totalOverall'] ?? '0')
+			(int)($data['totalOverall'] ?? '0'),
+			(int)($data['attendeesDay'] ?? '0'),
+			(int)($data['attendeesOverall'] ?? '0'),
+			(int)($data['attendeesWorkshops'] ?? '0'),
+			(int)($data['attendeesConference'] ?? '0'),
+			(string)($data['attendeeCountries'] ?? ''),
+			(int)($data['diversityDonationDay'] ?? '0'),
+			(int)($data['diversityDonationOverall'] ?? '0')
 		);
 	}
 }

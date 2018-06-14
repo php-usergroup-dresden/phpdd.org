@@ -25,19 +25,54 @@ final class TicketSaleSummary implements ProvidesSummaryArray
 	/** @var int */
 	private $totalOverall;
 
+	/** @var int */
+	private $attendeesDay;
+
+	/** @var int */
+	private $attendeesOverall;
+
+	/** @var int */
+	private $attendeesWorkshops;
+
+	/** @var int */
+	private $attendeesConference;
+
+	/** @var string */
+	private $attendeeCountries;
+
+	/** @var int */
+	private $diversityDonationDay;
+
+	/** @var int */
+	private $diversityDonationOverall;
+
 	public function __construct(
 		DateTimeImmutable $date,
 		int $purchasesDay,
 		int $purchasesOverall,
 		int $totalDay,
-		int $totalOverall
+		int $totalOverall,
+		int $attendeesDay,
+		int $attendeesOverall,
+		int $attendeesWorkshops,
+		int $attendeesConference,
+		string $attendeeCountries,
+		int $diversityDonationDay,
+		int $diversityDonationOverall
 	)
 	{
-		$this->date             = $date;
-		$this->purchasesDay     = $purchasesDay;
-		$this->purchasesOverall = $purchasesOverall;
-		$this->totalDay         = $totalDay;
-		$this->totalOverall     = $totalOverall;
+		$this->date                     = $date;
+		$this->purchasesDay             = $purchasesDay;
+		$this->purchasesOverall         = $purchasesOverall;
+		$this->totalDay                 = $totalDay;
+		$this->totalOverall             = $totalOverall;
+		$this->attendeesDay             = $attendeesDay;
+		$this->attendeesOverall         = $attendeesOverall;
+		$this->attendeesWorkshops       = $attendeesWorkshops;
+		$this->attendeesConference      = $attendeesConference;
+		$this->attendeeCountries        = $attendeeCountries;
+		$this->diversityDonationDay     = $diversityDonationDay;
+		$this->diversityDonationOverall = $diversityDonationOverall;
 	}
 
 	/**
@@ -46,7 +81,7 @@ final class TicketSaleSummary implements ProvidesSummaryArray
 	 */
 	public function toArray() : array
 	{
-		$message = sprintf( 'Ticket sale summary for %s', $this->date->format( 'Y-m-d' ) );
+		$message = "Ticket sale summary:\n";
 
 		return [
 			'fallback' => $message,
@@ -54,24 +89,48 @@ final class TicketSaleSummary implements ProvidesSummaryArray
 			'color'    => ($this->purchasesDay > 0) ? 'good' : 'danger',
 			'fields'   => [
 				[
-					'title' => 'Purchases (day)',
-					'value' => $this->purchasesDay,
-					'short' => true,
+					'title' => sprintf( 'Purchases (%s)', $this->date->format( 'Y-m-d' ) ),
+					'value' => sprintf( '%d (%d attendees)', $this->purchasesDay, $this->attendeesDay ),
+					'short' => false,
 				],
 				[
-					'title' => 'Total (day)',
+					'title' => sprintf( 'Total (%s)', $this->date->format( 'Y-m-d' ) ),
 					'value' => $this->getFormattedMoney( $this->totalDay ),
-					'short' => true,
+					'short' => false,
+				],
+				[
+					'title' => sprintf( 'Diversity Donations (%s)', $this->date->format( 'Y-m-d' ) ),
+					'value' => $this->getFormattedMoney( $this->diversityDonationDay ),
+					'short' => false,
 				],
 				[
 					'title' => 'Purchases (overall)',
-					'value' => $this->purchasesOverall,
-					'short' => true,
+					'value' => sprintf( '%d (%d attendees)', $this->purchasesOverall, $this->attendeesOverall ),
+					'short' => false,
 				],
 				[
 					'title' => 'Total (overall)',
 					'value' => $this->getFormattedMoney( $this->totalOverall ),
-					'short' => true,
+					'short' => false,
+				],
+				[
+					'title' => 'Diversity Donations (overall)',
+					'value' => $this->getFormattedMoney( $this->diversityDonationOverall ),
+					'short' => false,
+				],
+				[
+					'title' => 'Participation',
+					'value' => sprintf(
+						'Workshops: %d / Conference: %d',
+						$this->attendeesWorkshops,
+						$this->attendeesConference
+					),
+					'short' => false,
+				],
+				[
+					'title' => 'Purchases from countries',
+					'value' => $this->attendeeCountries,
+					'short' => false,
 				],
 			],
 		];
