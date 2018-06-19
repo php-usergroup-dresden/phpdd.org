@@ -22,14 +22,21 @@
                          class="img-rounded img-responsive">
                 </div>
                 <div class="col-xs-6 col-sm-8 col-md-9 col-lg-9">
-                    <h4>{{ ticket.getName }}</h4>
+                    <h4>
+                        {{ ticket.getName }}
+                        {% if ticket.isSoldOut %}
+                            <span class="text-danger"> // SOLD OUT!</span>
+                        {% endif %}
+                    </h4>
                     <p>
                         {{ ticket.getDescription|raw }}
                     </p>
-                    <h3>
-                        {{ ticket.getPrice.getMoney|formatMoney }} <sup>*</sup>
-                        <small class="text-muted"> | {{ ticket.getAvailableSeats }} seats available</small>
-                    </h3>
+                    {% if not ticket.isSoldOut %}
+                        <h3>
+                            {{ ticket.getPrice.getMoney|formatMoney }} <sup>*</sup>
+                            <small class="text-muted"> | {{ ticket.getAvailableSeats }} seats available</small>
+                        </h3>
+                    {% endif %}
 
                     <p>
                         <small class="text-muted">
@@ -38,21 +45,29 @@
                         </small>
                         {% if not ticket.isAvailable %}
                             <br>
-                            <small class="text-danger">
-                                This ticket is not for sale at the moment.
-                            </small>
+                            {% if ticket.isSoldOut %}
+                                <span class="text-danger">THESE TICKETS ARE ALREADY SOLD OUT!</span>
+                            {% else %}
+                                <small class="text-danger">
+                                    This ticket is not for sale at the moment.
+                                </small>
+                            {% endif %}
                         {% endif %}
                     </p>
                 </div>
                 <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
-                    <label for="quantity[{{ ticket.getId }}]" class="sr-only">Quantity</label>
-                    <select id="quantity[{{ ticket.getId }}]"
-                            name="quantity[{{ ticket.getId }}]"
-                            class="form-control"{% if not ticket.isAvailable %} disabled{% endif %}>
-                        {% for i in 0..ticket.getMaxSeatsPerOrder %}
-                            <option value="{{ i }}"{% if ticketSelectForm.get('selectedTickets')[ticket.getId().toString] == i %} selected{% endif %}>{{ i }}</option>
-                        {% endfor %}
-                    </select>
+                    {% if not ticket.isSoldOut %}
+                        <label for="quantity[{{ ticket.getId }}]" class="sr-only">Quantity</label>
+                        <select id="quantity[{{ ticket.getId }}]"
+                                name="quantity[{{ ticket.getId }}]"
+                                class="form-control"{% if not ticket.isAvailable %} disabled{% endif %}>
+                            {% for i in 0..ticket.getMaxSeatsPerOrder %}
+                                <option value="{{ i }}"{% if ticketSelectForm.get('selectedTickets')[ticket.getId().toString] == i %} selected{% endif %}>{{ i }}</option>
+                            {% endfor %}
+                        </select>
+                    {% else %}
+                        &nbsp;
+                    {% endif %}
                 </div>
             </div>
             <hr>

@@ -20,10 +20,14 @@ final class TicketInfo implements ProvidesTicketInformation
 	/** @var int */
 	private $availableSeats;
 
+	/** @var bool */
+	private $soldOut;
+
 	public function __construct( TicketConfig $ticketConfig, int $reservedSeats )
 	{
 		$this->ticketConfig   = $ticketConfig;
 		$this->availableSeats = max( 0, $ticketConfig->getSeats() - $reservedSeats );
+		$this->soldOut        = ($ticketConfig->getSeats() === $reservedSeats);
 	}
 
 	public function getId() : TicketId
@@ -101,5 +105,10 @@ final class TicketInfo implements ProvidesTicketInformation
 		}
 
 		return true;
+	}
+
+	public function isSoldOut() : bool
+	{
+		return $this->soldOut;
 	}
 }
