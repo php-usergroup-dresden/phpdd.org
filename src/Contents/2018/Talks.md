@@ -77,13 +77,17 @@ Practical lessons learned while revamping a US airline website to resist huge Bl
 
 
 <a name="application-metrics-with-prometheus"></a>
-## Application metrics with prometheus
+## Application Metrics (with Prometheus examples)
 
 ---
 
 By [Rafael Dohms](@baseUrl@/speakers.html#rafael-dohms)
 
-We all know not to poke at alien life forms in another planet, right? But what about metrics, do you know how to pick, measure and draw conclusions from them? In this talk we will cover Service Level Indicators (SLI), Objectives (SLO), and how to use Prometheus, an open-source system monitoring and alert platform, to measure and make sense of them. Let's get back to some real science.
+We all know not to poke at alien life forms in another planet, right? But what about metrics, do you know how to pick, 
+measure and draw conclusions from them? In this talk we will cover various Site Reliability Engineering topics, 
+such as SLIs and SLOs while we explore real life examples of defining and implementing metrics in a system with examples 
+using Prometheus, an open-source system monitoring and alert platform, to demonstrate implementation. Let's get back to 
+some real science.
 
 <a name="mutation-testing-better-code-by-making-bugs"></a>
 ## Mutation testing: better code by making bugs

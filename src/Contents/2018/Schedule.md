@@ -217,7 +217,7 @@ Breaks during the workshop day:
         10:30am - 11:30am
     </div>
     <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
-        <b><a href="@baseUrl@/talks.html#application-metrics-with-prometheus">Application metrics with Prometheus</a></b>
+        <b><a href="@baseUrl@/talks.html#application-metrics-with-prometheus">Application Metrics (with Prometheus examples)</a></b>
         <p>
             Speaker: <a href="@baseUrl@/speakers.html#rafael-dohms">Rafael Dohms</a>
         </p>

@@ -488,7 +488,7 @@ to gather and spread their knowledge all around the community, who step up on a 
         <p>
             <br>
             <a href="@baseUrl@/talks.html#application-metrics-with-prometheus">
-                Talk: Application metrics with prometheus
+                Talk: Application Metrics (with Prometheus examples)
             </a>
         </p>
         <p>
