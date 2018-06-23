@@ -545,6 +545,13 @@
                 "/index.html": "Home",
                 "/workshops.html": "Workshops"
             }
+        },
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
         }
     },
     "conference": {
@@ -6611,6 +6618,38 @@
             }
         }
     },
+    "closing": {
+        "https://2018.phpdd.dev/schedule.html": {
+            "title": "Schedule",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/schedule.html": "Schedule"
+            }
+        }
+    },
+    "words": {
+        "https://2018.phpdd.dev/schedule.html": {
+            "title": "Schedule",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/schedule.html": "Schedule"
+            }
+        },
+        "https://2018.phpdd.dev/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.dev/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
     "wurstcon": {
         "https://2018.phpdd.dev/schedule.html": {
             "title": "Schedule",
@@ -7902,22 +7941,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/supporters.html": "Supporters"
-            }
-        }
-    },
-    "words": {
-        "https://2018.phpdd.dev/workshops.html": {
-            "title": "Workshops",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/workshops.html": "Workshops"
-            }
-        },
-        "https://2018.phpdd.dev/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
             }
         }
     },
@@ -13178,6 +13201,13 @@
                 "/talks.html": "Talks"
             }
         },
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        },
         "https://2018.phpdd.dev/venue.html": {
             "title": "The venue",
             "breadcrumb": {
@@ -14361,23 +14391,7 @@
             }
         }
     },
-    "passionate": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        },
-        "https://2018.phpdd.dev/team.html": {
-            "title": "Meet the team",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/team.html": "Meet the team"
-            }
-        }
-    },
-    "teacher": {
+    "passion": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -14386,7 +14400,7 @@
             }
         }
     },
-    "mentor": {
+    "focused": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -14395,7 +14409,7 @@
             }
         }
     },
-    "newcomers": {
+    "backend": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -14404,7 +14418,7 @@
             }
         }
     },
-    "programming": {
+    "related": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -14413,7 +14427,7 @@
             }
         }
     },
-    "code4hire": {
+    "shares": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -14422,7 +14436,7 @@
             }
         }
     },
-    "remote": {
+    "teaching": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -14431,7 +14445,7 @@
             }
         }
     },
-    "engineers": {
+    "mentoring": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -14440,7 +14454,7 @@
             }
         }
     },
-    "offering": {
+    "speaking": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -14449,37 +14463,12 @@
             }
         }
     },
-    "outsourcing": {
+    "involved": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "consulting": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "services": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        },
-        "https://2018.phpdd.dev/privacy.html": {
-            "title": "Privacy",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/privacy.html": "Privacy"
             }
         }
     },
@@ -14489,6 +14478,45 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "local": {
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        },
+        "https://2018.phpdd.dev/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
+            }
+        }
+    },
+    "groups": {
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.dev/supporters.html": {
+            "title": "Supporters",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/supporters.html": "Supporters"
             }
         }
     },
@@ -14969,7 +14997,7 @@
             }
         }
     },
-    "teaching": {
+    "programming": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -15005,15 +15033,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/code-of-conduct.html": "Code of Conduct"
-            }
-        }
-    },
-    "related": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
             }
         }
     },
@@ -15311,15 +15330,6 @@
         }
     },
     "internetworks": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "involved": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -16151,6 +16161,15 @@
         }
     },
     "training": {
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "engineers": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -17070,15 +17089,6 @@
             }
         }
     },
-    "shares": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
     "across": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
@@ -17402,15 +17412,6 @@
             }
         }
     },
-    "mentoring": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
     "mates": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
@@ -17616,22 +17617,6 @@
             }
         }
     },
-    "groups": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        },
-        "https://2018.phpdd.dev/supporters.html": {
-            "title": "Supporters",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/supporters.html": "Supporters"
-            }
-        }
-    },
     "blame": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
@@ -17651,6 +17636,15 @@
         }
     },
     "career": {
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "teacher": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -17800,15 +17794,6 @@
         }
     },
     "hobby": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "speaking": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -20020,22 +20005,6 @@
             }
         }
     },
-    "local": {
-        "https://2018.phpdd.dev/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
-            }
-        },
-        "https://2018.phpdd.dev/supporters.html": {
-            "title": "Supporters",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/supporters.html": "Supporters"
-            }
-        }
-    },
     "transport": {
         "https://2018.phpdd.dev/venue.html": {
             "title": "The venue",
@@ -21713,6 +21682,15 @@
         }
     },
     "responsible": {
+        "https://2018.phpdd.dev/team.html": {
+            "title": "Meet the team",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/team.html": "Meet the team"
+            }
+        }
+    },
+    "passionate": {
         "https://2018.phpdd.dev/team.html": {
             "title": "Meet the team",
             "breadcrumb": {
@@ -30713,6 +30691,15 @@
         }
     },
     "eigenen": {
+        "https://2018.phpdd.dev/privacy.html": {
+            "title": "Privacy",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/privacy.html": "Privacy"
+            }
+        }
+    },
+    "services": {
         "https://2018.phpdd.dev/privacy.html": {
             "title": "Privacy",
             "breadcrumb": {
