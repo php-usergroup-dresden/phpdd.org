@@ -14574,67 +14574,6 @@
             }
         }
     },
-    "his": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "free": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        },
-        "https://2018.phpdd.dev/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        }
-    },
-    "reads": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "fantasy": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "novels": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "cook": {
-        "https://2018.phpdd.dev/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
     "lmuzinic": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
@@ -14830,6 +14769,31 @@
             }
         }
     },
+    "his": {
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "free": {
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.dev/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
     "producing": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
@@ -14980,6 +14944,42 @@
         }
     },
     "intuition": {
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "reads": {
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "fantasy": {
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "novels": {
+        "https://2018.phpdd.dev/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "cook": {
         "https://2018.phpdd.dev/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
