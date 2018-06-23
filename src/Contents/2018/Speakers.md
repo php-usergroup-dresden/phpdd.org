@@ -61,11 +61,9 @@ to gather and spread their knowledge all around the community, who step up on a 
             </a>
         </p>
         <p>
-            Passionate about being a developer, teacher and mentor for newcomers into world 
-            of programming. Works for Code4Hire, remote team of software engineers, 
-            offering outsourcing and consulting services. Organiser of 
-            <a href="https://twitter.com/webcampzagreb" target="_blank">@webcampzagreb</a> 
-            conference. Enjoys playing and watching sports that Croatians find odd and unpopular. 
+            Passion driven developer, focused on backend development in modern PHP and related stack. Shares knowledge 
+            by teaching, mentoring and speaking. Involved in <a href="https://twitter.com/webcampzagreb" target="_blank">@webcampzagreb</a> 
+            conference and local user groups. Enjoys playing and watching sports that Croatians find odd and unpopular. 
         </p><p>
             In his free time, he reads fantasy novels and likes to cook.
         </p>
