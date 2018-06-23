@@ -415,6 +415,19 @@ Breaks during the workshop day:
         07:15pm
     </div>
     <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+        <b>CLOSING WORDS</b><br>
+        by PHP USERGROUP DRESDEN e.V.
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+        MAIN HALL
+    </div>
+</div>
+
+<div class="row blockspace">
+    <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+        07:30pm
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
         <b>SOCIALIZING / WURSTCON</b>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
