@@ -64,8 +64,6 @@ to gather and spread their knowledge all around the community, who step up on a 
             Passion driven developer, focused on backend development in modern PHP and related stack. Shares knowledge 
             by teaching, mentoring and speaking. Involved in <a href="https://twitter.com/webcampzagreb" target="_blank">@webcampzagreb</a> 
             conference and local user groups. Enjoys playing and watching sports that Croatians find odd and unpopular. 
-        </p><p>
-            In his free time, he reads fantasy novels and likes to cook.
         </p>
         <p>
             <a href="https://twitter.com/lmuzinic" title="Luka Muzinic at Twitter" target="_blank">
