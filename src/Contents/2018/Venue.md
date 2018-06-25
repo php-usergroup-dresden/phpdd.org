@@ -21,17 +21,62 @@
                 <i class="fa fa-link"></i> Go to hotel's booking website
             </a>
         </p>
-        <p>
-            There are a lot of hotels in the city center nearby.<br>
-            <a href="https://www.booking.com/searchresults.en-gb.html?label=gen173nr-1FCAEoggJCAlhYSDNYBGg7iAEBmAEHuAEHyAEM2AEB6AEB-AELkgIBeagCAw&lang=en-gb&sid=f1b76249bed3e128f3bd95811f7e3875&sb=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.en-gb.html%3Flabel%3Dgen173nr-1FCAEoggJCAlhYSDNYBGg7iAEBmAEHuAEHyAEM2AEB6AEB-AELkgIBeagCAw%3Bsid%3Df1b76249bed3e128f3bd95811f7e3875%3Bsb_price_type%3Dtotal%26%3B&ss=International+Congress+Center+Dresden%2C+Dresden%2C+Saxony%2C+Germany&checkin_monthday=20&checkin_month=9&checkin_year=2018&checkout_monthday=23&checkout_month=9&checkout_year=2018&group_adults=1&group_children=0&no_rooms=1&from_sf=1&ss_raw=Congress+Center+Dresden&ac_position=0&ac_langcode=en&dest_id=12530&dest_type=landmark&place_id_lat=51.058034&place_id_lon=13.731658&search_pageview_id=87683bdbb61f0068&search_selected=true&search_pageview_id=87683bdbb61f0068&ac_suggestion_list_length=1&ac_suggestion_theme_list_length=0&map=1#map_opened" target="_blank">
-                <i class="fa fa-link"></i> Checkout hotels nearby on booking.com
-            </a>
-        </p>
     </div>
     <div class="hidden-xs hidden-sm col-md-4 col-lg-3">
         <img src="@baseUrl@/assets/images/venue/maritim-logo.png" alt="Maritim Hotel and International Congress Center Dresden" class="img-responsive">
     </div>
 </div>
+
+<a name="hotels"></a>
+## Hotels nearby
+
+---
+
+We have reserved a quota for you in some hotels nearby.
+
+### Art'otel
+
+<i class="fa fa-map-marker"></i> [View on map](https://goo.gl/maps/yG5RWWbMYY82)
+
+* Single room incl. breakfast: €120
+* Double room incl. breakfast: €135
+
+You can reserve rooms via:
+
+* Phone reservation: +49 30 400 557 700
+* Fax reservation: +49 30 400 557 777
+* Email reservation: [addres@artotels.com](mailto:addres@artotels.com?subject=Room%20reservation,%20Keyword:%20PHP%20Developer%20Days%202018)
+
+To take advantage of the quote, name the keyword: "**PHP Developer Days 2018**"
+
+The quote expires on September 1, 2018.
+
+### Leonardo
+
+<i class="fa fa-map-marker"></i> [View on map](https://goo.gl/maps/SCe3rgPFWjv)
+
+* Single room incl. breakfast: €101
+* Double room incl. breakfast: €123
+
+Minimum stay: 2 days
+
+You can reserve rooms via:
+
+* Phone reservation: +49 351 48 67 150
+* Fax reservation: +49 351 48 67 100
+* [Reservation form (PDF)](@baseUrl@/assets/downloads/Leonardo-Reservationform-PHPDD18.pdf)
+
+To take advantage of the quote, name the keyword: "**PHPDD18**"
+
+The quote expires on August 24, 2018.
+
+---
+
+There are a lot of other hotels in the city center nearby.
+
+<i class="fa fa-link"></i> [Checkout hotels nearby on booking.com](https://www.booking.com/searchresults.en-gb.html?label=gen173nr-1FCAEoggJCAlhYSDNYBGg7iAEBmAEHuAEHyAEM2AEB6AEB-AELkgIBeagCAw&lang=en-gb&sid=f1b76249bed3e128f3bd95811f7e3875&sb=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.en-gb.html%3Flabel%3Dgen173nr-1FCAEoggJCAlhYSDNYBGg7iAEBmAEHuAEHyAEM2AEB6AEB-AELkgIBeagCAw%3Bsid%3Df1b76249bed3e128f3bd95811f7e3875%3Bsb_price_type%3Dtotal%26%3B&ss=International+Congress+Center+Dresden%2C+Dresden%2C+Saxony%2C+Germany&checkin_monthday=20&checkin_month=9&checkin_year=2018&checkout_monthday=23&checkout_month=9&checkout_year=2018&group_adults=1&group_children=0&no_rooms=1&from_sf=1&ss_raw=Congress+Center+Dresden&ac_position=0&ac_langcode=en&dest_id=12530&dest_type=landmark&place_id_lat=51.058034&place_id_lon=13.731658&search_pageview_id=87683bdbb61f0068&search_selected=true&search_pageview_id=87683bdbb61f0068&ac_suggestion_list_length=1&ac_suggestion_theme_list_length=0&map=1#map_opened)
+
+&nbsp;
 
 ## IMPRESSIONS
 
