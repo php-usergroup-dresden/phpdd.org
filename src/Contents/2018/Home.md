@@ -287,22 +287,27 @@ We are commited to creating a unique community experience - an event where every
 </div>
 
 <a name="book-sponsors"></a>
-## Our book sponsors
+## Our license & book sponsors
 
 ---
 
 <div class="row">
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
+        <a href="https://www.jetbrains.com" target="_blank" title="JET BRAINS">
+            <img src="@baseUrl@/assets/images/sponsors/jetbrains.png" alt="JET BRAINS" class="img-responsive img-sponsor">
+        </a>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
         <a href="https://www.dpunkt.de" target="_blank" title="dpunkt Verlag">
             <img src="@baseUrl@/assets/images/sponsors/dpunkt_verlag.png" alt="dpunkt Verlag" class="img-responsive img-sponsor">
         </a>
     </div>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
         <a href="https://mitp.de" target="_blank" title="mitp Verlag">
             <img src="@baseUrl@/assets/images/sponsors/mitp-verlag.png" alt="mitp Verlag" class="img-responsive img-sponsor">
         </a>
     </div>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 text-center">
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
         <a href="https://www.rheinwerk-verlag.de" target="_blank" title="Rheinwerk Verlag">
             <img src="@baseUrl@/assets/images/sponsors/rheinwerk-verlag.png" alt="Rheinwerk Verlag" class="img-responsive img-sponsor">
         </a>
