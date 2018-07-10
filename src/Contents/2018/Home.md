@@ -186,8 +186,8 @@ We are commited to creating a unique community experience - an event where every
 </div>
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-        <a href="@baseUrl@/become-sponsor.html#gold" title="Become a GOLD sponsor">
-            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=GOLD" class="img-responsive img-sponsor">
+        <a href="https://www.honeypot.io" title="Honeypot - The Developer-Focused Job Platform" target="_blank">
+            <img src="@baseUrl@/assets/images/sponsors/honeypot.png" alt="honeypot.io" class="img-responsive img-sponsor">
         </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
