@@ -3535,6 +3535,14 @@
             }
         }
     },
+    "license": {
+        "https://2018.phpdd.dev/index.html": {
+            "title": "Home",
+            "breadcrumb": {
+                "/index.html": "Home"
+            }
+        }
+    },
     "book": {
         "https://2018.phpdd.dev/index.html": {
             "title": "Home",
