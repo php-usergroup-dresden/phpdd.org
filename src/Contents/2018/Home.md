@@ -174,8 +174,8 @@ We are commited to creating a unique community experience - an event where every
 
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <a href="@baseUrl@/become-sponsor.html#platin" title="Become a PLATIN sponsor">
-            <img src="https://placehold.it/439x270/f3f3f3/000000/?text=PLATIN" class="img-responsive img-sponsor">
+        <a href="https://www.getyourguide.de/" target="_blank" title="Book Things To Do, Attractions And Tours | GetYourGuide">
+            <img src="@baseUrl@/assets/images/sponsors/get-your-guide.png" alt="GetYourGuide" class="img-responsive img-sponsor">
         </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
