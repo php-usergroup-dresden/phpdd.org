@@ -8,9 +8,17 @@
 </div>
 
 <h1 class="hidden-lg">
-    THE COMMUNITY EVENT IN DRESDEN, DE<br>
+    THE COMMUNITY EVENT IN DRESDEN, DE<br class="hidden-xs">
     - 4th EDITION
 </h1>
+
+<div class="row blockspace">
+    <div class="col-xs-12">
+        <a href="@baseUrl@/tickets/" title="Buy tickets!" class="btn btn-success btn-block btn-lg">
+            <i class="fa fa-ticket"></i> BUY TICKETS
+        </a>
+    </div>
+</div>
 
 ## OUR GOAL
 
