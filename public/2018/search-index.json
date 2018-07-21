@@ -292,6 +292,50 @@
             }
         }
     },
+    "buy": {
+        "https://2018.phpdd.dev/index.html": {
+            "title": "Home",
+            "breadcrumb": {
+                "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.dev/tickets.html": {
+            "title": "Buy tickets",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/tickets.html": "Buy tickets"
+            }
+        }
+    },
+    "tickets": {
+        "https://2018.phpdd.dev/index.html": {
+            "title": "Home",
+            "breadcrumb": {
+                "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.dev/tickets.html": {
+            "title": "Buy tickets",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/tickets.html": "Buy tickets"
+            }
+        },
+        "https://2018.phpdd.dev/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "The venue",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "The venue"
+            }
+        }
+    },
     "our": {
         "https://2018.phpdd.dev/index.html": {
             "title": "Home",
@@ -18496,38 +18540,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "buy": {
-        "https://2018.phpdd.dev/tickets.html": {
-            "title": "Buy tickets",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/tickets.html": "Buy tickets"
-            }
-        }
-    },
-    "tickets": {
-        "https://2018.phpdd.dev/tickets.html": {
-            "title": "Buy tickets",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/tickets.html": "Buy tickets"
-            }
-        },
-        "https://2018.phpdd.dev/diversity-scholarship-application.html": {
-            "title": "Diversity scholarships",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/diversity-scholarship-application.html": "Scholarships"
-            }
-        },
-        "https://2018.phpdd.dev/venue.html": {
-            "title": "The venue",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "The venue"
             }
         }
     },
