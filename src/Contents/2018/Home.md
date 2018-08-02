@@ -187,8 +187,8 @@ We are commited to creating a unique community experience - an event where every
         </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <a href="@baseUrl@/become-sponsor.html#platin" title="Become a PLATIN sponsor">
-            <img src="https://placehold.it/439x270/f3f3f3/000000/?text=PLATIN" class="img-responsive img-sponsor">
+        <a href="https://www.tag24.de" target="_blank" title="Deutschland - Regionale Nachrichten, News aus Deutschland und Weltweit - TAG24">
+            <img src="@baseUrl@/assets/images/sponsors/tag24.png" alt="TAG24" class="img-responsive img-sponsor">
         </a>
     </div>
 </div>
@@ -204,8 +204,8 @@ We are commited to creating a unique community experience - an event where every
         </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-        <a href="@baseUrl@/become-sponsor.html#gold" title="Become a GOLD sponsor">
-            <img src="https://placehold.it/292x265/f3f3f3/000000/?text=GOLD" class="img-responsive img-sponsor">
+        <a href="https://www.in2it.be" target="_blank" title="Professional PHP Services - in2it vof">
+            <img src="@baseUrl@/assets/images/sponsors/in2it.png" alt="in2it vof" class="img-responsive img-sponsor">
         </a>
     </div>
 </div>
