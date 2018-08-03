@@ -70,6 +70,16 @@ To take advantage of the quote, name the keyword: "**PHPDD18**"
 
 The quote expires on August 24, 2018.
 
+### Holiday Inn
+
+<i class="fa fa-map-marker"></i> [View on map](https://goo.gl/maps/jVGdgDLpPoG2)
+
+* Double room incl. breakfast: €119
+
+You can reserve rooms via:
+
+* [Online reservation](https://www.holidayinn.com/hotels/de/de/find-hotels/hotel/rooms?qDest=Ostra-Allee%2025%20Am%20Zwinger%20Dresden%20%20Germany&qCiMy=82018&qCiD=21&qCoMy=82018&qCoD=23&qAdlt=1&qChld=0&qRms=1&qRtP=6CBARC&qIta=99801505&qGrpCd=PHP&qSlH=DRSHI&qAkamaiCC=US&qSrt=sBR&qBrs=ic.ki.ul.in.cp.vn.hi.ex.cv.rs.va.cw.sb.ma&qWch=0&qSmP=1&setPMCookies=true&qRad=30&icdv=99801505)
+
 ---
 
 There are a lot of other hotels in the city center nearby.
