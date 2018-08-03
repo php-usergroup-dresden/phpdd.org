@@ -225,9 +225,9 @@
     },
     "/venue.html": {
       "pageLevel": 2,
-      "navName": "The venue",
-      "pageTitle": "The venue",
-      "description": "The venue of the PHP Developer Days 2018 in Dresden, Germany",
+      "navName": "Venue and Hotels",
+      "pageTitle": "Venue and Hotels",
+      "description": "Info about the venue and nearby hotels for the PHP Developer Days 2018 in Dresden, Germany",
       "language": "en",
       "imageUrl": "/assets/images/socialcard.png",
       "tags": [
@@ -236,7 +236,9 @@
         "Congress Center",
         "Maritim",
         "Dresden",
-        "Community"
+        "Community",
+        "Hotels",
+        "nearby"
       ],
       "contentType": "markdown",
       "renderer": "twig",
