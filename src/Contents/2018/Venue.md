@@ -27,6 +27,14 @@
     </div>
 </div>
 
+## People from Dresden welcome you!
+
+---
+
+If you want to experience Dresden in a more non-tourist (and less expensive) way, people from Dresden are welcoming you at their homes. 
+
+<i class="fa fa-map-marker"></i> **[Check out the AirBnB offers near the event venue.](https://www.airbnb.de/s/Dresden-Mitte--Dresden/homes?refinement_paths%5B%5D=%2Fhomes&adults=1&checkin=2018-09-20&checkout=2018-09-23&children=0&infants=0&place_id=ChIJfYgPV3DPCUcR4Z37UQ0f6JU&query=Dresden%20Mitte%2C%20Dresden&allow_override%5B%5D=&s_tag=yAdffLgY)** 
+
 <a name="hotels"></a>
 ## Hotels nearby
 
