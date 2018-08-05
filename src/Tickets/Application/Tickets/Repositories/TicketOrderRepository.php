@@ -653,7 +653,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 	{
 		$queryOrdersDay = 'SELECT 
 						COUNT(DISTINCT o.orderId) AS `purchasesDay`, 
-						SUM(o.`paymentTotal`) AS `totalDay`, 
+						SUM(o.`paymentTotal` - o.`paymentFee`) AS `totalDay`, 
 						SUM(o.diversityDonation) AS `diversityDonationDay`
 					 FROM `ticketOrders` AS o
 					 WHERE o.`date` BETWEEN :start AND :end';
@@ -666,7 +666,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 
 		$queryOrdersOverall = 'SELECT 
 							COUNT(DISTINCT o.orderId) AS `purchasesOverall`, 
-							SUM(o.`paymentTotal`) AS `totalOverall`,
+							SUM(o.`paymentTotal` - o.`paymentFee`) AS `totalOverall`,
 							SUM(o.diversityDonation) AS `diversityDonationOverall`,
 							GROUP_CONCAT(DISTINCT oa.countryCode SEPARATOR \', \') AS `attendeeCountries`
 					     FROM `ticketOrders` AS o 
