@@ -39,6 +39,8 @@ Dresden also has a lot of private pensions and rooms where you can stay:
 
 <i class="fa fa-map-marker"></i> **[Check out the offers at dresden-pension.de (Website in German only).](https://www.dresden-pension.de/verzeichnis-ez.html)**
 
+You can also try to ask our local twitter users for a place to stay by using the hashtag **#SchlafplatzDD**. 
+
 <a name="hotels"></a>
 ## Hotels nearby
 
