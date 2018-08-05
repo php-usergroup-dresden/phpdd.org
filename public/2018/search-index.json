@@ -176,6 +176,13 @@
                 "/diversity-scholarship-application.html": "Scholarships"
             }
         },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        },
         "https://2018.phpdd.dev/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -1371,6 +1378,13 @@
                 "/diversity-scholarship-application.html": "Scholarships"
             }
         },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        },
         "https://2018.phpdd.dev/supporters.html": {
             "title": "Supporters",
             "breadcrumb": {
@@ -2051,6 +2065,13 @@
                 "/diversity-scholarship-application.html": "Scholarships"
             }
         },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        },
         "https://2018.phpdd.dev/side-events.html": {
             "title": "Side events",
             "breadcrumb": {
@@ -2152,6 +2173,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/tickets.html": "Buy tickets"
+            }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
             }
         }
     },
@@ -2822,6 +2850,13 @@
                 "/diversity-scholarship-application.html": "Scholarships"
             }
         },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        },
         "https://2018.phpdd.dev/become-sponsor.html": {
             "title": "Become sponsor",
             "breadcrumb": {
@@ -3297,6 +3332,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
             }
         }
     },
@@ -6892,6 +6934,13 @@
                 "/speakers.html": "Speakers/Trainers"
             }
         },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        },
         "https://2018.phpdd.dev/supporters.html": {
             "title": "Supporters",
             "breadcrumb": {
@@ -7948,6 +7997,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
             }
         }
     },
@@ -11346,6 +11402,13 @@
                 "/index.html": "Home",
                 "/talks.html": "Talks"
             }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
         }
     },
     "based": {
@@ -12056,6 +12119,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
             }
         }
     },
@@ -13593,6 +13663,13 @@
                 "/index.html": "Home",
                 "/talks.html": "Talks"
             }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
         }
     },
     "files": {
@@ -14298,6 +14375,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
             }
         },
         "https://2018.phpdd.dev/become-sponsor.html": {
@@ -16375,6 +16459,13 @@
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
             }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
         }
     },
     "manchester": {
@@ -17270,6 +17361,13 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
             }
         },
         "https://2018.phpdd.dev/become-sponsor.html": {
@@ -19633,6 +19731,250 @@
             }
         }
     },
+    "welcome": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "tourist": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "expensive": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "welcoming": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        },
+        "https://2018.phpdd.dev/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "homes": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "airbnb": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "www": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        },
+        "https://2018.phpdd.dev/imprint.html": {
+            "title": "Imprint",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/imprint.html": "Imprint"
+            }
+        },
+        "https://2018.phpdd.dev/privacy.html": {
+            "title": "Privacy",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/privacy.html": "Privacy"
+            }
+        }
+    },
+    "mitte": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "refinement": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "paths": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "2fhomes": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "adults": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "checkin": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "checkout": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "children": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "infants": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "place": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        },
+        "https://2018.phpdd.dev/privacy.html": {
+            "title": "Privacy",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/privacy.html": "Privacy"
+            }
+        }
+    },
+    "chijfygpv3dpcucr4z37uq0f6ju": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "query": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "20mitte": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "20dresden": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "override": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "tag": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "yadfflgy": {
+        "https://2018.phpdd.dev/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
     "hotels": {
         "https://2018.phpdd.dev/venue.html": {
             "title": "Venue and Hotels",
@@ -20242,29 +20584,6 @@
             }
         }
     },
-    "www": {
-        "https://2018.phpdd.dev/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
-            }
-        },
-        "https://2018.phpdd.dev/imprint.html": {
-            "title": "Imprint",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/imprint.html": "Imprint"
-            }
-        },
-        "https://2018.phpdd.dev/privacy.html": {
-            "title": "Privacy",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/privacy.html": "Privacy"
-            }
-        }
-    },
     "holidayinn": {
         "https://2018.phpdd.dev/venue.html": {
             "title": "Venue and Hotels",
@@ -20311,15 +20630,6 @@
         }
     },
     "20zwinger": {
-        "https://2018.phpdd.dev/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
-            }
-        }
-    },
-    "20dresden": {
         "https://2018.phpdd.dev/venue.html": {
             "title": "Venue and Hotels",
             "breadcrumb": {
@@ -20571,15 +20881,6 @@
             }
         }
     },
-    "checkout": {
-        "https://2018.phpdd.dev/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
-            }
-        }
-    },
     "searchresults": {
         "https://2018.phpdd.dev/venue.html": {
             "title": "Venue and Hotels",
@@ -20796,15 +21097,6 @@
             }
         }
     },
-    "checkin": {
-        "https://2018.phpdd.dev/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
-            }
-        }
-    },
     "monthday": {
         "https://2018.phpdd.dev/venue.html": {
             "title": "Venue and Hotels",
@@ -20815,24 +21107,6 @@
         }
     },
     "month": {
-        "https://2018.phpdd.dev/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
-            }
-        }
-    },
-    "adults": {
-        "https://2018.phpdd.dev/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
-            }
-        }
-    },
-    "children": {
         "https://2018.phpdd.dev/venue.html": {
             "title": "Venue and Hotels",
             "breadcrumb": {
@@ -20883,22 +21157,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "Venue and Hotels"
-            }
-        }
-    },
-    "place": {
-        "https://2018.phpdd.dev/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
-            }
-        },
-        "https://2018.phpdd.dev/privacy.html": {
-            "title": "Privacy",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/privacy.html": "Privacy"
             }
         }
     },
@@ -21423,15 +21681,6 @@
         }
     },
     "bahnhof": {
-        "https://2018.phpdd.dev/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
-            }
-        }
-    },
-    "mitte": {
         "https://2018.phpdd.dev/venue.html": {
             "title": "Venue and Hotels",
             "breadcrumb": {
@@ -22387,15 +22636,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/team.html": "Meet the team"
-            }
-        }
-    },
-    "welcoming": {
-        "https://2018.phpdd.dev/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
             }
         }
     },
