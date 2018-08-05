@@ -35,6 +35,10 @@ If you want to experience Dresden in a more non-tourist (and less expensive) way
 
 <i class="fa fa-map-marker"></i> **[Check out the AirBnB offers near the event venue.](https://www.airbnb.de/s/Dresden-Mitte--Dresden/homes?refinement_paths%5B%5D=%2Fhomes&adults=1&checkin=2018-09-20&checkout=2018-09-23&children=0&infants=0&place_id=ChIJfYgPV3DPCUcR4Z37UQ0f6JU&query=Dresden%20Mitte%2C%20Dresden&allow_override%5B%5D=&s_tag=yAdffLgY)** 
 
+Dresden also has a lot of private pensions and rooms where you can stay:
+
+<i class="fa fa-map-marker"></i> **[Check out the offers at dresden-pension.de (Website in German only).](https://www.dresden-pension.de/verzeichnis-ez.html)**
+
 <a name="hotels"></a>
 ## Hotels nearby
 
