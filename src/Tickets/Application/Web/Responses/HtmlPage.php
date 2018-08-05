@@ -23,6 +23,9 @@ final class HtmlPage
 	 * @param int    $httpCode
 	 *
 	 * @throws RuntimeException
+	 * @throws \Twig_Error_Loader
+	 * @throws \Twig_Error_Runtime
+	 * @throws \Twig_Error_Syntax
 	 */
 	public function respond( string $template, array $data, int $httpCode = HttpCode::OK ) : void
 	{
@@ -37,6 +40,9 @@ final class HtmlPage
 	 * @param array  $data
 	 *
 	 * @throws RuntimeException
+	 * @throws \Twig_Error_Loader
+	 * @throws \Twig_Error_Runtime
+	 * @throws \Twig_Error_Syntax
 	 * @return string
 	 */
 	private function getContent( string $template, array $data ) : string
@@ -59,6 +65,9 @@ final class HtmlPage
 	 * @param array  $data
 	 *
 	 * @throws RuntimeException
+	 * @throws \Twig_Error_Loader
+	 * @throws \Twig_Error_Runtime
+	 * @throws \Twig_Error_Syntax
 	 * @return bool
 	 */
 	public function saveToFile( string $filePath, string $template, array $data ) : bool

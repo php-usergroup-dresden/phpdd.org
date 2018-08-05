@@ -212,6 +212,7 @@ final class SendOrderMailsCommand extends AbstractConsoleCommand
 	 * @param InputInterface $input
 	 *
 	 * @throws RuntimeException
+	 * @throws \Symfony\Component\Console\Exception\InvalidArgumentException
 	 * @return array
 	 */
 	private function getTicketOrderIds( InputInterface $input ) : array
@@ -429,6 +430,15 @@ final class SendOrderMailsCommand extends AbstractConsoleCommand
 		$this->repository->addInvoice( $invoice );
 	}
 
+	/**
+	 * @param stdClass $ticketOrder
+	 * @param stdClass $billingAddress
+	 * @param array    $attachments
+	 *
+	 * @throws \Twig_Error_Loader
+	 * @throws \Twig_Error_Runtime
+	 * @throws \Twig_Error_Syntax
+	 */
 	private function sendEmail(
 		stdClass $ticketOrder,
 		stdClass $billingAddress,

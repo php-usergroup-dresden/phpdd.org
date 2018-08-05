@@ -20,6 +20,9 @@ final class TicketDetailsRequestHandler extends AbstractRequestHandler implement
 	 * @param ProvidesReadRequestData $request
 	 *
 	 * @throws RuntimeException
+	 * @throws \Twig_Error_Loader
+	 * @throws \Twig_Error_Runtime
+	 * @throws \Twig_Error_Syntax
 	 */
 	public function handle( ProvidesReadRequestData $request )
 	{

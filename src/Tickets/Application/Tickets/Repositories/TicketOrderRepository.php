@@ -727,7 +727,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 			(int)($data['attendeesOverall'] ?? '0'),
 			(int)($data['attendeesWorkshops'] ?? '0'),
 			(int)($data['attendeesConference'] ?? '0'),
-			(string)($data['attendeeCountries'] ?? ''),
+			$data['attendeeCountries'] ?? '',
 			(int)($data['diversityDonationDay'] ?? '0'),
 			(int)($data['diversityDonationOverall'] ?? '0')
 		);
