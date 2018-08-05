@@ -13,6 +13,8 @@
   "require": {
     "php": ">=7.2",
     "ext-PDO": "*",
+    "ext-intl": "*",
+    "ext-json": "*",
     "tm/tooly-composer-script": "~1.2",
     "moneyphp/money": "~3.1.3",
     "icehawk/icehawk": "~2.2.0",
