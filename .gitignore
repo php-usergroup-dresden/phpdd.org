@@ -8,3 +8,4 @@
 /data/backups/*
 /data/mail/attachments/*
 !.gitkeep
+/*.cache
