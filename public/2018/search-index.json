@@ -3679,6 +3679,44 @@
             }
         }
     },
+    "partner": {
+        "https://2018.phpdd.dev/index.html": {
+            "title": "Home",
+            "breadcrumb": {
+                "/index.html": "Home"
+            }
+        }
+    },
+    "connect": {
+        "https://2018.phpdd.dev/index.html": {
+            "title": "Home",
+            "breadcrumb": {
+                "/index.html": "Home"
+            }
+        }
+    },
+    "attendees": {
+        "https://2018.phpdd.dev/index.html": {
+            "title": "Home",
+            "breadcrumb": {
+                "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.dev/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        },
+        "https://2018.phpdd.dev/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
     "schedule": {
         "https://2018.phpdd.dev/schedule.html": {
             "title": "Schedule",
@@ -22022,22 +22060,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/side-events.html": "Side events"
-            }
-        }
-    },
-    "attendees": {
-        "https://2018.phpdd.dev/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
-            }
-        },
-        "https://2018.phpdd.dev/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
             }
         }
     },
