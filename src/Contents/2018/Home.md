@@ -295,7 +295,7 @@ We are commited to creating a unique community experience - an event where every
 </div>
 
 <a name="book-sponsors"></a>
-## Our license & book sponsors
+## OUR LICENSE & BOOK SPONSORS
 
 ---
 
@@ -318,6 +318,19 @@ We are commited to creating a unique community experience - an event where every
     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 text-center">
         <a href="https://www.rheinwerk-verlag.de" target="_blank" title="Rheinwerk Verlag">
             <img src="@baseUrl@/assets/images/sponsors/rheinwerk-verlag.png" alt="Rheinwerk Verlag" class="img-responsive img-sponsor">
+        </a>
+    </div>
+</div>
+
+<a name="connector"></a>
+## OUR PARTNER TO CONNECT ATTENDEES & SPONSORS
+
+---
+
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <a href="https://www.confgames.com" target="_blank">
+            <img src="@baseUrl@/assets/images/sponsors/confgames.png" alt="ConfGames - We make sponsors happy" class="img-responsive">
         </a>
     </div>
 </div>
