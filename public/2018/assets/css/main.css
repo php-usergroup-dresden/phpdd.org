@@ -28,37 +28,10 @@ hr {
     border-top: 2px solid #dce4e8;
 }
 
-.fa.fa-meetup {
-    color: #da3846;
-}
-
-.fa.fa-github {
-    color: #505050;
-}
-
-.fa.fa-twitter {
+.fab.fa-twitter {
     color: #4a9ee9;
 }
 
-.fa.fa-facebook {
-    color: #415993;
-}
-
-.fa.fa-xing {
-    color: #2a6366;
-}
-
-.fa.fa-github-square {
-    color: #ce2d55;
-}
-
-.fa.fa-slack {
-    color: #e1ab3b;
-}
-
-.fa.fa-youtube {
-    color: #000000;
-}
 
 #brandimg {
     margin: 0 auto;

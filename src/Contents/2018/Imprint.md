@@ -2,7 +2,7 @@
 
 <span class="pull-right">
 	<a href="@baseUrl@/assets/downloads/Imprint.pdf" target="_blank" title="Download als PDF">
-		<i class="fa fa-file-pdf-o"></i> Als PDF herunterladen
+		<i class="fas fa-file-pdf"></i> Als PDF herunterladen
 	</a>
 </span>
 

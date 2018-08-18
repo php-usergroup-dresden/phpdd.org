@@ -96,7 +96,7 @@
     <link rel="stylesheet" href="{{ project.getUrl('/assets/css/webfonts.css') }}">
     <link rel="stylesheet" href="{{ project.getUrl('/assets/css/twemoji-awesome.css') }}">
     <link rel="stylesheet" href="{{ project.getUrl('/assets/css/main.css') ~ '?' ~ ('now'|date('YmdHis')) }}">
-    <script src="https://use.fontawesome.com/e89ed69fdb.js" async="async"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
     {% block stylesheets %}{% endblock %}
 </head>
@@ -175,14 +175,14 @@
                                 <!--suppress HtmlUnknownTarget -->
                                 <a href="@twitter_url@" target="_blank"
                                    title="Follow PHP Developer Days 2018 on twitter">
-                                    <i class="fa fa-twitter"></i> <span class="text-twitter">@twitter_handle@</span>
+                                    <i class="fab fa-twitter"></i> <span class="text-twitter">@twitter_handle@</span>
                                 </a>
                             </div>
                             <div class="col-xs-12">
                                 <!--suppress HtmlUnknownTarget -->
                                 <a href="@twitter_hashtag_url@" target="_blank"
                                    title="Hashtag #PHPDD18 on twitter">
-                                    <i class="fa fa-twitter"></i> <span class="text-twitter">@twitter_hashtag@</span>
+                                    <i class="fab fa-twitter"></i> <span class="text-twitter">@twitter_hashtag@</span>
                                 </a>
                             </div>
                         </div>
@@ -258,13 +258,13 @@
                 <!--suppress HtmlUnknownTarget -->
                 <a href="@twitter_url@" target="_blank"
                    title="Follow PHP Developer Days 2018 on twitter">
-                    <i class="fa fa-twitter"></i> <span class="text-twitter">@twitter_handle@</span>
+                    <i class="fab fa-twitter"></i> <span class="text-twitter">@twitter_handle@</span>
                 </a>
                 &middot;
                 <!--suppress HtmlUnknownTarget -->
                 <a href="@twitter_hashtag_url@" target="_blank"
                    title="Hashtag #PHPDD18 on twitter">
-                    <i class="fa fa-twitter"></i> <span class="text-twitter">@twitter_hashtag@</span>
+                    <i class="fab fa-twitter"></i> <span class="text-twitter">@twitter_hashtag@</span>
                 </a>
                 &middot;
                 <a href="{{ project.getUrl('/imprint.html') }}">Imprint</a>

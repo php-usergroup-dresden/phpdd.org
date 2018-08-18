@@ -15,7 +15,7 @@
 <div class="row blockspace">
     <div class="col-xs-12">
         <a href="@baseUrl@/tickets/" title="Buy tickets!" class="btn btn-success btn-block btn-lg">
-            <i class="fa fa-ticket"></i> BUY TICKETS
+            <i class="fas fa-ticket-alt"></i> BUY TICKETS
         </a>
     </div>
 </div>
@@ -31,7 +31,7 @@ On the second day our international speakers will provide you with great talks a
 
 We are commited to creating a unique community experience - an event where everyone is among #<span class="text-danger">PHP</span>riends.
 
-[<i class="fa fa-clock-o"></i> Check out the impressions of our last PHP Developer Day in 2017](https://2017.phpdd.org/en/)
+[<i class="fas fa-clock"></i> Check out the impressions of our last PHP Developer Day in 2017](https://2017.phpdd.org/en/)
 
 <a name="workshops"></a>
 ## OUR WORKSHOPS

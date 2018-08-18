@@ -44,8 +44,8 @@ and for you:
 
 ---
 
-<button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#platin-sponsor-modal">
-    2 slots left - BOOK NOW
+<button class="btn btn-lg btn-danger pull-right disabled" disabled data-toggle="modal" data-target="#platin-sponsor-modal">
+    NO SLOTS LEFT
 </button>
 
 - You can advertise with: 
@@ -72,8 +72,8 @@ and for you:
 
 ---
 
-<button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#gold-sponsor-modal">
-    2 slots left - BOOK NOW
+<button class="btn btn-lg btn-danger pull-right disabled" disabled data-toggle="modal" data-target="#gold-sponsor-modal">
+    NO SLOTS LEFT
 </button>
 
 - You can advertise with: 
@@ -118,7 +118,7 @@ and for you:
 ---
 
 <button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#bronze-sponsor-modal">
-    12 slots left - BOOK NOW
+    10 slots left - BOOK NOW
 </button>
 
 - You can advertise with: 

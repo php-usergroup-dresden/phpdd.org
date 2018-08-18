@@ -7,7 +7,7 @@
  
 We take a comfortable atmosphere and an enrichig exchange for everyone very seriously.
  
-### The PHP USERGROUP DRESDEN e.V. and this event are commited to the [<i class="fa fa-link"></i> DRESDEN CODE OF CONDUCT](https://dresden-code-of-conduct.org/en/).
+### The PHP USERGROUP DRESDEN e.V. and this event are commited to the [<i class="fas fa-link"></i> DRESDEN CODE OF CONDUCT](https://dresden-code-of-conduct.org/en/).
 
 <hr class="blockspace">
 
@@ -58,4 +58,4 @@ If you observe any harm of this code of conduct against you or others, please do
 	</div>
 </div>
 
-Or send an e-mail to <i class="fa fa-envelope-o"></i> &#111;&#114;&#103;&#097;&#064;&#112;&#104;&#112;&#117;&#103;&#045;&#100;&#114;&#101;&#115;&#100;&#101;&#110;&#046;&#111;&#114;&#103;.
+Or send an e-mail to <i class="fas fa-envelope"></i> &#111;&#114;&#103;&#097;&#064;&#112;&#104;&#112;&#117;&#103;&#045;&#100;&#114;&#101;&#115;&#100;&#101;&#110;&#046;&#111;&#114;&#103;.

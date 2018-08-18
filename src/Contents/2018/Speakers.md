@@ -32,11 +32,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/miss_jwo" title="Jenny Wong at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @miss_jwo
+                <i class="fab fa-twitter "></i> @miss_jwo
             </a>
             &nbsp;|&nbsp;
             <a href="https://https://joind.in/user/jwo" title="Jenny Wong at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/jwo
+                <i class="fas fa-comment"></i> joind.in/user/jwo
             </a>
         </p>
     </div>
@@ -67,11 +67,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/lmuzinic" title="Luka Muzinic at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @lmuzinic
+                <i class="fab fa-twitter "></i> @lmuzinic
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/lmuzinic" title="Luka Muzinic at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/lmuzinic
+                <i class="fas fa-comment"></i> joind.in/user/lmuzinic
             </a>
         </p>
     </div>
@@ -106,7 +106,7 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/carnage" title="Christopher Riley at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @carnage
+                <i class="fab fa-twitter "></i> @carnage
             </a>
         </p>
     </div>
@@ -139,7 +139,7 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/arneblankerts" title="Arne Blankerts at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @arneblankerts
+                <i class="fab fa-twitter "></i> @arneblankerts
             </a>
         </p>
     </div>
@@ -174,11 +174,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/cfing99" title="Clinton Ingrams at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @cfing99
+                <i class="fab fa-twitter "></i> @cfing99
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/cfing99" title="Clinton Ingrams at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/cfing99
+                <i class="fas fa-comment"></i> joind.in/user/cfing99
             </a>
         </p>
     </div>
@@ -211,11 +211,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/belanur" title="Sebastian Heuer at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @belanur
+                <i class="fab fa-twitter "></i> @belanur
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/belanur" title="Sebastian Heuer at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/belanur
+                <i class="fas fa-comment"></i> joind.in/user/belanur
             </a>
         </p>
     </div>
@@ -246,11 +246,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/n0x13" title="Jeroen van der Gulik at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @n0x13
+                <i class="fab fa-twitter "></i> @n0x13
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/n0xie" title="Jeroen van der Gulik at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/n0xie
+                <i class="fas fa-comment"></i> joind.in/user/n0xie
             </a>
         </p>
     </div>
@@ -283,11 +283,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/wimgtr" title="Wim Godden at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @wimgtr
+                <i class="fab fa-twitter "></i> @wimgtr
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/wimg" title="Wim Godden at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/wimg
+                <i class="fas fa-comment"></i> joind.in/user/wimg
             </a>
         </p>
     </div>
@@ -322,11 +322,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/Mark_Baker" title="Mark Baker at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @Mark_Baker
+                <i class="fab fa-twitter "></i> @Mark_Baker
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/Mark%20Baker" title="Mark Baker at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/Mark Baker
+                <i class="fas fa-comment"></i> joind.in/user/Mark Baker
             </a>
         </p>
     </div>
@@ -359,11 +359,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/BastianHofmann" title="Bastian Hofmann at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @BastianHofmann
+                <i class="fab fa-twitter "></i> @BastianHofmann
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/bhofmann" title="Bastian Hofmann at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/bhofmann
+                <i class="fas fa-comment"></i> joind.in/user/bhofmann
             </a>
         </p>
     </div>
@@ -396,7 +396,7 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/OndrejMirtes" title="Ondřej Mirtes at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @OndrejMirtes
+                <i class="fab fa-twitter "></i> @OndrejMirtes
             </a>
         </p>
     </div>
@@ -426,11 +426,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/asgrim" title="James Titcumb at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @asgrim
+                <i class="fab fa-twitter "></i> @asgrim
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/Asgrim" title="James Titcumb at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/Asgrim
+                <i class="fas fa-comment"></i> joind.in/user/Asgrim
             </a>
         </p>
     </div>
@@ -459,11 +459,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/gbtekkie" title="Georgiana Gligor at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @gbtekkie
+                <i class="fab fa-twitter "></i> @gbtekkie
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/tekkie" title="Georgiana Gligor at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/tekkie
+                <i class="fas fa-comment"></i> joind.in/user/tekkie
             </a>
         </p>
     </div>
@@ -494,11 +494,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/rdohms" title="Rafael Dohms at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @rdohms
+                <i class="fab fa-twitter "></i> @rdohms
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/rdohms" title="Rafael Dohms at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/rdohms
+                <i class="fas fa-comment"></i> joind.in/user/rdohms
             </a>
         </p>
     </div>
@@ -529,11 +529,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/tfidry" title="Théo Fidry at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @tfidry
+                <i class="fab fa-twitter "></i> @tfidry
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/theofidry" title="Théo Fidry at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/theofidry
+                <i class="fas fa-comment"></i> joind.in/user/theofidry
             </a>
         </p>
     </div>
@@ -564,11 +564,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/heiglandreas" title="Andreas Heigl at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @heiglandreas
+                <i class="fab fa-twitter "></i> @heiglandreas
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/heiglandreas" title="Andreas Heigl at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> joind.in/user/heiglandreas
+                <i class="fas fa-comment"></i> joind.in/user/heiglandreas
             </a>
         </p>
     </div>
@@ -599,7 +599,7 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/BlackIkeEagle" title="Ike Devolder at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @BlackIkeEagle
+                <i class="fab fa-twitter "></i> @BlackIkeEagle
             </a>
         </p>
     </div>
@@ -631,11 +631,11 @@ to gather and spread their knowledge all around the community, who step up on a 
         </p>
         <p>
             <a href="https://twitter.com/Jan0707" title="Jan Gregor Emge-Triebel at Twitter" target="_blank">
-                <i class="fa fa-twitter"></i> @Jan0707
+                <i class="fab fa-twitter "></i> @Jan0707
             </a>
             &nbsp;|&nbsp;
             <a href="https://joind.in/user/Jan0707" title="Jan Gregor Emge-Triebel at joind.in" target="_blank">
-                <i class="fa fa-comment"></i> https://joind.in/user/Jan0707
+                <i class="fas fa-comment"></i> https://joind.in/user/Jan0707
             </a>
         </p>
     </div>
