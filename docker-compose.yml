@@ -50,8 +50,8 @@ services:
     restart: always
     volumes:
       - ./data/nginx/vhost.conf:/etc/nginx/conf.d/default.conf
-      - ./data/nginx/server.crt:/etc/ssl/tickets.phpdd.dev.crt
-      - ./data/nginx/server.key:/etc/ssl/tickets.phpdd.dev.key
+      - ./data/nginx/server.crt:/etc/ssl/tickets.phpdd.devel.crt
+      - ./data/nginx/server.key:/etc/ssl/tickets.phpdd.devel.key
       - ./:/repo
     ports:
       - 80:80
