@@ -1,121 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://2018.phpdd.dev/index.html</loc>
+    <loc>https://2018.phpdd.devel/index.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Home</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/404.html</loc>
+    <loc>https://2018.phpdd.devel/404.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>404 - Not Found</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/500.html</loc>
+    <loc>https://2018.phpdd.devel/500.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>404 - Not Found</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/schedule.html</loc>
+    <loc>https://2018.phpdd.devel/schedule.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Schedule</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/workshops.html</loc>
+    <loc>https://2018.phpdd.devel/workshops.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Workshops</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/talks.html</loc>
+    <loc>https://2018.phpdd.devel/talks.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Talks</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/speakers.html</loc>
+    <loc>https://2018.phpdd.devel/speakers.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Speakers/Trainers</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/tickets.html</loc>
+    <loc>https://2018.phpdd.devel/tickets.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Buy tickets</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/diversity-scholarship-application.html</loc>
+    <loc>https://2018.phpdd.devel/diversity-scholarship-application.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard-diversity-scholarships.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard-diversity-scholarships.png</image:loc>
       <image:caption>Diversity scholarships</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/venue.html</loc>
+    <loc>https://2018.phpdd.devel/venue.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Venue and Hotels</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/side-events.html</loc>
+    <loc>https://2018.phpdd.devel/side-events.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Side events</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/become-sponsor.html</loc>
+    <loc>https://2018.phpdd.devel/become-sponsor.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Become sponsor</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/supporters.html</loc>
+    <loc>https://2018.phpdd.devel/supporters.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Supporters</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/team.html</loc>
+    <loc>https://2018.phpdd.devel/team.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Meet the team</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/code-of-conduct.html</loc>
+    <loc>https://2018.phpdd.devel/code-of-conduct.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Code of Conduct</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/imprint.html</loc>
+    <loc>https://2018.phpdd.devel/imprint.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Imprint</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://2018.phpdd.dev/privacy.html</loc>
+    <loc>https://2018.phpdd.devel/privacy.html</loc>
     <image:image>
-      <image:loc>https://2018.phpdd.dev/assets/images/socialcard.png</image:loc>
+      <image:loc>https://2018.phpdd.devel/assets/images/socialcard.png</image:loc>
       <image:caption>Privacy</image:caption>
     </image:image>
   </url>
