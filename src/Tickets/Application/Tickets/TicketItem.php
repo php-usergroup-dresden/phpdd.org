@@ -3,6 +3,7 @@
 namespace PHPUGDD\PHPDD\Website\Tickets\Application\Tickets;
 
 use Money\Money;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\LogicException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountExceededTicketPriceException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Exceptions\DiscountNotAllowedForTicketException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesTicketItemInformation;
@@ -22,6 +23,9 @@ final class TicketItem implements ProvidesTicketItemInformation
 	/** @var null|DiscountItem */
 	private $discountItem;
 
+	/** @var string */
+	private $status;
+
 	/**
 	 * @param Ticket       $ticket
 	 * @param AttendeeName $attendeeName
@@ -30,6 +34,7 @@ final class TicketItem implements ProvidesTicketItemInformation
 	{
 		$this->ticket       = $ticket;
 		$this->attendeeName = $attendeeName;
+		$this->status       = TicketItemStatus::PAID;
 	}
 
 	/**
@@ -78,6 +83,19 @@ final class TicketItem implements ProvidesTicketItemInformation
 		}
 	}
 
+	/**
+	 * @throws LogicException
+	 */
+	public function refund() : void
+	{
+		if ( TicketItemStatus::REFUNDED === $this->status )
+		{
+			throw new LogicException( 'Ticket item is already refunded.' );
+		}
+
+		$this->status = TicketItemStatus::REFUNDED;
+	}
+
 	public function getTicket() : Ticket
 	{
 		return $this->ticket;
@@ -91,5 +109,10 @@ final class TicketItem implements ProvidesTicketItemInformation
 	public function getDiscountItem() : ?DiscountItem
 	{
 		return $this->discountItem;
+	}
+
+	public function getStatus() : string
+	{
+		return $this->status;
 	}
 }

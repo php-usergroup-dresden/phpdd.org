@@ -142,8 +142,8 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 	 */
 	private function addTicketOrderRecord( TicketOrder $ticketOrder ) : void
 	{
-		$query = 'INSERT INTO `ticketOrders` (orderId, date, email, paymentProvider, currencyCode, orderTotal, discountTotal, diversityDonation, paymentFee, paymentTotal) 
-			VALUES (:orderId, :date, :email, :paymentProvider, :currencyCode, :orderTotal, :discountTotal, :diversityDonation, :paymentFee, :paymentTotal)';
+		$query = 'INSERT INTO `ticketOrders` (orderId, date, email, paymentProvider, currencyCode, orderTotal, discountTotal, diversityDonation, paymentFee, paymentTotal, refundTotal) 
+			VALUES (:orderId, :date, :email, :paymentProvider, :currencyCode, :orderTotal, :discountTotal, :diversityDonation, :paymentFee, :paymentTotal, 0)';
 
 		$emailAddress = $ticketOrder->getEmailAddress();
 		if ( null === $emailAddress )
@@ -243,8 +243,8 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 	 */
 	private function addTicketOrderItemRecord( TicketOrderId $ticketOrderId, TicketItem $ticketItem ) : void
 	{
-		$query = 'INSERT INTO `ticketOrderItems` (itemId, orderId, ticketId, attendeeName, discountCode) 
-				  VALUES (:itemId, :orderId, :ticketId, :attendeeName, :discountCode)';
+		$query = 'INSERT INTO `ticketOrderItems` (itemId, orderId, ticketId, attendeeName, discountCode, status) 
+				  VALUES (:itemId, :orderId, :ticketId, :attendeeName, :discountCode, :status)';
 
 		$statement = $this->database->prepare( $query );
 		$statement->execute(
@@ -256,6 +256,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 				'discountCode' => (null !== $ticketItem->getDiscountItem())
 					? $ticketItem->getDiscountItem()->getCode()->toString()
 					: null,
+				'status'       => $ticketItem->getStatus(),
 			]
 		);
 
@@ -265,7 +266,9 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 	/**
 	 * @param TicketOrder $ticketOrder
 	 *
+	 * @throws InvalidArgumentException
 	 * @throws RuntimeException
+	 * @throws \InvalidArgumentException
 	 */
 	private function addTicketOrderPayment( TicketOrder $ticketOrder ) : void
 	{
@@ -276,16 +279,19 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 			throw new RuntimeException( 'No payment set in ticket order.' );
 		}
 
-		$query = 'INSERT INTO `ticketOrderPayments` (paymentId, orderId, payerId, metaData, `status`, executedAt) 
-				  VALUES (:paymentId, :orderId, :payerId, :metaData, :status, :executedAt)';
+		$query = 'INSERT INTO `ticketOrderPayments` (paymentId, orderId, provider, payerId, metaData, amount, fee, `status`, executedAt) 
+				  VALUES (:paymentId, :orderId, :provider, :payerId, :metaData, :amount, :fee, :status, :executedAt)';
 
 		$statement = $this->database->prepare( $query );
 		$statement->execute(
 			[
 				'paymentId'  => $payment->getPaymentId()->toString(),
 				'orderId'    => $ticketOrder->getOrderId()->toString(),
+				'provider'   => $payment->getPaymentProvider()->toString(),
 				'payerId'    => $payment->getPayerId()->toString(),
 				'metaData'   => json_encode( $payment->getMetaData() ),
+				'amount'     => $ticketOrder->getPaymentTotal()->getMoney()->getAmount(),
+				'fee'        => $ticketOrder->getPaymentFee()->getMoney()->getAmount(),
 				'status'     => 'pending',
 				'executedAt' => null,
 			]

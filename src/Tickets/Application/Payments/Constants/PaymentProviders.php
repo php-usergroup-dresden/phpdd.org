@@ -8,8 +8,11 @@ abstract class PaymentProviders
 
 	public const STRIPE = 'Stripe';
 
+	public const NONE   = 'None';
+
 	public const ALL    = [
 		self::PAYPAL,
 		self::STRIPE,
+		self::NONE,
 	];
 }
