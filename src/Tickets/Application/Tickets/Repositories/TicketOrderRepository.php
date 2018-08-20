@@ -666,7 +666,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 	{
 		$queryOrdersDay = 'SELECT 
 						COUNT(DISTINCT o.orderId) AS `purchasesDay`, 
-						SUM(o.`paymentTotal` - o.`paymentFee`) AS `totalDay`, 
+						SUM(o.`paymentTotal` - o.`paymentFee` + o.`refundTotal`) AS `totalDay`, 
 						SUM(o.diversityDonation) AS `diversityDonationDay`
 					 FROM `ticketOrders` AS o
 					 WHERE o.`date` BETWEEN :start AND :end';
@@ -679,7 +679,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 
 		$queryOrdersOverall = 'SELECT 
 							COUNT(DISTINCT o.orderId) AS `purchasesOverall`, 
-							SUM(o.`paymentTotal` - o.`paymentFee`) AS `totalOverall`,
+							SUM(o.`paymentTotal` - o.`paymentFee` + o.`refundTotal`) AS `totalOverall`,
 							SUM(o.diversityDonation) AS `diversityDonationOverall`,
 							GROUP_CONCAT(DISTINCT oa.countryCode SEPARATOR \', \') AS `attendeeCountries`
 					     FROM `ticketOrders` AS o 
@@ -692,7 +692,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 							SUM(IF(oi.ticketId IN (\'PHPDD18-EB-01\', \'PHPDD18-CT-01\'), 0, 1))  AS `attendeesWorkshops`
 						  FROM ticketOrderItems AS oi
 						  JOIN ticketOrders AS o USING (orderId)
-						  WHERE 1';
+						  WHERE oi.status = \'paid\'';
 
 		$statementOrdersDay = $this->database->prepare( $queryOrdersDay );
 		$statementOrdersDay->execute(
@@ -800,7 +800,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 			$statement = $this->database->prepare( $orderRefundQuery );
 			$statement->execute(
 				[
-					'refundAmount' => $refund->getRefundMoney()->getAmount(),
+					'refundAmount' => $refund->getRefundMoney()->negative()->getAmount(),
 					'orderId'      => $refund->getTicketOrderId()->toString(),
 				]
 			);
