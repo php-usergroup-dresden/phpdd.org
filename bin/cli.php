@@ -2,6 +2,7 @@
 
 namespace PHPUGDD\PHPDD\Website\Bin;
 
+use PHPUGDD\PHPDD\Website\Tickets\Application\Cli\ConsoleCommands\ChangeAttendeeNameCommand;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Cli\ConsoleCommands\RefundTicketsCommand;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Cli\ConsoleCommands\SendOrderMailsCommand;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Cli\ConsoleCommands\SendTicketSaleSummary;
@@ -22,6 +23,7 @@ try
 	$app->add( new SendOrderMailsCommand( 'send:ordermails', $env ) );
 	$app->add( new SendTicketSaleSummary( 'send:salesummary', $env ) );
 	$app->add( new RefundTicketsCommand( 'refund:tickets', $env ) );
+	$app->add( new ChangeAttendeeNameCommand( 'change:attendee', $env ) );
 
 	$exitCode = $app->run();
 }

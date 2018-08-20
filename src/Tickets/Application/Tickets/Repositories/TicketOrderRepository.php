@@ -816,4 +816,41 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 			throw $e;
 		}
 	}
+
+	/**
+	 * @param array $itemIdsAttendeeNames
+	 *
+	 * @throws PDOException
+	 * @throws Throwable
+	 */
+	public function updateTicketAttendeeNames( array $itemIdsAttendeeNames ) : void
+	{
+		$this->database->beginTransaction();
+
+		try
+		{
+			$query     = 'UPDATE `ticketOrderItems` SET `attendeeName` = :attendeeName WHERE `itemId` = :itemId LIMIT 1';
+			$statement = $this->database->prepare( $query );
+
+			foreach ( $itemIdsAttendeeNames as $itemId => $attendeeName )
+			{
+				$statement->execute(
+					[
+						'itemId'       => $itemId,
+						'attendeeName' => $attendeeName,
+					]
+				);
+
+				$this->guardStatementSucceeded( $statement );
+			}
+
+			$this->database->commit();
+		}
+		catch ( Throwable $e )
+		{
+			$this->database->rollBack();
+
+			throw $e;
+		}
+	}
 }
