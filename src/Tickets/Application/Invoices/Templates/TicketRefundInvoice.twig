@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<!--suppress HtmlUnknownTarget -->
+<img src="{{ imageDir }}/phpugdd-logo.png" style="width:35mm; height:35mm; float: right;">
+
+<span style="font-weight: bold; color: #000080">&lt;?php</span>
+
+<div style="margin-top: 25mm; text-decoration: underline; font-size: 10px;">
+    PHP USERGROUP DRESDEN e.V. • Fetscherstr. 36 • 01307 Dresden, DE
+</div>
+<div>{{ billingAddress.companyName }}</div>
+<div>{{ billingAddress.firstname }} {{ billingAddress.lastname }}</div>
+<div>{{ billingAddress.streetWithNumber }}</div>
+<div>{{ billingAddress.addressAddon }}</div>
+<div>{{ billingAddress.zipCode }} {{ billingAddress.city }}</div>
+<div>{{ billingAddress.countryCode }}</div>
+
+<div style="text-align: right;">Dresden, {{ invoiceDate }}<br>orga@phpug-dresden.org</div>
+
+<h3>Invoice No. {{ invoiceId }}</h3>
+<p style="color: #505050;">
+    Ticket refund of your order {{ ticketOrder.orderId }} from {{ ticketOrder.date }}
+</p>
+
+<div class="row">
+    <div class="table-col-1"><strong>#</strong></div>
+    <div class="table-col-2"><strong>Position</strong></div>
+    <div class="table-col-3">&nbsp;</div>
+</div>
+{% set nr=0 %}{% for item in ticketItems %}{% set nr=nr+1 %}
+    <div class="row">
+        <div class="table-col-1">{{ nr }}</div>
+        <div class="table-col-2">{{ item.ticketName }}<br>Attendee: {{ item.attendeeName }}</div>
+        <div class="table-col-3">&nbsp;</div>
+    </div>
+{% endfor %}
+
+<hr>
+
+<div class="row">
+    <div class="table-col-1">&nbsp;</div>
+    <div class="table-col-2"><strong>Total</strong> (incl. VAT)</div>
+    <div class="table-col-3"><strong>{{ refundMoney|formatMoney('EUR') }}</strong></div>
+</div>
+
+<p style="margin-top: 10mm;">Refund is executed via: {{ refundPaymentProvider }}</p>
+
+<p>As a German small business we are not allowed to tag VAT on the invoice. (§ 19 UStG)</p>
+
+{% if billingAddress.companyName and billingAddress.countryCode != 'DE' %}
+    <p>Reverse charge regulation applied / VAT due do the recipient</p>
+    <p>Your VAT number: {{ billingAddress.vatNumber }}</p>
+{% endif %}
+
+<p><strong>Thank you!</strong></p>
+
+<p>Kind Regards,</p>
+<!--suppress HtmlUnknownTarget -->
+<img src="{{ imageDir }}/signed-hwoltersdorf.png" style="width: 50mm; margin-top: 5mm;">
+<p>p.p. Holger Woltersdorf</p>
+
+<footer>
+    PHP USERGROUP DRESDEN e.V. | Fetscherstr. 36 | 01307 Dresden, DE<br>
+    Board of directors: Holger Woltersdorf, Marcel Führer, Patrick Pächnatz<br>
+    Deutsche Skatbank | IBAN: DE95 8306 5408 0004 9500 98 | BIC (SWIFT-Code): GENO DEF1 SLR<br>
+    Amtsgericht Dresden, VR 9725 | Tax number: 203/142/10280 | VAT number DE 308 538 781
+</footer>
+</body>
+</html>

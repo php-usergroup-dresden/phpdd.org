@@ -14,8 +14,10 @@ use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesRedeeme
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Interfaces\ProvidesReservedTicketCount;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Ticket;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItem;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketItemStatus;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketOrder;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketSaleSummary;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\TicketsRefund;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\PaymentId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketItemId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
@@ -560,14 +562,15 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 
 		try
 		{
-			$query = 'INSERT INTO `ticketOrderInvoices` (orderId, invoiceId, date, pdf) 
-					  VALUES (:orderId, :invoiceId, :date, :pdf)';
+			$query = 'INSERT INTO `ticketOrderInvoices` (orderId, invoiceId, type, date, pdf) 
+					  VALUES (:orderId, :invoiceId, :type, :date, :pdf)';
 
 			$statement = $this->database->prepare( $query );
 			$statement->execute(
 				[
 					'orderId'   => $invoice->getOrderId()->toString(),
 					'invoiceId' => $invoice->getId()->toString(),
+					'type'      => $invoice->getType()->toString(),
 					'date'      => $invoice->getDate()->format( 'c' ),
 					'pdf'       => $invoice->getPdfFile()->getFileContent(),
 				]
@@ -625,20 +628,24 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 	/**
 	 * @param string $ticketOrderId
 	 *
+	 * @param string $invoiceType
+	 *
 	 * @throws RuntimeException
 	 * @return null|stdClass
 	 */
-	public function getInvoiceRecordIfExists( string $ticketOrderId ) : ?stdClass
+	public function getInvoiceRecordIfExists( string $ticketOrderId, string $invoiceType ) : ?stdClass
 	{
 		$query = 'SELECT `invoiceId`, `date`, `pdf` 
 				  FROM `ticketOrderInvoices` 
 				  WHERE `orderId` = :orderId 
+				  	AND type = :type
 				  LIMIT 1';
 
 		$statement = $this->database->prepare( $query );
 		$statement->execute(
 			[
 				'orderId' => $ticketOrderId,
+				'type'    => $invoiceType,
 			]
 		);
 
@@ -737,5 +744,76 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 			(int)($data['diversityDonationDay'] ?? '0'),
 			(int)($data['diversityDonationOverall'] ?? '0')
 		);
+	}
+
+	/**
+	 * @param TicketsRefund $refund
+	 *
+	 * @throws PDOException
+	 * @throws Throwable
+	 */
+	public function refundTickets( TicketsRefund $refund ) : void
+	{
+		$this->database->beginTransaction();
+
+		try
+		{
+			$paymentQuery = 'INSERT INTO `ticketOrderPayments` (paymentId, orderId, provider, payerId, metaData, amount, fee, status, executedAt) 
+							VALUES (:paymentId, :orderId, :provider, :payerId, :metaData, :amount, :fee, :status, NOW())';
+
+			$statement = $this->database->prepare( $paymentQuery );
+			$statement->execute(
+				[
+					'paymentId' => $refund->getRefundPayment()->getPaymentId()->toString(),
+					'orderId'   => $refund->getTicketOrderId()->toString(),
+					'provider'  => $refund->getRefundPayment()->getPaymentProvider()->toString(),
+					'payerId'   => $refund->getRefundPayment()->getPayerId()->toString(),
+					'metaData'  => json_encode( $refund->getRefundPayment()->getMetaData() ),
+					'amount'    => $refund->getRefundMoney()->getAmount(),
+					'fee'       => 0,
+					'status'    => 'executed',
+				]
+			);
+
+			$this->guardStatementSucceeded( $statement );
+
+			$ticketStatusQuery = 'UPDATE `ticketOrderItems` SET `status` = :status WHERE `itemId` = :itemId LIMIT 1';
+			$statement         = $this->database->prepare( $ticketStatusQuery );
+
+			foreach ( $refund->getTicketsToRefund() as $ticketItem )
+			{
+				$statement->execute(
+					[
+						'status' => TicketItemStatus::REFUNDED,
+						'itemId' => $ticketItem->itemId,
+					]
+				);
+
+				$this->guardStatementSucceeded( $statement );
+			}
+
+			$orderRefundQuery = 'UPDATE `ticketOrders` 
+								 SET `refundTotal` = `refundTotal` + :refundAmount 
+								 WHERE `orderId` = :orderId 
+								 LIMIT 1';
+
+			$statement = $this->database->prepare( $orderRefundQuery );
+			$statement->execute(
+				[
+					'refundAmount' => $refund->getRefundMoney()->getAmount(),
+					'orderId'      => $refund->getTicketOrderId()->toString(),
+				]
+			);
+
+			$this->guardStatementSucceeded( $statement );
+
+			$this->database->commit();
+		}
+		catch ( Throwable $e )
+		{
+			$this->database->rollBack();
+
+			throw $e;
+		}
 	}
 }

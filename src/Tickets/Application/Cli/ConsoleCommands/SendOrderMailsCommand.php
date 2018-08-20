@@ -9,10 +9,12 @@ use mikehaertl\wkhtmlto\Pdf;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Configs\TicketsConfig;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Exceptions\RuntimeException;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Invoices\Invoice;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Invoices\InvoiceTypes;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Tickets\Repositories\TicketOrderRepository;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\InvoiceDate;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\InvoiceId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\InvoicePdfFile;
+use PHPUGDD\PHPDD\Website\Tickets\Application\Types\InvoiceType;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketId;
 use PHPUGDD\PHPDD\Website\Tickets\Application\Types\TicketOrderId;
 use PHPUGDD\PHPDD\Website\Tickets\Traits\MoneyProviding;
@@ -283,7 +285,7 @@ final class SendOrderMailsCommand extends AbstractConsoleCommand
 	 */
 	private function getInvoiceIfExists( string $ticketOrderId ) : ?Invoice
 	{
-		$invoiceRecord = $this->repository->getInvoiceRecordIfExists( $ticketOrderId );
+		$invoiceRecord = $this->repository->getInvoiceRecordIfExists( $ticketOrderId, InvoiceTypes::ORDER );
 
 		if ( null === $invoiceRecord )
 		{
@@ -297,6 +299,7 @@ final class SendOrderMailsCommand extends AbstractConsoleCommand
 		$invoice = new Invoice(
 			new InvoiceId( (string)$invoiceRecord->invoiceId ),
 			new TicketOrderId( $ticketOrderId ),
+			new InvoiceType( InvoiceTypes::ORDER ),
 			new InvoiceDate( (string)$invoiceRecord->date ),
 			new InvoicePdfFile( $invoiceFilePath )
 		);
@@ -423,6 +426,7 @@ final class SendOrderMailsCommand extends AbstractConsoleCommand
 		$invoice = new Invoice(
 			new InvoiceId( $invoiceId ),
 			new TicketOrderId( $ticketOrderId ),
+			new InvoiceType( InvoiceTypes::ORDER ),
 			$invoiceDate,
 			new InvoicePdfFile( $invoicePdf )
 		);
