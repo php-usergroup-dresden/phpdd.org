@@ -238,13 +238,13 @@ We are commited to creating a unique community experience - an event where every
         </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
-        <a href="https://www.leankoala.com" title="Leankoala - Rethink Web Testing" target="_blank">
-            <img src="@baseUrl@/assets/images/sponsors/leankoala_220x192.png" alt="Leankoala" class="img-responsive img-sponsor">
+        <a href="https://mayflower.de" target="_blank" title="Mayflower GmbH - Agile Teams für gute Softwareentwicklung">
+            <img src="@baseUrl@/assets/images/sponsors/mayflower.png" alt="Mayflower GmbH" class="img-responsive img-sponsor">
         </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
-        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
-            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        <a href="https://www.leankoala.com" title="Leankoala - Rethink Web Testing" target="_blank">
+            <img src="@baseUrl@/assets/images/sponsors/leankoala_220x192.png" alt="Leankoala" class="img-responsive img-sponsor">
         </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">

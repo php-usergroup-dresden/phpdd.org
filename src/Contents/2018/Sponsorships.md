@@ -118,7 +118,7 @@ and for you:
 ---
 
 <button class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#bronze-sponsor-modal">
-    10 slots left - BOOK NOW
+    9 slots left - BOOK NOW
 </button>
 
 - You can advertise with: 
