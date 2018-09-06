@@ -12063,6 +12063,13 @@
                 "/talks.html": "Talks"
             }
         },
+        "https://2018.phpdd.devel/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        },
         "https://2018.phpdd.devel/side-events.html": {
             "title": "Side events",
             "breadcrumb": {
@@ -16503,7 +16510,7 @@
             }
         }
     },
-    "lead": {
+    "relocating": {
         "https://2018.phpdd.devel/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -16512,7 +16519,7 @@
             }
         }
     },
-    "paybreak": {
+    "amsterdam": {
         "https://2018.phpdd.devel/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -16521,7 +16528,7 @@
             }
         }
     },
-    "fintech": {
+    "soon": {
         "https://2018.phpdd.devel/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -16530,7 +16537,7 @@
             }
         }
     },
-    "altrincham": {
+    "role": {
         "https://2018.phpdd.devel/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -16539,23 +16546,16 @@
             }
         }
     },
-    "near": {
+    "sms": {
         "https://2018.phpdd.devel/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
             }
-        },
-        "https://2018.phpdd.devel/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
-            }
         }
     },
-    "manchester": {
+    "messagebird": {
         "https://2018.phpdd.devel/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -16971,6 +16971,15 @@
         }
     },
     "submission": {
+        "https://2018.phpdd.devel/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "lead": {
         "https://2018.phpdd.devel/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -19892,6 +19901,15 @@
         }
     },
     "airbnb": {
+        "https://2018.phpdd.devel/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        }
+    },
+    "near": {
         "https://2018.phpdd.devel/venue.html": {
             "title": "Venue and Hotels",
             "breadcrumb": {
