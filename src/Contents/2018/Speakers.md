@@ -312,7 +312,7 @@ to gather and spread their knowledge all around the community, who step up on a 
             </a>
         </p>
         <p>
-           Mark is Lead/Senior Developer at Paybreak, a fintech company based in Altrincham near Manchester, UK.
+           Currently in the process of relocating from the UK to Amsterdam, Mark is soon to start a new role as a Senior Software Engineer on the SMS team at Messagebird.
         </p><p>   
            He has worked in the computer software industry since before symbolics.com was registered as a domain name, before "cyberspace" was first mentioned in fiction, when Linus Torvalds and Rasmus Lerdorf were still at high school, and Mrs. Zuckerberg had yet to give birth to a bouncing baby social network enabler; and has developed for the Web in many different languages since the days when the Tim Berners-Lee's creation comprised less than 1,000 sites.
         </p><p>  
