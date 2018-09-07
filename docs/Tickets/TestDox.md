@@ -220,7 +220,7 @@
 ## Unit\Application\Types\PaymentProviderTest
 
 - [x] Throws Exception When Constructed With Invalid Payment Provider (💚 1)
-- [x] Can Construct From Valid Payment Provider (💚 2)
+- [x] Can Construct From Valid Payment Provider (💚 4)
 
 ---
 
@@ -335,7 +335,7 @@
 ## Unit\Application\Web\Tickets\Write\Validators\PaymentProviderValidatorTest
 
 - [x] Validation Of Payment Provider Fails For Invalid Selection (💚 2)
-- [x] Validation Of Payment Provider Passes (💚 2)
+- [x] Validation Of Payment Provider Passes (💚 4)
 
 ---
 
@@ -381,4 +381,4 @@
 
 ---
 
-Report created at 2018-08-05 19:18:23 (UTC)
+Report created at 2018-09-07 17:42:48 (UTC)

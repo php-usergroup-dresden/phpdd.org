@@ -12,7 +12,7 @@ final class PaypalFeeCalculator implements CalculatesPaymentFee
 {
 	use MoneyProviding;
 
-	private const VARIABLE_FEE_GERMANY         = 1.9;
+	private const VARIABLE_FEE_GERMANY         = 2.49;
 
 	private const VARIABLE_FEE_OTHER_COUNTRIES = 5.2;
 

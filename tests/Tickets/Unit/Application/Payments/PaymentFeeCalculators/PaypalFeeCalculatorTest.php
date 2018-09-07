@@ -37,15 +37,15 @@ final class PaypalFeeCalculatorTest extends TestCase
 		return [
 			[
 				'total'       => 100,
-				'expectedFee' => '37',
+				'expectedFee' => '38',
 			],
 			[
 				'total'       => 1000,
-				'expectedFee' => '54',
+				'expectedFee' => '61',
 			],
 			[
 				'total'       => 10000,
-				'expectedFee' => '229',
+				'expectedFee' => '290',
 			],
 		];
 	}
