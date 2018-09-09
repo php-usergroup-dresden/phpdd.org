@@ -66,9 +66,9 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 		$ticketsConfig       = TicketsConfig::fromConfigFile();
 		$selectedTickets     = (array)$ticketSelectionForm->get( 'selectedTickets' );
 		$selectedTicketInfos = new SelectedTicketInfos( $ticketsConfig, $selectedTickets );
-		$discountConfigs     = DiscountsConfig::fromConfigFile();
+		$discountsConfig     = DiscountsConfig::fromConfigFile();
 
-		$userInputValidator = $this->getUserInputValidator( $selectedTicketInfos, $discountConfigs, $input );
+		$userInputValidator = $this->getUserInputValidator( $selectedTicketInfos, $discountsConfig, $input );
 
 		if ( $userInputValidator->failed() )
 		{
@@ -81,7 +81,6 @@ final class SaveTicketDetailsRequestHandler extends AbstractRequestHandler imple
 		}
 
 		$ticketsConfig      = TicketsConfig::fromConfigFile();
-		$discountsConfig    = DiscountsConfig::fromConfigFile();
 		$ticketOrderBuilder = new TicketOrderBuilder( $ticketsConfig, $discountsConfig );
 
 		try
