@@ -248,8 +248,8 @@ We are commited to creating a unique community experience - an event where every
         </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
-        <a href="@baseUrl@/become-sponsor.html#bronze" title="Become a BRONZE sponsor">
-            <img src="https://placehold.it/220x192/f3f3f3/000000/?text=BRONZE" class="img-responsive img-sponsor">
+        <a href="https://lineupr.com" title="LINEUPR - Event-App einfach selbst erstellen">
+            <img src="@baseUrl@/assets/images/sponsors/lineupr.png" alt="LINEUPR" class="img-responsive img-sponsor">
         </a>
     </div>
     <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2">
