@@ -29,7 +29,7 @@ All workshops and talks will be presented in English language.
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        &nbsp;
+        FOYER
     </div>
 </div>
 
@@ -44,7 +44,7 @@ All workshops and talks will be presented in English language.
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM WS-01
+        <img src="@baseUrl@/assets/images/sponsors/get-your-guide.png" class="img-responsive" alt="ROOM GET YOUR GUIDE">
     </div>
 </div>
 
@@ -60,7 +60,7 @@ All workshops and talks will be presented in English language.
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM WS-02
+        <img src="@baseUrl@/assets/images/sponsors/tag24.png" class="img-responsive" alt="ROOM TAG24">
     </div>
 </div>
 
@@ -75,22 +75,7 @@ All workshops and talks will be presented in English language.
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM WS-03
-    </div>
-</div>
-
-<div class="row blockspace alt">
-    <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        02:30pm - 07:00pm
-    </div>
-    <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
-        <b><a href="@baseUrl@/workshops.html#pentesting-dos-and-donts">Pentesting Do's and Dont's</a></b>
-        <p>
-            Trainer: <a href="@baseUrl@/speakers.html#clinton-ingrams">Clinton Ingrams</a>
-        </p>
-    </div>
-    <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM WS-03
+        <img src="@baseUrl@/assets/images/sponsors/honeypot.png" class="img-responsive" alt="ROOM Honeypot">
     </div>
 </div>
 
@@ -105,9 +90,25 @@ All workshops and talks will be presented in English language.
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM WS-04
+        <img src="@baseUrl@/assets/images/sponsors/in2it.png" class="img-responsive" alt="ROOM in2it vof">
     </div>
 </div>
+
+<div class="row blockspace alt">
+    <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+        02:30pm - 07:00pm
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
+        <b><a href="@baseUrl@/workshops.html#pentesting-dos-and-donts">Pentesting Do's and Dont's</a></b>
+        <p>
+            Trainer: <a href="@baseUrl@/speakers.html#clinton-ingrams">Clinton Ingrams</a>
+        </p>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+        <img src="@baseUrl@/assets/images/sponsors/honeypot.png" class="img-responsive" alt="ROOM Honeypot">
+    </div>
+</div>
+
 
 <div class="row blockspace alt">
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
@@ -120,7 +121,7 @@ All workshops and talks will be presented in English language.
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM WS-04
+        <img src="@baseUrl@/assets/images/sponsors/in2it.png" class="img-responsive" alt="ROOM in2it vof">
     </div>
 </div>
 
@@ -208,7 +209,7 @@ Breaks during the workshop day:
         <b>COFFEE BREAK</b>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        &nbsp;
+        FOYER
     </div>
 </div>
 
@@ -238,7 +239,7 @@ Breaks during the workshop day:
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM CONF-02
+        <img src="@baseUrl@/assets/images/sponsors/move_elevator_263x244.png" class="img-responsive" alt="ROOM move:elevator">
     </div>
 </div>
 
@@ -268,7 +269,7 @@ Breaks during the workshop day:
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM CONF-02
+        <img src="@baseUrl@/assets/images/sponsors/move_elevator_263x244.png" class="img-responsive" alt="ROOM move:elevator">
     </div>
 </div>
 
@@ -280,7 +281,7 @@ Breaks during the workshop day:
         <b>LUNCH BREAK</b>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        &nbsp;
+        RESTAURANT
     </div>
 </div>
 
@@ -310,7 +311,7 @@ Breaks during the workshop day:
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM CONF-02
+        <img src="@baseUrl@/assets/images/sponsors/move_elevator_263x244.png" class="img-responsive" alt="ROOM move:elevator">
     </div>
 </div>
 
@@ -340,7 +341,7 @@ Breaks during the workshop day:
         </p>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM CONF-02
+        <img src="@baseUrl@/assets/images/sponsors/move_elevator_263x244.png" class="img-responsive" alt="ROOM move:elevator">
     </div>
 </div>
 
@@ -352,7 +353,7 @@ Breaks during the workshop day:
         <b>COFFEE BREAK</b>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        &nbsp;
+        FOYER
     </div>
 </div>
 
@@ -376,10 +377,10 @@ Breaks during the workshop day:
         05:00pm - 06:00pm
     </div>
     <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
-        <b><span style="color: #FF0000">UN</span>CONFERENCE (2 TALKS)</b>
+        <b><span style="color: #EE8032; font-style: italic;">#UN</span> CONFERENCE (2 TALKS)</b>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM CONF-02
+        <img src="@baseUrl@/assets/images/sponsors/move_elevator_263x244.png" class="img-responsive" alt="ROOM move:elevator">
     </div>
 </div>
 
@@ -403,10 +404,10 @@ Breaks during the workshop day:
         06:15pm - 07:15pm
     </div>
     <div class="col-xs-6 col-sm-6 col-md-8 col-lg-8">
-        <b><span style="color: #FF0000">UN</span>CONFERENCE (2 TALKS)</b>
+        <b><span style="color: #EE8032; font-style: italic;">#UN</span> CONFERENCE (2 TALKS)</b>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        ROOM CONF-02
+        <img src="@baseUrl@/assets/images/sponsors/move_elevator_263x244.png" class="img-responsive" alt="ROOM move:elevator">
     </div>
 </div>
 
@@ -431,6 +432,6 @@ Breaks during the workshop day:
         <b>SOCIALIZING / WURSTCON</b>
     </div>
     <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-        &nbsp;
+        FOYER
     </div>
 </div>
