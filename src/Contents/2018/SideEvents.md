@@ -95,8 +95,7 @@ Along with our main conference schedule on September 22nd, we will have several 
             You never sausage a conference.
         </p>
         <p>
-            <a href="http://www.sir-mampfelot.de/" target="_blank">Sir Mampfelot</a> 
-            will serve awesome creations of Hot-Dog after the conference.
+            We will serve awesome creations of Hot-Dog after the conference.
         </p>
         <p>
             So grab yourself a bib and post-install your require-dev package!
