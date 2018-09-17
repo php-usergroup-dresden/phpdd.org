@@ -27,7 +27,7 @@ final class TicketInfo implements ProvidesTicketInformation
 	{
 		$this->ticketConfig   = $ticketConfig;
 		$this->availableSeats = max( 0, $ticketConfig->getSeats() - $reservedSeats );
-		$this->soldOut        = ($ticketConfig->getSeats() === $reservedSeats);
+		$this->soldOut        = ($ticketConfig->getSeats() <= $reservedSeats);
 	}
 
 	public function getId() : TicketId
