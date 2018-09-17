@@ -13,6 +13,11 @@ In real world, where you get paid by code that ships, developer strive to write 
 
 This workshop is for developers who start their projects by drawing model of the database first, developers who are overwhelmed by number of testing tools or don’t know where to start and developers who simply want to level up their game.
 
+**Workshop requirements:**
+
+* PHP7+ installed and running
+* [composer](https://getcomposer.org) installed and running
+* A git repository link with workshop material will be sent to all attendees via email on Wednesday, Sept. 19th 2018. 
 
 <a name="pragmatic-event-sourcing"></a>
 ## PRAGMATIC EVENT SOURCING <span class="small text-muted">- FULL-DAY WORKSHOP</span>
@@ -28,6 +33,9 @@ In this workshop, we will create a solid, event-sourced web application from scr
  
 Make sure to bring your laptop!
 
+**Workshop requirements:**
+
+* A laptop
 
 <a name="hack-this-workshop"></a>
 ## HACK THIS WORKSHOP! <span class="small text-muted">- HALF-DAY WORKSHOP</span>
@@ -40,6 +48,9 @@ In this workshop we will take a look at common security failings from a new pers
  
 All the sites will be run locally inside docker containers so don't worry about breaking any laws! Obviously this means that you will need to bring a laptop which is capable of running docker containers in order to participate in this workshop.
 
+**Workshop requirements:**
+
+* A laptop which is capable of running docker containers
 
 <a name="pentesting-dos-and-donts"></a>
 ## PENTESTING DO's & DONT's <span class="small text-muted">- HALF-DAY WORKSHOP</span>
@@ -51,6 +62,10 @@ By [Clinton Ingrams](@baseUrl@/speakers.html#clinton-ingrams)
 This workshop is a necessarily short introduction to the work of a pentester. 
 We will consider ethical issues, legal requirements, learning environments, tools used, and then we will explore the basics of an actual pentest. We will reference the OWASP Top 10, but we will also look at the contents of a scoping document, and how to structure a pentest by selecting relevant ideas from a range of pentesting methodologies.
 
+**Workshop requirements:**
+
+* Laptop with a virtual machine runtime (VirtualBox or any that supports OVA images)
+* A download link will be sent to all attendees via email on Wednesday, Sept. 19th 2018. 
 
 <a name="event-storming-for-fun-and-profit"></a>
 ## EVENT STORMING FOR FUN AND PROFIT! <span class="small text-muted">- HALF-DAY WORKSHOP</span>
@@ -61,6 +76,10 @@ By [Jeroen van der Gulik](@baseUrl@/speakers.html#jeroen-van-der-gulik)
 
 One of the challenges we face on a day-to-day basis is getting the right and correct information from our product owners or clients. 
 This can be both frustrating and decremental to the velocity of your team. No one likes to work on features that when delivered someone says "well... that wasn't exactly what I had in mind" But now we have Stickies! So many stickies! It's a whirlpool of stickies, what is this madness? In this interactive workshop, we will explore all the facets of Event Storming as a modelling technique to get a clear and precise mental model of how a feature is supposed to work, all using the power of stickies! As we go through the user story, we'll explain the different types of stickies, why they matter, and show why EventStorming is such an effective format.
+
+**Workshop requirements:**
+
+* No technical requirements
 
 <a name="your-app-lives-on-a-network"></a>
 ## YOUR APP LIVES ON A NETWORK - NETWORKING FOR PHP DEVS <span class="small text-muted">- HALF-DAY WORKSHOP</span>
@@ -75,3 +94,7 @@ actually work? In this tutorial, we walk through the basics of networking, befor
 every PHP developer should know, from TCP/UDP over IP addressing (IPv4/6), source/destination ports, sockets, DNS, 
 switching, firewalling and even more advanced protocols such as OSPF, VRRP and BGP. Prepare for an eye-opener when 
 you realize how much a typical app relies on all of these (and many more) working flawlessly... and how you can prepare your app for failure in the chain.
+
+**Workshop requirements:**
+
+* A laptop
