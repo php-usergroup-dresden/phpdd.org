@@ -727,6 +727,13 @@
                 "/index.html": "Home"
             }
         },
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
         "https://2018.phpdd.devel/tickets.html": {
             "title": "Buy tickets",
             "breadcrumb": {
@@ -2369,6 +2376,13 @@
                 "/index.html": "Home"
             }
         },
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
         "https://2018.phpdd.devel/speakers.html": {
             "title": "Speakers/Trainers",
             "breadcrumb": {
@@ -2432,6 +2446,13 @@
             "title": "Home",
             "breadcrumb": {
                 "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
             }
         },
         "https://2018.phpdd.devel/side-events.html": {
@@ -3700,6 +3721,13 @@
             "title": "Home",
             "breadcrumb": {
                 "/index.html": "Home"
+            }
+        },
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
             }
         },
         "https://2018.phpdd.devel/side-events.html": {
@@ -6160,6 +6188,13 @@
                 "/schedule.html": "Schedule"
             }
         },
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
         "https://2018.phpdd.devel/talks.html": {
             "title": "Talks",
             "breadcrumb": {
@@ -8045,6 +8080,232 @@
             }
         }
     },
+    "requirements": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.devel/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "installed": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "running": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.devel/talks.html": {
+            "title": "Talks",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/talks.html": "Talks"
+            }
+        },
+        "https://2018.phpdd.devel/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "composer": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.devel/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        }
+    },
+    "getcomposer": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "git": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.devel/speakers.html": {
+            "title": "Speakers/Trainers",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/speakers.html": "Speakers/Trainers"
+            }
+        },
+        "https://2018.phpdd.devel/side-events.html": {
+            "title": "Side events",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/side-events.html": "Side events"
+            }
+        }
+    },
+    "repository": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "link": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.devel/privacy.html": {
+            "title": "Privacy",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/privacy.html": "Privacy"
+            }
+        }
+    },
+    "material": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "sent": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "via": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.devel/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        },
+        "https://2018.phpdd.devel/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        },
+        "https://2018.phpdd.devel/privacy.html": {
+            "title": "Privacy",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/privacy.html": "Privacy"
+            }
+        }
+    },
+    "email": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        },
+        "https://2018.phpdd.devel/diversity-scholarship-application.html": {
+            "title": "Diversity scholarships",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/diversity-scholarship-application.html": "Scholarships"
+            }
+        },
+        "https://2018.phpdd.devel/venue.html": {
+            "title": "Venue and Hotels",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/venue.html": "Venue and Hotels"
+            }
+        },
+        "https://2018.phpdd.devel/become-sponsor.html": {
+            "title": "Become sponsor",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/become-sponsor.html": "Become sponsor"
+            }
+        }
+    },
+    "wednesday": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "sept": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "19th": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
     "domain": {
         "https://2018.phpdd.devel/workshops.html": {
             "title": "Workshops",
@@ -9190,29 +9451,6 @@
             }
         }
     },
-    "running": {
-        "https://2018.phpdd.devel/workshops.html": {
-            "title": "Workshops",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/workshops.html": "Workshops"
-            }
-        },
-        "https://2018.phpdd.devel/talks.html": {
-            "title": "Talks",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/talks.html": "Talks"
-            }
-        },
-        "https://2018.phpdd.devel/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
     "order": {
         "https://2018.phpdd.devel/workshops.html": {
             "title": "Workshops",
@@ -9342,22 +9580,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/privacy.html": "Privacy"
-            }
-        }
-    },
-    "requirements": {
-        "https://2018.phpdd.devel/workshops.html": {
-            "title": "Workshops",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/workshops.html": "Workshops"
-            }
-        },
-        "https://2018.phpdd.devel/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
             }
         }
     },
@@ -9640,6 +9862,78 @@
         }
     },
     "methodologies": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "virtual": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "machine": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "runtime": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "virtualbox": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "supports": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "ova": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "images": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "download": {
         "https://2018.phpdd.devel/workshops.html": {
             "title": "Workshops",
             "breadcrumb": {
@@ -10407,6 +10701,15 @@
         }
     },
     "format": {
+        "https://2018.phpdd.devel/workshops.html": {
+            "title": "Workshops",
+            "breadcrumb": {
+                "/index.html": "Home",
+                "/workshops.html": "Workshops"
+            }
+        }
+    },
+    "technical": {
         "https://2018.phpdd.devel/workshops.html": {
             "title": "Workshops",
             "breadcrumb": {
@@ -18098,15 +18401,6 @@
             }
         }
     },
-    "composer": {
-        "https://2018.phpdd.devel/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
     "hobby": {
         "https://2018.phpdd.devel/speakers.html": {
             "title": "Speakers/Trainers",
@@ -18505,22 +18799,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/speakers.html": "Speakers/Trainers"
-            }
-        }
-    },
-    "git": {
-        "https://2018.phpdd.devel/speakers.html": {
-            "title": "Speakers/Trainers",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/speakers.html": "Speakers/Trainers"
-            }
-        },
-        "https://2018.phpdd.devel/side-events.html": {
-            "title": "Side events",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/side-events.html": "Side events"
             }
         }
     },
@@ -19193,29 +19471,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/diversity-scholarship-application.html": "Scholarships"
-            }
-        },
-        "https://2018.phpdd.devel/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        }
-    },
-    "email": {
-        "https://2018.phpdd.devel/diversity-scholarship-application.html": {
-            "title": "Diversity scholarships",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/diversity-scholarship-application.html": "Scholarships"
-            }
-        },
-        "https://2018.phpdd.devel/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
             }
         },
         "https://2018.phpdd.devel/become-sponsor.html": {
@@ -20303,29 +20558,6 @@
             "breadcrumb": {
                 "/index.html": "Home",
                 "/venue.html": "Venue and Hotels"
-            }
-        }
-    },
-    "via": {
-        "https://2018.phpdd.devel/venue.html": {
-            "title": "Venue and Hotels",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/venue.html": "Venue and Hotels"
-            }
-        },
-        "https://2018.phpdd.devel/become-sponsor.html": {
-            "title": "Become sponsor",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/become-sponsor.html": "Become sponsor"
-            }
-        },
-        "https://2018.phpdd.devel/privacy.html": {
-            "title": "Privacy",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/privacy.html": "Privacy"
             }
         }
     },
@@ -31905,15 +32137,6 @@
         }
     },
     "widerrufen": {
-        "https://2018.phpdd.devel/privacy.html": {
-            "title": "Privacy",
-            "breadcrumb": {
-                "/index.html": "Home",
-                "/privacy.html": "Privacy"
-            }
-        }
-    },
-    "link": {
         "https://2018.phpdd.devel/privacy.html": {
             "title": "Privacy",
             "breadcrumb": {
