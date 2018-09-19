@@ -861,7 +861,7 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 	public function getAllAttendeesGroupedByEmail() : iterable
 	{
 		$query = "
-			SELECT o.email, oa.firstname, oa.lastname, GROUP_CONCAT(oi.attendeeName SEPARATOR ', ') AS `attendees`
+			SELECT o.email, oa.firstname, oa.lastname, GROUP_CONCAT(DISTINCT oi.attendeeName SEPARATOR ', ') AS `attendees`
 			FROM `ticketOrders` AS o
 			JOIN `ticketOrderAddresses` AS oa USING (orderId)
 			JOIN `ticketOrderItems` AS oi USING (orderId)
