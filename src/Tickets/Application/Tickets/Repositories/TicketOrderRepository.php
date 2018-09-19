@@ -853,4 +853,29 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 			throw $e;
 		}
 	}
+
+	/**
+	 * @throws RuntimeException
+	 * @return iterable
+	 */
+	public function getAllAttendeesGroupedByEmail() : iterable
+	{
+		$query = "
+			SELECT o.email, oa.firstname, oa.lastname, GROUP_CONCAT(oi.attendeeName SEPARATOR ', ') AS `attendees`
+			FROM `ticketOrders` AS o
+			JOIN `ticketOrderAddresses` AS oa USING (orderId)
+			JOIN `ticketOrderItems` AS oi USING (orderId)
+			WHERE 1
+			GROUP BY o.email
+		";
+
+		$statement = $this->database->query( $query );
+
+		$this->guardStatementSucceeded( $statement );
+
+		while ( $record = $statement->fetch( PDO::FETCH_ASSOC ) )
+		{
+			yield $record;
+		}
+	}
 }
