@@ -40,6 +40,8 @@ final class ExportAttendeesCommand extends AbstractConsoleCommand
 			$csv = new SplFileObject( $outfile, 'wb' );
 			$csv->setCsvControl( ',', '"', '\\' );
 
+			$csv->fputcsv( ['email', 'firstname', 'lastname', 'attendees'] );
+
 			foreach ( $repository->getAllAttendeesGroupedByEmail() as $record )
 			{
 				$csv->fputcsv( $record, ',', '"', '\\' );
