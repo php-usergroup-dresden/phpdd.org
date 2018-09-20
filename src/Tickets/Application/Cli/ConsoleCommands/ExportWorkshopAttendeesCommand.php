@@ -14,7 +14,7 @@ final class ExportWorkshopAttendeesCommand extends AbstractConsoleCommand
 {
 	protected function configure() : void
 	{
-		$this->addArgument( 'outfile', InputArgument::REQUIRED, 'Path to outfile', 'workshopAttendees.csv' );
+		$this->addArgument( 'outfile', InputArgument::OPTIONAL, 'Path to outfile', 'workshopAttendees.csv' );
 		$this->setDescription( 'Export all workshop attendees incl. workshop number.' );
 	}
 
