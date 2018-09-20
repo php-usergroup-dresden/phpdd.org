@@ -878,4 +878,54 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 			yield $record;
 		}
 	}
+
+	/**
+	 * @throws RuntimeException
+	 * @return iterable
+	 */
+	public function getAllWorkshopAttendees() : iterable
+	{
+		$query = "
+			SELECT 
+				oi.attendeeName AS `fullname`, 
+				oa.companyName, 
+				GROUP_CONCAT(DISTINCT RIGHT(oi.ticketId, 2) SEPARATOR ', ') AS `workshops`
+			FROM `ticketOrderItems` AS oi
+			JOIN `ticketOrderAddresses` AS oa USING (orderId)
+			WHERE oi.ticketId LIKE 'PHPDD18-WS-%'
+			GROUP BY `fullname`
+		";
+
+		$statement = $this->database->query( $query );
+
+		$this->guardStatementSucceeded( $statement );
+
+		while ( $record = $statement->fetch( PDO::FETCH_ASSOC ) )
+		{
+			yield $record;
+		}
+	}
+
+	/**
+	 * @throws RuntimeException
+	 * @return iterable
+	 */
+	public function getAllConferenceAttendees() : iterable
+	{
+		$query = "
+			SELECT oi.attendeeName AS `fullname`, oa.companyName
+			FROM `ticketOrderItems` AS oi
+			JOIN `ticketOrderAddresses` AS oa USING (orderId)
+			WHERE oi.ticketId IN ('PHPDD18-EB-01', 'PHPDD18-CT-01')
+		";
+
+		$statement = $this->database->query( $query );
+
+		$this->guardStatementSucceeded( $statement );
+
+		while ( $record = $statement->fetch( PDO::FETCH_ASSOC ) )
+		{
+			yield $record;
+		}
+	}
 }
