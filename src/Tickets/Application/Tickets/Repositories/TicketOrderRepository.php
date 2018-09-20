@@ -928,4 +928,29 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 			yield $record;
 		}
 	}
+
+	/**
+	 * @param TicketItemId $ticketItemId
+	 *
+	 * @throws RuntimeException
+	 * @return stdClass
+	 */
+	public function getTicketItem( TicketItemId $ticketItemId ) : stdClass
+	{
+		$statement = $this->database->prepare(
+			"
+				SELECT oi.attendeeName, oi.ticketId, IF(ois.itemId IS NULL, 'N', 'Y') AS `scanned`, ois.scannedAt
+				FROM ticketOrderItems AS oi
+				LEFT JOIN ticketOrderItemScans AS ois USING (itemId)
+				WHERE itemId = :ticketItemId
+				LIMIT 1
+			"
+		);
+
+		$statement->execute( ['ticketItemId' => $ticketItemId->toString()] );
+
+		$this->guardStatementSucceeded( $statement );
+
+		return $statement->fetchObject();
+	}
 }
