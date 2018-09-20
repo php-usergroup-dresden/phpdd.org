@@ -1,0 +1,22 @@
+{% extends "Theme.twig" %}
+
+{% block content %}
+
+    {% if ticketNotFound %}
+
+        <h1 class="text-danger">TICKET NOT FOUND</h1>
+
+    {% else %}
+
+        <h1>{{ attendeeName }}</h1>
+        <h3>{{ ticketName }}</h3>
+
+        {% if ticketScanned %}
+            <h2 class="text-danger">ALREADY SCANNED</h2>
+        {% else %}
+            <button class="btn btn-block btn-success btn-lg">CONFIRM TICKET</button>
+        {% endif %}
+
+    {% endif %}
+
+{% endblock %}
