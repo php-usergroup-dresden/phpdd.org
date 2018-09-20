@@ -31,7 +31,7 @@ return [
 		'maxSeatsPerOrder' => 3,
 		'type'             => \PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes::HALFDAY_WORKSHOP_A,
 		'validFrom'        => '2018-06-03 00:00:00',
-		'validTo'          => '2018-09-20 23:59:59',
+		'validTo'          => '2018-09-21 10:00:00',
 		'image'            => '/assets/images/speakers/christopher-riley.jpg',
 	],
 	'PHPDD18-WS-04' => [
@@ -42,7 +42,7 @@ return [
 		'maxSeatsPerOrder' => 3,
 		'type'             => \PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes::HALFDAY_WORKSHOP_B,
 		'validFrom'        => '2018-06-03 00:00:00',
-		'validTo'          => '2018-09-20 23:59:59',
+		'validTo'          => '2018-09-21 15:00:00',
 		'image'            => '/assets/images/speakers/clinton-ingrams.jpg',
 	],
 	'PHPDD18-WS-05' => [
@@ -53,7 +53,7 @@ return [
 		'maxSeatsPerOrder' => 3,
 		'type'             => \PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes::HALFDAY_WORKSHOP_A,
 		'validFrom'        => '2018-06-03 00:00:00',
-		'validTo'          => '2018-09-20 23:59:59',
+		'validTo'          => '2018-09-21 10:00:00',
 		'image'            => '/assets/images/speakers/jeroen-van-der-gulik.jpg',
 	],
 	'PHPDD18-WS-06' => [
@@ -64,7 +64,7 @@ return [
 		'maxSeatsPerOrder' => 3,
 		'type'             => \PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes::HALFDAY_WORKSHOP_B,
 		'validFrom'        => '2018-06-03 00:00:00',
-		'validTo'          => '2018-09-20 23:59:59',
+		'validTo'          => '2018-09-21 15:00:00',
 		'image'            => '/assets/images/speakers/wim-godden.jpg',
 	],
 	'PHPDD18-EB-01' => [
@@ -86,7 +86,7 @@ return [
 		'maxSeatsPerOrder' => 10,
 		'type'             => \PHPUGDD\PHPDD\Website\Tickets\Application\Constants\TicketTypes::CONFERENCE,
 		'validFrom'        => '2018-06-03 00:00:00',
-		'validTo'          => '2018-09-20 23:59:59',
+		'validTo'          => '2018-09-22 12:00:00',
 		'image'            => '/assets/images/tickets/conference.png',
 	],
 ];
