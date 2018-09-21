@@ -51,6 +51,7 @@ final class FindTicketRequestHandler extends AbstractRequestHandler implements H
 				'ticketName'      => $ticketConfig->getName(),
 				'ticketScanned'   => 'Y' === $ticketItem->scanned,
 				'ticketScannedAt' => $ticketItem->scannedAt,
+				'ticketItemId'    => $ticketItemId,
 			];
 
 			(new HtmlPage( $this->getEnv() ))->respond( 'Tickets/Read/Pages/FindTicket.twig', $data );

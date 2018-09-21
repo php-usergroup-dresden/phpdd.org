@@ -7,4 +7,5 @@ return [
 	'^/tickets/purchase/?$'       => \PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\PurchaseTicketsRequestHandler::class,
 	'^/tickets/paypal-success/?$' => \PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\PaypalSuccessRequestHandler::class,
 	'^/tickets/stripe-success/?$' => \PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\StripeSuccessRequestHandler::class,
+	'^/tickets/confirm-scan/?$'   => \PHPUGDD\PHPDD\Website\Tickets\Application\Web\Tickets\Write\ConfirmTicketScanRequestHandler::class,
 ];

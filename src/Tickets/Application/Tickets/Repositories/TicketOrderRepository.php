@@ -953,4 +953,23 @@ final class TicketOrderRepository implements ProvidesReservedTicketCount, Provid
 
 		return $statement->fetchObject();
 	}
+
+	/**
+	 * @param TicketItemId $ticketItemId
+	 *
+	 * @throws RuntimeException
+	 */
+	public function confirmTicketScan( TicketItemId $ticketItemId ) : void
+	{
+		$statement = $this->database->prepare(
+			'
+				INSERT INTO ticketOrderItemScans (itemId, scannedAt)
+				VALUES (:ticketItemId, NOW())
+			'
+		);
+
+		$statement->execute( ['ticketItemId' => $ticketItemId->toString()] );
+
+		$this->guardStatementSucceeded( $statement );
+	}
 }

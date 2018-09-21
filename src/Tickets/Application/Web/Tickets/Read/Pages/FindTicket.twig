@@ -1,22 +1,26 @@
-{% extends "Theme.twig" %}
+<html>
+<head>
+    <title>Ticket scan</title>
+</head>
+<body style="padding: 20px;">
+{% if ticketNotFound %}
 
-{% block content %}
+    <h1 class="text-danger">TICKET NOT FOUND</h1>
 
-    {% if ticketNotFound %}
+{% else %}
 
-        <h1 class="text-danger">TICKET NOT FOUND</h1>
+    <h1>{{ attendeeName }}</h1>
+    <h3>{{ ticketName }}</h3>
 
+    {% if ticketScanned %}
+        <h2 class="text-danger">ALREADY SCANNED<br>at {{ ticketScannedAt }}</h2>
     {% else %}
-
-        <h1>{{ attendeeName }}</h1>
-        <h3>{{ ticketName }}</h3>
-
-        {% if ticketScanned %}
-            <h2 class="text-danger">ALREADY SCANNED</h2>
-        {% else %}
-            <button class="btn btn-block btn-success btn-lg">CONFIRM TICKET</button>
-        {% endif %}
-
+        <form method="post" action="{{ project.getBaseUrl }}/tickets/confirm-scan">
+            <input type="hidden" name="ticketItemId" value="{{ ticketItemId }}">
+            <button type="submit" style="font-size: 18px;">CONFIRM TICKET</button>
+        </form>
     {% endif %}
 
-{% endblock %}
+{% endif %}
+</body>
+</html>
